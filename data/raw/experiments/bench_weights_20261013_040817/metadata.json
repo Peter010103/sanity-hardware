@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "logger_version": "2.0.0",
+  "preset": "weights",
+  "started_unix_time_ns": 1791864497879883769,
+  "started_monotonic_ns": 10825420827094,
+  "battery_id": "unrecorded",
+  "operator_note": "",
+  "argv": [
+    "run_weight_check.py",
+    "--execute",
+    "--battery-disconnected",
+    "--mass-g",
+    "100",
+    "--position",
+    "centre"
+  ],
+  "python": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+  "platform": "Linux-5.15.185-tegra-aarch64-with-glibc2.35",
+  "settings": {
+    "force_limit_N": 2.0,
+    "thrust_sign": 1,
+    "rpm_requested_hz": 60.0,
+    "health_period_s": 0.2,
+    "force_stale_timeout_s": 0.35,
+    "health_stale_timeout_s": 0.45
+  },
+  "plan": [],
+  "controller": null,
+  "calibration_id": "c1bd33fe-d4b3-4c22-bb7b-db5bdfab119c",
+  "calibration_sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+  "source_sha256": {
+    "bench_experiments.py": "4b5ca36047acc4da904eddb1a54291982b8a8b38db97f536f3d2f4eb19c1e754",
+    "betaflight_msp.py": "5a32b63fceb41c5dc451543be7b71fe037c09e6860bcf4425e8accac075688c6",
+    "betaflight_motors.py": "eec6f6067e894e5337518135e9591067f136992b7e85e092ed00bdffeabaae24"
+  },
+  "units": {
+    "commands": "MSP external motor counts",
+    "rpm": "FC reported mechanical RPM; physical pole count unverified",
+    "force": "newtons"
+  },
+  "timing": {
+    "clock": "CLOCK_MONOTONIC ns; shared across threads",
+    "command": "host request start / acknowledgement",
+    "rpm": "request start / reply arrival; FC sample time and age unavailable",
+    "force": "native ready-observed / read-complete"
+  },
+  "limitations": [
+    "Host timestamps do not separate USB/FC/ESC/motor delays.",
+    "HX711 nominal 10 SPS; force includes sensor/fixture dynamics.",
+    "Unchanging RPM values may reflect quantization or cached data; reply rate alone is not freshness.",
+    "FC voltage/current and physical motor pole count remain independently unverified.",
+    "Zero-valued ESC auxiliary fields do not establish working ESC current/voltage/temperature sensors.",
+    "STOP delivery is best effort; USB/host loss can retain persistent motor-test output."
+  ],
+  "operator_declarations": {
+    "bench_ready": false,
+    "off_axis_checked": false,
+    "battery_disconnected": true
+  }
+}

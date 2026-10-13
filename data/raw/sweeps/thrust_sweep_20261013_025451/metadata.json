@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "run_id": "c5f379f0-d5fc-4166-ba7b-f10437837efb",
+  "started_unix_time_ns": 1791860092009753355,
+  "operator_declared_setup": "props installed; aircraft secured on thrust stand; physical battery cut reachable",
+  "execution": "manual step advance; four motors commanded collectively; all stopped between steps",
+  "board_profile": {
+    "identity": {
+      "firmware_identifier": "BTFL",
+      "firmware_version": "4.5.1",
+      "msp_protocol_version": 0,
+      "msp_api_version": "1.46"
+    },
+    "board": {
+      "board_identifier": "S405",
+      "hardware_revision": 0,
+      "target_name": "STM32F405",
+      "board_name": "BETAFPVF405",
+      "manufacturer_id": "BEFH",
+      "raw_payload_hex": "53343035000002030953544d3332463430350b4245544146505646343035044245464800000000000000000000000000000000000000000000000000000000000000000101401f000000000100"
+    },
+    "motor_config": {
+      "min_throttle_setting": 1070,
+      "max_throttle_setting": 2000,
+      "min_command_setting": 1000,
+      "motor_count": 4,
+      "configured_motor_poles": 12,
+      "dshot_telemetry_enabled": true,
+      "esc_sensor_feature": false,
+      "raw_payload_hex": "2e04d007e803040c0100"
+    },
+    "features": {
+      "mask": 268764168,
+      "reversible_3d_enabled": false
+    },
+    "motor_protocol": {
+      "code": 6,
+      "name": "DSHOT300",
+      "raw_advanced_payload_hex": "01020006e001e80300000000307d00000002005a"
+    },
+    "BUILD_INFO": {
+      "raw_payload_hex": "4a756c203330203230323431323a34343a3231373764303162610110021003100410051006100710081009100a100b100c100d300e300f301030113012301330164018401a401c401d402040214022402440254027202b20"
+    },
+    "MIXER_CONFIG": {
+      "raw_payload_hex": "0301"
+    },
+    "MOTOR_3D_CONFIG": {
+      "raw_payload_hex": "7e05ea05b405"
+    },
+    "uid_payload_hex": "56003f001451333231343731"
+  },
+  "live_controller": {
+    "identity": {
+      "firmware_identifier": "BTFL",
+      "firmware_version": "4.5.1",
+      "msp_protocol_version": 0,
+      "msp_api_version": "1.46"
+    },
+    "board": {
+      "board_identifier": "S405",
+      "hardware_revision": 0,
+      "target_name": "STM32F405",
+      "board_name": "BETAFPVF405",
+      "manufacturer_id": "BEFH",
+      "raw_payload_hex": "53343035000002030953544d3332463430350b4245544146505646343035044245464800000000000000000000000000000000000000000000000000000000000000000101401f000000000100"
+    },
+    "motor_config": {
+      "min_throttle_setting": 1070,
+      "max_throttle_setting": 2000,
+      "min_command_setting": 1000,
+      "motor_count": 4,
+      "configured_motor_poles": 12,
+      "dshot_telemetry_enabled": true,
+      "esc_sensor_feature": false,
+      "raw_payload_hex": "2e04d007e803040c0100"
+    },
+    "features": {
+      "mask": 268764168,
+      "reversible_3d_enabled": false
+    },
+    "motor_protocol": {
+      "code": 6,
+      "name": "DSHOT300",
+      "raw_advanced_payload_hex": "01020006e001e80300000000307d00000002005a"
+    },
+    "BUILD_INFO": {
+      "raw_payload_hex": "4a756c203330203230323431323a34343a3231373764303162610110021003100410051006100710081009100a100b100c100d300e300f301030113012301330164018401a401c401d402040214022402440254027202b20"
+    },
+    "MIXER_CONFIG": {
+      "raw_payload_hex": "0301"
+    },
+    "MOTOR_3D_CONFIG": {
+      "raw_payload_hex": "7e05ea05b405"
+    },
+    "uid_payload_hex": "56003f001451333231343731"
+  },
+  "live_battery_preflight": {
+    "detected_cells": 2,
+    "voltage_V": 7.74,
+    "current_A": 0.5,
+    "consumed_mAh": 147,
+    "configured_capacity_mAh": 0,
+    "battery_state_code": 0,
+    "voltage_resolution_V": 0.01,
+    "source": "FC-configured voltage/current meters; calibration not independently verified"
+  },
+  "hx711_hardware": {
+    "backend": "native_gpio_cdev",
+    "gpio_version": "2.1.9",
+    "jetson_info": {
+      "P1_REVISION": 1,
+      "RAM": "32768M, 65536M",
+      "REVISION": "Unknown",
+      "TYPE": "JETSON_ORIN_NX",
+      "MANUFACTURER": "NVIDIA",
+      "PROCESSOR": "A78AE"
+    },
+    "channel": "A",
+    "gain": 128,
+    "physical_pins": {
+      "dout": 29,
+      "sck": 31
+    }
+  },
+  "calibration": {
+    "calibration_id": "c1bd33fe-d4b3-4c22-bb7b-db5bdfab119c",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "counts_per_N": 21036.44535271289,
+    "zero_counts": 206507.025,
+    "measured_force_range_N": [
+      0.0,
+      9.80665
+    ],
+    "quality_status": "candidate; review residuals/hysteresis before use",
+    "rated_capacity": "unverified"
+  },
+  "motor_outputs": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "motor_protocol": "DSHOT300",
+  "MSP_MOTOR_TELEMETRY_139_supported": true,
+  "DShot_speed_units": "MSP reports mechanical RPM converted from DShot eRPM using FC configured motor pole count",
+  "configured_motor_poles": 12,
+  "derived_eRPM_note": "erpm_derived = reported mechanical RPM * configured pole count / 2; physical pole count not independently verified",
+  "stop_external_command": 1000,
+  "stop_dshot_value": 0,
+  "command_units": "Betaflight MSP external motor command counts; not RPM, PWM microseconds, or newtons",
+  "thrust_sign": 1,
+  "thrust_delta_formula": "thrust_N = thrust_sign * (measured_load_force_N - stopped_baseline_force_N)",
+  "settings": {
+    "step_command_counts": 100,
+    "interval_s": 3.0,
+    "baseline_seconds": 3.0,
+    "max_command": 2000,
+    "force_limit_delta_N": 9.0
+  },
+  "measurement_notes": [
+    "Thrust values are load-cell force changes from the stopped aircraft baseline.",
+    "Linear interpolation is only supported within the weight-sweep calibration range.",
+    "Force is invalid outside calibrated force range or at ADC rails.",
+    "FC battery meter calibration is unverified; DShot RPM/eRPM is telemetry, not an independent tachometer reading.",
+    "MSP RPM is mechanical RPM converted by FC using its configured pole count; eRPM columns are derived and pole count is unverified.",
+    "Host acquisition timestamps are sequential, not simultaneous across HX711 and FC."
+  ],
+  "stopped_baseline": {
+    "sample_count": 35,
+    "mean_force_N": 0.5515504411390219,
+    "sample_sd_N": 0.001844212356710363
+  }
+}

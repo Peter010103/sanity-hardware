@@ -1,0 +1,39 @@
+{
+  "audit_date": "2026-10-13",
+  "evidence": {
+    "capture_code": "../motor_step_response.py:158-204",
+    "polling_probe": "../telemetry_timing_probe_20261013.json",
+    "acquisition_order": [
+      "MSP_STATUS",
+      "MSP_BATTERY_STATE",
+      "MSP_SET_MOTOR except first post-step sample",
+      "MSP_MOTOR_TELEMETRY",
+      "blocking HX711 read",
+      "shared row timestamp"
+    ],
+    "RPM_request_and_reply_timestamps_saved": false,
+    "HX711_native_ready_and_complete_timestamps_saved": false,
+    "HX711_native_ready_and_complete_timestamps_available_in_driver": true
+  },
+  "corrections": [
+    "The saved row timestamp follows the blocking HX711 read, whereas the RPM value was queried earlier. The gap is not recorded and cannot be exactly corrected retrospectively.",
+    "Existing RPM fitted delays and time constants can include transport timing, variable row-time assignment error and sparse sampling. They are descriptive fits, not identified physical motor constants.",
+    "Existing crossing brackets are brackets on row time, not rigorous bounds on actual RPM measurement or rotor response time.",
+    "HX711 output rate alone is not a universal hard 0.3-second identifiability cutoff. Timing accuracy, input scheduling, repeatability, sensor dynamics and model assumptions also matter.",
+    "Similar up/down thrust response may be influenced by load-cell/fixture dynamics. An axial force trace alone cannot separate that from motor/propeller dynamics."
+  ],
+  "read_only_probe_result": {
+    "RPM_reply_rate_hz": 60.98,
+    "median_round_trip_ms": 15.984,
+    "motor_commands_sent": 0,
+    "fresh_running_RPM_update_rate_verified": false
+  },
+  "before_more_transient_tests": [
+    "Acquire RPM independently of HX711, using a single owner for serial transactions.",
+    "Log each command write start/acknowledgement, RPM request/reply interval, and HX711 ready/read-complete timestamps separately.",
+    "Check achievable RPM cadence and telemetry freshness with safety monitoring enabled during the next supervised moderate-power run.",
+    "Retain battery/status, force-range, force-limit, stale-sensor and stop-on-error handling; use variable dwell timing to avoid sampling all repeated edges at one phase."
+  ],
+  "raw_recordings_modified": false,
+  "powered_tests_run_during_this_audit": false
+}

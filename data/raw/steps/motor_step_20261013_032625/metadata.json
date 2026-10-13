@@ -1,0 +1,94 @@
+{
+  "description": "Collective motor-command step response using FC motor telemetry and load cell",
+  "commands_units": "Betaflight MSP external motor command counts; not RPM, PWM microseconds, or newtons",
+  "motor_order": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "stop_command": 1000,
+  "step_time_definition": "host monotonic timestamp immediately before first acknowledged step-command packet",
+  "channels_sequential_not_simultaneous": true,
+  "hx711_nominal_rate_hz": 10,
+  "sampling_limit": "approximately 0.1 s minimum interval; sub-0.3 s delays are not resolved reliably",
+  "setup_operator_confirmed": "props installed; aircraft secured on thrust stand; physical battery cut reachable",
+  "configuration": {
+    "start_command": 1450,
+    "step_command": 1250,
+    "pre_step_seconds": 3.0,
+    "post_step_seconds": 4.0,
+    "force_limit_N": 2.0,
+    "thrust_sign": 1
+  },
+  "sensor": {
+    "backend": "native_gpio_cdev",
+    "gpio_version": "2.1.9",
+    "jetson_info": {
+      "P1_REVISION": 1,
+      "RAM": "32768M, 65536M",
+      "REVISION": "Unknown",
+      "TYPE": "JETSON_ORIN_NX",
+      "MANUFACTURER": "NVIDIA",
+      "PROCESSOR": "A78AE"
+    },
+    "channel": "A",
+    "gain": 128,
+    "physical_pins": {
+      "dout": 29,
+      "sck": 31
+    },
+    "nominal_rate_hz": 10
+  },
+  "calibration_file": "calibration.json",
+  "calibration_force_range_N": [
+    0.0,
+    9.80665
+  ],
+  "flight_controller": {
+    "identity": {
+      "firmware_identifier": "BTFL",
+      "firmware_version": "4.5.1",
+      "msp_protocol_version": 0,
+      "msp_api_version": "1.46"
+    },
+    "board": {
+      "board_identifier": "S405",
+      "hardware_revision": 0,
+      "target_name": "STM32F405",
+      "board_name": "BETAFPVF405",
+      "manufacturer_id": "BEFH",
+      "raw_payload_hex": "53343035000002030953544d3332463430350b4245544146505646343035044245464800000000000000000000000000000000000000000000000000000000000000000101401f000000000100"
+    },
+    "motor_config": {
+      "min_throttle_setting": 1070,
+      "max_throttle_setting": 2000,
+      "min_command_setting": 1000,
+      "motor_count": 4,
+      "configured_motor_poles": 12,
+      "dshot_telemetry_enabled": true,
+      "esc_sensor_feature": false,
+      "raw_payload_hex": "2e04d007e803040c0100"
+    },
+    "features": {
+      "mask": 268764168,
+      "reversible_3d_enabled": false
+    },
+    "motor_protocol": {
+      "code": 6,
+      "name": "DSHOT300",
+      "raw_advanced_payload_hex": "01020006e001e80300000000307d00000002005a"
+    },
+    "BUILD_INFO": {
+      "raw_payload_hex": "4a756c203330203230323431323a34343a3231373764303162610110021003100410051006100710081009100a100b100c100d300e300f301030113012301330164018401a401c401d402040214022402440254027202b20"
+    },
+    "MIXER_CONFIG": {
+      "raw_payload_hex": "0301"
+    },
+    "MOTOR_3D_CONFIG": {
+      "raw_payload_hex": "7e05ea05b405"
+    },
+    "uid_payload_hex": "56003f001451333231343731"
+  },
+  "interpretation": "Measured collective thrust is not an individual motor curve. RPM is FC-reported mechanical RPM if supported. This is a bench characterization, not sim-to-real validation."
+}

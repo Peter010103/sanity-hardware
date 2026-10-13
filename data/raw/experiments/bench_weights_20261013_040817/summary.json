@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "error": null,
+  "ended_unix_time_ns": 1791864547379543048,
+  "rows": {
+    "commands": 0,
+    "phases": 7,
+    "rpm": 0,
+    "force": 561,
+    "battery": 0,
+    "status": 0,
+    "weight_checks": 3
+  },
+  "stopped_baseline_N": 0.6797714518891311,
+  "stopped_baseline_sd_N": 0.0012506720403461546,
+  "final_stopped_baseline_N": 0.6782200318136784,
+  "baseline_return_shift_N": -0.0015514200754527252,
+  "last_battery": null,
+  "last_rpm": null,
+  "stop_attempts": 0,
+  "stop_acknowledgements": 0,
+  "cleanup_stop_acknowledged": null,
+  "physical_stop_confirmed": false,
+  "HX711_worker_error": null,
+  "no_motor_commands_sent": true
+}

@@ -1,0 +1,12 @@
+{"kind": "operator_prompt", "monotonic_ns": 10828948897369, "unix_time_ns": 1791864501407969564, "message": "Cycle 1/3: add 100.0 g at centre, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10834510927397, "unix_time_ns": 1791864506969999368, "note": "Manual marker, not precise physical force-step time"}
+{"kind": "operator_prompt", "monotonic_ns": 10837512088106, "unix_time_ns": 1791864509971159629, "message": "Remove the reference weight, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10842463182567, "unix_time_ns": 1791864514922253866, "note": "Manual marker, not precise physical force-step time"}
+{"kind": "operator_prompt", "monotonic_ns": 10845465151224, "unix_time_ns": 1791864517924222843, "message": "Cycle 2/3: add 100.0 g at centre, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10850126966592, "unix_time_ns": 1791864522586037475, "note": "Manual marker, not precise physical force-step time"}
+{"kind": "operator_prompt", "monotonic_ns": 10853128645828, "unix_time_ns": 1791864525587717255, "message": "Remove the reference weight, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10857823205010, "unix_time_ns": 1791864530282276149, "note": "Manual marker, not precise physical force-step time"}
+{"kind": "operator_prompt", "monotonic_ns": 10860825312895, "unix_time_ns": 1791864533284384514, "message": "Cycle 3/3: add 100.0 g at centre, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10865247524511, "unix_time_ns": 1791864537706595906, "note": "Manual marker, not precise physical force-step time"}
+{"kind": "operator_prompt", "monotonic_ns": 10868249458952, "unix_time_ns": 1791864540708530763, "message": "Remove the reference weight, remove your hand, then press Enter (q exits)."}
+{"kind": "operator_enter", "monotonic_ns": 10871871442714, "unix_time_ns": 1791864544330514365, "note": "Manual marker, not precise physical force-step time"}

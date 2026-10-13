@@ -1,0 +1,15 @@
+run,path,kind,battery_id,status,analysis_use,notes
+bench_individual_20261013_040641,data/raw/experiments/bench_individual_20261013_040641,individual,B04,completed,individual force/speed identification + reference evaluation,physical rotor location map unconfirmed
+bench_multilevel_20261013_040554,data/raw/experiments/bench_multilevel_20261013_040554,multilevel,B03,completed,held-out evaluation before final refit,
+bench_probe_20261013_040054,data/raw/experiments/bench_probe_20261013_040054,probe,unrecorded,completed,acquisition timing diagnostic only,
+bench_probe_20261013_040425,data/raw/experiments/bench_probe_20261013_040425,probe,unrecorded,interrupted,acquisition timing diagnostic only,
+bench_reference_20261013_040736,data/raw/experiments/bench_reference_20261013_040736,reference,B05,completed,held-out evaluation before final refit,
+bench_repeatability_20261013_040435,data/raw/experiments/bench_repeatability_20261013_040435,repeatability,B01,completed,fit + last-cycle model selection,
+bench_small_steps_20261013_040516,data/raw/experiments/bench_small_steps_20261013_040516,small_steps,B02,completed,fit + last-cycle model selection,
+bench_weights_20261013_040817,data/raw/experiments/bench_weights_20261013_040817,weights,unrecorded,completed,mounted 100 g scale check only,
+thrust_sweep_20261013_025451,data/raw/sweeps/thrust_sweep_20261013_025451,legacy_collective_sweep,not separately recorded,failed,ten settled static points only,battery-warning/critical high levels; partial maximum stage
+motor_step_20261013_031851,data/raw/steps/motor_step_20261013_031851,legacy_step,not separately recorded,failed,excluded from fast-response fitting,sequential acquisition biases row timing
+motor_step_20261013_032116,data/raw/steps/motor_step_20261013_032116,legacy_step,not separately recorded,completed,excluded from fast-response fitting,sequential acquisition biases row timing
+motor_step_20261013_032625,data/raw/steps/motor_step_20261013_032625,legacy_step,not separately recorded,completed,excluded from fast-response fitting,sequential acquisition biases row timing
+loadcell_weight_calibration,data/raw/loadcell,nominal 0..1000 g weights,,complete,force calibration: 840 samples / 21 levels,descending levels check hysteresis; absolute accuracy unconfirmed
+mass_summaries,data/raw/mass_readings.csv,battery absent/present weighing,,summaries only,39.40 g / 66.09 g mass evidence,individual raw samples not retained; inclusions/tare incompletely documented

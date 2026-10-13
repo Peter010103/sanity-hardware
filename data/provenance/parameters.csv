@@ -1,0 +1,49 @@
+parameter,value,units,frame_or_scope,status,source,adopted
+published_mass,0.072,kg,paper configuration,published,paper section 2.1,false
+inertia_tensor,diag(5.75e-5;6.64e-5;9.31e-5),kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
+geometry_width,0.11191870246145903,m,base_link,calculated from source,DAE nested transforms,true
+geometry_height,0.0295,m,base_link,calculated from source,DAE nested transforms,true
+motor_diagonal,0.0805,m,CAD shaft axes,calculated from source,STEP cylindrical surfaces,true
+T_to_channel_a,-26.92,counts/N^2,aircraft collective,implemented mapping not new fit,udp_broadcaster/control.py,true
+T_to_channel_b,296.3,counts/N,aircraft collective,implemented mapping not new fit,udp_broadcaster/control.py,true
+T_to_channel_c,1162,counts,aircraft collective positive T,implemented mapping not new fit,udp_broadcaster/control.py,true
+zero_channel,1000,counts,aircraft collective zero T,code override,udp_broadcaster/control.py,true
+roll_pitch_limit,0.5235987756,rad,sender mapping,configured not verified FC setting,udp_broadcaster/control.py,true
+yaw_rate_limit,10.471975512,rad/s,sender mapping,configured not verified FC setting,udp_broadcaster/control.py,true
+udp_rate,100,Hz,sender default,configured not measured,broadcast_rpyt.py,true
+sbus_rate,100,Hz,receiver default,configured not measured,receiver config.h,true
+tf_poll_rate,100,Hz,launch default,configured not camera sample verification,launch.py,true
+lqg_rate,50,Hz,launch default,configured not measured,launch.py,true
+usable_thrust_limits,,N,aircraft or rotor,unknown,measurements exist; peak stage is battery-critical; usable limits unestablished,false
+yaw_reaction_torque,,N m,rotor body axis,unknown,requires torque identification,false
+motor_speed_limits,,rad/s,rotor,unknown,observed RPM envelope available; rated limits unknown,false
+command_latency,,s,flight UDP/SBUS end to end,unknown,USB apparent delay separately identified; not flight-path latency,false
+battery_installed_mass,0.06609,kg,bench configuration,measured; confirmed contribution mass; raw individual samples unavailable,data/raw/mass_readings.csv; models/sanity.urdf,true
+mass_without_battery,0.03940,kg,bench configuration,measured; same inclusion limitations,data/raw/mass_readings.csv,see parameter scope
+CoM_coordinates,[0;0;0],m,base_link,operator-approved model CoM after 3D review,models/sanity.urdf,true
+full_range_k,3.135940456614356e-08,N/(rad/s)^2,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Conditional on FC-reported mechanical RPM scaling; high-range battery warnings retained and flagged,41 new settled phases + 10 legacy sweep plateaus,see model validity domain
+local_k,3.2732551603912513e-08,N/(rad/s)^2,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; ,41 new settled phases,see model validity domain
+local_force_offset,0.009962661170831744,N per modeled rotor contribution,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Empirical correction; not motor command deadband,41 new settled phases,see model validity domain
+apparent_interface_delay,0.01928848119734354,s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Host send to telemetry reply; physical motor delay not isolated,104 normal rotor edges / 32 command events,see model validity domain
+rotor_response_tau,0.03741163154618727,s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; ,104 normal rotor edges / 32 command events,see model validity domain
+M1_speed_a,2452.314683173012,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M1_speed_b,773.1848784748311,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M1_speed_c,-20.656931862452687,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M2_speed_a,2532.059941647188,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M2_speed_b,749.6159603033368,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M2_speed_c,-49.7513179479204,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M3_speed_a,2472.331334669701,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M3_speed_b,784.4780734224935,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M3_speed_c,-14.465018262415466,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M4_speed_a,2393.74534727326,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M4_speed_b,750.9976739793324,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+M4_speed_c,-20.65447243855458,rad/s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; omega_ss=(V/8)*(a+b*q+c*q^2); q=(MSP count-1350)/100,125 new per-motor plateau speed means,see model validity domain
+loadcell_observation_delay,0.1233880272614954,s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Sensor/fixture/acquisition observation only,Training-only measured RPM to load-cell force traces,see model validity domain
+loadcell_observation_tau,0.0510431009274121,s,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Do not apply to simulator aerodynamic force,Training-only measured RPM to load-cell force traces,see model validity domain
+physical_motor_poles,unknown,count,rotor-axis speed/force magnitudes; hardware output M1..M4,unknown; ,not established,see model validity domain
+reaction_torque_coefficient,unknown,N*m/(rad/s)^2,rotor-axis speed/force magnitudes; hardware output M1..M4,unknown; ,not established,see model validity domain
+battery_dynamic_parameters,unknown,various,rotor-axis speed/force magnitudes; hardware output M1..M4,unknown; ,not established,see model validity domain
+independent_physical_motor_delay,unknown,s,rotor-axis speed/force magnitudes; hardware output M1..M4,unknown; ,not established,see model validity domain
+historical_Jxx,5.75e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
+historical_Jyy,6.64e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
+historical_Jzz,9.31e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true

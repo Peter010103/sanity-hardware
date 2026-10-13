@@ -1,0 +1,8 @@
+phase,role,cycle,command_event,request_start_ns,ack_ns,end_ns,requested_duration_s,completed
+weight_unloaded_baseline,weight_unloaded,0,0,10825947251409,10825947252113,10828948017952,3.0,True
+weight_loaded_1,weight_loaded,1,0,10834511060905,10834511061833,10837511316340,3.0,True
+weight_unloaded_1,weight_unloaded,1,0,10842463332203,10842463333099,10845464262431,3.0,True
+weight_loaded_2,weight_loaded,2,0,10850127069923,10850127070723,10853127855981,3.0,True
+weight_unloaded_2,weight_unloaded,2,0,10857823320982,10857823321942,10860824358692,3.0,True
+weight_loaded_3,weight_loaded,3,0,10865247639202,10865247640003,10868248580495,3.0,True
+weight_unloaded_3,weight_unloaded,3,0,10871871559389,10871871560253,10874872109898,3.0,True

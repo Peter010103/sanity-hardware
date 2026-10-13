@@ -1,0 +1,373 @@
+{
+  "gradient_counts_per_g": 206.29705681818183,
+  "inverse_gradient_g_per_count": 0.004847378898291029,
+  "counts_per_N": 21036.445352712886,
+  "N_per_count": 4.753654827292572e-05,
+  "fit_intercept_counts": 206457.64431818182,
+  "final_zero_counts": 206507.025,
+  "gradient_regression_standard_error_counts_per_g": 0.03143030933915846,
+  "r_squared": 0.9999997910926763,
+  "ascending_residual_RMSE_equivalent_g": 0.14453628172165364,
+  "ascending_max_abs_residual_equivalent_g": 0.23412289240218084,
+  "zero_return_drift_counts": 26.47500000000582,
+  "zero_return_drift_equivalent_g": 0.1283343563322832,
+  "max_abs_hysteresis_equivalent_g": 0.20674071001208416,
+  "fit_method": "unweighted linear least squares of ascending load-level means; descending held out",
+  "points": [
+    {
+      "sweep": "ascending",
+      "mass_g": 0,
+      "sample_count": 40,
+      "mean_counts": 206480.55,
+      "std_counts": 58.77290061034802,
+      "min_counts": 206370,
+      "max_counts": 206632,
+      "first_to_last_half_drift_counts": -12.60000000000582,
+      "fitted_counts": 206457.64431818182,
+      "residual_counts": 22.905681818170706,
+      "residual_equivalent_g": 0.11103251869636917,
+      "repeatability_std_equivalent_g": 0.2848945182099569
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 100,
+      "sample_count": 40,
+      "mean_counts": 227128.15,
+      "std_counts": 43.915741001289135,
+      "min_counts": 227037,
+      "max_counts": 227228,
+      "first_to_last_half_drift_counts": 33.20000000001164,
+      "fitted_counts": 227087.35,
+      "residual_counts": 40.79999999998836,
+      "residual_equivalent_g": 0.19777305905021755,
+      "repeatability_std_equivalent_g": 0.21287623623246307
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 200,
+      "sample_count": 40,
+      "mean_counts": 247724.55,
+      "std_counts": 40.54497344671558,
+      "min_counts": 247663,
+      "max_counts": 247836,
+      "first_to_last_half_drift_counts": -26.10000000000582,
+      "fitted_counts": 247717.0556818182,
+      "residual_counts": 7.49431818179437,
+      "residual_equivalent_g": 0.03632779981150882,
+      "repeatability_std_equivalent_g": 0.1965368487173792
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 300,
+      "sample_count": 40,
+      "mean_counts": 268308.2,
+      "std_counts": 51.61007653549837,
+      "min_counts": 268215,
+      "max_counts": 268401,
+      "first_to_last_half_drift_counts": -17.599999999976717,
+      "fitted_counts": 268346.76136363635,
+      "residual_counts": -38.56136363634141,
+      "residual_equivalent_g": -0.18692154038012837,
+      "repeatability_std_equivalent_g": 0.25017359593735977
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 400,
+      "sample_count": 40,
+      "mean_counts": 288968.35,
+      "std_counts": 51.05680597038397,
+      "min_counts": 288855,
+      "max_counts": 289075,
+      "first_to_last_half_drift_counts": 9.799999999988358,
+      "fitted_counts": 288976.46704545454,
+      "residual_counts": -8.117045454564504,
+      "residual_equivalent_g": -0.03934639485292509,
+      "repeatability_std_equivalent_g": 0.24749168387497866
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 500,
+      "sample_count": 40,
+      "mean_counts": 309579.075,
+      "std_counts": 40.73578877571278,
+      "min_counts": 309508,
+      "max_counts": 309681,
+      "first_to_last_half_drift_counts": 37.34999999997672,
+      "fitted_counts": 309606.17272727273,
+      "residual_counts": -27.097727272717748,
+      "residual_equivalent_g": -0.13135295137341732,
+      "repeatability_std_equivalent_g": 0.19746180291663065
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 600,
+      "sample_count": 40,
+      "mean_counts": 330190.275,
+      "std_counts": 37.02181442865468,
+      "min_counts": 330107,
+      "max_counts": 330252,
+      "first_to_last_half_drift_counts": 2.4500000000116415,
+      "fitted_counts": 330235.8784090909,
+      "residual_counts": -45.603409090894274,
+      "residual_equivalent_g": -0.22105700291733418,
+      "repeatability_std_equivalent_g": 0.17945876203790703
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 700,
+      "sample_count": 40,
+      "mean_counts": 350866.2,
+      "std_counts": 41.25107613203905,
+      "min_counts": 350772,
+      "max_counts": 350946,
+      "first_to_last_half_drift_counts": 31.599999999976717,
+      "fitted_counts": 350865.5840909091,
+      "residual_counts": 0.615909090905916,
+      "residual_equivalent_g": 0.002985544730522948,
+      "repeatability_std_equivalent_g": 0.19995959597424282
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 800,
+      "sample_count": 40,
+      "mean_counts": 371474.5,
+      "std_counts": 40.2250081671997,
+      "min_counts": 371384,
+      "max_counts": 371558,
+      "first_to_last_half_drift_counts": -11.5,
+      "fitted_counts": 371495.2897727273,
+      "residual_counts": -20.789772727293894,
+      "residual_equivalent_g": -0.10077590561855075,
+      "repeatability_std_equivalent_g": 0.1949858557732681
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 900,
+      "sample_count": 40,
+      "mean_counts": 392145.05,
+      "std_counts": 43.31397003277349,
+      "min_counts": 392058,
+      "max_counts": 392229,
+      "first_to_last_half_drift_counts": -3.099999999976717,
+      "fitted_counts": 392124.9954545455,
+      "residual_counts": 20.054545454506297,
+      "residual_equivalent_g": 0.0972119804509921,
+      "repeatability_std_equivalent_g": 0.2099592243380762
+    },
+    {
+      "sweep": "ascending",
+      "mass_g": 1000,
+      "sample_count": 40,
+      "mean_counts": 412803,
+      "std_counts": 47.091291589738155,
+      "min_counts": 412702,
+      "max_counts": 412889,
+      "first_to_last_half_drift_counts": -25.400000000023283,
+      "fitted_counts": 412754.70113636367,
+      "residual_counts": 48.29886363632977,
+      "residual_equivalent_g": 0.23412289240218084,
+      "repeatability_std_equivalent_g": 0.22826933314536652
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 900,
+      "sample_count": 40,
+      "mean_counts": 392133.95,
+      "std_counts": 36.585656429948834,
+      "min_counts": 392044,
+      "max_counts": 392217,
+      "first_to_last_half_drift_counts": -34.79999999998836,
+      "fitted_counts": 392124.9954545455,
+      "residual_counts": 8.95454545452958,
+      "residual_equivalent_g": 0.043406074680074534,
+      "repeatability_std_equivalent_g": 0.17734453895865948
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 800,
+      "sample_count": 40,
+      "mean_counts": 371477.325,
+      "std_counts": 38.19141231165685,
+      "min_counts": 371411,
+      "max_counts": 371549,
+      "first_to_last_half_drift_counts": -3.150000000023283,
+      "fitted_counts": 371495.2897727273,
+      "residual_counts": -17.964772727282252,
+      "residual_equivalent_g": -0.08708206023082217,
+      "repeatability_std_equivalent_g": 0.1851282461354576
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 700,
+      "sample_count": 40,
+      "mean_counts": 350829.475,
+      "std_counts": 44.58698643073289,
+      "min_counts": 350736,
+      "max_counts": 350930,
+      "first_to_last_half_drift_counts": 32.54999999998836,
+      "fitted_counts": 350865.5840909091,
+      "residual_counts": -36.10909090912901,
+      "residual_equivalent_g": -0.1750344453093844,
+      "repeatability_std_equivalent_g": 0.21613001716272306
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 600,
+      "sample_count": 40,
+      "mean_counts": 330212.7,
+      "std_counts": 43.56557097478437,
+      "min_counts": 330110,
+      "max_counts": 330284,
+      "first_to_last_half_drift_counts": 21.29999999998836,
+      "fitted_counts": 330235.8784090909,
+      "residual_counts": -23.178409090905916,
+      "residual_equivalent_g": -0.11235453112321428,
+      "repeatability_std_equivalent_g": 0.21117882943516988
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 500,
+      "sample_count": 40,
+      "mean_counts": 309581.725,
+      "std_counts": 55.54484789973889,
+      "min_counts": 309464,
+      "max_counts": 309670,
+      "first_to_last_half_drift_counts": 0.1499999999650754,
+      "fitted_counts": 309606.17272727273,
+      "residual_counts": -24.447727272752672,
+      "residual_equivalent_g": -0.1185073972931154,
+      "repeatability_std_equivalent_g": 0.2692469236179791
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 400,
+      "sample_count": 40,
+      "mean_counts": 288975.95,
+      "std_counts": 44.09194937854302,
+      "min_counts": 288866,
+      "max_counts": 289063,
+      "first_to_last_half_drift_counts": 38.40000000002328,
+      "fitted_counts": 288976.46704545454,
+      "residual_counts": -0.5170454545295797,
+      "residual_equivalent_g": -0.0025063152257439785,
+      "repeatability_std_equivalent_g": 0.21373038500206568
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 300,
+      "sample_count": 40,
+      "mean_counts": 268349.375,
+      "std_counts": 49.45377924942928,
+      "min_counts": 268253,
+      "max_counts": 268456,
+      "first_to_last_half_drift_counts": -13.25,
+      "fitted_counts": 268346.76136363635,
+      "residual_counts": 2.613636363646947,
+      "residual_equivalent_g": 0.012669285756948308,
+      "repeatability_std_equivalent_g": 0.23972120597442625
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 200,
+      "sample_count": 40,
+      "mean_counts": 247738.575,
+      "std_counts": 43.59774606030066,
+      "min_counts": 247646,
+      "max_counts": 247831,
+      "first_to_last_half_drift_counts": 2.8500000000058208,
+      "fitted_counts": 247717.0556818182,
+      "residual_counts": 21.519318181817653,
+      "residual_equivalent_g": 0.10431228886015335,
+      "repeatability_std_equivalent_g": 0.21133479426575225
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 100,
+      "sample_count": 40,
+      "mean_counts": 227170.8,
+      "std_counts": 38.89908047163148,
+      "min_counts": 227052,
+      "max_counts": 227242,
+      "first_to_last_half_drift_counts": 22.60000000000582,
+      "fitted_counts": 227087.35,
+      "residual_counts": 83.44999999998254,
+      "residual_equivalent_g": 0.4045137690623017,
+      "repeatability_std_equivalent_g": 0.18855858184111107
+    },
+    {
+      "sweep": "descending",
+      "mass_g": 0,
+      "sample_count": 40,
+      "mean_counts": 206507.025,
+      "std_counts": 53.63575515240958,
+      "min_counts": 206409,
+      "max_counts": 206613,
+      "first_to_last_half_drift_counts": -6.9500000000116415,
+      "fitted_counts": 206457.64431818182,
+      "residual_counts": 49.38068181817653,
+      "residual_equivalent_g": 0.23936687502865236,
+      "repeatability_std_equivalent_g": 0.2599928277196945
+    }
+  ],
+  "hysteresis": [
+    {
+      "mass_g": 900,
+      "descending_minus_ascending_counts": -11.099999999976717,
+      "equivalent_g": -0.05380590577091756
+    },
+    {
+      "mass_g": 800,
+      "descending_minus_ascending_counts": 2.8250000000116415,
+      "equivalent_g": 0.013693845387728587
+    },
+    {
+      "mass_g": 700,
+      "descending_minus_ascending_counts": -36.725000000034925,
+      "equivalent_g": -0.17801999003990732
+    },
+    {
+      "mass_g": 600,
+      "descending_minus_ascending_counts": 22.42499999998836,
+      "equivalent_g": 0.10870247179411989
+    },
+    {
+      "mass_g": 500,
+      "descending_minus_ascending_counts": 2.6499999999650754,
+      "equivalent_g": 0.012845554080301934
+    },
+    {
+      "mass_g": 400,
+      "descending_minus_ascending_counts": 7.600000000034925,
+      "equivalent_g": 0.03684007962718111
+    },
+    {
+      "mass_g": 300,
+      "descending_minus_ascending_counts": 41.17499999998836,
+      "equivalent_g": 0.19959082613707668
+    },
+    {
+      "mass_g": 200,
+      "descending_minus_ascending_counts": 14.025000000023283,
+      "equivalent_g": 0.06798448904864454
+    },
+    {
+      "mass_g": 100,
+      "descending_minus_ascending_counts": 42.64999999999418,
+      "equivalent_g": 0.20674071001208416
+    },
+    {
+      "mass_g": 0,
+      "descending_minus_ascending_counts": 26.47500000000582,
+      "equivalent_g": 0.1283343563322832
+    }
+  ],
+  "reference_mass_range_g": [
+    0,
+    1000
+  ],
+  "measured_force_range_N": [
+    0.0,
+    9.80665
+  ],
+  "uncertainty_note": "Regression standard error omits weight accuracy, gravity uncertainty, alignment and other systematic errors"
+}

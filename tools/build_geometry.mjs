@@ -1,0 +1,14 @@
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {build} from './geometry/geometry.mjs';
+import {audit} from './geometry/audit_sources.mjs';
+import {roundtrip} from './geometry/roundtrip.mjs';
+import {validate} from './geometry/validate.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const model=path.join(root,'models');
+const reports=path.join(root,'build/geometry');
+await build(path.join(model,'sources'),model,reports);
+await audit(model,reports);
+await roundtrip(model,reports);
+await validate(model,reports);
+console.log('Built models/sanity.urdf; geometry checks passed.');

@@ -1,0 +1,111 @@
+{
+  "raw_files_checksum_verified": 88,
+  "fitting_source_hash_matches": true,
+  "model_consistency_checks": {
+    "parameters_finite": true,
+    "steady_speed_monotonic_1250_to_1450": true,
+    "static_thrust_nonnegative_in_range": true,
+    "zero_speed_zero_thrust": true,
+    "dynamic_time_constant_positive": true,
+    "hardware_policy_deployment_validated": false
+  },
+  "offline_evaluator_tests": {
+    "count": 4,
+    "result": "passed",
+    "checks": [
+      "analytic delayed-step response",
+      "invariance to timestep subdivision",
+      "domain/startup rejection",
+      "individual omega-squared summation"
+    ]
+  },
+  "plots_visually_inspected": [
+    "thrust_model.png",
+    "spinning_response.png",
+    "multilevel_validation.png",
+    "reference_validation.png"
+  ],
+  "heldout_prediction_scores": [
+    {
+      "run": "bench_multilevel_20261013_040554",
+      "rpm": {
+        "n": 3144,
+        "rmse": 317.26369614310624,
+        "mae": 244.5195906150108,
+        "bias": 12.046884387751899,
+        "maximum_absolute_error": 1208.5318635251278,
+        "R_squared": 0.9924931470685449
+      },
+      "observed_loadcell_force_N": {
+        "n": 186,
+        "rmse": 0.016089140671048708,
+        "mae": 0.013233898953249858,
+        "bias": 0.010464187709723082,
+        "maximum_absolute_error": 0.04339456518928081,
+        "R_squared": 0.9952940917834804
+      },
+      "initial_state": "one measured rotor state after initial warmup; no later state reset",
+      "input": "recorded command transitions and causally held FC voltage; voltage evolution is not predicted"
+    },
+    {
+      "run": "bench_reference_20261013_040736",
+      "rpm": {
+        "n": 812,
+        "rmse": 425.8740468879332,
+        "mae": 294.68696227504154,
+        "bias": 104.456794627423,
+        "maximum_absolute_error": 2841.7176211476217,
+        "R_squared": 0.9958436378995033
+      },
+      "observed_loadcell_force_N": {
+        "n": 45,
+        "rmse": 0.02545570984438385,
+        "mae": 0.0166560760412715,
+        "bias": 0.0055245444779344335,
+        "maximum_absolute_error": 0.08360470369586559,
+        "R_squared": 0.9961760210028844
+      },
+      "initial_state": "one measured rotor state after initial warmup; no later state reset",
+      "input": "recorded command transitions and causally held FC voltage; voltage evolution is not predicted"
+    }
+  ],
+  "no_hardware_commands_during_identification": true,
+  "clean_archive_reproduction": {
+    "result": "passed",
+    "parameters": "all four selected parameter vectors match exactly",
+    "heldout_scores": "match exactly",
+    "bootstrap_repetitions": 100
+  },
+  "jetson_evaluator_tests": {
+    "count": 4,
+    "result": "passed",
+    "no_hardware_IO": true
+  },
+  "historical_inertia": {
+    "selected_diagonal_kg_m2": [
+      5.75e-05,
+      6.64e-05,
+      9.31e-05
+    ],
+    "checks": {
+      "symmetric": true,
+      "positive_definite": true,
+      "principal_moments_kg_m2": [
+        5.75e-05,
+        6.64e-05,
+        9.31e-05
+      ],
+      "triangle_inequalities": true,
+      "triangle_margins_kg_m2": [
+        0.00010200000000000001,
+        8.420000000000001e-05,
+        3.080000000000002e-05
+      ],
+      "triangle_boundary": false
+    },
+    "about_CoM": "assumed per user",
+    "current_configuration_match": "unconfirmed",
+    "experimental_method": "user-reported historical bifilar estimate; no original notes",
+    "actuator_fit_parameters_unchanged": true
+  }
+}

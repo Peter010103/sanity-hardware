@@ -1,0 +1,42 @@
+{
+  "status": "failed",
+  "error": "RuntimeError: FC lost 2S/3S battery detection; stopping immediately",
+  "started_unix_time_ns": 1791860092009753355,
+  "ended_unix_time_ns": 1791860137623842548,
+  "samples_written": 381,
+  "motor_command_acknowledgements_by_value": {
+    "1000": 35,
+    "1100": 36,
+    "1200": 35,
+    "1300": 35,
+    "1400": 35,
+    "1500": 36,
+    "1600": 35,
+    "1700": 36,
+    "1800": 36,
+    "1900": 35,
+    "2000": 28
+  },
+  "ADC_rail_samples": 0,
+  "out_of_calibration_range_samples": 0,
+  "force_limit_events": 0,
+  "timing_rejected_conversions": 0,
+  "ADC_recovery_resets": 0,
+  "stop_attempts": 36,
+  "stop_acknowledgements": 36,
+  "physical_spin_down_verified": false,
+  "last_FC_battery": {
+    "detected_cells": 2,
+    "voltage_V": 5.63,
+    "current_A": 32.02,
+    "consumed_mAh": 234,
+    "configured_capacity_mAh": 0,
+    "battery_state_code": 2,
+    "voltage_resolution_V": 0.01,
+    "source": "FC-configured voltage/current meters; calibration not independently verified"
+  },
+  "last_calibrated_load_force_N": 3.7715485515602194,
+  "last_FC_armed": false,
+  "output_csv": "samples.csv",
+  "metadata": "metadata.json"
+}

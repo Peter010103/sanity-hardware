@@ -1,0 +1,893 @@
+{
+  "selection_rule": "least complex within 5% of lowest selection RMSE; test runs untouched during selection",
+  "selected": {
+    "static_thrust": {
+      "component": "static_thrust",
+      "candidate": "shared_threshold_square",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.20576867189516515,
+        0.010768274366006947
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.011105730052109459,
+        "mae": 0.007369796353759628,
+        "bias": -0.004551732456769388,
+        "maximum_absolute_error": 0.037308875644095796,
+        "R_squared": 0.9990491957472651
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.009002357440239375,
+        "mae": 0.007323529999424705,
+        "bias": 0.002870584705551793,
+        "maximum_absolute_error": 0.0163738304828438,
+        "R_squared": 0.9992887214145615
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.010529142543846324,
+        "mae": 0.009426409968380733,
+        "bias": 0.003974575230973101,
+        "maximum_absolute_error": 0.01645882842791102,
+        "R_squared": 0.9987686850651682
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.05401949738480893,
+        "mae": 0.035810696069090875,
+        "bias": 0.030582070829356368,
+        "maximum_absolute_error": 0.1306270782238519,
+        "R_squared": 0.9972701241536951
+      },
+      "selection_rmse": 0.009002357440239375
+    },
+    "spinning_dynamics": {
+      "component": "spinning_dynamics",
+      "candidate": "fopdt",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.01935033010193212,
+        0.03649898385547523
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.04145052250597561,
+        "rpm_rmse": 389.4595056569345,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.03677897105491266,
+        "rpm_rmse": 360.9438508997399,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.05749132288317618,
+        "rpm_rmse": 309.2851754366053,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.03677897105491266
+    },
+    "steady_speed": {
+      "component": "steady_speed",
+      "candidate": "quadratic_voltage_linear",
+      "parameters": 12,
+      "fitted_parameters": [
+        2448.256224968599,
+        766.4658131692056,
+        -16.259481116195715,
+        2538.498629189278,
+        739.6155657519203,
+        -64.27386216351873,
+        2480.542696267522,
+        784.7601668098683,
+        -20.607456989137862,
+        2392.8104794722935,
+        744.49132347887,
+        -12.845862627452737
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 19.94815004095482,
+        "mae": 14.534885935221071,
+        "bias": -1.6304664538720317,
+        "maximum_absolute_error": 62.295209876667286,
+        "R_squared": 0.9988171758635667
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 25.00094055763801,
+        "mae": 15.583108642679562,
+        "bias": -5.578509225017527,
+        "maximum_absolute_error": 67.51251691038033,
+        "R_squared": 0.9979906611853641
+      },
+      "test": {
+        "n": 49,
+        "rmse": 21.25107174761695,
+        "mae": 15.492896049191373,
+        "bias": 3.5794705501053725,
+        "maximum_absolute_error": 82.53884335265411,
+        "R_squared": 0.9979488286203315
+      },
+      "selection_rmse": 25.00094055763801
+    }
+  },
+  "candidates": [
+    {
+      "component": "static_thrust",
+      "candidate": "shared_square",
+      "parameters": 1,
+      "fitted_parameters": [
+        0.19598494116782667
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.017739845161992018,
+        "mae": 0.01446271812760551,
+        "bias": -3.866057396022249e-05,
+        "maximum_absolute_error": 0.040725683300568694,
+        "R_squared": 0.9975739679183184
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.012634420856679242,
+        "mae": 0.00890708377502071,
+        "bias": 0.008890936823908749,
+        "maximum_absolute_error": 0.021918939273921245,
+        "R_squared": 0.9985990007372728
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.018865739122761467,
+        "mae": 0.018034937624550898,
+        "bias": 0.01205039860184138,
+        "maximum_absolute_error": 0.02435486389191388,
+        "R_squared": 0.9960469638488106
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.016958737016816734,
+        "mae": 0.014947419390020283,
+        "bias": -0.0025943154134729237,
+        "maximum_absolute_error": 0.02988008898051553,
+        "R_squared": 0.999730952581793
+      },
+      "selection_rmse": 0.012634420856679242
+    },
+    {
+      "component": "static_thrust",
+      "candidate": "shared_power",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.19378101089255537,
+        2.128943863829536
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.011423295785664166,
+        "mae": 0.007964041905066343,
+        "bias": -0.004052627115544333,
+        "maximum_absolute_error": 0.03710784177068027,
+        "R_squared": 0.9989940422650775
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.009671677437316974,
+        "mae": 0.006519553374324444,
+        "bias": 0.0030990712455864766,
+        "maximum_absolute_error": 0.018073996397843572,
+        "R_squared": 0.9991790232921555
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.008007475490129647,
+        "mae": 0.006494416188119239,
+        "bias": 0.002940606419799056,
+        "maximum_absolute_error": 0.014192681360481768,
+        "R_squared": 0.9992878452542615
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.11486555502506884,
+        "mae": 0.0703538329896696,
+        "bias": 0.06906748155556929,
+        "maximum_absolute_error": 0.28415105049874523,
+        "R_squared": 0.9876569795461576
+      },
+      "selection_rmse": 0.009671677437316974
+    },
+    {
+      "component": "static_thrust",
+      "candidate": "rotor_square",
+      "parameters": 4,
+      "fitted_parameters": [
+        0.1971329097937854,
+        0.18317078050642283,
+        0.19599878599353399,
+        0.20861491699556672
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.01651874533734516,
+        "mae": 0.013551451176907918,
+        "bias": -9.432067862771322e-05,
+        "maximum_absolute_error": 0.0291771433302635,
+        "R_squared": 0.997896458881667
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.012540981713494024,
+        "mae": 0.009297653976518286,
+        "bias": 0.008824177951000892,
+        "maximum_absolute_error": 0.021798597867213443,
+        "R_squared": 0.9986196465745222
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.018578948368790923,
+        "mae": 0.017700163343220332,
+        "bias": 0.011855969824394673,
+        "maximum_absolute_error": 0.024308160256721334,
+        "R_squared": 0.9961662358463562
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.01741014527520605,
+        "mae": 0.015366377306888307,
+        "bias": -0.003292865490001024,
+        "maximum_absolute_error": 0.03172252616063975,
+        "R_squared": 0.9997164389290893
+      },
+      "selection_rmse": 0.012540981713494024
+    },
+    {
+      "component": "static_thrust",
+      "candidate": "shared_quadratic",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.2180423051567172,
+        -0.023616501868147025
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.011203616892224013,
+        "mae": 0.007625526655362758,
+        "bias": -0.004344239664167157,
+        "maximum_absolute_error": 0.03718101741885327,
+        "R_squared": 0.999032360943568
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.009300454301814844,
+        "mae": 0.006972628094655292,
+        "bias": 0.002959106445780374,
+        "maximum_absolute_error": 0.017284510602070036,
+        "R_squared": 0.9992408360889852
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.009181620139201868,
+        "mae": 0.007840744516837648,
+        "bias": 0.0034573479985643718,
+        "maximum_absolute_error": 0.014114053746842048,
+        "R_squared": 0.9990636854350539
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.07600035375083453,
+        "mae": 0.048343563045952075,
+        "bias": 0.04524590292949512,
+        "maximum_absolute_error": 0.18507287512314496,
+        "R_squared": 0.9945965262583298
+      },
+      "selection_rmse": 0.009300454301814844
+    },
+    {
+      "component": "static_thrust",
+      "candidate": "rotor_power",
+      "parameters": 5,
+      "fitted_parameters": [
+        0.19406980150561456,
+        0.18355722267712227,
+        0.19225761611779252,
+        0.20630382740186784,
+        2.1275297846387757
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.00954368872992798,
+        "mae": 0.007792044396006978,
+        "bias": -0.004056708543583843,
+        "maximum_absolute_error": 0.018591656561494085,
+        "R_squared": 0.9992978507724424
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.010118701829849152,
+        "mae": 0.006664638574638421,
+        "bias": 0.0031548079759702863,
+        "maximum_absolute_error": 0.019001274311895244,
+        "R_squared": 0.9991013784579323
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.007886535908009739,
+        "mae": 0.006410154480981773,
+        "bias": 0.0028098129302850426,
+        "maximum_absolute_error": 0.013915104787780463,
+        "R_squared": 0.9993091946270423
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.11251186144300453,
+        "mae": 0.06859319568120677,
+        "bias": 0.06761496962129152,
+        "maximum_absolute_error": 0.27896170664567066,
+        "R_squared": 0.9881576351349788
+      },
+      "selection_rmse": 0.010118701829849152
+    },
+    {
+      "component": "static_thrust",
+      "candidate": "shared_threshold_square",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.20576867189516515,
+        0.010768274366006947
+      ],
+      "train": {
+        "n": 24,
+        "rmse": 0.011105730052109459,
+        "mae": 0.007369796353759628,
+        "bias": -0.004551732456769388,
+        "maximum_absolute_error": 0.037308875644095796,
+        "R_squared": 0.9990491957472651
+      },
+      "selection": {
+        "n": 4,
+        "rmse": 0.009002357440239375,
+        "mae": 0.007323529999424705,
+        "bias": 0.002870584705551793,
+        "maximum_absolute_error": 0.0163738304828438,
+        "R_squared": 0.9992887214145615
+      },
+      "test": {
+        "n": 13,
+        "rmse": 0.010529142543846324,
+        "mae": 0.009426409968380733,
+        "bias": 0.003974575230973101,
+        "maximum_absolute_error": 0.01645882842791102,
+        "R_squared": 0.9987686850651682
+      },
+      "legacy": {
+        "n": 10,
+        "rmse": 0.05401949738480893,
+        "mae": 0.035810696069090875,
+        "bias": 0.030582070829356368,
+        "maximum_absolute_error": 0.1306270782238519,
+        "R_squared": 0.9972701241536951
+      },
+      "selection_rmse": 0.009002357440239375
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "first_order",
+      "parameters": 1,
+      "fitted_parameters": [
+        0.053119867097080865
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.05390243514878685,
+        "rpm_rmse": 524.2164867061233,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.04729347733227862,
+        "rpm_rmse": 521.9364264034735,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.06764635759140146,
+        "rpm_rmse": 421.62154501266957,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.04729347733227862
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "fopdt",
+      "parameters": 2,
+      "fitted_parameters": [
+        0.01935033010193212,
+        0.03649898385547523
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.04145052250597561,
+        "rpm_rmse": 389.4595056569345,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.03677897105491266,
+        "rpm_rmse": 360.9438508997399,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.05749132288317618,
+        "rpm_rmse": 309.2851754366053,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.03677897105491266
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "direction_tau",
+      "parameters": 3,
+      "fitted_parameters": [
+        0.019517417005848418,
+        0.03185292037881037,
+        0.04338480968752631
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.036343657587579,
+        "rpm_rmse": 355.03437950754653,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.03647581433424514,
+        "rpm_rmse": 370.486189714571,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.054180472349210515,
+        "rpm_rmse": 308.1104414295824,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.03647581433424514
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "direction_delay_tau",
+      "parameters": 4,
+      "fitted_parameters": [
+        0.02026447692771134,
+        0.03116509121018887,
+        0.01823317422393345,
+        0.044642606335524526
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.0362518453796284,
+        "rpm_rmse": 350.48101984244676,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.03591403866767212,
+        "rpm_rmse": 360.2184009769038,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.05396385383009982,
+        "rpm_rmse": 302.2105013306443,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.03591403866767212
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "rotor_direction_tau",
+      "parameters": 9,
+      "fitted_parameters": [
+        0.0195430430442953,
+        0.032369395091167284,
+        0.0426011698553829,
+        0.02871849874674938,
+        0.03901429978165044,
+        0.033212881953285825,
+        0.043804003261984484,
+        0.033033470539888005,
+        0.04881538880514961
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.035230882327529044,
+        "rpm_rmse": 339.8085995028239,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.03572620941920983,
+        "rpm_rmse": 358.90231100486346,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.054440786186814166,
+        "rpm_rmse": 302.26299518627076,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.03572620941920983
+    },
+    {
+      "component": "spinning_dynamics",
+      "candidate": "two_pole",
+      "parameters": 3,
+      "fitted_parameters": [
+        0.01624601290730097,
+        0.003000000002637212,
+        0.036480518490258663
+      ],
+      "train": {
+        "edges": 48,
+        "samples": 1547,
+        "normalized_rmse": 0.041451551903957475,
+        "rpm_rmse": 389.4561866817253,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection": {
+        "edges": 16,
+        "samples": 520,
+        "normalized_rmse": 0.036775157630171106,
+        "rpm_rmse": 360.9346246738455,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "test": {
+        "edges": 40,
+        "samples": 1292,
+        "normalized_rmse": 0.05749191437882707,
+        "rpm_rmse": 309.32142219626087,
+        "interpretation": "Conditional transient-shape test using measured pre/post speed levels; not an end-to-end command prediction"
+      },
+      "selection_rmse": 0.036775157630171106
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "linear_no_voltage",
+      "parameters": 8,
+      "fitted_parameters": [
+        2388.7602662692543,
+        717.4557427334897,
+        2446.638041692919,
+        692.3000401175274,
+        2415.145806544633,
+        735.4949873098972,
+        2332.6266887732495,
+        695.4659758712171
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 31.640662945097663,
+        "mae": 23.468131742869776,
+        "bias": 3.371941392829289,
+        "maximum_absolute_error": 79.32967542473943,
+        "R_squared": 0.99702418399936
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 43.38806933880878,
+        "mae": 35.59492197368343,
+        "bias": 28.08839301785474,
+        "maximum_absolute_error": 83.67260131584135,
+        "R_squared": 0.9939482478985855
+      },
+      "test": {
+        "n": 49,
+        "rmse": 51.147389679012726,
+        "mae": 42.71823034275837,
+        "bias": 37.75816020322152,
+        "maximum_absolute_error": 110.74091068190637,
+        "R_squared": 0.9881180636512695
+      },
+      "selection_rmse": 43.38806933880878
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "linear_voltage_linear",
+      "parameters": 8,
+      "fitted_parameters": [
+        2437.8525826900877,
+        766.7222065711862,
+        2496.6477371857854,
+        740.022812825027,
+        2467.361657744332,
+        785.0186679708398,
+        2384.7580798071076,
+        744.8972537408039
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 24.60028401269722,
+        "mae": 16.494835947258984,
+        "bias": -0.5801801126959352,
+        "maximum_absolute_error": 86.97875470031477,
+        "R_squared": 0.9982011490990964
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 29.97861049239964,
+        "mae": 19.218065092863228,
+        "bias": -6.1402736807661,
+        "maximum_absolute_error": 92.13211472671264,
+        "R_squared": 0.9971108939915133
+      },
+      "test": {
+        "n": 49,
+        "rmse": 22.02048064125559,
+        "mae": 15.262270126426092,
+        "bias": -1.703530063596659,
+        "maximum_absolute_error": 106.91331097427837,
+        "R_squared": 0.9977976118525017
+      },
+      "selection_rmse": 29.97861049239964
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "linear_voltage_fitted",
+      "parameters": 9,
+      "fitted_parameters": [
+        2431.6592324271437,
+        760.4788754449381,
+        2490.1886218428917,
+        733.7849222377284,
+        2460.6261084835387,
+        778.5810935865493,
+        2378.025596517515,
+        738.4833592410524,
+        0.8726351670839657
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 24.506905831218273,
+        "mae": 16.796906515614854,
+        "bias": -0.06049816661325546,
+        "maximum_absolute_error": 83.68247821290106,
+        "R_squared": 0.9982147793992654
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 29.446642121560554,
+        "mae": 19.275894545680103,
+        "bias": -1.7856204008788552,
+        "maximum_absolute_error": 87.93154526882972,
+        "R_squared": 0.997212518235191
+      },
+      "test": {
+        "n": 49,
+        "rmse": 22.346259024812234,
+        "mae": 15.228780857203692,
+        "bias": 3.29490059040037,
+        "maximum_absolute_error": 99.26553367679708,
+        "R_squared": 0.9977319640712623
+      },
+      "selection_rmse": 29.446642121560554
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "quadratic_no_voltage",
+      "parameters": 12,
+      "fitted_parameters": [
+        2405.423041775291,
+        716.5723967049948,
+        -26.1701347488853,
+        2493.12227432992,
+        690.881487625049,
+        -72.87412756417896,
+        2433.9599260176283,
+        735.0621335563065,
+        -29.79677463742611,
+        2346.558511684812,
+        695.4021169020526,
+        -21.91932024289375
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 25.681937850245404,
+        "mae": 20.120644304049865,
+        "bias": 1.6602499519514557,
+        "maximum_absolute_error": 62.849767729569976,
+        "R_squared": 0.9980394834757238
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 37.68423488308343,
+        "mae": 33.57372026921331,
+        "bias": 28.50532483828721,
+        "maximum_absolute_error": 72.25709239781963,
+        "R_squared": 0.99543479922095
+      },
+      "test": {
+        "n": 49,
+        "rmse": 52.47459578832042,
+        "mae": 46.16528014914298,
+        "bias": 44.717238336227496,
+        "maximum_absolute_error": 102.68955438141029,
+        "R_squared": 0.9874934225540267
+      },
+      "selection_rmse": 37.68423488308343
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "quadratic_voltage_linear",
+      "parameters": 12,
+      "fitted_parameters": [
+        2448.256224968599,
+        766.4658131692056,
+        -16.259481116195715,
+        2538.498629189278,
+        739.6155657519203,
+        -64.27386216351873,
+        2480.542696267522,
+        784.7601668098683,
+        -20.607456989137862,
+        2392.8104794722935,
+        744.49132347887,
+        -12.845862627452737
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 19.94815004095482,
+        "mae": 14.534885935221071,
+        "bias": -1.6304664538720317,
+        "maximum_absolute_error": 62.295209876667286,
+        "R_squared": 0.9988171758635667
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 25.00094055763801,
+        "mae": 15.583108642679562,
+        "bias": -5.578509225017527,
+        "maximum_absolute_error": 67.51251691038033,
+        "R_squared": 0.9979906611853641
+      },
+      "test": {
+        "n": 49,
+        "rmse": 21.25107174761695,
+        "mae": 15.492896049191373,
+        "bias": 3.5794705501053725,
+        "maximum_absolute_error": 82.53884335265411,
+        "R_squared": 0.9979488286203315
+      },
+      "selection_rmse": 25.00094055763801
+    },
+    {
+      "component": "steady_speed",
+      "candidate": "quadratic_voltage_fitted",
+      "parameters": 13,
+      "fitted_parameters": [
+        2438.668250056257,
+        755.4289305926917,
+        -18.297803729826438,
+        2528.3169378867515,
+        728.6713908522287,
+        -66.17994231463258,
+        2470.047922408974,
+        773.4814844890363,
+        -22.715708433226094,
+        2382.4096996157023,
+        733.2799990755598,
+        -15.047945131691032,
+        0.7759530639024682
+      ],
+      "train": {
+        "n": 60,
+        "rmse": 19.387388054830875,
+        "mae": 14.87854137908716,
+        "bias": -0.8221257517888224,
+        "maximum_absolute_error": 55.61825684610312,
+        "R_squared": 0.9988827418480531
+      },
+      "selection": {
+        "n": 16,
+        "rmse": 23.873518165452783,
+        "mae": 16.947948877405622,
+        "bias": 2.103928847597274,
+        "maximum_absolute_error": 59.23062745025709,
+        "R_squared": 0.9981677981080205
+      },
+      "test": {
+        "n": 49,
+        "rmse": 23.6742016570482,
+        "mae": 18.75083153696463,
+        "bias": 12.788041999710343,
+        "maximum_absolute_error": 68.13512612843942,
+        "R_squared": 0.9974543953347578
+      },
+      "selection_rmse": 23.873518165452783
+    }
+  ],
+  "counts": {
+    "static": 41,
+    "legacy": 10,
+    "normal_edges": 104,
+    "normal_command_events": 32,
+    "startup_edges": 21,
+    "stop_edges": 21
+  },
+  "inventory": [
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_individual_20261013_040641",
+      "preset": "individual",
+      "status": "completed",
+      "use": "identification/validation"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_multilevel_20261013_040554",
+      "preset": "multilevel",
+      "status": "completed",
+      "use": "identification/validation"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_probe_20261013_040054",
+      "preset": "probe",
+      "status": "completed",
+      "use": "timing diagnostic"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_probe_20261013_040425",
+      "preset": "probe",
+      "status": "interrupted",
+      "use": "timing diagnostic"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_reference_20261013_040736",
+      "preset": "reference",
+      "status": "completed",
+      "use": "identification/validation"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_repeatability_20261013_040435",
+      "preset": "repeatability",
+      "status": "completed",
+      "use": "identification/validation"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_small_steps_20261013_040516",
+      "preset": "small_steps",
+      "status": "completed",
+      "use": "identification/validation"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_experiments/bench_weights_20261013_040817",
+      "preset": "weights",
+      "status": "completed",
+      "use": "mounted calibration diagnostic"
+    },
+    {
+      "directory": "/home/hw527/Projects/drones/Sanity/output/betaflight_usb/collected_sweeps/thrust_sweep_20261013_025451",
+      "use": "settled force-versus-speed cross-check/extended-range fit; no dynamic fit",
+      "reason": "sequential row timing; battery warning/critical at high commands retained as flagged static observations"
+    }
+  ]
+}

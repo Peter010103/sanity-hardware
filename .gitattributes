@@ -1,0 +1,21 @@
+* text=auto
+*.csv -text
+*.json -text
+*.jsonl -text
+*.pdf binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.usdz binary
+*.blend binary
+models/sources/** -text
+data/raw/** -text
+data/provenance/*.yaml -text
+# Preserve original CAD/record bytes; CRLF is part of these source records.
+models/sources/** -whitespace
+data/raw/** -whitespace
+*.csv whitespace=cr-at-eol
+licenses/** -whitespace
+tools/geometry/vendor/** -whitespace
+*.obj binary

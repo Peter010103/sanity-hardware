@@ -1,0 +1,4 @@
+{"kind": "baseline_established", "monotonic_ns": 10647841376761, "unix_time_ns": 1791864320300447452, "mean_N": 0.6659700073738917, "sd_N": 0.0019074306440545594}
+{"kind": "cleanup_stop", "monotonic_ns": 10663631677938, "unix_time_ns": 1791864336090748501, "request_start_ns": 10663618286504, "ack_ns": 10663631665554, "acknowledged": true, "error": null}
+{"kind": "cleanup_stop", "monotonic_ns": 10663647936880, "unix_time_ns": 1791864336107007763, "request_start_ns": 10663631787349, "ack_ns": 10663647922320, "acknowledged": true, "error": null}
+{"kind": "cleanup_stop", "monotonic_ns": 10663663672032, "unix_time_ns": 1791864336122742307, "request_start_ns": 10663648067668, "ack_ns": 10663663663743, "acknowledged": true, "error": null}

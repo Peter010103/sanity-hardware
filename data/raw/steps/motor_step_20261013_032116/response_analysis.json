@@ -1,0 +1,131 @@
+{
+  "step_event_definition": "first new-command packet host monotonic timestamp",
+  "sampling_note": "Sequential nominal 10 SPS HX711 and FC queries; sub-0.3 s response is unresolved",
+  "sample_count": 82,
+  "median_row_interval_s": 0.087435786,
+  "capture_status": "completed",
+  "capture_error": null,
+  "completed_requested_post_step_duration": true,
+  "channels": {
+    "collective_thrust_N": {
+      "status": "ok",
+      "initial_steady_window_mean": 0.33279782852812106,
+      "final_endpoint_window_mean_not_confirmed_steady": 1.1694291939945454,
+      "change": 0.8366313654664244,
+      "onset_5_percent_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.08636606299999997,
+        0.26122150499999996
+      ],
+      "t10_crossing_bracket_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "t90_crossing_bracket_s": [
+        0.251546191,
+        0.338974648
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M1": {
+      "status": "ok",
+      "initial_steady_window_mean": 15804.333333333334,
+      "final_endpoint_window_mean_not_confirmed_steady": 29270.666666666668,
+      "change": 13466.333333333334,
+      "onset_5_percent_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.171689539
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "t90_crossing_bracket_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M2": {
+      "status": "ok",
+      "initial_steady_window_mean": 16669.416666666668,
+      "final_endpoint_window_mean_not_confirmed_steady": 29254.0,
+      "change": 12584.583333333332,
+      "onset_5_percent_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.171689539
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "t90_crossing_bracket_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M3": {
+      "status": "ok",
+      "initial_steady_window_mean": 15991.666666666666,
+      "final_endpoint_window_mean_not_confirmed_steady": 29387.25,
+      "change": 13395.583333333334,
+      "onset_5_percent_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.171689539
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "t90_crossing_bracket_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M4": {
+      "status": "ok",
+      "initial_steady_window_mean": 15768.166666666666,
+      "final_endpoint_window_mean_not_confirmed_steady": 28079.0,
+      "change": 12310.833333333334,
+      "onset_5_percent_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.171689539
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006509411,
+        0.077753143
+      ],
+      "t90_crossing_bracket_s": [
+        0.077753143,
+        0.165180128
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    }
+  }
+}

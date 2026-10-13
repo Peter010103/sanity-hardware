@@ -1,0 +1,26 @@
+[
+  {
+    "source_name": "sanity.blend",
+    "bytes": 6775961,
+    "sha256": "cf6bf30d5e966991227b32f535f21b8b4f7ca0c4b5d35dc01ea128b1e3e1cc92",
+    "rights": "CC-BY-4.0"
+  },
+  {
+    "source_name": "sanity.dae",
+    "bytes": 9605890,
+    "sha256": "5b303e59f05d7aad0794182e18fa50d09ed4453619f454cf4f4b4797dfbc5b2a",
+    "rights": "CC-BY-4.0"
+  },
+  {
+    "source_name": "sanity.step",
+    "bytes": 3021115,
+    "sha256": "ee7884cf9593a87ee0efa91b08c98233d6c76709c904872bb45366344f3c0a1f",
+    "rights": "CC-BY-4.0"
+  },
+  {
+    "source_name": "sanity.usdz",
+    "bytes": 804684,
+    "sha256": "b2aac86004b0545995f9dd5b703fe657e0a860483a774d214138f905239f0342",
+    "rights": "CC-BY-4.0"
+  }
+]

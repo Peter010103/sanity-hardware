@@ -1,0 +1,6 @@
+phase,role,cycle,command_event,request_start_ns,ack_ns,end_ns,requested_duration_s,completed
+stopped_baseline,stopped,0,1,10784963614401,10784979449673,10787492710534,2.5,True
+reference_low_before,reference,0,2,10787523684448,10787539512967,10790053141262,2.5,True
+reference_high,reference,0,3,10790083759646,10790099586820,10792101048600,2.0,True
+reference_low_after,reference,0,4,10792131934479,10792147647090,10794149253333,2.0,True
+stopped_after,stopped,0,5,10794149357848,10794163458413,10796676802267,2.5,True

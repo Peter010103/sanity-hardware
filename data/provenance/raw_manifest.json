@@ -1,0 +1,547 @@
+[
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/battery.csv",
+    "sha256": "d2e0ac3f0e362cca2a5befae0ee28b6abfc9d65752df739819c1748e09d8967c",
+    "bytes": 8946
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/commands.csv",
+    "sha256": "ce5e02f799d71760ea81ae26a59d702593e5c4904ed4d153ca70eb767a182929",
+    "bytes": 1377
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/events.jsonl",
+    "sha256": "b6664fc336cfc49d02d85aab259f98f8e4acdcb11fb20a9a23ce7cbca42d84b2",
+    "bytes": 741
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/force.csv",
+    "sha256": "4c1962187be6e6326fb5763921eac17f3b3fd898842620e031528b595c7177dc",
+    "bytes": 74058
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/metadata.json",
+    "sha256": "8dd5a073dd25fe468ae5bc4591ed0679feedae8d4b680ad0f3955101a9f25d38",
+    "bytes": 7152
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/phases.csv",
+    "sha256": "39c874e6785d1f0767220c0b8d18b38caaf2cf46f43bb8aefbba932a5a26c5d5",
+    "bytes": 1702
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/rpm.csv",
+    "sha256": "ddcea215989ba444d992a04dffad763f038871a5b6c7542dcc09020ecc0ed426",
+    "bytes": 517868
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/status.csv",
+    "sha256": "cf795a4201d734abf9aff836da505832a40132d944c399032da23e71e257a82a",
+    "bytes": 15787
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/summary.json",
+    "sha256": "396ea3b5c7dc5e455d59f85e626478ed37d880564cf1241f4437c42622c5e889",
+    "bytes": 987
+  },
+  {
+    "path": "data/raw/experiments/bench_individual_20261013_040641/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/battery.csv",
+    "sha256": "d4408c79f81f5537ec0e54408f891daa019b7e209c0f96f33914f32215ca7ece",
+    "bytes": 5235
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/commands.csv",
+    "sha256": "a5a11974d58e09cdb11b3bb0042480095239db1c1b4214faca344f6837ceea89",
+    "bytes": 859
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/events.jsonl",
+    "sha256": "246ce2b219995d92c1bd3fc0924b02fffb4770d8bf99458f182b95f0f391aebe",
+    "bytes": 741
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/force.csv",
+    "sha256": "a7b657ea7c417eab159b3eb0b7cc3b085b24ceadcaac3a84128097ccd0608694",
+    "bytes": 42926
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/metadata.json",
+    "sha256": "6b643da217145cfce0fe8c9b5f66b01772a5e1477ad907812cd7c3909bcefede",
+    "bytes": 5527
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/phases.csv",
+    "sha256": "056732eb360e1268d8f17ef9133a791b07b2d08491783fdd3c5e907654d35b1e",
+    "bytes": 1013
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/rpm.csv",
+    "sha256": "714083d137dc4ce22a0a2ea7f3ab9241096a33b21c2dfe2d2f65ce10f10f756c",
+    "bytes": 369769
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/status.csv",
+    "sha256": "263fed4634f270f511f391d07ef9977dfdfc7131a8d81e31c65ce8f0a3223b43",
+    "bytes": 9079
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/summary.json",
+    "sha256": "1f6d00e385bcbceb5cfa3c0af6935eaf71b015a5e80ef15decc2e722811a6ca3",
+    "bytes": 986
+  },
+  {
+    "path": "data/raw/experiments/bench_multilevel_20261013_040554/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/battery.csv",
+    "sha256": "415d6f2187d9ce8170e202f5f9e8e03fcd934336f120d7bde7a6f7897f1162a4",
+    "bytes": 1152
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/commands.csv",
+    "sha256": "0cbe5ad1630ef319164168d8b13e65532c5fade647238da8f396099a9d8fed7b",
+    "bytes": 62
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/events.jsonl",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/force.csv",
+    "sha256": "998b5662145929c13c8ec6223a1f608e9197400578b84b21429a5ef2c9827187",
+    "bytes": 6604
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/metadata.json",
+    "sha256": "02480c9d804ea8adebabe5eb6995ee954d2bf8ff13b4f4e500a6e9b260bde9a4",
+    "bytes": 3727
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/phases.csv",
+    "sha256": "2b621d8c25ecfb3fd4d67fa2d18df34cb2a50854077dc4ca26aa4868a9a70fa5",
+    "bytes": 179
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/rpm.csv",
+    "sha256": "c14667d607f905d2a75afb2ebc54ca8c6be4e04b1e926bd909a9ad362649b2b1",
+    "bytes": 66351
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/status.csv",
+    "sha256": "6fbd760e57447a801548985451c7e79d3d64aa79f0eb1cf7b0be7a248f666580",
+    "bytes": 2027
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/summary.json",
+    "sha256": "a41efcefee890c1de5e8323eb4726e3eb012ba0bc7ed2dd286a9b1314c335c17",
+    "bytes": 915
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040054/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/battery.csv",
+    "sha256": "11eee469f2bb938f4dff94daf7127c258618ed6027ca891099be0e3f9f8275b5",
+    "bytes": 1064
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/commands.csv",
+    "sha256": "0cbe5ad1630ef319164168d8b13e65532c5fade647238da8f396099a9d8fed7b",
+    "bytes": 62
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/events.jsonl",
+    "sha256": "0193bea1fc54c1f9fa41c4950dd27f9a52c3c89e6ed93706f59b3947b50cab56",
+    "bytes": 160
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/force.csv",
+    "sha256": "30b8c30573582eb2b7e1f7fc710577be05ebab84ad2370f0d7118d6427315598",
+    "bytes": 5920
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/metadata.json",
+    "sha256": "6128e7ae59669a3f529fc08bb8965afc3bdd8303eef14e52cd9b9a17f4dd673c",
+    "bytes": 3701
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/phases.csv",
+    "sha256": "eef53d0fa7967e132781e2aec4eaddf0586268d61aad548ad42a880576e1fb20",
+    "bytes": 180
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/rpm.csv",
+    "sha256": "92e9ace1a101dd7c426ac6b90a9d0c6b9c27a654bb062677ee55545d8fa6d0e9",
+    "bytes": 58159
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/status.csv",
+    "sha256": "c617cf3ccfbc42f1cd111959efd8cfbcf55d48657f29ee3028dc4b883e36b9b2",
+    "bytes": 1855
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/summary.json",
+    "sha256": "47056b3a7e811e93817981f49a80eb647501f311fcdb9be93d25a57c7b34c6af",
+    "bytes": 958
+  },
+  {
+    "path": "data/raw/experiments/bench_probe_20261013_040425/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/battery.csv",
+    "sha256": "1b03a28ced61422ae1af86eb5bcefb3e3d7d37afd37a8a6912df9c10e2422d70",
+    "bytes": 2709
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/commands.csv",
+    "sha256": "dabccf661115ecd577085404ab236af2fe32bdc01a0e201b7767f3dc2d08ed3a",
+    "bytes": 439
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/events.jsonl",
+    "sha256": "f1781bfab5774102919eb2b5522aa6b1194e218f72b0a23cc58cce1cdbca1ecc",
+    "bytes": 741
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/force.csv",
+    "sha256": "8afc7d828098bc1525907843ff74023035e6f4313da90f947293d51e52715ca6",
+    "bytes": 20890
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/metadata.json",
+    "sha256": "8d5ad718bdd08d83c39dd8f8f1a4989837741917d5dd934a327e787202f62c3e",
+    "bytes": 4419
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/phases.csv",
+    "sha256": "87142c1bee2fb98c5f016faa4939cc43b00dd5ff8bbd43c439475b2049075d7e",
+    "bytes": 522
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/rpm.csv",
+    "sha256": "d89637cf0c04aebd80544dc04d49c490ee3c23e1cd9ed2cfddc19a62960bfd25",
+    "bytes": 174867
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/status.csv",
+    "sha256": "84c450cac5cec551c15aae5d1516c308cf41632c3aa84681a1ba100f9b1f3c94",
+    "bytes": 4693
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/summary.json",
+    "sha256": "a3034d834c3f7b473e6a1bc3c4f9cfcc6e93b914e1395c2a65ff38ce82040bbb",
+    "bytes": 981
+  },
+  {
+    "path": "data/raw/experiments/bench_reference_20261013_040736/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/battery.csv",
+    "sha256": "a0b0217e9d1ab138ccbfc31baa60e761058ebc33074f012ceb2d464c0d2c538b",
+    "bytes": 5098
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/commands.csv",
+    "sha256": "064da22e313ee02249069fe3d12386c8d083dd4e36ce8d7449673975ab44c027",
+    "bytes": 788
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/events.jsonl",
+    "sha256": "e2eba6d373fcb03491fdb51a9ac2a45a52c356b5f92e3289ef1e4295eb175945",
+    "bytes": 742
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/force.csv",
+    "sha256": "cc4dae874b54375b6cedda69b5fc27f6e2a0e6455f0c3400c06712217118154b",
+    "bytes": 40184
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/metadata.json",
+    "sha256": "42669db4b55416d292faf38ba3d71c07092ae68f2b3af82ac5ba1b3039fcf361",
+    "bytes": 5495
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/phases.csv",
+    "sha256": "4b667f32e3099c36aa1e1840ce34af1e9f0d08f357463172c8e2720dabc51e11",
+    "bytes": 974
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/rpm.csv",
+    "sha256": "ad9997e868767a05b7b6edbb56b6897c236563309a2a377ac03fb1be2d209a3e",
+    "bytes": 346183
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/status.csv",
+    "sha256": "e14f3aa9eb13d56af0481f57be4fbafdc27c3af09567f9a5e18ac8e2ffa6326e",
+    "bytes": 8993
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/summary.json",
+    "sha256": "13a2b47179ce5ca3a3af1ef68a3427b8c7d88cf573056e47c9e58fed520e5289",
+    "bytes": 986
+  },
+  {
+    "path": "data/raw/experiments/bench_repeatability_20261013_040435/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/battery.csv",
+    "sha256": "05db1964fcc06cee0fe9867f819dd1f10223b0f52c4b45efe9f1b1112086ec47",
+    "bytes": 4220
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/commands.csv",
+    "sha256": "32e7f93d83dad8dedbec4a0ba35f916b1d91faf1b76b64257823a76441896a44",
+    "bytes": 658
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/events.jsonl",
+    "sha256": "d7558fbbe267e345ed545a60e0b204d0ea42e410efd95c7ab97dc02a34301902",
+    "bytes": 742
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/force.csv",
+    "sha256": "6ad1bc6aadbc7b40c269547c80a2693f368de28b31fe1a9b9e3dc3d979a9ba73",
+    "bytes": 33035
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/metadata.json",
+    "sha256": "2a4fd3deb8c0b7033ba8199260f41efed5dfd4ccd8d6c34c2a5e0a7e121bb13c",
+    "bytes": 5100
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/phases.csv",
+    "sha256": "e0aebb5bd4dbc8f32f427612a33a52a2313149682616638eee661f61eef787f0",
+    "bytes": 810
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/rpm.csv",
+    "sha256": "78a07613b78e324ed0eb4dbe006371e3685af055d2b7d360c88cf4abee6a8041",
+    "bytes": 285216
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/status.csv",
+    "sha256": "dfc132ab2ba299efb63f30660028f478cde4382585164ab23e94b1ec4c507928",
+    "bytes": 7445
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/summary.json",
+    "sha256": "f5e5322b7e83875ca4a3d17f1858538b0f2859fad0b99ac0cde5745bceee22b3",
+    "bytes": 980
+  },
+  {
+    "path": "data/raw/experiments/bench_small_steps_20261013_040516/weight_checks.csv",
+    "sha256": "776f48921c6f4346f02f1d3d045573188d1d465fd5c24c73a953de4e3fe5de89",
+    "bytes": 129
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/battery.csv",
+    "sha256": "b1bf55a198006f5fb4de207e20105996358d3197a0cb3730c107efef59ddbd6d",
+    "bytes": 94
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/calibration_reference.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/commands.csv",
+    "sha256": "0cbe5ad1630ef319164168d8b13e65532c5fade647238da8f396099a9d8fed7b",
+    "bytes": 62
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/events.jsonl",
+    "sha256": "414ffd07fac33a684446682faf850053eb2dabd1901a12315d4c9e8635972287",
+    "bytes": 2085
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/force.csv",
+    "sha256": "9800596084dd34693332c37307a5adbe68b8dfb6bf56f67bd80958c0e1638302",
+    "bytes": 91666
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/metadata.json",
+    "sha256": "8b159cc90b70c6dbf12c04e2be50623b0f57ed9ee2d3c1cf431869463d50818d",
+    "bytes": 2287
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/phases.csv",
+    "sha256": "b8a2a55fdcc8d781387a6229befe0dd662f94552a7e8899f1222bc0dc5c783c6",
+    "bytes": 740
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/rpm.csv",
+    "sha256": "39132683875e507bef89765c1ffb8f8c0e3944cb9a12240eb6b2a1475d7c67fb",
+    "bytes": 559
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/status.csv",
+    "sha256": "1c38a946ed26ace57d5a8a6cfb0585ea6fea32ce1fb5458924b542df10ec6188",
+    "bytes": 49
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/summary.json",
+    "sha256": "a59b962d0a6db67d016c698d12e20be624cb6a1a2701d6a4ea70f8e10f5252ab",
+    "bytes": 663
+  },
+  {
+    "path": "data/raw/experiments/bench_weights_20261013_040817/weight_checks.csv",
+    "sha256": "b8db9027e49adddc8325064dcd81a3d3e98c73eed724765d2ab4476c26f9439f",
+    "bytes": 561
+  },
+  {
+    "path": "data/raw/loadcell/PROVENANCE.md",
+    "sha256": "6bcb0568f2eca748fa55a836ab517b3bf76e1859cec076dde5a213eb971d9ca1",
+    "bytes": 1183
+  },
+  {
+    "path": "data/raw/loadcell/calibration.json",
+    "sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+    "bytes": 27164
+  },
+  {
+    "path": "data/raw/loadcell/readings.json",
+    "sha256": "fdff508c102b084f6f20c54262217e9a4ffe40df466e4b2f399a08a2a23b37fb",
+    "bytes": 297767
+  },
+  {
+    "path": "data/raw/mass_readings.csv",
+    "sha256": "55872d8510457e1d01a57acf9179cdc2fa84c5a301f9180a05384c10734ff1ce",
+    "bytes": 610
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_031851/metadata.json",
+    "sha256": "e61263daa9c4975b56e6d0f22bb1e364bf92d7fb74046e505e18bf2fd87c0dd8",
+    "bytes": 3130
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_031851/response_analysis.json",
+    "sha256": "fe62bb0b2466c425022e3e23238f7f781e4cc61dfb8772bb53b9b01352637654",
+    "bytes": 5079
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_031851/samples.csv",
+    "sha256": "39f86be99d72f06c4643600a22f146265cb54c52b707fa0bdf7ef7024df5d8d5",
+    "bytes": 20651
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_031851/summary.json",
+    "sha256": "5c6accfc8c0a24f08535130f0b8554f54507125482abc44cf644512a6ae3369f",
+    "bytes": 1013
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032116/metadata.json",
+    "sha256": "f67ca1f1172a20356ca342a2d71690941b180aa978f50209a1c15c22f9f4454d",
+    "bytes": 3130
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032116/response_analysis.json",
+    "sha256": "6c1b52c5b0f32c6d8a0c0ccc4cc8eee7b464f88bfdaa3e2586b971b60cbdc16c",
+    "bytes": 4505
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032116/samples.csv",
+    "sha256": "e195285a02b67d1e0b7a69a2dfce226dd04fa9f587a831ba087dde031fa6f420",
+    "bytes": 29993
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032116/summary.json",
+    "sha256": "c157e0e901afc79801f880a5ac493753a5215ea6d3b81df2120a523bdd95f517",
+    "bytes": 701
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032625/metadata.json",
+    "sha256": "3cd672dfd2e09855504edcd6d0479f5b88c0623329d1f93ef3e5d6d6c2edb59c",
+    "bytes": 3130
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032625/response_analysis.json",
+    "sha256": "d506e8ede781866f1f607893f71f92b0550951681896ba309eb32e5539003ab4",
+    "bytes": 4531
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032625/samples.csv",
+    "sha256": "95a37caf2d6c71214bb8a674a31b5d0823e43105c6ee5a1d4a6f0f03609b9836",
+    "bytes": 29974
+  },
+  {
+    "path": "data/raw/steps/motor_step_20261013_032625/summary.json",
+    "sha256": "908bff580f89081032e9bb488e2c8360548b213d46b2bd445bd3569f6bd8bacb",
+    "bytes": 702
+  },
+  {
+    "path": "data/raw/steps/timing_audit.json",
+    "sha256": "b369afb5931662ed7c41a14a20c3da97a66e855d0d7d806c808240d5296ddfc9",
+    "bytes": 2328
+  },
+  {
+    "path": "data/raw/sweeps/thrust_sweep_20261013_025451/mass_readings_reference.csv",
+    "sha256": "55872d8510457e1d01a57acf9179cdc2fa84c5a301f9180a05384c10734ff1ce",
+    "bytes": 610
+  },
+  {
+    "path": "data/raw/sweeps/thrust_sweep_20261013_025451/metadata.json",
+    "sha256": "2f61c855dc28310095915da41b2a1b13333df9ecec3e5860568f678b924d0671",
+    "bytes": 6158
+  },
+  {
+    "path": "data/raw/sweeps/thrust_sweep_20261013_025451/samples.csv",
+    "sha256": "52d7ece43673f80858d1adb7eaa897eab3b9647bcae5937306c4127de0cc28c2",
+    "bytes": 203111
+  },
+  {
+    "path": "data/raw/sweeps/thrust_sweep_20261013_025451/summary.json",
+    "sha256": "cd8853d966031a265c2aff1c2ea3906fb30a9333757d2d096a2916258d549fa5",
+    "bytes": 1160
+  }
+]

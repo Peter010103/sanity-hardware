@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "error": null,
+  "samples_written": 82,
+  "stop_acknowledgements": 6,
+  "physical_spin_down_verified": false,
+  "last_battery_telemetry": {
+    "detected_cells": 2,
+    "voltage_V": 7.82,
+    "current_A": 1.57,
+    "consumed_mAh": 388,
+    "configured_capacity_mAh": 0,
+    "battery_state_code": 0,
+    "voltage_resolution_V": 0.01,
+    "source": "FC-configured voltage/current meters; calibration not independently verified"
+  },
+  "stopped_baseline_N": 0.6130130249565652,
+  "nominal_force_sampling_hz": 10,
+  "interpretation_limit": "The existing 10 SPS HX711 and sequential FC polling cannot robustly measure sub-0.3 s response delays.",
+  "data_file": "samples.csv"
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "candidate": "instantaneous",
+    "fitted_parameters": [],
+    "parameters": 0,
+    "measurement_model_only": true,
+    "train": {
+      "n": 259,
+      "rmse": 0.16765965538963196,
+      "mae": 0.06301515157966178,
+      "bias": 0.008036013477029022,
+      "maximum_absolute_error": 0.7821489326084189,
+      "R_squared": 0.7809054694781841
+    },
+    "test": {
+      "n": 281,
+      "rmse": 0.11684151079319875,
+      "mae": 0.04373397856065768,
+      "bias": 0.012173614937813548,
+      "maximum_absolute_error": 0.7663757551389652,
+      "R_squared": 0.8478373926506042
+    }
+  },
+  {
+    "candidate": "delay_only",
+    "fitted_parameters": [
+      0.16739923241712792
+    ],
+    "parameters": 1,
+    "measurement_model_only": true,
+    "train": {
+      "n": 259,
+      "rmse": 0.023093725491591135,
+      "mae": 0.011151169182827646,
+      "bias": 0.0020214038832752955,
+      "maximum_absolute_error": 0.1518912707430468,
+      "R_squared": 0.9958431687341024
+    },
+    "test": {
+      "n": 281,
+      "rmse": 0.020857027069740717,
+      "mae": 0.013048290109057486,
+      "bias": 0.004673109322969343,
+      "maximum_absolute_error": 0.16004426447219688,
+      "R_squared": 0.9951513769334404
+    }
+  },
+  {
+    "candidate": "delay_first_order",
+    "fitted_parameters": [
+      0.1233880272614954,
+      0.0510431009274121
+    ],
+    "parameters": 2,
+    "measurement_model_only": true,
+    "train": {
+      "n": 259,
+      "rmse": 0.00967119325958974,
+      "mae": 0.0063600670701227865,
+      "bias": 0.0012459921074122005,
+      "maximum_absolute_error": 0.05216678890648313,
+      "R_squared": 0.9992709882614152
+    },
+    "test": {
+      "n": 281,
+      "rmse": 0.012200129384800295,
+      "mae": 0.00998744809429571,
+      "bias": 0.004915878226274622,
+      "maximum_absolute_error": 0.053318330846436765,
+      "R_squared": 0.9983410148956862
+    }
+  }
+]

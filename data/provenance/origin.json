@@ -1,0 +1,11 @@
+{
+  "source_package": "output/sanity_gamma0_contribution_20261013",
+  "date": "2026-10-13",
+  "original_asset_directory": "assets/",
+  "new_paper_source": "paper/Sanity__An_Agile_Brushless_Quadrotor_for_Multi_Agent_Experiments.pdf",
+  "paper_sha256": "17bdd1743f45ff876510eca7ee4c0ffd6472d11292e883b7f29e39d65d194b43",
+  "raw_data": "copied byte-for-byte; see raw_manifest.json",
+  "derived_metadata": "paths updated for repository layout; numerical fitted parameters unchanged",
+  "public_repository_license": "CC-BY-4.0 for lab CAD/meshes, data and documentation; MIT for robot descriptions and code; see LICENSES.md",
+  "original_package_model_sha256": "956167e59cb76296f8845d004a1021d58921c3e65f88b07e85a1ef5492b2cfa9"
+}

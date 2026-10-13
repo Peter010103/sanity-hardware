@@ -1,0 +1,40 @@
+{
+  "status": "interrupted",
+  "error": "Operator interrupt or termination signal",
+  "ended_unix_time_ns": 1791864270943776317,
+  "rows": {
+    "commands": 0,
+    "phases": 1,
+    "rpm": 225,
+    "force": 53,
+    "battery": 20,
+    "status": 21,
+    "weight_checks": 0
+  },
+  "stopped_baseline_N": null,
+  "stopped_baseline_sd_N": null,
+  "final_stopped_baseline_N": null,
+  "baseline_return_shift_N": null,
+  "last_battery": {
+    "detected_cells": 2,
+    "voltage_V": 8.22,
+    "current_A": 0.45,
+    "consumed_mAh": 466,
+    "configured_capacity_mAh": 0,
+    "battery_state_code": 0,
+    "voltage_resolution_V": 0.01,
+    "source": "FC-configured voltage/current meters; calibration not independently verified"
+  },
+  "last_rpm": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "stop_attempts": 0,
+  "stop_acknowledgements": 0,
+  "cleanup_stop_acknowledged": null,
+  "physical_stop_confirmed": false,
+  "HX711_worker_error": null,
+  "no_motor_commands_sent": true
+}

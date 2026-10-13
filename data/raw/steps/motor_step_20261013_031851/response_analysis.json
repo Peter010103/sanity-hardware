@@ -1,0 +1,131 @@
+{
+  "step_event_definition": "first new-command packet host monotonic timestamp",
+  "sampling_note": "Sequential nominal 10 SPS HX711 and FC queries; sub-0.3 s response is unresolved",
+  "sample_count": 56,
+  "median_row_interval_s": 0.087430997,
+  "capture_status": "failed",
+  "capture_error": "RuntimeError: Battery state changed; refusing to continue: {'detected_cells': 2, 'voltage_V': 6.98, 'current_A': 18.05, 'consumed_mAh': 322, 'configured_capacity_mAh': 0, 'battery_state_code': 1, 'voltage_resolution_V': 0.01, 'source': 'FC-configured voltage/current meters; calibration not independently verified'}",
+  "completed_requested_post_step_duration": false,
+  "channels": {
+    "collective_thrust_N": {
+      "status": "truncated capture; endpoint-window response is provisional",
+      "initial_steady_window_mean": 0.34000120014307833,
+      "final_endpoint_window_mean_not_confirmed_steady": 2.4659227892468167,
+      "change": 2.125921589103738,
+      "onset_5_percent_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.087201008,
+        0.262039642
+      ],
+      "t10_crossing_bracket_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "t90_crossing_bracket_s": [
+        0.256122725,
+        0.343543898
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M1": {
+      "status": "truncated capture; endpoint-window response is provisional",
+      "initial_steady_window_mean": 16160.833333333334,
+      "final_endpoint_window_mean_not_confirmed_steady": 42311.166666666664,
+      "change": 26150.33333333333,
+      "onset_5_percent_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.175216755
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "t90_crossing_bracket_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M2": {
+      "status": "truncated capture; endpoint-window response is provisional",
+      "initial_steady_window_mean": 16784.75,
+      "final_endpoint_window_mean_not_confirmed_steady": 42965.416666666664,
+      "change": 26180.666666666664,
+      "onset_5_percent_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.175216755
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "t90_crossing_bracket_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M3": {
+      "status": "truncated capture; endpoint-window response is provisional",
+      "initial_steady_window_mean": 16273.333333333334,
+      "final_endpoint_window_mean_not_confirmed_steady": 42565.333333333336,
+      "change": 26292.0,
+      "onset_5_percent_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.175216755
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "t90_crossing_bracket_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    },
+    "rpm_M4": {
+      "status": "truncated capture; endpoint-window response is provisional",
+      "initial_steady_window_mean": 16004.166666666666,
+      "final_endpoint_window_mean_not_confirmed_steady": 40762.75,
+      "change": 24758.583333333336,
+      "onset_5_percent_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "rise_or_fall_10_to_90_bracket_s": [
+        0.0,
+        0.175216755
+      ],
+      "t10_crossing_bracket_s": [
+        -0.006295038,
+        0.081504256
+      ],
+      "t90_crossing_bracket_s": [
+        0.081504256,
+        0.168921717
+      ],
+      "threshold_definition": "10% and 90% of change from initial-window mean to final endpoint-window mean",
+      "timing_resolution_warning": "Intervals are bounded by observed sample times without interpolation; channels are sampled sequentially at about 0.1 s or slower."
+    }
+  }
+}

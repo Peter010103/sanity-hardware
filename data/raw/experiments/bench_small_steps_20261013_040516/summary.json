@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "error": null,
+  "ended_unix_time_ns": 1791864336195286810,
+  "rows": {
+    "commands": 9,
+    "phases": 9,
+    "rpm": 875,
+    "force": 211,
+    "battery": 85,
+    "status": 86,
+    "weight_checks": 0
+  },
+  "stopped_baseline_N": 0.6659700073738917,
+  "stopped_baseline_sd_N": 0.0019074306440545594,
+  "final_stopped_baseline_N": 0.6692442671988723,
+  "baseline_return_shift_N": 0.003274259824980641,
+  "last_battery": {
+    "detected_cells": 2,
+    "voltage_V": 7.99,
+    "current_A": 0.4,
+    "consumed_mAh": 500,
+    "configured_capacity_mAh": 0,
+    "battery_state_code": 0,
+    "voltage_resolution_V": 0.01,
+    "source": "FC-configured voltage/current meters; calibration not independently verified"
+  },
+  "last_rpm": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "stop_attempts": 3,
+  "stop_acknowledgements": 3,
+  "cleanup_stop_acknowledged": true,
+  "physical_stop_confirmed": false,
+  "HX711_worker_error": null,
+  "no_motor_commands_sent": false
+}

@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "logger_version": "2.0.0",
+  "preset": "small_steps",
+  "started_unix_time_ns": 1791864317178432166,
+  "started_monotonic_ns": 10644719382692,
+  "battery_id": "B02",
+  "operator_note": "",
+  "argv": [
+    "run_small_steps.py",
+    "--battery-id",
+    "B02",
+    "--execute",
+    "--bench-ready"
+  ],
+  "python": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+  "platform": "Linux-5.15.185-tegra-aarch64-with-glibc2.35",
+  "settings": {
+    "force_limit_N": 2.0,
+    "thrust_sign": 1,
+    "rpm_requested_hz": 60.0,
+    "health_period_s": 0.2,
+    "force_stale_timeout_s": 0.35,
+    "health_stale_timeout_s": 0.45
+  },
+  "plan": [
+    {
+      "name": "warmup",
+      "commands": [
+        1300,
+        1300,
+        1300,
+        1300
+      ],
+      "duration_s": 2.5,
+      "role": "warmup",
+      "cycle": 0
+    },
+    {
+      "name": "up_1",
+      "commands": [
+        1400,
+        1400,
+        1400,
+        1400
+      ],
+      "duration_s": 1.57,
+      "role": "identification",
+      "cycle": 1
+    },
+    {
+      "name": "down_1",
+      "commands": [
+        1300,
+        1300,
+        1300,
+        1300
+      ],
+      "duration_s": 1.83,
+      "role": "identification",
+      "cycle": 1
+    },
+    {
+      "name": "up_2",
+      "commands": [
+        1400,
+        1400,
+        1400,
+        1400
+      ],
+      "duration_s": 1.69,
+      "role": "identification",
+      "cycle": 2
+    },
+    {
+      "name": "down_2",
+      "commands": [
+        1300,
+        1300,
+        1300,
+        1300
+      ],
+      "duration_s": 1.91,
+      "role": "identification",
+      "cycle": 2
+    },
+    {
+      "name": "up_3",
+      "commands": [
+        1400,
+        1400,
+        1400,
+        1400
+      ],
+      "duration_s": 1.76,
+      "role": "validation",
+      "cycle": 3
+    },
+    {
+      "name": "down_3",
+      "commands": [
+        1300,
+        1300,
+        1300,
+        1300
+      ],
+      "duration_s": 1.63,
+      "role": "validation",
+      "cycle": 3
+    }
+  ],
+  "controller": {
+    "identity": {
+      "firmware_identifier": "BTFL",
+      "firmware_version": "4.5.1",
+      "msp_protocol_version": 0,
+      "msp_api_version": "1.46"
+    },
+    "board": {
+      "board_identifier": "S405",
+      "hardware_revision": 0,
+      "target_name": "STM32F405",
+      "board_name": "BETAFPVF405",
+      "manufacturer_id": "BEFH",
+      "raw_payload_hex": "53343035000002030953544d3332463430350b4245544146505646343035044245464800000000000000000000000000000000000000000000000000000000000000000101401f000000000100"
+    },
+    "motor_config": {
+      "min_throttle_setting": 1070,
+      "max_throttle_setting": 2000,
+      "min_command_setting": 1000,
+      "motor_count": 4,
+      "configured_motor_poles": 12,
+      "dshot_telemetry_enabled": true,
+      "esc_sensor_feature": false,
+      "raw_payload_hex": "2e04d007e803040c0100"
+    },
+    "features": {
+      "mask": 268764168,
+      "reversible_3d_enabled": false
+    },
+    "motor_protocol": {
+      "code": 6,
+      "name": "DSHOT300",
+      "raw_advanced_payload_hex": "01020006e001e80300000000307d00000002005a"
+    },
+    "BUILD_INFO": {
+      "raw_payload_hex": "4a756c203330203230323431323a34343a3231373764303162610110021003100410051006100710081009100a100b100c100d300e300f301030113012301330164018401a401c401d402040214022402440254027202b20"
+    },
+    "MIXER_CONFIG": {
+      "raw_payload_hex": "0301"
+    },
+    "MOTOR_3D_CONFIG": {
+      "raw_payload_hex": "7e05ea05b405"
+    },
+    "uid_payload_hex": "56003f001451333231343731"
+  },
+  "calibration_id": "c1bd33fe-d4b3-4c22-bb7b-db5bdfab119c",
+  "calibration_sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29",
+  "source_sha256": {
+    "bench_experiments.py": "4b5ca36047acc4da904eddb1a54291982b8a8b38db97f536f3d2f4eb19c1e754",
+    "betaflight_msp.py": "5a32b63fceb41c5dc451543be7b71fe037c09e6860bcf4425e8accac075688c6",
+    "betaflight_motors.py": "eec6f6067e894e5337518135e9591067f136992b7e85e092ed00bdffeabaae24"
+  },
+  "units": {
+    "commands": "MSP external motor counts",
+    "rpm": "FC reported mechanical RPM; physical pole count unverified",
+    "force": "newtons"
+  },
+  "timing": {
+    "clock": "CLOCK_MONOTONIC ns; shared across threads",
+    "command": "host request start / acknowledgement",
+    "rpm": "request start / reply arrival; FC sample time and age unavailable",
+    "force": "native ready-observed / read-complete"
+  },
+  "limitations": [
+    "Host timestamps do not separate USB/FC/ESC/motor delays.",
+    "HX711 nominal 10 SPS; force includes sensor/fixture dynamics.",
+    "Unchanging RPM values may reflect quantization or cached data; reply rate alone is not freshness.",
+    "FC voltage/current and physical motor pole count remain independently unverified.",
+    "Zero-valued ESC auxiliary fields do not establish working ESC current/voltage/temperature sensors.",
+    "STOP delivery is best effort; USB/host loss can retain persistent motor-test output."
+  ],
+  "operator_declarations": {
+    "bench_ready": true,
+    "off_axis_checked": false,
+    "battery_disconnected": false
+  }
+}

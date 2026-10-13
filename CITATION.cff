@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the Sanity paper when using this platform, robot description or calibration data."
+title: "Sanity: Robot Models and Actuator Data"
+type: software
+authors:
+  - name: "Prorok Lab, University of Cambridge"
+preferred-citation:
+  type: unpublished
+  title: "Sanity: An Agile Brushless Quadrotor for Multi-Agent Experiments"
+  authors:
+    - family-names: Woo
+      given-names: Heedo
+    - family-names: Sanim
+      given-names: Kazi R. I.
+    - family-names: Okumura
+      given-names: Keisuke
+    - family-names: Yang
+      given-names: Guang
+    - family-names: Shankar
+      given-names: Ajay
+    - family-names: Prorok
+      given-names: Amanda
+  year: 2025
+  url: "https://openreview.net/forum?id=i5dKOANPZZ"
