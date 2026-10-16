@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<mujoco model="sanity">
+  <compiler angle="radian" inertiafromgeom="auto" alignfree="false" />
+  <option timestep="0.002" gravity="0 0 -9.80665" integrator="implicitfast" />
+  <statistic center="0 0 0.8" extent="2.5" />
+
+  <visual>
+    <headlight ambient="0.5 0.5 0.5" diffuse="0.8 0.8 0.8" specular="0.2 0.2 0.2" />
+    <rgba haze="0.15 0.25 0.35 1" />
+    <global offwidth="1280" offheight="720" />
+  </visual>
+
+  <asset>
+    <mesh name="visual_0" file="meshes/visual/material_0.obj" scale="1 1 1" />
+    <material name="visual_0" rgba="0.854306 0.34919 0.34919 1" />
+    <mesh name="visual_1" file="meshes/visual/material_1.obj" scale="1 1 1" />
+    <material name="visual_1" rgba="0.0998528 0.0998528 0.0998528 1" />
+    <mesh name="visual_2" file="meshes/visual/material_2.obj" scale="1 1 1" />
+    <material name="visual_2" rgba="0.896244 0.791787 0.618031 1" />
+    <mesh name="visual_3" file="meshes/visual/material_3.obj" scale="1 1 1" />
+    <material name="visual_3" rgba="0.247059 0.247059 0.247059 1" />
+    <mesh name="visual_4" file="meshes/visual/material_4.obj" scale="1 1 1" />
+    <material name="visual_4" rgba="0.0998528 0.0998528 0.0998528 1" />
+    <mesh name="visual_5" file="meshes/visual/material_5.obj" scale="1 1 1" />
+    <material name="visual_5" rgba="0.0998528 0.0998528 0.0998528 1" />
+    <mesh name="collision_0" file="meshes/collision/envelope.obj" scale="1 1 1" />
+  </asset>
+
+  <worldbody>
+    <light directional="true" pos="0 0 4" dir="0 0 -1" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="true" />
+    <light directional="true" pos="2 -2 4" dir="-0.5 0.5 -1" diffuse="0.6 0.6 0.6" specular="0.2 0.2 0.2" />
+    <light directional="true" pos="-2 2 4" dir="0.5 -0.5 -1" diffuse="0.5 0.5 0.5" specular="0.1 0.1 0.1" />
+    <geom name="floor" type="plane" size="5 5 0.1" rgba="0.7 0.7 0.7 1" />
+
+    <body name="base_link" pos="0 0 1.5">
+      <freejoint name="floating_base" />
+      <inertial pos="0 0 0" mass="0.06609" fullinertia="5.75e-05 6.64e-05 9.31e-05 0 0 0" />
+      <geom name="visual_0" type="mesh" mesh="visual_0" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_0" contype="0" conaffinity="0" group="1" />
+      <geom name="visual_1" type="mesh" mesh="visual_1" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_1" contype="0" conaffinity="0" group="1" />
+      <geom name="visual_2" type="mesh" mesh="visual_2" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_2" contype="0" conaffinity="0" group="1" />
+      <geom name="visual_3" type="mesh" mesh="visual_3" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_3" contype="0" conaffinity="0" group="1" />
+      <geom name="visual_4" type="mesh" mesh="visual_4" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_4" contype="0" conaffinity="0" group="1" />
+      <geom name="visual_5" type="mesh" mesh="visual_5" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_5" contype="0" conaffinity="0" group="1" />
+      <geom name="collision_0" type="mesh" mesh="collision_0" pos="0 0 0" quat="1 0 0 0" mass="0" rgba="0.4 0.7 1 0.2" group="3" contype="1" conaffinity="1" />
+      <site name="rotor_1_rear_right" pos="-0.0284610479 -0.0284610479 0" quat="1 0 0 0" size="0.001" rgba="0 0 0 0" group="4" />
+      <site name="rotor_2_front_right" pos="0.0284610479 -0.0284610479 0" quat="1 0 0 0" size="0.001" rgba="0 0 0 0" group="4" />
+      <site name="rotor_3_front_left" pos="0.0284610479 0.0284610479 0" quat="1 0 0 0" size="0.001" rgba="0 0 0 0" group="4" />
+      <site name="rotor_4_rear_left" pos="-0.0284610479 0.0284610479 0" quat="1 0 0 0" size="0.001" rgba="0 0 0 0" group="4" />
+
+      <!-- Segmented flexible rope with zero friction loss and a slight 1mm perturbation -->
+      <body name="rope_link1" pos="0.001 0 -0.01">
+        <joint type="ball" damping="0.0005" frictionloss="0" armature="0.00001" />
+        <geom type="capsule" size="0.002 0.05" contype="1" conaffinity="1" pos="0 0 -0.05" rgba="0.8 0.6 0.4 1" mass="0.007" />
+
+        <body name="rope_link2" pos="0.001 0 -0.1">
+          <joint type="ball" damping="0.0005" frictionloss="0" armature="0.00001" />
+          <geom type="capsule" size="0.002 0.05" contype="1" conaffinity="1" pos="0 0 -0.05" rgba="0.8 0.6 0.4 1" mass="0.007" />
+
+          <body name="rope_link3" pos="0 0 -0.1">
+            <joint type="ball" damping="0.0005" frictionloss="0" armature="0.00001" />
+            <geom type="capsule" size="0.002 0.05" contype="1" conaffinity="1" pos="0 0 -0.05" rgba="0.8 0.6 0.4 1" mass="0.007" />
+
+            <body name="rope_link4" pos="0 0 -0.1">
+              <joint type="ball" damping="0.0005" frictionloss="0" armature="0.00001" />
+              <geom type="capsule" size="0.002 0.05" contype="1" conaffinity="1" pos="0 0 -0.05" rgba="0.8 0.6 0.4 1" mass="0.007" />
+
+              <body name="rope_link5" pos="0 0 -0.1">
+                <joint type="ball" damping="0.0005" frictionloss="0" armature="0.00001" />
+                <geom type="capsule" size="0.002 0.05" contype="1" conaffinity="1" pos="0 0 -0.05" rgba="0.8 0.6 0.4 1" mass="0.007" />
+                <site name="rope_end" pos="0 0 -0.1" size="0.02" rgba="1 0 0 1" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="rotor_1_rear_right_thrust" site="rotor_1_rear_right" gear="0 0 1 0 0 0" ctrllimited="false" />
+    <motor name="rotor_2_front_right_thrust" site="rotor_2_front_right" gear="0 0 1 0 0 0" ctrllimited="false" />
+    <motor name="rotor_3_front_left_thrust" site="rotor_3_front_left" gear="0 0 1 0 0 0" ctrllimited="false" />
+    <motor name="rotor_4_rear_left_thrust" site="rotor_4_rear_left" gear="0 0 1 0 0 0" ctrllimited="false" />
+    <motor name="rotor_1_rear_right_reaction_torque" site="rotor_1_rear_right" gear="0 0 0 0 0 1" ctrllimited="false" />
+    <motor name="rotor_2_front_right_reaction_torque" site="rotor_2_front_right" gear="0 0 0 0 0 1" ctrllimited="false" />
+    <motor name="rotor_3_front_left_reaction_torque" site="rotor_3_front_left" gear="0 0 0 0 0 1" ctrllimited="false" />
+    <motor name="rotor_4_rear_left_reaction_torque" site="rotor_4_rear_left" gear="0 0 0 0 0 1" ctrllimited="false" />
+  </actuator>
+</mujoco>
