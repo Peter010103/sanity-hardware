@@ -2,7 +2,7 @@
 <h1>Sanity</h1>
 <p><strong>An agile brushless quadrotor for multi-agent experiments</strong><br>
 Prorok Lab · University of Cambridge</p>
-<p><a href="paper/sanity.pdf">Paper</a> · <a href="docs/build-instructions.md">Build guide</a> · <a href="models/sanity.urdf">URDF</a> · <a href="models/sanity.xml">MuJoCo XML</a> · <a href="models/meshes/">Meshes</a> · <a href="parameters/actuators.json">Actuator model</a> · <a href="data/">Data</a></p>
+<p><a href="paper/sanity.pdf">Paper</a> · <a href="docs/build-instructions.md">Build guide</a> · <a href="models/sanity.urdf">URDF</a> · <a href="models/sanity.xml">MuJoCo XML</a> · <a href="models/meshes/">Meshes</a> · <a href="parameters/actuators.json">Actuator model</a> · <a href="data/">Data</a> · <a href="docs/inertia.md">Inertia measurements</a></p>
 <img src="media/overview.png" alt="Sanity platform overview" width="520">
 </div>
 
@@ -20,6 +20,7 @@ Sanity quadrotor hardware models, meshes, measured actuator dynamics and calibra
 | File or directory | Contents |
 |---|---|
 | [docs/build-instructions.md](docs/build-instructions.md) | Assembly instructions with photos |
+| [docs/inertia.md](docs/inertia.md) | Bifilar setup, measured results, fixture correction and reproduction |
 | [models/sanity.urdf](models/sanity.urdf) | Robot description in URDF (XML), including mass, CoM and inertia |
 | [models/sanity.xml](models/sanity.xml) | MuJoCo MJCF with a free base, rotor thrust and reaction-torque inputs |
 | [models/meshes/](models/meshes/) | Visual OBJ/MTL meshes and lightweight collision geometry |
@@ -34,7 +35,7 @@ Sanity quadrotor hardware models, meshes, measured actuator dynamics and calibra
 
 Load `models/sanity.urdf` with a floating base, keeping the `meshes/` directory beside it. Units are metres and radians; the model defines **X forward, Y left, Z up**. The model has one rigid assembly and four fixed rotor frames. Visual materials are included; no textures are required.
 
-The URDF includes the confirmed battery-installed mass of **66.09 g**, CoM at **[0, 0, 0] m**, and bifilar inertia estimate **diag(5.75, 6.64, 9.31) × 10⁻⁵ kg·m²**. All mass and inertia are on `base_link`; the rotor frames are massless.
+The URDF uses the measured battery-installed mass of **69.47 g** and the 19 October 2026 bifilar working estimate **diag(3.32, 4.28, 5.43) × 10⁻⁵ kg·m²** about **[0, 0, 0] m**, the assumed drone CoM. The inertia includes provisional fixture/marker subtraction and parallel-axis corrections; the physical CoM and fixture mass split are not independently calibrated. Off-diagonal terms remain zero as a modelling assumption. See the [inertial update](docs/inertia.md). All mass and inertia are on `base_link`; the rotor frames are massless.
 
 The MuJoCo XML is generated from the URDF and uses the same meshes and physical parameters. Open it with `python -m mujoco.viewer --mjcf=models/sanity.xml`. Its inputs are rotor thrusts in N and separate signed reaction torques in N·m. See the [MuJoCo notes](docs/technical-notes.md#mujoco-xml) for input ordering and actuator-model integration.
 

@@ -1,0 +1,29 @@
+{
+  "axis": "yaw",
+  "tracked_frame": "RigidBody",
+  "parent_frame": "map",
+  "geometry": {
+    "mass_total_kg": null,
+    "string_length_m": 0.645,
+    "upper_full_spacing_m": 0.156,
+    "lower_full_spacing_m": 0.13,
+    "vertical_separation_m": 0.6448689789406837,
+    "gravity_m_s2": 9.80665,
+    "stiffness_Nm_rad": null,
+    "inertia_per_T_squared": null
+  },
+  "collection_only": true,
+  "setup_label": "extra_marker",
+  "mass_status": "unconfirmed",
+  "marker_to_drone_orientation_confirmed": false,
+  "countdown_s": 10.0,
+  "record_duration_s": 45.0,
+  "fit_start_s_after_cue": 5.0,
+  "frame_inertia_subtracted": false,
+  "geometry_source": "https://gdcplnr.edu.in/admin/uploads/1683i%20sem%20%20PRACTICALS.pdf (bifilar experiment)",
+  "assumptions": [
+    "Equal actual string lengths; uncrossed strings; attachment midpoints aligned.",
+    "Drone labelled axis vertical; rigid fixture; total suspended mass includes markers.",
+    "Suspension axis approximately through combined centre of mass; small-angle torsion."
+  ]
+}

@@ -543,5 +543,55 @@
     "path": "data/raw/sweeps/thrust_sweep_20261013_025451/summary.json",
     "sha256": "cd8853d966031a265c2aff1c2ea3906fb30a9333757d2d096a2916258d549fa5",
     "bytes": 1160
+  },
+  {
+    "path": "data/raw/bifilar/20261019/pitch/capture_receipt.json",
+    "sha256": "36913f6189ff456f4faa33b3348d6f03f86f136679c762b645d22d3802c019bd",
+    "bytes": 369
+  },
+  {
+    "path": "data/raw/bifilar/20261019/pitch/config.json",
+    "sha256": "10579ff8933d94ff98fd9797a33f6ca199524bf58865fd0e4d67fd921c7dea09",
+    "bytes": 1035
+  },
+  {
+    "path": "data/raw/bifilar/20261019/pitch/poses.csv",
+    "sha256": "667496711771b469052552ded38f49c2274e38e1e40b25b9cf0588cfc051d6f9",
+    "bytes": 2172744
+  },
+  {
+    "path": "data/raw/bifilar/20261019/roll/capture_receipt.json",
+    "sha256": "26d0c63b97e812bb809a8f3dff8eda99392dbe793479c859934c30cd5d3c87b9",
+    "bytes": 367
+  },
+  {
+    "path": "data/raw/bifilar/20261019/roll/config.json",
+    "sha256": "357233fe112e3257bfcdda982a17ba9429a577730dcfe63afe7b093a9880b3f0",
+    "bytes": 1034
+  },
+  {
+    "path": "data/raw/bifilar/20261019/roll/poses.csv",
+    "sha256": "a82f6ac6de2e0e858f230dc43412faecc30e952ffe2e0bd820a5ee4c18ef10fc",
+    "bytes": 2138186
+  },
+  {
+    "path": "data/raw/bifilar/20261019/u_mount_rev4.dxf",
+    "sha256": "f6f1d67b1e3e7f1cb286674ec16cbc1b19e7896c3df8c4a511b15bb78ed3b31b",
+    "bytes": 21708
+  },
+  {
+    "path": "data/raw/bifilar/20261019/yaw/capture_receipt.json",
+    "sha256": "fd75b78868bb30c6ffd38dd632656621f27c1ed0c87389ea9625fa453235f1dd",
+    "bytes": 368
+  },
+  {
+    "path": "data/raw/bifilar/20261019/yaw/config.json",
+    "sha256": "a94dc28fec2c1dedee85ae8d8c520f79b59a05c58eba34ca0e6fc7bf4ccbcf98",
+    "bytes": 1033
+  },
+  {
+    "path": "data/raw/bifilar/20261019/yaw/poses.csv",
+    "sha256": "e2bf768ca7a358d03bdfec46abb815c240f521de77b5e9368aed3f53cbb7b2ab",
+    "bytes": 2203899
   }
 ]

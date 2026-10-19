@@ -45,6 +45,7 @@ from isaaclab.assets import RigidObject, RigidObjectCfg
 from isaaclab.utils.math import quat_apply
 from sanity_actuator import SanityModel, SpinningModel
 from sanity_isaac import SanityIsaacActuator, apply_to_isaaclab
+from validate_models import mass_properties
 
 # Deliberately nontrivial mapping exercises output-to-frame allocation.
 FRAMES = ['rotor_3_front_left', 'rotor_1_rear_right',
@@ -156,7 +157,8 @@ def run():
     motors = SanityIsaacActuator(N, DT, output_to_frame=FRAMES, device=args.device,
                                  omit_reaction_torque=True, delay_s=params.L)
     mass = motors.mass_kg
-    J = torch.tensor([5.75e-5,6.64e-5,9.31e-5], device=args.device)
+    _, _, urdf_inertia = mass_properties()
+    J = torch.tensor(np.diag(urdf_inertia), device=args.device, dtype=torch.float32)
     actual_mass = robot.root_physx_view.get_masses().cpu().numpy()
     actual_J = robot.root_physx_view.get_inertias().cpu().numpy().reshape(N,3,3)
     com = robot.root_physx_view.get_coms().cpu().numpy()

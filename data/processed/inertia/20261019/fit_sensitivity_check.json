@@ -1,0 +1,34 @@
+{
+  "waveform_gate_unchanged": true,
+  "comparison": "soft-L1 loss with0.25deg scale versus ordinary least squares; same source-time grid and model",
+  "inference": "Working periods are insensitive to residual spikes; this does not resolve window drift or geometry uncertainty.",
+  "axes": {
+    "yaw": {
+      "least_squares_period_s": 0.7783196200590374,
+      "outlier_resistant_period_s": 0.7781732035050296,
+      "least_squares_drone_inertia_kg_m2": 5.4319867037035375e-05,
+      "outlier_resistant_drone_inertia_kg_m2": 5.4280125242084656e-05,
+      "drone_inertia_change_percent": -0.07316254092378793,
+      "robust_fit_converged": true,
+      "working_period_supported": true
+    },
+    "pitch": {
+      "least_squares_period_s": 0.6309267890816808,
+      "outlier_resistant_period_s": 0.6308220050396705,
+      "least_squares_drone_inertia_kg_m2": 4.275169663746243e-05,
+      "outlier_resistant_drone_inertia_kg_m2": 4.2724804663237354e-05,
+      "drone_inertia_change_percent": -0.06290270641916562,
+      "robust_fit_converged": true,
+      "working_period_supported": true
+    },
+    "roll": {
+      "least_squares_period_s": 0.549474894888715,
+      "outlier_resistant_period_s": 0.5491907615703754,
+      "least_squares_drone_inertia_kg_m2": 3.318103705957341e-05,
+      "outlier_resistant_drone_inertia_kg_m2": 3.311675014889691e-05,
+      "drone_inertia_change_percent": -0.1937459355507043,
+      "robust_fit_converged": true,
+      "working_period_supported": true
+    }
+  }
+}

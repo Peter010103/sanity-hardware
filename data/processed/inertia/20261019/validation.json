@@ -1,0 +1,15 @@
+{
+  "raw_hashes_unchanged": {
+    "yaw": true,
+    "pitch": true,
+    "roll": true
+  },
+  "independent_parallel_axis_identity": true,
+  "selected_URDF_parameters_match": true,
+  "URDF_matches_rounded_reproduced_estimates": true,
+  "inertia_positive_and_triangle_valid": true,
+  "all_periods_robust_to_outliers": true,
+  "waveform_failures_retained": true,
+  "calibrated_geometry_uncertainty_claimed": false,
+  "hardware_access": false
+}

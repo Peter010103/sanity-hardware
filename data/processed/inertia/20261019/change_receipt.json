@@ -1,0 +1,66 @@
+{
+  "date_utc": "2026-10-19T18:58:13.128055+00:00",
+  "branch": "main",
+  "base_commit": "0de77931c2ca",
+  "cable_branch_preserved": "sanitty_cable at b682963",
+  "selected_model_parameters": {
+    "date": "2026-10-19",
+    "mass_kg": 0.06947,
+    "inertia_diagonal_kg_m2": [
+      3.32e-05,
+      4.28e-05,
+      5.43e-05
+    ],
+    "CoM_model_origin_assumed": true,
+    "products_of_inertia_zero_assumed": true,
+    "previous_mass_kg": 0.06609,
+    "previous_inertia_diagonal_kg_m2": [
+      5.75e-05,
+      6.64e-05,
+      9.31e-05
+    ]
+  },
+  "reproduce": "python3 tools/inertia/analyze.py",
+  "checks": {
+    "collector_synthetic_self_test": "passed",
+    "pipeline_reproduction": "passed",
+    "relocated_checkout_system_python": {
+      "raw_hashes_unchanged": {
+        "yaw": true,
+        "pitch": true,
+        "roll": true
+      },
+      "independent_parallel_axis_identity": true,
+      "selected_URDF_parameters_match": true,
+      "URDF_matches_rounded_reproduced_estimates": true,
+      "inertia_positive_and_triangle_valid": true,
+      "all_periods_robust_to_outliers": true,
+      "waveform_failures_retained": true,
+      "calibrated_geometry_uncertainty_claimed": false,
+      "hardware_access": false,
+      "relocated_checkout_from_unrelated_cwd": true,
+      "original_workspace_paths_required": false,
+      "system_python_reproduces_within_1e_minus12_kg_m2": true
+    },
+    "repository_evaluator_tests": {
+      "passed": 12,
+      "skipped": 0
+    },
+    "raw_files_sha256_verified": 119,
+    "documentation_links_checked": 116,
+    "pybullet_import_and_rotor_force_checks": "passed",
+    "inertia_positive_definite_and_triangle_valid": true,
+    "mujoco_version": "3.3.7",
+    "mujoco_hover_duration_s": 0.5,
+    "mujoco_hover_drift_m": 0.0,
+    "mujoco_relocated_load_and_body_force_checks": "passed",
+    "native_Isaac_execution_with_new_parameters": "not run"
+  },
+  "physical_geometry_COM_uncertainty_calibrated": false,
+  "hardware_access": false,
+  "trained_checkpoints_or_training_assets_modified": false,
+  "model_sha256": {
+    "models/sanity.urdf": "eaee80955c33538e822f879d2563005121d87a64b575efe0adf9ccfd79ec08b5",
+    "models/sanity.xml": "7b4fbdbc145576c858268a73465509aef7cd3e130703598d30f80eadaf20af72"
+  }
+}

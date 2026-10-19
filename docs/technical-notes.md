@@ -2,7 +2,7 @@
 
 ## Geometry and frames
 
-The source assembly is **Sanity_simplified v4**, exported on 2026-03-05. The URDF uses metres and radians and defines +X as forward, +Y as left and +Z as up. Its origin is the mean CAD propeller datum, confirmed by the lab as the model CoM at **[0, 0, 0] m**. Rotor positions are at $|x|=|y|=0.028461047943$ m, z ≈ 0. Registration of the physical aircraft and flight controller to this frame, including M1–M4 assignments, is not established by the supplied measurements. Rotor rotation directions are unknown; their convention is CW/CCW viewed from above, looking along −Z.
+The source assembly is **Sanity_simplified v4**, exported on 2026-03-05. The URDF uses metres and radians and defines +X as forward, +Y as left and +Z as up. Its origin is the mean CAD propeller datum, retained as the assumed model CoM at **[0, 0, 0] m**; the physical CoM is not independently measured. Rotor positions are at $|x|=|y|=0.028461047943$ m, z ≈ 0. Registration of the physical aircraft and flight controller to this frame, including M1–M4 assignments, is not established by the supplied measurements. Rotor rotation directions are unknown; their convention is CW/CCW viewed from above, looking along −Z.
 
 The visual model measures **111.919 × 111.919 × 29.5 mm**. It contains motors, propellers, frame, ducts and a simplified 55 × 18 × 12 mm battery. Electronics and motion-capture markers are not identifiable in the geometry. The six diffuse materials require no textures. Collision geometry is a 12-triangle enclosing box, including the duct openings.
 
@@ -23,11 +23,23 @@ The paper reports an 80 mm wheelbase, 150 mm diameter, 72 g mass, BetaFPV 1102 1
 
 ## Mass and inertia
 
-[models/sanity.urdf](../models/sanity.urdf) defines the mass, CoM and inertia. The geometry builder preserves its `base_link` inertial block. Bench weighings gave **39.40 g without the battery** and **66.09 g with the battery**. Each summary covers 58 samples over five seconds with 0.20 g sample standard deviation. That spread is not an absolute uncertainty estimate. Individual weighing samples and complete accessory/tare details are unavailable.
+[The URDF](../models/sanity.urdf) uses the measured **69.47 g** drone mass and the
+19 October 2026 working inertia **diag(3.32e−5, 4.28e−5, 5.43e−5) kg·m²**, about
+the assumed model CoM at **[0, 0, 0] m**, aligned with `base_link`. All aircraft
+mass/inertia belong to that link; the four rotor frames are massless. Zero cross
+terms remain a modelling assumption. The tensor is positive definite and passes
+principal-moment triangle checks.
 
-The inertia is **diag(5.75e−5, 6.64e−5, 9.31e−5) kg·m²**, estimated in-house using bifilar pendulum measurements about the aircraft CoM. The lab has confirmed this tensor and the 66.09 g mass for the contribution. No original pendulum notes exist. The supplied model uses zero cross terms.
+The [inertia guide](inertia.md) contains the measured setup, source recordings,
+fixture subtraction, fit checks, assumptions and one-command reproduction.
+Earlier 13 October weighings (39.40 g without battery,66.09 g with battery) and
+the older tensor diag(5.75e−5,6.64e−5,9.31e−5) are retained as historical evidence
+in the parameter provenance; they are not the current URDF parameters.
 
-The tensor is symmetric and positive definite. Principal-moment triangle margins are [1.02e−4, 8.42e−5, 3.08e−5] kg·m². The URDF places the tensor at **[0, 0, 0] m** with axes parallel to `base_link`. All mass and inertia belong to `base_link`; the four fixed rotor-frame links have zero mass and inertia. When loading with PyBullet, use `flags=pybullet.URDF_USE_INERTIA_FROM_FILE`. CAD densities are unsuitable for physical identification: the STEP assigns steel to the propellers and ABS to the simplified battery.
+The geometry builder preserves the URDF inertial block. In PyBullet, use
+`flags=pybullet.URDF_USE_INERTIA_FROM_FILE`. CAD densities are unsuitable for
+physical identification: the STEP assigns steel to propellers and ABS to the
+simplified battery.
 
 ## MuJoCo XML
 
@@ -247,16 +259,26 @@ A flight policy using attitude/collective actions needs a matching inner control
 | Geometry | 66,584 visual triangles; positive transform determinants; triangle/normal serialization checks; collision envelope contains all vertices |
 | URDF import | PyBullet 3.2.7 loads a free base, four massless fixed rotor frames and six visual shapes; total mass, CoM and inertia match the URDF |
 | MuJoCo XML | MuJoCo 3.3.7 loads relocated assets; compiled vertices agree within 3.44 × 10⁻⁹ m, materials and rotor sites match, and mass/CoM/inertia match the URDF |
-| Physical parameters | The confirmed inertia passes symmetry, positive-definiteness and triangle checks; total mass is 0.06609 kg |
+| Physical parameters | The selected working inertia passes symmetry, positive-definiteness and triangle checks; measured mass is 0.06947 kg; CoM placement and fixture correction remain provisional |
 | Calibration and fitting | Load-cell scale reproduces; four fitted coefficient vectors and held-out metrics reproduce from the included data |
 | Offline evaluator | Four tests: delayed step, timestep consistency, domain rejection and summed rotor forces |
 | Isaac adapter | Eight offline tests plus native Isaac Sim 5.1.0 / Isaac Lab 2.3.2 checks: portable import/render, physical properties, free fall, hover, force/moment signs, actuator steps and partial resets in eight GPU environments |
-| Native force checks | Four equal +Z forces balance the 0.6481215 N weight for 0.5 s; a separate force at each rotor produces the expected roll/pitch acceleration |
+| Native force checks | Four equal +Z forces balance the URDF weight for 0.5 s; a separate force at each rotor produces the expected roll/pitch acceleration |
 | MuJoCo force checks | Free fall, 0.5 s balanced thrust with zero drift, individual roll/pitch moments, body-relative thrust under tilt, and positive/negative reaction-torque inputs pass |
-| Actuator force balance | Equal rotor speed 2273.08 rad/s gives total thrust equal to the aircraft weight |
+| Actuator force balance | Equal rotor speed calculated from the current URDF mass gives total thrust equal to the aircraft weight |
 | Scalar dynamics | Two-second vertical pulse check with fixed attitude and voltage; finite response and return to force balance |
 | Hardware evidence | Five later powered bench runs completed without invalid force samples or battery warnings; flight-policy validation remains unperformed |
 
 The PyBullet force checks omit reaction torque; MuJoCo checks the signs of explicit torque inputs without identifying a physical torque coefficient. Neither models the flight controller. The scalar check holds attitude fixed and excludes yaw, drag and battery dynamics. No complete aircraft dynamics or sim-to-real validation is claimed. The flight videos show separate research demonstrations.
 
 Run the commands in the main README to regenerate the reports under `build/geometry/` and `build/validation/`. Repository validation also checks source/data hashes, documentation links, PDF and media files. Scientific plots use Matplotlib. To rebuild video previews from the original large media files, run `python tools/build_media.py --source-dir /path/to/figures`; this needs FFmpeg and Poppler. Source filenames and conversion settings are in [the media script](../tools/build_media.py).
+
+
+## Bifilar inertial update — 19 October 2026
+
+The consolidated [inertia guide](inertia.md) is the current result and provenance
+entry point. The hardware URDF and generated MJCF use its selected mass/inertia;
+PyBullet, MuJoCo, raw-hash and repository checks are rerun for this update.
+Native Isaac validation receipts describe the older parameters until rerun.
+Imported training/deployment assets and checkpoints require a separate matched
+assessment before results with the new physical parameters can be claimed.

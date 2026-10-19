@@ -1,6 +1,6 @@
 parameter,value,units,frame_or_scope,status,source,adopted
 published_mass,0.072,kg,paper configuration,published,paper section 2.1,false
-inertia_tensor,diag(5.75e-5;6.64e-5;9.31e-5),kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
+historical_inertia_tensor,diag(5.75e-5;6.64e-5;9.31e-5),kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,false
 geometry_width,0.11191870246145903,m,base_link,calculated from source,DAE nested transforms,true
 geometry_height,0.0295,m,base_link,calculated from source,DAE nested transforms,true
 motor_diagonal,0.0805,m,CAD shaft axes,calculated from source,STEP cylindrical surfaces,true
@@ -18,9 +18,9 @@ usable_thrust_limits,,N,aircraft or rotor,unknown,measurements exist; peak stage
 yaw_reaction_torque,,N m,rotor body axis,unknown,requires torque identification,false
 motor_speed_limits,,rad/s,rotor,unknown,observed RPM envelope available; rated limits unknown,false
 command_latency,,s,flight UDP/SBUS end to end,unknown,USB apparent delay separately identified; not flight-path latency,false
-battery_installed_mass,0.06609,kg,bench configuration,measured; confirmed contribution mass; raw individual samples unavailable,data/raw/mass_readings.csv; models/sanity.urdf,true
+historical_battery_installed_mass,0.06609,kg,bench configuration,measured; confirmed contribution mass; raw individual samples unavailable,data/raw/mass_readings.csv; models/sanity.urdf,false
 mass_without_battery,0.03940,kg,bench configuration,measured; same inclusion limitations,data/raw/mass_readings.csv,see parameter scope
-CoM_coordinates,[0;0;0],m,base_link,operator-approved model CoM after 3D review,models/sanity.urdf,true
+CoM_coordinates,[0;0;0],m,base_link,retained model assumption; physical COM not independently measured,models/sanity.urdf,true
 full_range_k,3.135940456614356e-08,N/(rad/s)^2,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Conditional on FC-reported mechanical RPM scaling; high-range battery warnings retained and flagged,41 new settled phases + 10 legacy sweep plateaus,see model validity domain
 local_k,3.2732551603912513e-08,N/(rad/s)^2,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; ,41 new settled phases,see model validity domain
 local_force_offset,0.009962661170831744,N per modeled rotor contribution,rotor-axis speed/force magnitudes; hardware output M1..M4,fitted from measurements; Empirical correction; not motor command deadband,41 new settled phases,see model validity domain
@@ -47,3 +47,5 @@ independent_physical_motor_delay,unknown,s,rotor-axis speed/force magnitudes; ha
 historical_Jxx,5.75e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
 historical_Jyy,6.64e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
 historical_Jzz,9.31e-05,kg m^2,about CoM; base_link axes,historical bifilar estimate; confirmed by operator for this model,in-house bifilar pendulum measurements; models/sanity.urdf,true
+battery_installed_mass,0.06947,kg,19 October drone configuration,operator measured,data/processed/inertia/20261019/measurement_inputs.json,true
+inertia_tensor,diag(3.32e-5;4.28e-5;5.43e-5),kg m^2,assumed drone COM; base_link axes,operator-selected working estimate; provisional fixture and COM correction,docs/inertia.md; data/processed/inertia/20261019/inertia_estimates.json,true

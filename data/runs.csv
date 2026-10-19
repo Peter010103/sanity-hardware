@@ -13,3 +13,6 @@ motor_step_20261013_032116,data/raw/steps/motor_step_20261013_032116,legacy_step
 motor_step_20261013_032625,data/raw/steps/motor_step_20261013_032625,legacy_step,not separately recorded,completed,excluded from fast-response fitting,sequential acquisition biases row timing
 loadcell_weight_calibration,data/raw/loadcell,nominal 0..1000 g weights,,complete,force calibration: 840 samples / 21 levels,descending levels check hysteresis; absolute accuracy unconfirmed
 mass_summaries,data/raw/mass_readings.csv,battery absent/present weighing,,summaries only,39.40 g / 66.09 g mass evidence,individual raw samples not retained; inclusions/tare incompletely documented
+bifilar_20261019_yaw,data/raw/bifilar/20261019/yaw,bifilar pendulum,,complete,working drone COM inertia,see docs/inertia.md; original configs retained; geometry corrected in processed inputs
+bifilar_20261019_pitch,data/raw/bifilar/20261019/pitch,bifilar pendulum,,complete,working drone COM inertia,see docs/inertia.md; original configs retained; geometry corrected in processed inputs
+bifilar_20261019_roll,data/raw/bifilar/20261019/roll,bifilar pendulum,,complete,working drone COM inertia,see docs/inertia.md; original configs retained; geometry corrected in processed inputs

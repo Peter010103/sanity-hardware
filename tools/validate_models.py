@@ -230,8 +230,8 @@ def evidence():
         assert digest(ROOT/'models/sources'/item['source_name'])==item['sha256']
     counts['original_asset_hashes']=len(read('models/sources/inventory.json'))
     mass,com,J=mass_properties()
-    assert mass==0.06609 and np.array_equal(com,[0,0,0])
-    assert np.array_equal(J,np.diag([5.75e-5,6.64e-5,9.31e-5]))
+    assert mass==0.06947 and np.array_equal(com,[0,0,0])
+    assert np.array_equal(J,np.diag([3.32e-5,4.28e-5,5.43e-5]))
     assert np.allclose(J,J.T) and np.all(np.linalg.eigvalsh(J)>0)
     eig=np.linalg.eigvalsh(J); margins=eig.sum()-2*eig
     assert np.all(margins>=0)
@@ -239,7 +239,7 @@ def evidence():
                 selected_inertia_diagonal_kg_m2=np.diag(J).tolist(),
                 inertia_symmetric=True,inertia_positive_definite=True,triangle_margins_kg_m2=margins.tolist(),
                 mass_in_URDF=True,rotor_frames_massless=True,
-                configuration='mass, tensor and CoM placement confirmed by operator')
+                configuration='measured mass; operator-selected bifilar working tensor; CoM placement assumed')
 
 
 def main():
@@ -262,7 +262,7 @@ def main():
                               'python3 tools/validate_models.py','python3 tools/validate_repo.py'],
                     dependencies_note='tools installed externally; no dependency binaries vendored')
     put(out,'toolchain_current.json',versions)
-    print(json.dumps(dict(geometry='passed',native_import_and_force_checks='passed',physical='mass, CoM and inertia match confirmed URDF parameters',
+    print(json.dumps(dict(geometry='passed',native_import_and_force_checks='passed',physical='mass, CoM and inertia match selected URDF parameters',
                          scalar_simulation='passed; not 6-DoF',source_hashes=results['physical_and_evidence']),indent=2))
 
 if __name__=='__main__':

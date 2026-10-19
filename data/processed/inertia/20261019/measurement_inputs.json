@@ -1,0 +1,567 @@
+{
+  "status": "Provisional CAD-based drone-COM inertia analysis performed; yaw/pitch fits pass, roll diagnostic; final physical calibration incomplete",
+  "dxf": {
+    "path": "data/raw/bifilar/20261019/u_mount_rev4.dxf",
+    "sha256": "f6f1d67b1e3e7f1cb286674ec16cbc1b19e7896c3df8c4a511b15bb78ed3b31b",
+    "units": "mm",
+    "nominal_thickness_m": 0.003
+  },
+  "fixture_F": {
+    "origin": "Intersection of base centrelines at bottom surface",
+    "positive_x_y": "Along the two perpendicular bases",
+    "positive_z": "Toward the open upright ends",
+    "centroid_F_m": [
+      0.0,
+      0.0,
+      0.012638400704916047
+    ],
+    "centroidal_inertia_per_kg_m2": [
+      [
+        0.0015551656748144045,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0015551656748144045,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.002800630811647475
+      ]
+    ],
+    "uniform_plywood_density_assumption": true,
+    "plywood_mass_kg": null
+  },
+  "mass_ledger": {
+    "total_suspended_kg": 0.08738,
+    "separately_weighed_fixture_package_kg": 0.0179,
+    "fixture_package_includes": [
+      "plywood",
+      "all six markers",
+      "tape",
+      "glue",
+      "mounts"
+    ],
+    "marker_mass_each_kg_approx": 0.00108,
+    "all_six_markers_kg_approx": 0.00648,
+    "plywood_plus_other_fixture_attachments_kg_approx": 0.01142,
+    "plywood_only_kg": null,
+    "other_fixture_attachments_excluding_markers_kg": null,
+    "non_fixture_mass_remainder_kg": 0.06948,
+    "remainder_scope": "Combined reading minus fixture-package reading; independently measured drone mass retained separately",
+    "mass_uncertainties_kg": null,
+    "drone_separately_weighed_kg": 0.06947,
+    "sum_of_separately_weighed_components_kg": 0.08737,
+    "total_minus_component_sum_kg": 1e-05,
+    "balance_note": "The three independent readings are retained. The 0.01g mass closure difference has not been allocated; scale uncertainties unspecified."
+  },
+  "markers": {
+    "m1": {
+      "center_mocap_mm": [
+        -75.749,
+        -4.849,
+        -9.692
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        -0.07566530178127513,
+        -0.009400639262810526,
+        0.006269831250815777
+      ],
+      "centroidal_inertia_model": null,
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    },
+    "m2": {
+      "center_mocap_mm": [
+        73.359,
+        -6.42,
+        8.518
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        0.07356088722588694,
+        0.007826373238294933,
+        0.007698942752934865
+      ],
+      "centroidal_inertia_model": null,
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    },
+    "m3": {
+      "center_mocap_mm": [
+        -0.173,
+        7.68,
+        0.514
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        0.0,
+        0.0,
+        -0.00635
+      ],
+      "centroidal_inertia_model": null,
+      "known_constraint": {
+        "contact": "Sphere directly touching bottom plywood face",
+        "center_z_F_m_nominal": -0.00635,
+        "center_x_y_F_m": [
+          0.0,
+          0.0
+        ]
+      },
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    },
+    "m4": {
+      "center_mocap_mm": [
+        -47.68,
+        7.599,
+        0.189
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        -0.04750818071658816,
+        1.27675647831893e-18,
+        -0.00635
+      ],
+      "centroidal_inertia_model": null,
+      "known_constraint": {
+        "contact": "Sphere directly touching bottom plywood face",
+        "center_z_F_m_nominal": -0.00635,
+        "center_x_y_F_m": [
+          -0.04750818071658816,
+          1.27675647831893e-18
+        ]
+      },
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    },
+    "m5": {
+      "center_mocap_mm": [
+        -10.988,
+        -3.145,
+        45.108
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        -0.010528123208585793,
+        0.044903957385398416,
+        0.003425628820447306
+      ],
+      "centroidal_inertia_model": null,
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    },
+    "m6": {
+      "center_mocap_mm": [
+        7.232,
+        -1.045,
+        -44.637
+      ],
+      "diameter_m": 0.0127,
+      "mass_kg_approx": 0.00108,
+      "center_F_m": [
+        0.007081065406542457,
+        -0.04498742096267698,
+        0.003425628820447306
+      ],
+      "centroidal_inertia_model": null,
+      "center_F_status": "Nominal geometric registration from operator-confirmed layout; uncertainty not quantified"
+    }
+  },
+  "mocap": {
+    "recorded_child": "RigidBody",
+    "recorded_parent": "map",
+    "csv_quaternion_order": "xyzw",
+    "supplied_marker_coordinate_units": "mm, interpreted from provided scale; formal unit confirmation pending",
+    "pivot_shift_already_applied_in_motive": true,
+    "apply_extra_pivot_shift_to_tf": false,
+    "pivot_is_measured_center_of_mass": false,
+    "fixture_from_mocap_registration": {
+      "rotation": [
+        [
+          0.9999751470889778,
+          0.0017049695184753137,
+          0.006840927080302226
+        ],
+        [
+          -0.006799862630904459,
+          -0.023027535100761342,
+          0.9997117056908876
+        ],
+        [
+          0.0018620076739293355,
+          -0.9997333773092324,
+          -0.023015369240964912
+        ]
+      ],
+      "translation_m": [
+        0.00015638529802522737,
+        -0.00033817672338641564,
+        0.0013401043648523503
+      ],
+      "convention": "p_F = rotation_F_from_M @ p_M + translation_F_from_M",
+      "source": "Operator confirmed illustrated nominal placement; 3mm plywood and12.7mm marker diameter",
+      "operator_layout_confirmed": true,
+      "uncertainty_quantified": false,
+      "note": "This is the physical offset between the existing Motive pivot and F, not a second application of the Motive centroid shift."
+    }
+  },
+  "drone": {
+    "mass_kg": 0.06947,
+    "center_of_mass_F_m": null,
+    "fixture_from_drone_rotation": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "fixture_from_drone_translation_m": null,
+    "nominal_visualization_translation_F_m": [
+      0.0,
+      0.0,
+      0.0282
+    ],
+    "mounting": "Centred over collar with battery side touching it; nose +X_A, body +Z_B downward",
+    "rotation_A_from_B": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "placement_status": "Orientation and centred contact confirmed by operator. Translation uses nominal CAD outer battery-side surface, not a measured registration.",
+    "visual_model": "models/sanity.urdf",
+    "visual_model_mass_not_used_for_measurement": true
+  },
+  "trials": [
+    {
+      "axis_label": "yaw",
+      "raw_run_directory": "data/raw/bifilar/20261019/yaw",
+      "pose_csv_sha256": "e2bf768ca7a358d03bdfec46abb815c240f521de77b5e9368aed3f53cbb7b2ab",
+      "reported_string_length_m": 0.642,
+      "loaded_free_lengths_m": [
+        null,
+        null
+      ],
+      "number_of_strings": 2,
+      "number_source": "Bifilar setup described by operator",
+      "upper_full_spacing_m": 0.156,
+      "lower_full_spacing_m": 0.132,
+      "upper_contact_positions_world_m": null,
+      "lower_contact_positions_F_m": null,
+      "measurement_axis_point_F_m": null,
+      "measurement_axis_direction_F": null,
+      "mounting_sequence_step": "Initial yaw mounting: A +Z vertical; A +X along initial reference +X",
+      "nominal_rotation_C_from_A": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nominal_rotation_C_from_B": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "nominal_vertical_axis_in_A": [
+        0,
+        0,
+        1
+      ],
+      "nominal_measurement_axis_direction_F": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "nominal_measurement_axis_direction_B": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "nominal_axis_mapping_status": "Operator-described nominal reorientation; sign is immaterial for axis inertia, actual tilt/axis point not calibrated",
+      "source_run_name": "sanity_bifilar_20261019_183444_1e008f_yaw"
+    },
+    {
+      "axis_label": "pitch",
+      "raw_run_directory": "data/raw/bifilar/20261019/pitch",
+      "pose_csv_sha256": "667496711771b469052552ded38f49c2274e38e1e40b25b9cf0588cfc051d6f9",
+      "reported_string_length_m": 0.642,
+      "loaded_free_lengths_m": [
+        null,
+        null
+      ],
+      "number_of_strings": 2,
+      "number_source": "Bifilar setup described by operator",
+      "upper_full_spacing_m": 0.156,
+      "lower_full_spacing_m": 0.155,
+      "upper_contact_positions_world_m": null,
+      "lower_contact_positions_F_m": null,
+      "measurement_axis_point_F_m": null,
+      "measurement_axis_direction_F": null,
+      "mounting_sequence_step": "From yaw, +90 degrees about assembly +X (right-hand convention)",
+      "nominal_rotation_C_from_A": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "nominal_rotation_C_from_B": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "nominal_vertical_axis_in_A": [
+        0,
+        1,
+        0
+      ],
+      "nominal_measurement_axis_direction_F": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "nominal_measurement_axis_direction_B": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "nominal_axis_mapping_status": "Operator-described nominal reorientation; sign is immaterial for axis inertia, actual tilt/axis point not calibrated",
+      "source_run_name": "sanity_bifilar_20261019_184000_2c30fe_pitch"
+    },
+    {
+      "axis_label": "roll",
+      "raw_run_directory": "data/raw/bifilar/20261019/roll",
+      "pose_csv_sha256": "a82f6ac6de2e0e858f230dc43412faecc30e952ffe2e0bd820a5ee4c18ef10fc",
+      "reported_string_length_m": 0.642,
+      "loaded_free_lengths_m": [
+        null,
+        null
+      ],
+      "number_of_strings": 2,
+      "number_source": "Bifilar setup described by operator",
+      "upper_full_spacing_m": 0.156,
+      "lower_full_spacing_m": 0.155,
+      "upper_contact_positions_world_m": null,
+      "lower_contact_positions_F_m": null,
+      "measurement_axis_point_F_m": null,
+      "measurement_axis_direction_F": null,
+      "mounting_sequence_step": "From pitch, -90 degrees about the assembly own +Z (right-hand convention; intrinsic axis)",
+      "nominal_rotation_C_from_A": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          0
+        ]
+      ],
+      "nominal_rotation_C_from_B": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "nominal_vertical_axis_in_A": [
+        -1,
+        0,
+        0
+      ],
+      "nominal_measurement_axis_direction_F": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "nominal_measurement_axis_direction_B": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "nominal_axis_mapping_status": "Operator-described nominal reorientation; sign is immaterial for axis inertia, actual tilt/axis point not calibrated",
+      "source_run_name": "sanity_bifilar_20261019_184310_51e35e_roll"
+    }
+  ],
+  "pending_quantities": [
+    "Plywood-only mass, or quantified tape/glue/mount mass split",
+    "Registration/cut/marker dimensional uncertainties (nominal layout is operator confirmed)",
+    "Fixture placement relative to the drone physical centre of mass",
+    "Non-marker attachment positions and mass distribution for correction",
+    "Actual loaded free string lengths and 3D suspension contacts for each trial"
+  ],
+  "correction_rule": "Rotate every component into a common frame, shift to the same measurement-axis point, subtract projected axis inertias; only then shift remaining drone inertia to its own COM.",
+  "no_inertia_subtraction_or_period_fitting_performed": false,
+  "assembly_A": {
+    "origin": "Recorded Motive rigid-body pivot; not a measured centre of mass",
+    "positive_x": "m4 toward m3; m2 positive side",
+    "positive_y": "m6 side",
+    "positive_z": "m3/top side",
+    "rotation_A_from_F": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "translation_A_from_F_m": [
+      -0.00015638529802522737,
+      -0.00033817672338641564,
+      0.0013401043648523503
+    ],
+    "frame_relation": "X_A=X_F; Y_A=-Y_F; Z_A=-Z_F; origins differ by the recorded nominal translation"
+  },
+  "layout_registration": {
+    "file": "data/processed/inertia/20261019/registration.json",
+    "m3_center_F_m": [
+      0,
+      0,
+      -0.00635
+    ],
+    "origin_xy_anchor_operator_confirmed": true,
+    "frame_orientation_operator_confirmed": true,
+    "uncertainty_quantified": false,
+    "used_for_inertia_correction": false,
+    "used_for_provisional_inertia_correction": true
+  },
+  "mounting_sequence": {
+    "source": "Operator-described mounting sequence; final rotation explicitly confirmed about assembly own +Z",
+    "order": [
+      "yaw",
+      "pitch",
+      "roll"
+    ],
+    "reference_C": "Initial yaw assembly orientation; +Z_C nominal world vertical and +X_C initial assembly +X. C is not a calibrated recorded map frame.",
+    "rotation_convention": "Active right-hand rotations; p_C=R_C_from_A @ p_A. Intrinsic increments multiply on the right.",
+    "formula": "yaw: I; pitch: Rx(+90deg); roll: Rx(+90deg) @ Rz(-90deg)",
+    "verbatim_operator_description": "yaw started with x axis aligned with the x axis, then I rotated +90 degrees ACW about +x to collect pitch and then from there I rotated -90 degrees ACW about +z to collect roll",
+    "own_z_axis_confirmation": true,
+    "rotations_are_nominal_not_mocap_fitted": true,
+    "direction_sign_does_not_change_scalar_axis_inertia": true,
+    "measurement_axis_points_and_string_contacts_still_unresolved": true
+  },
+  "analysis": {
+    "result_file": "data/processed/inertia/20261019/inertia_estimates.json",
+    "summary": "docs/inertia.md",
+    "reproduce": "python3 tools/inertia/analyze.py",
+    "cad_placement_for_provisional_estimate_authorized_by_operator": true,
+    "nominal_registration_used_for_provisional_correction": true,
+    "raw_recordings_modified": false,
+    "flight_model_updated_by_operator_request": true
+  },
+  "source_note": "Operator-reported geometry and masses; original recording configs retained unchanged in data/raw; corrected trial geometry is explicit here.",
+  "model_update": {
+    "date": "2026-10-19",
+    "mass_kg": 0.06947,
+    "inertia_diagonal_kg_m2": [
+      3.32e-05,
+      4.28e-05,
+      5.43e-05
+    ],
+    "CoM_model_origin_assumed": true,
+    "products_of_inertia_zero_assumed": true,
+    "previous_mass_kg": 0.06609,
+    "previous_inertia_diagonal_kg_m2": [
+      5.75e-05,
+      6.64e-05,
+      9.31e-05
+    ]
+  }
+}

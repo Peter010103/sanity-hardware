@@ -1,0 +1,50 @@
+{
+  "uniform_density": true,
+  "nominal_thickness_m": 0.003,
+  "parts": [
+    {
+      "part": "U_X",
+      "area_mm2": 2286.0,
+      "volume_mm3": 6858.0
+    },
+    {
+      "part": "U_Y",
+      "area_mm2": 2295.0,
+      "volume_mm3": 6885.0
+    },
+    {
+      "part": "collar",
+      "area_mm2": 607.8583470577034,
+      "volume_mm3": 1823.5750411731103,
+      "bottom_z_mm": 10,
+      "top_z_mm": 13
+    }
+  ],
+  "total_volume_m3": 1.5566575041173112e-05,
+  "centroid_F_m": [
+    0.0,
+    0.0,
+    0.012638400704916047
+  ],
+  "centroidal_inertia_per_kg_m2": [
+    [
+      0.0015551656748144045,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0015551656748144045,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.002800630811647475
+    ]
+  ],
+  "matches_operator_supplied_coefficients_within_rounding": true,
+  "plywood_mass_kg": null,
+  "mass_dependent_inertia_not_computed": true,
+  "dxf_sha256": "f6f1d67b1e3e7f1cb286674ec16cbc1b19e7896c3df8c4a511b15bb78ed3b31b"
+}

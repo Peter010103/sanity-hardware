@@ -22,7 +22,7 @@
   <worldbody>
     <body name="base_link">
       <freejoint name="floating_base" />
-      <inertial pos="0 0 0" mass="0.06609" fullinertia="5.75e-05 6.64e-05 9.31e-05 0 0 0" />
+      <inertial pos="0 0 0" mass="0.06947" fullinertia="3.32e-05 4.28e-05 5.43e-05 0 0 0" />
       <geom name="visual_0" type="mesh" mesh="visual_0" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_0" contype="0" conaffinity="0" group="1" />
       <geom name="visual_1" type="mesh" mesh="visual_1" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_1" contype="0" conaffinity="0" group="1" />
       <geom name="visual_2" type="mesh" mesh="visual_2" pos="0 0 0" quat="1 0 0 0" mass="0" material="visual_2" contype="0" conaffinity="0" group="1" />

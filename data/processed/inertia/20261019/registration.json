@@ -1,0 +1,201 @@
+{
+  "status": "Operator-confirmed nominal layout; uncertainty not quantified; inertia correction deferred",
+  "operator_confirmed_nominal_layout": true,
+  "registration_uncertainty_quantified": false,
+  "source_marker_frame": "Supplied Motive pivot; pivot shift already included",
+  "marker_diameter_mm": 12.7,
+  "marker_mass_g_approx": 1.08,
+  "construction": [
+    "Fixture +X follows m4->m3; assembly +X is the same.",
+    "Fixture +Z is opposite assembly +Z; assembly +Z points toward m3/top.",
+    "m3 nominal centre is [X,Y,-6.35]mm; default X=Y=0 placement was confirmed by operator.",
+    "All six marker centres move as a rigid cluster; m3/m4 spheres touch bottom plane Z_F=0.",
+    "Marker sphere shape used for display only; internal mass distribution unknown.",
+    "Drone centred over collar with battery-side contact; nominal CAD contact offset, COM unresolved."
+  ],
+  "m3_xy_nominal_mm": [
+    0.0,
+    0.0
+  ],
+  "rotation_F_from_mocap": [
+    [
+      0.9999751470889778,
+      0.0017049695184753137,
+      0.006840927080302226
+    ],
+    [
+      -0.006799862630904459,
+      -0.023027535100761342,
+      0.9997117056908876
+    ],
+    [
+      0.0018620076739293355,
+      -0.9997333773092324,
+      -0.023015369240964912
+    ]
+  ],
+  "assembly_A": {
+    "origin": "Recorded Motive pivot, not a measured centre of mass",
+    "positive_x": "m4 toward m3; m2 positive side",
+    "positive_y": "m6 side",
+    "positive_z": "m3/top side"
+  },
+  "rotation_A_from_F": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ]
+  ],
+  "translation_A_from_F_mm": [
+    -0.15638529802522738,
+    -0.33817672338641563,
+    1.3401043648523503
+  ],
+  "display_frame": "assembly",
+  "translation_F_from_mocap_mm": [
+    0.15638529802522738,
+    -0.33817672338641563,
+    1.3401043648523503
+  ],
+  "markers_F_mm": {
+    "m1": [
+      -75.66530178127513,
+      -9.400639262810525,
+      6.269831250815777
+    ],
+    "m2": [
+      73.56088722588694,
+      7.826373238294933,
+      7.698942752934865
+    ],
+    "m3": [
+      0.0,
+      0.0,
+      -6.35
+    ],
+    "m4": [
+      -47.508180716588164,
+      1.27675647831893e-15,
+      -6.35
+    ],
+    "m5": [
+      -10.528123208585793,
+      44.903957385398414,
+      3.425628820447306
+    ],
+    "m6": [
+      7.081065406542457,
+      -44.98742096267698,
+      3.425628820447306
+    ]
+  },
+  "used_for_inertia_correction": false,
+  "raw_recordings_modified": false,
+  "mass_ledger_g": {
+    "total_suspended": 87.38,
+    "drone_separately_weighed": 69.47,
+    "fixture_markers_tape_glue_mounts": 17.9,
+    "component_sum": 87.37,
+    "total_minus_component_sum": 0.01,
+    "six_marker_sum_approx": 6.48,
+    "plywood_plus_other_fixture_attachments_residual_approx": 11.42,
+    "plywood_only": null,
+    "tape_glue_mounts_excluding_markers": null,
+    "note": "Independent measured readings retained; 0.01g closure difference, uncertainty unspecified."
+  },
+  "drone": {
+    "rotation_F_from_B": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "translation_F_from_B_mm": [
+      0.0,
+      0.0,
+      28.2
+    ],
+    "operator_confirmed": "Front along +X_A; +Z_B down, battery side toward collar; centred collar contact.",
+    "translation_status": "Nominal CAD-derived contact placement, not a measured COM or calibrated rigid transform",
+    "contact_method": "Lowest battery-side external mesh vertex over solid collar footprint placed at Z_F=13mm",
+    "mesh_support_z_B_mm": -15.2,
+    "nominal_contact_plane_F_mm": 13.0,
+    "offset_override_F_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "body_origin_is_measured_COM": false,
+    "meshes": [
+      {
+        "source": "models/meshes/visual/material_0.obj",
+        "sha256": "c260bb169654e45e438c005ec1be6d0b1a5e32515de07dd748dd79499685abe9"
+      },
+      {
+        "source": "models/meshes/visual/material_1.obj",
+        "sha256": "9ed9e845b7668fa700b39aafeee1b97ed5fb397daf0847d6d47c7a298e9fa1ff"
+      },
+      {
+        "source": "models/meshes/visual/material_2.obj",
+        "sha256": "a5163596a1909d13d00dbb31ce94be63a99fc800c8e1e4f9b86b008b5cd17bde"
+      },
+      {
+        "source": "models/meshes/visual/material_3.obj",
+        "sha256": "f606f2b0c7f7cc6b66e2b07892dcea71e58e25978a621678732f2e9eb11ade1e"
+      },
+      {
+        "source": "models/meshes/visual/material_4.obj",
+        "sha256": "315b1067671257dbecc7b106a53244bbe1892085c57d02e8cc9bd41a0dd57f0c"
+      },
+      {
+        "source": "models/meshes/visual/material_5.obj",
+        "sha256": "3d39a297e05ac986ba08e70944d473b8296e6c47f080f5cf656413d64db5a739"
+      }
+    ],
+    "used_for_inertia_correction": false,
+    "rotation_A_from_B": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ]
+    ],
+    "translation_A_from_B_mm": [
+      -0.15638529802522738,
+      -0.33817672338641563,
+      -26.859895635147648
+    ]
+  }
+}

@@ -1,8 +1,16 @@
 # Sanity calibration data
 
-Measurements collected in-house on **2026-10-13**. [runs.csv](runs.csv) indexes the experiments; `raw/` contains recordings and `processed/` contains reduced tables and fit results.
+Actuator measurements were collected in-house on **2026-10-13**; bifilar inertia measurements on **2026-10-19**. See the [inertia guide](../docs/inertia.md) for the current mass/inertia and complete measurement workflow. [runs.csv](runs.csv) indexes the experiments; `raw/` contains recordings and `processed/` contains reduced tables and fit results.
 
-## Experiments
+## Bifilar inertia
+
+The [raw 19 October recordings](raw/bifilar/20261019) contain yaw, pitch and roll poses, capture receipts, original configs and the nominal fixture DXF. The [processed inputs and results](processed/inertia/20261019) retain corrected geometry, explicit mass/COM assumptions, fits and validation. Original configs predate later geometry corrections; use the processed inputs for reproduction.
+
+```sh
+python3 tools/inertia/analyze.py
+```
+
+## Actuator experiments
 
 | Recording | Kind | Status | Used for |
 |---|---|---|---|

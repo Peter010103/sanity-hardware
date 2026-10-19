@@ -1,0 +1,835 @@
+{
+  "status": "Operator-selected working estimates; period robustness checked separately from waveform residuals; COM/fixture correction provisional",
+  "nominal_correction": {
+    "component_mass_sum_kg": 0.08737,
+    "combined_COM_F_m": [
+      -0.0006558821714540605,
+      -2.0491564266197607e-05,
+      0.02417482168051228
+    ],
+    "assumed_drone_COM_F_m": [
+      0.0,
+      0.0,
+      0.0282
+    ],
+    "equivalent_uniform_plywood_mass_kg": 0.01142,
+    "uniform_remainder_about_combined_COM_F_kg_m2": [
+      [
+        1.927987328362347e-05,
+        -1.53485390041755e-10,
+        8.640980503602305e-08
+      ],
+      [
+        -1.53485390041755e-10,
+        1.928478116016617e-05,
+        2.6996801410225467e-09
+      ],
+      [
+        8.640980503602305e-08,
+        2.6996801410225467e-09,
+        3.198812133616893e-05
+      ]
+    ],
+    "point_markers_about_combined_COM_F_kg_m2": [
+      [
+        8.10693673794375e-06,
+        -5.330987885958778e-07,
+        -1.7006753748378152e-06
+      ],
+      [
+        -5.330987885958778e-07,
+        1.814838718242773e-05,
+        -4.136172406952256e-08
+      ],
+      [
+        -1.7006753748378152e-06,
+        -4.136172406952256e-08,
+        1.9091401490292493e-05
+      ]
+    ],
+    "other_attachments_about_combined_COM_F_kg_m2": [
+      [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        -0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "drone_parallel_axis_to_combined_COM_F_kg_m2": [
+      [
+        1.1255863139354268e-06,
+        -9.336803893345641e-10,
+        -1.834037661380408e-07
+      ],
+      [
+        -9.336803893345641e-10,
+        1.155441846634321e-06,
+        -5.7300384490533056e-09
+      ],
+      [
+        -1.834037661380408e-07,
+        -5.7300384490533056e-09,
+        2.9913874189286054e-08
+      ]
+    ],
+    "total_subtraction_F_kg_m2": [
+      [
+        2.851239633550265e-05,
+        -5.341859543752541e-07,
+        -1.797669335939833e-06
+      ],
+      [
+        -5.341859543752541e-07,
+        3.858861018922822e-05,
+        -4.4392082377553314e-08
+      ],
+      [
+        -1.797669335939833e-06,
+        -4.4392082377553314e-08,
+        5.1109436700650706e-05
+      ]
+    ]
+  },
+  "fit_window_s_after_cue": [
+    10.0,
+    20.0
+  ],
+  "selection": "Common 10-20s window chosen to avoid initial large amplitude; waveform quality thresholds unchanged",
+  "assumptions": [
+    "Two equal taut strings; reported 0.642m treated as loaded free length; aligned upper/lower attachment midpoints.",
+    "Dominant small-angle torsional mode about nominal drone body axis; wire torsional stiffness neglected.",
+    "Suspension/torsion axis assumed through combined assembly COM; exact axis points/contact locations not measured.",
+    "Drone COM assumed at URDF base_link origin in the displayed centred collar-contact CAD placement; this COM is not measured.",
+    "Entire 11.42g non-marker fixture remainder treated as uniform nominal plywood, including unseparated tape/glue/mount mass.",
+    "Six 1.08g markers modelled as point masses at nominal registered centres; marker intrinsic inertia omitted.",
+    "Measured 87.38g used for restoring stiffness; component bookkeeping sums to87.37g. The0.01g closure difference is not allocated.",
+    "Body axes aligned with F as established by mounting; off-diagonal drone tensor elements are not identified."
+  ],
+  "method": {
+    "height": "h=sqrt(L^2-(a-b)^2), with a,b half the full top/bottom spacings",
+    "stiffness": "k=M*g*a*b/h",
+    "fit": "theta=c0+c1*(t-mean(t))+exp(-lambda*t)*(A*cos(2*pi*f*t)+B*sin(2*pi*f*t))",
+    "combined_inertia": "J=k/((2*pi*f)^2+lambda^2)",
+    "drone_inertia": "J_drone,Gd=J_combined,G - J_fixture,G - md*||n cross (Gd-G)||^2",
+    "time": "Fit against integer-derived source timestamps; windows selected relative to host countdown cue."
+  },
+  "axes": {
+    "yaw": {
+      "body_axis": "Z",
+      "status": "working_estimate_provisional_correction",
+      "geometry": {
+        "mass_total_kg": 0.08738,
+        "string_length_m": 0.642,
+        "upper_full_spacing_m": 0.156,
+        "lower_full_spacing_m": 0.132,
+        "vertical_separation_m": 0.6418878406700037,
+        "gravity_m_s2": 9.80665,
+        "stiffness_Nm_rad": 0.006872458172429981,
+        "inertia_per_T_squared": 0.00017408139914076577
+      },
+      "main": {
+        "swing_max_deg": 2.465748487951728,
+        "swing_percentile95_deg": 1.342321872171994,
+        "window_s_after_cue": [
+          10.0,
+          20.0
+        ],
+        "fit": {
+          "frequency_damped_hz": 1.2848192108071843,
+          "period_damped_s": 0.7783196200590374,
+          "decay_per_s": 0.12671319213833807,
+          "amplitude_at_fit_start_deg": 10.12941444245003,
+          "residual_rms_deg": 0.25702317967652555,
+          "residual_to_oscillation_rms": 0.05895155787409134,
+          "fitted_cycles": 12.8224957238557,
+          "peak_period_median_s": 0.7799999999999999,
+          "peak_period_sd_s": 0.010298573010888698,
+          "peak_period_count": 12,
+          "failures": [],
+          "warnings": []
+        },
+        "combined_inertia_kg_m2": 0.00010542930373768608,
+        "drone_inertia_candidate_kg_m2": 5.4319867037035375e-05,
+        "small_angle_fit_passed": true
+      },
+      "window_sensitivity": [
+        {
+          "swing_max_deg": 2.465748487951728,
+          "swing_percentile95_deg": 1.342321872171994,
+          "window_s_after_cue": [
+            10.0,
+            20.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.2848192108071843,
+            "period_damped_s": 0.7783196200590374,
+            "decay_per_s": 0.12671319213833807,
+            "amplitude_at_fit_start_deg": 10.12941444245003,
+            "residual_rms_deg": 0.25702317967652555,
+            "residual_to_oscillation_rms": 0.05895155787409134,
+            "fitted_cycles": 12.8224957238557,
+            "peak_period_median_s": 0.7799999999999999,
+            "peak_period_sd_s": 0.010298573010888698,
+            "peak_period_count": 12,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 0.00010542930373768608,
+          "drone_inertia_candidate_kg_m2": 5.4319867037035375e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 3.4567873512752105,
+          "swing_percentile95_deg": 1.4694706214319873,
+          "window_s_after_cue": [
+            0.0,
+            10.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.2537149949950128,
+            "period_damped_s": 0.7976294484728389,
+            "decay_per_s": 0.11887893746459588,
+            "amplitude_at_fit_start_deg": 32.89373842861727,
+            "residual_rms_deg": 1.2482140085401656,
+            "residual_to_oscillation_rms": 0.08633344605668423,
+            "fitted_cycles": 12.512075650050228,
+            "peak_period_median_s": 0.7999999999999998,
+            "peak_period_sd_s": 0.01206045378311056,
+            "peak_period_count": 11,
+            "failures": [],
+            "warnings": [
+              "Amplitude above 12 deg: small-angle approximation needs review"
+            ]
+          },
+          "combined_inertia_kg_m2": 0.00011072758555743343,
+          "drone_inertia_candidate_kg_m2": 5.9618148856782726e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 2.465748487951728,
+          "swing_percentile95_deg": 1.3404075100088144,
+          "window_s_after_cue": [
+            8.0,
+            18.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.2794797564500056,
+            "period_damped_s": 0.7815676605736701,
+            "decay_per_s": 0.125855919267899,
+            "amplitude_at_fit_start_deg": 12.97021417579801,
+            "residual_rms_deg": 0.3322246580668855,
+            "residual_to_oscillation_rms": 0.05936454508530006,
+            "fitted_cycles": 12.769207969371056,
+            "peak_period_median_s": 0.7799999999999999,
+            "peak_period_sd_s": 0.00852802865422433,
+            "peak_period_count": 12,
+            "failures": [],
+            "warnings": [
+              "Amplitude above 12 deg: small-angle approximation needs review"
+            ]
+          },
+          "combined_inertia_kg_m2": 0.00010631122037992354,
+          "drone_inertia_candidate_kg_m2": 5.520178367927284e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 2.465748487951728,
+          "swing_percentile95_deg": 1.4124720611832016,
+          "window_s_after_cue": [
+            12.0,
+            22.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.2896878910180625,
+            "period_damped_s": 0.7753813980610559,
+            "decay_per_s": 0.1257598135661605,
+            "amplitude_at_fit_start_deg": 7.858746324748074,
+            "residual_rms_deg": 0.20070668374114345,
+            "residual_to_oscillation_rms": 0.05935088381139021,
+            "fitted_cycles": 12.871085152360264,
+            "peak_period_median_s": 0.78,
+            "peak_period_sd_s": 0.015569978883230612,
+            "peak_period_count": 12,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 0.00010463537495684169,
+          "drone_inertia_candidate_kg_m2": 5.352593825619098e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 2.465748487951728,
+          "swing_percentile95_deg": 1.3929062597143023,
+          "window_s_after_cue": [
+            15.0,
+            25.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.2967086358103523,
+            "period_damped_s": 0.7711832653717694,
+            "decay_per_s": 0.12293847001421698,
+            "amplitude_at_fit_start_deg": 5.351203468964172,
+            "residual_rms_deg": 0.16611423910043752,
+            "residual_to_oscillation_rms": 0.07162913534339999,
+            "fitted_cycles": 12.941152185387317,
+            "peak_period_median_s": 0.7799999999999994,
+            "peak_period_sd_s": 0.018090680674665675,
+            "peak_period_count": 12,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 0.0001035067546483769,
+          "drone_inertia_candidate_kg_m2": 5.23973179477262e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 2.2572626405852723,
+          "swing_percentile95_deg": 1.3049620620232933,
+          "window_s_after_cue": [
+            20.0,
+            30.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.3066016508821479,
+            "period_damped_s": 0.765344203663644,
+            "decay_per_s": 0.11745378484308215,
+            "amplitude_at_fit_start_deg": 2.8880491885406023,
+            "residual_rms_deg": 0.13827633496742966,
+            "residual_to_oscillation_rms": 0.10907815515191353,
+            "fitted_cycles": 13.039884475803836,
+            "peak_period_median_s": 0.7600000000000005,
+            "peak_period_sd_s": 0.03424510582152236,
+            "peak_period_count": 12,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 0.00010194761696537186,
+          "drone_inertia_candidate_kg_m2": 5.0838180264721156e-05,
+          "small_angle_fit_passed": true
+        }
+      ],
+      "fixture_and_parallel_axis_subtraction_kg_m2": 5.1109436700650706e-05,
+      "source_pose_csv_sha256": "e2bf768ca7a358d03bdfec46abb815c240f521de77b5e9368aed3f53cbb7b2ab",
+      "conditional_estimate_kg_m2": 5.4319867037035375e-05
+    },
+    "pitch": {
+      "body_axis": "Y",
+      "status": "working_estimate_provisional_correction",
+      "geometry": {
+        "mass_total_kg": 0.08738,
+        "string_length_m": 0.642,
+        "upper_full_spacing_m": 0.156,
+        "lower_full_spacing_m": 0.155,
+        "vertical_separation_m": 0.6419998052959207,
+        "gravity_m_s2": 9.80665,
+        "stiffness_Nm_rad": 0.00806852455052904,
+        "inertia_per_T_squared": 0.00020437811442671592
+      },
+      "main": {
+        "swing_max_deg": 3.427387025178958,
+        "swing_percentile95_deg": 2.0927420694606713,
+        "window_s_after_cue": [
+          10.0,
+          20.0
+        ],
+        "fit": {
+          "frequency_damped_hz": 1.5849699478690837,
+          "period_damped_s": 0.6309267890816808,
+          "decay_per_s": 0.1405667273373634,
+          "amplitude_at_fit_start_deg": 6.779690182027092,
+          "residual_rms_deg": 0.3085397608154779,
+          "residual_to_oscillation_rms": 0.11170683695737597,
+          "fitted_cycles": 15.818000079733457,
+          "peak_period_median_s": 0.6200000000000001,
+          "peak_period_sd_s": 0.012649110640673459,
+          "peak_period_count": 15,
+          "failures": [],
+          "warnings": []
+        },
+        "combined_inertia_kg_m2": 8.134030682669065e-05,
+        "drone_inertia_candidate_kg_m2": 4.275169663746243e-05,
+        "small_angle_fit_passed": true
+      },
+      "window_sensitivity": [
+        {
+          "swing_max_deg": 3.427387025178958,
+          "swing_percentile95_deg": 2.0927420694606713,
+          "window_s_after_cue": [
+            10.0,
+            20.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.5849699478690837,
+            "period_damped_s": 0.6309267890816808,
+            "decay_per_s": 0.1405667273373634,
+            "amplitude_at_fit_start_deg": 6.779690182027092,
+            "residual_rms_deg": 0.3085397608154779,
+            "residual_to_oscillation_rms": 0.11170683695737597,
+            "fitted_cycles": 15.818000079733457,
+            "peak_period_median_s": 0.6200000000000001,
+            "peak_period_sd_s": 0.012649110640673459,
+            "peak_period_count": 15,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 8.134030682669065e-05,
+          "drone_inertia_candidate_kg_m2": 4.275169663746243e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 6.231720909039349,
+          "swing_percentile95_deg": 3.82533026072433,
+          "window_s_after_cue": [
+            0.0,
+            10.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.5406570518935154,
+            "period_damped_s": 0.6490737174577359,
+            "decay_per_s": 0.13764937387776993,
+            "amplitude_at_fit_start_deg": 27.710160784224904,
+            "residual_rms_deg": 1.3180397369813908,
+            "residual_to_oscillation_rms": 0.11601962965802867,
+            "fitted_cycles": 15.375757377897285,
+            "peak_period_median_s": 0.6400000000000006,
+            "peak_period_sd_s": 0.021788191176076728,
+            "peak_period_count": 14,
+            "failures": [],
+            "warnings": [
+              "Amplitude above 12 deg: small-angle approximation needs review"
+            ]
+          },
+          "combined_inertia_kg_m2": 8.608641675960627e-05,
+          "drone_inertia_candidate_kg_m2": 4.749780657037805e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 3.485668569162304,
+          "swing_percentile95_deg": 2.2788927703934356,
+          "window_s_after_cue": [
+            8.0,
+            18.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.5771120255227407,
+            "period_damped_s": 0.6340703664779588,
+            "decay_per_s": 0.14682097097370184,
+            "amplitude_at_fit_start_deg": 9.223665168806951,
+            "residual_rms_deg": 0.39968193816746667,
+            "residual_to_oscillation_rms": 0.1070205515634249,
+            "fitted_cycles": 15.739578014716953,
+            "peak_period_median_s": 0.620000000000001,
+            "peak_period_sd_s": 0.014735767952259985,
+            "peak_period_count": 15,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 8.215121139828036e-05,
+          "drone_inertia_candidate_kg_m2": 4.356260120905214e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 3.427387025178958,
+          "swing_percentile95_deg": 2.1592935914144316,
+          "window_s_after_cue": [
+            12.0,
+            22.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.5920546297630156,
+            "period_damped_s": 0.62811914949731,
+            "decay_per_s": 0.13295315458175644,
+            "amplitude_at_fit_start_deg": 5.01856550527342,
+            "residual_rms_deg": 0.23905588879286876,
+            "residual_to_oscillation_rms": 0.1141238795396295,
+            "fitted_cycles": 15.888705205034896,
+            "peak_period_median_s": 0.6200000000000001,
+            "peak_period_sd_s": 0.014474937289114897,
+            "peak_period_count": 15,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 8.061980497753158e-05,
+          "drone_inertia_candidate_kg_m2": 4.2031194788303364e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 3.362767301231642,
+          "swing_percentile95_deg": 2.2497233862243973,
+          "window_s_after_cue": [
+            15.0,
+            25.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.6022285235727527,
+            "period_damped_s": 0.6241306937727805,
+            "decay_per_s": 0.12727682015612754,
+            "amplitude_at_fit_start_deg": 3.3128256775656935,
+            "residual_rms_deg": 0.18712096310566845,
+            "residual_to_oscillation_rms": 0.1321268784540165,
+            "fitted_cycles": 15.990240665256072,
+            "peak_period_median_s": 0.6200000000000001,
+            "peak_period_sd_s": 0.012798809468443549,
+            "peak_period_count": 15,
+            "failures": [],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 7.960054795199938e-05,
+          "drone_inertia_candidate_kg_m2": 4.101193776277116e-05,
+          "small_angle_fit_passed": true
+        },
+        {
+          "swing_max_deg": 3.3170251380222533,
+          "swing_percentile95_deg": 2.2470126995934683,
+          "window_s_after_cue": [
+            20.0,
+            30.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.6155600061155266,
+            "period_damped_s": 0.6189804131165718,
+            "decay_per_s": 0.12686871221938256,
+            "amplitude_at_fit_start_deg": 1.77531993972434,
+            "residual_rms_deg": 0.17907196746820492,
+            "residual_to_oscillation_rms": 0.2353485503494865,
+            "fitted_cycles": 16.123288861032957,
+            "peak_period_median_s": 0.6200000000000001,
+            "peak_period_sd_s": 0.017674302033770663,
+            "peak_period_count": 15,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 7.829253698806216e-05,
+          "drone_inertia_candidate_kg_m2": 3.970392679883394e-05,
+          "small_angle_fit_passed": false
+        }
+      ],
+      "fixture_and_parallel_axis_subtraction_kg_m2": 3.858861018922822e-05,
+      "source_pose_csv_sha256": "667496711771b469052552ded38f49c2274e38e1e40b25b9cf0588cfc051d6f9",
+      "conditional_estimate_kg_m2": 4.275169663746243e-05
+    },
+    "roll": {
+      "body_axis": "X",
+      "status": "working_estimate_provisional_correction",
+      "geometry": {
+        "mass_total_kg": 0.08738,
+        "string_length_m": 0.642,
+        "upper_full_spacing_m": 0.156,
+        "lower_full_spacing_m": 0.155,
+        "vertical_separation_m": 0.6419998052959207,
+        "gravity_m_s2": 9.80665,
+        "stiffness_Nm_rad": 0.00806852455052904,
+        "inertia_per_T_squared": 0.00020437811442671592
+      },
+      "main": {
+        "swing_max_deg": 2.441071760543847,
+        "swing_percentile95_deg": 1.2560857264173566,
+        "window_s_after_cue": [
+          10.0,
+          20.0
+        ],
+        "fit": {
+          "frequency_damped_hz": 1.8199193617435965,
+          "period_damped_s": 0.549474894888715,
+          "decay_per_s": 0.1656750759353734,
+          "amplitude_at_fit_start_deg": 6.451763778883575,
+          "residual_rms_deg": 0.62273085116418,
+          "residual_to_oscillation_rms": 0.25258730610400904,
+          "fitted_cycles": 18.162795230201095,
+          "peak_period_median_s": 0.54,
+          "peak_period_sd_s": 0.04749612987329806,
+          "peak_period_count": 17,
+          "failures": [
+            "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+          ],
+          "warnings": []
+        },
+        "combined_inertia_kg_m2": 6.169343339507606e-05,
+        "drone_inertia_candidate_kg_m2": 3.318103705957341e-05,
+        "small_angle_fit_passed": false
+      },
+      "window_sensitivity": [
+        {
+          "swing_max_deg": 2.441071760543847,
+          "swing_percentile95_deg": 1.2560857264173566,
+          "window_s_after_cue": [
+            10.0,
+            20.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.8199193617435965,
+            "period_damped_s": 0.549474894888715,
+            "decay_per_s": 0.1656750759353734,
+            "amplitude_at_fit_start_deg": 6.451763778883575,
+            "residual_rms_deg": 0.62273085116418,
+            "residual_to_oscillation_rms": 0.25258730610400904,
+            "fitted_cycles": 18.162795230201095,
+            "peak_period_median_s": 0.54,
+            "peak_period_sd_s": 0.04749612987329806,
+            "peak_period_count": 17,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 6.169343339507606e-05,
+          "drone_inertia_candidate_kg_m2": 3.318103705957341e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 2.276566239275302,
+          "swing_percentile95_deg": 1.5396841090358073,
+          "window_s_after_cue": [
+            0.0,
+            10.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.762588183777864,
+            "period_damped_s": 0.5673475002292585,
+            "decay_per_s": 0.1632104461609656,
+            "amplitude_at_fit_start_deg": 36.01991869853134,
+            "residual_rms_deg": 2.461344382796673,
+            "residual_to_oscillation_rms": 0.17820399727642613,
+            "fitted_cycles": 17.590630074103085,
+            "peak_period_median_s": 0.56,
+            "peak_period_sd_s": 0.021828206253269835,
+            "peak_period_count": 17,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": [
+              "Amplitude above 12 deg: small-angle approximation needs review"
+            ]
+          },
+          "combined_inertia_kg_m2": 6.57715938677428e-05,
+          "drone_inertia_candidate_kg_m2": 3.725919753224015e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 2.441071760543847,
+          "swing_percentile95_deg": 1.3033301006320166,
+          "window_s_after_cue": [
+            8.0,
+            18.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.8111994557791142,
+            "period_damped_s": 0.5521203072412779,
+            "decay_per_s": 0.18431278290293415,
+            "amplitude_at_fit_start_deg": 9.786728350724587,
+            "residual_rms_deg": 0.7100699608696917,
+            "residual_to_oscillation_rms": 0.20070048825462763,
+            "fitted_cycles": 18.075770568675562,
+            "peak_period_median_s": 0.54,
+            "peak_period_sd_s": 0.03280961121737478,
+            "peak_period_count": 17,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 6.228563898509719e-05,
+          "drone_inertia_candidate_kg_m2": 3.377324264959454e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 2.441071760543847,
+          "swing_percentile95_deg": 1.1355969687489968,
+          "window_s_after_cue": [
+            12.0,
+            22.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.8281944091588767,
+            "period_damped_s": 0.5469877793030141,
+            "decay_per_s": 0.16236677432305024,
+            "amplitude_at_fit_start_deg": 4.557630890697288,
+            "residual_rms_deg": 0.5300036124523191,
+            "residual_to_oscillation_rms": 0.2995298640238313,
+            "fitted_cycles": 18.24538020340559,
+            "peak_period_median_s": 0.5400000000000005,
+            "peak_period_sd_s": 0.0694422221866658,
+            "peak_period_count": 18,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 6.113682387002292e-05,
+          "drone_inertia_candidate_kg_m2": 3.262442753452027e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 1.4567998613698572,
+          "swing_percentile95_deg": 0.81896005141497,
+          "window_s_after_cue": [
+            15.0,
+            25.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.842706349664418,
+            "period_damped_s": 0.5426800641253088,
+            "decay_per_s": 0.17091554635339185,
+            "amplitude_at_fit_start_deg": 2.8571201787304332,
+            "residual_rms_deg": 0.43643972441761664,
+            "residual_to_oscillation_rms": 0.4030670944603333,
+            "fitted_cycles": 18.390209369650893,
+            "peak_period_median_s": 0.54,
+            "peak_period_sd_s": 0.07738368881177513,
+            "peak_period_count": 17,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 6.017657883091423e-05,
+          "drone_inertia_candidate_kg_m2": 3.166418249541158e-05,
+          "small_angle_fit_passed": false
+        },
+        {
+          "swing_max_deg": 1.3663233681614637,
+          "swing_percentile95_deg": 0.6745110159338085,
+          "window_s_after_cue": [
+            20.0,
+            30.0
+          ],
+          "fit": {
+            "frequency_damped_hz": 1.8307310484321513,
+            "period_damped_s": 0.5462298795098307,
+            "decay_per_s": 0.13593947521108277,
+            "amplitude_at_fit_start_deg": 1.1976126659123387,
+            "residual_rms_deg": 0.5140138320889746,
+            "residual_to_oscillation_rms": 1.0389695702477129,
+            "fitted_cycles": 18.27069586335287,
+            "peak_period_median_s": 0.56,
+            "peak_period_sd_s": 0.08468569340016457,
+            "peak_period_count": 16,
+            "failures": [
+              "Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking"
+            ],
+            "warnings": []
+          },
+          "combined_inertia_kg_m2": 6.097118603884371e-05,
+          "drone_inertia_candidate_kg_m2": 3.2458789703341057e-05,
+          "small_angle_fit_passed": false
+        }
+      ],
+      "fixture_and_parallel_axis_subtraction_kg_m2": 2.851239633550265e-05,
+      "source_pose_csv_sha256": "a82f6ac6de2e0e858f230dc43412faecc30e952ffe2e0bd820a5ee4c18ef10fc",
+      "conditional_estimate_kg_m2": 3.318103705957341e-05
+    }
+  },
+  "raw_recordings_modified": false,
+  "flight_model_modified": false,
+  "geometry_uncertainty_quantified": false,
+  "statistical_confidence_interval_not_claimed": true,
+  "references": [
+    "https://doi.org/10.2514/1.34015",
+    "https://doi.org/10.1016/0020-7403(67)90047-1"
+  ],
+  "candidate_body_diagonal_kg_m2": [
+    3.318103705957341e-05,
+    4.275169663746243e-05,
+    5.4319867037035375e-05
+  ],
+  "off_diagonal_body_tensor_elements": null,
+  "candidate_diagonal_positive": true,
+  "candidate_diagonal_satisfies_triangle_inequalities": true,
+  "marker_intrinsic_inertia_max_subtraction_each_axis_kg_m2": 2.612898e-07,
+  "unmeasured_axis_offset_parallel_axis_only_sensitivity": [
+    {
+      "offset_m": 0.003,
+      "extra_subtraction_kg_m2": 7.863300000000001e-07
+    },
+    {
+      "offset_m": 0.005,
+      "extra_subtraction_kg_m2": 2.1842500000000003e-06
+    },
+    {
+      "offset_m": 0.01,
+      "extra_subtraction_kg_m2": 8.737000000000001e-06
+    }
+  ],
+  "attachment_distribution_sensitivity": [
+    {
+      "scenario": "1g attachment at collar",
+      "illustrative_not_uncertainty_bound": true,
+      "delta_drone_body_diagonal_kg_m2": [
+        1.5633795407047916e-06,
+        1.5633795407047848e-06,
+        2.8006308116474855e-06
+      ]
+    },
+    {
+      "scenario": "1g attachment at arm",
+      "illustrative_not_uncertainty_bound": true,
+      "delta_drone_body_diagonal_kg_m2": [
+        1.657771965607267e-06,
+        -4.001228993509035e-06,
+        -2.85837014746882e-06
+      ]
+    }
+  ],
+  "period_sensitivity_review": {
+    "waveform_gate_unchanged": true,
+    "comparison": "soft-L1 loss with0.25deg scale versus ordinary least squares; same source-time grid and model",
+    "inference": "Working periods are insensitive to residual spikes; this does not resolve window drift or geometry uncertainty.",
+    "axes": {
+      "yaw": {
+        "least_squares_period_s": 0.7783196200590374,
+        "outlier_resistant_period_s": 0.7781732035050296,
+        "least_squares_drone_inertia_kg_m2": 5.4319867037035375e-05,
+        "outlier_resistant_drone_inertia_kg_m2": 5.4280125242084656e-05,
+        "drone_inertia_change_percent": -0.07316254092378793,
+        "robust_fit_converged": true,
+        "working_period_supported": true
+      },
+      "pitch": {
+        "least_squares_period_s": 0.6309267890816808,
+        "outlier_resistant_period_s": 0.6308220050396705,
+        "least_squares_drone_inertia_kg_m2": 4.275169663746243e-05,
+        "outlier_resistant_drone_inertia_kg_m2": 4.2724804663237354e-05,
+        "drone_inertia_change_percent": -0.06290270641916562,
+        "robust_fit_converged": true,
+        "working_period_supported": true
+      },
+      "roll": {
+        "least_squares_period_s": 0.549474894888715,
+        "outlier_resistant_period_s": 0.5491907615703754,
+        "least_squares_drone_inertia_kg_m2": 3.318103705957341e-05,
+        "outlier_resistant_drone_inertia_kg_m2": 3.311675014889691e-05,
+        "drone_inertia_change_percent": -0.1937459355507043,
+        "robust_fit_converged": true,
+        "working_period_supported": true
+      }
+    }
+  },
+  "selected_URDF_parameters": {
+    "date": "2026-10-19",
+    "mass_kg": 0.06947,
+    "inertia_diagonal_kg_m2": [
+      3.32e-05,
+      4.28e-05,
+      5.43e-05
+    ],
+    "CoM_model_origin_assumed": true,
+    "products_of_inertia_zero_assumed": true,
+    "previous_mass_kg": 0.06609,
+    "previous_inertia_diagonal_kg_m2": [
+      5.75e-05,
+      6.64e-05,
+      9.31e-05
+    ]
+  }
+}
