@@ -1,6 +1,6 @@
 # Sanity calibration data
 
-Actuator measurements were collected in-house on **2026-10-13**; bifilar inertia measurements on **2026-10-19**. See the [inertia guide](../docs/inertia.md) for the current mass/inertia and complete measurement workflow. [runs.csv](runs.csv) indexes the experiments; `raw/` contains recordings and `processed/` contains reduced tables and fit results.
+Actuator measurements were collected in-house on **2026-10-13** and **2026-10-20**; bifilar inertia measurements on **2026-10-19**. See the [inertia guide](../docs/inertia.md) for the current mass/inertia and complete measurement workflow. [runs.csv](runs.csv) indexes the experiments; `raw/` contains recordings and `processed/` contains reduced tables and fit results.
 
 ## Bifilar inertia
 
@@ -10,7 +10,13 @@ The [raw 19 October recordings](raw/bifilar/20261019) contain yaw, pitch and rol
 python3 tools/inertia/analyze.py
 ```
 
-## Actuator experiments
+## Regulated actuator campaign: 20 October
+
+The [selected model guide](../docs/actuator-results-20261020.md) and compact [identified model file](../parameters/identified_actuators.json) retain the direct command/FC-voltage thrust surface, speed law, Acro compensation-100 collective curve, observed response candidates and provisional balanced-yaw coefficient. The guide distinguishes measured models from provisional response/torque estimates.
+
+The original raw audit reproduced 767 static plateaus and 986 step-signal records, with 4,617 matching file hashes. Source-product hashes are recorded in the compact parameter file. The large campaign dumps, traces, historical reports and figure/reproduction ZIPs remain local analysis artifacts; only the selected model parameters, concise documentation and three vector figures are retained for this update. The original 13 October runtime calibration remains unchanged.
+
+## Actuator experiments: 13 October
 
 | Recording | Kind | Status | Used for |
 |---|---|---|---|

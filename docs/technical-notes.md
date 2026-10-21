@@ -1,5 +1,7 @@
 # Technical notes
 
+The actuator equations and API below describe the **13 October calibration**. For the newer selected direct-motor/voltage and CTBR bench models, use the [20 October model guide](actuator-results-20261020.md) and [compact parameters](../parameters/identified_actuators.json). These explicit offline models do not change the existing API.
+
 ## Geometry and frames
 
 The source assembly is **Sanity_simplified v4**, exported on 2026-03-05. The URDF uses metres and radians and defines +X as forward, +Y as left and +Z as up. Its origin is the mean CAD propeller datum, retained as the assumed model CoM at **[0, 0, 0] m**; the physical CoM is not independently measured. Rotor positions are at $|x|=|y|=0.028461047943$ m, z ≈ 0. Registration of the physical aircraft and flight controller to this frame, including M1–M4 assignments, is not established by the supplied measurements. Rotor rotation directions are unknown; their convention is CW/CCW viewed from above, looking along −Z.

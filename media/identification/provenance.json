@@ -1,0 +1,45 @@
+{
+  "scope": "Three curated vector figures; raw/full analysis archives remain external. No device/network access.",
+  "models_sha256": "fae40ecbc4052c9d54aaf18c475aa2415a95a2b8cb67e783afd24581da1964f8",
+  "plotting_script_sha256": "68f9042fc3259bf7f6f60b9cae06459b46e7cb62f475750d4ece7d21f2353d22",
+  "sources": [
+    {
+      "archive": "sanity_fullrange_id_20261020/thrust_command_voltage_surface.json",
+      "sha256": "6d337b0c8935188251514133c0a2e122ed87f5ef9a52cdbdea0ed92aff42170c"
+    },
+    {
+      "archive": "sanity_fullrange_id_20261020/thrust_omega_voltage_surface.json",
+      "sha256": "5e307bb3dbb1823c727439bb864a5b5e1d288fafed78ced3647d13b82c8a5b45"
+    },
+    {
+      "archive": "sanity_fullrange_id_20261020/results.json",
+      "sha256": "68c451e691546fdc2359cc9c966508d143bea35480fced8a8c92bfff6b23eab1"
+    },
+    {
+      "archive": "sanity_regulated_id_20261020/results.json",
+      "sha256": "7aed0166fa4c124961e787f492b2eb00f501ce52435073f4db0117a579b758a8"
+    },
+    {
+      "archive": "sanity_fullrange_id_20261020/audited_step_traces.npz",
+      "sha256": "c1078b77f23165362dffbd471c358ba1b14caebb3cf7fe48e828181860d3402a"
+    },
+    {
+      "archive": "sanity_regulated_id_20261020/provisional_yaw_model.json",
+      "sha256": "38b2a743b61449c096b6e2e173b60186913e9d39ac2abd2797e6e3c8f8ccdbb9"
+    }
+  ],
+  "assets": [
+    {
+      "path": "media/identification/direct-thrust.svg",
+      "sha256": "2aa981b5f4dbe075427f96bdda24f7a2f775b08e2b32d4c9353c4d1bd18fcc65"
+    },
+    {
+      "path": "media/identification/ctbr-collective.svg",
+      "sha256": "78090629c1c942bd87887dc6e29dd538f6f8b4ff7fb4939feab96312fec98d41"
+    },
+    {
+      "path": "media/identification/yaw-torque.svg",
+      "sha256": "a7c2afc702899da01c8b3dc0436ffbb6a07bf538b0092adfa054f011ac09e4db"
+    }
+  ]
+}

@@ -21,11 +21,14 @@ Sanity quadrotor hardware models, meshes, measured actuator dynamics and calibra
 |---|---|
 | [docs/build-instructions.md](docs/build-instructions.md) | Assembly instructions with photos |
 | [docs/inertia.md](docs/inertia.md) | Bifilar setup, measured results, fixture correction and reproduction |
+| [docs/actuator-results-20261020.md](docs/actuator-results-20261020.md) | Selected identified models, input conventions and validation |
 | [models/sanity.urdf](models/sanity.urdf) | Robot description in URDF (XML), including mass, CoM and inertia |
 | [models/sanity.xml](models/sanity.xml) | MuJoCo MJCF with a free base, rotor thrust and reaction-torque inputs |
 | [models/meshes/](models/meshes/) | Visual OBJ/MTL meshes and lightweight collision geometry |
 | [models/sources/](models/sources/) | STEP, USDZ, DAE and Blender CAD files |
-| [parameters/actuators.json](parameters/actuators.json) | Thrust coefficient, response times, command-to-speed coefficients and operating ranges |
+| [media/identification/](media/identification/) | Three selected vector figures: direct thrust, Acro collective/response and provisional yaw torque |
+| [parameters/identified_actuators.json](parameters/identified_actuators.json) | Selected 20 October direct-motor, CTBR, response and provisional yaw models |
+| [parameters/actuators.json](parameters/actuators.json) | Original 13 October calibration used by the existing actuator API |
 | [sanity_isaac.py](sanity_isaac.py) | Batched PyTorch actuator and body-force adapter for Isaac Sim / Isaac Lab |
 | [data/](data/README.md) | Raw measurements, processed CSV and experiment index |
 | [tools/](tools/) | Conversion, fitting, validation and data-collection scripts |
@@ -41,45 +44,30 @@ The MuJoCo XML is generated from the URDF and uses the same meshes and physical 
 
 ## Actuator model
 
-The measured thrust model is
+The [selected model guide](docs/actuator-results-20261020.md) explains the compact [20 October parameter file](parameters/identified_actuators.json):
 
-$$
-T_i = k_T\omega_i^2,\qquad k_T = 3.13594\times10^{-8}\ \mathrm{N}/(\mathrm{rad/s})^2.
-$$
+| Selected model | Meaning |
+|---|---|
+| Direct motor thrust | One shared `T(direct MSP count, delivered FC voltage)` polynomial for all four motors; 393 steady plateaus; **0.0361 N** held-out-command RMS per rotor |
+| Thrust from measured speed | `T = 3.27592e-8 × omega² N` per rotor, with mechanical omega in rad/s |
+| CTBR collective | Aircraft-total RC-throttle response with **Betaflight Acro, voltage compensation 100 and RC smoothing ON**; voltage input is the **PSU source setting** |
+| Observed step responses | Separate rising/falling direct-RPM and Acro fits; include measurement-path effects, not motor-only dynamics |
+| Yaw reaction torque | Balanced-contrast coefficient, explicitly **provisional** because torque calibration/lever arms are assumed |
 
-![Collective thrust against RMS rotor angular speed](media/thrust-fit.png)
+Direct motor counts are not RC throttle; delivered FC voltage is not PSU source voltage. The direct model is restricted to its stored joint command/voltage hull. These models do not establish free-flight rate-loop dynamics, startup behaviour or voltage-independent actuator limits.
 
-The collective curve uses $\omega_{\mathrm{RMS}}=\sqrt{\frac{1}{4}\sum_i\omega_i^2}$, so $T_{\mathrm{total}}=4k_T\omega_{\mathrm{RMS}}^2$. Individual-motor measurements are also included in the dataset and fit.
-
-| Parameter | Value |
-|---|---:|
-| Static fit RMS error, all 51 observations | 0.01754 N |
-| Spinning response time constant | 37.41 ms |
-| Apparent command-to-RPM delay | 19.29 ms |
-| Command-map range | 1250–1450 MSP counts, 7.513–8.112 V |
-
-![Measured motor-speed steps and fitted first-order response](media/response-fit.png)
-
-Measured speed steps, normalised between their settled low and high speeds. The curves show the fitted delay and first-order response.
-
-The delay includes USB and telemetry effects. Angular speed uses the flight controller's configured 12 motor poles. High-speed static measurements include low-battery readings and do not establish a safe thrust limit.
+The existing Python/Isaac API retains the [original 13 October calibration](parameters/actuators.json), with its narrower 1250–1450-count command map. The new models are explicit offline inputs and have not silently changed that API:
 
 ```python
-from sanity_actuator import SanityModel, SpinningModel
+import json
+from pathlib import Path
 
-model = SanityModel()
-omega = model.steady_omega([1350] * 4, voltage_V=7.8)
-thrust_N = model.thrusts(omega)
-
-rotors = SpinningModel(model, [1350] * 4, voltage_V=7.8)
-omega_next = rotors.step(0.01, [1400] * 4, voltage_V=7.8)
+models = json.loads(Path("parameters/identified_actuators.json").read_text())["models"]
+direct = models["direct_motor_thrust"]
+ctbr = models["ctbr_acro100_collective"]
 ```
 
-Outputs follow flight-controller order **M1–M4**. The flight interface accepts roll, pitch, yaw rate and collective thrust through ROS 2 → UDP → ESP32/SBUS → Betaflight. A policy trained on individual rotor commands needs a controller adapter. Equations, hardware details and validation results are in the [technical notes](docs/technical-notes.md).
-
-For Isaac Sim, [sanity_isaac.py](sanity_isaac.py) runs the measured model on CPU or GPU and supplies body forces and moments through Isaac Lab's external-wrench API. It supports batched environments, partial resets and a configurable command delay. Native import, rendering and dynamics checks pass in Isaac Sim 5.1.0 / Isaac Lab 2.3.2. See the [integration example and test results](docs/technical-notes.md#isaac-sim).
-
-The bench data do not identify the hardware-to-frame mapping, rotor rotation directions, physical pole count, yaw reaction torque or usable actuator limits. These parameters are explicitly unknown in [actuators.json](parameters/actuators.json). Native checks validate the simulator implementation; flight deployment has not been validated.
+For the original `SanityModel`/`SpinningModel` API and [Isaac adapter](sanity_isaac.py), see the [technical notes](docs/technical-notes.md). The measured mass/inertia are already in the robot descriptions. The model guide embeds three selected vector figures. Full campaign dumps, PDFs and generated archives remain local analysis artifacts rather than part of the curated model contribution.
 
 ## Reproduce
 

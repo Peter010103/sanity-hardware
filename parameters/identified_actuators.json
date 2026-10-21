@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "measurement_date": "2026-10-20",
+  "purpose": "Compact selected offline identification models. Explicit opt-in; not a replacement for the legacy runtime API or a flight-readiness declaration.",
+  "body_frame": "X forward, Y left, Z up",
+  "rigid_body_reference": {
+    "mass_kg": 0.06947,
+    "battery": "2S 530 mAh included in mass",
+    "inertia_diagonal_kg_m2": [
+      3.32e-05,
+      4.28e-05,
+      5.43e-05
+    ],
+    "source": "models/sanity.urdf and docs/inertia.md",
+    "status": "Working CoM/fixture-corrected bifilar estimate; provisional physical CoM and fixture subtraction assumptions retained."
+  },
+  "models": {
+    "direct_motor_thrust": {
+      "status": "Selected shared static direct-MSP model",
+      "input_units": {
+        "command": "MSP_SET_MOTOR count, not RC throttle or measured PWM pulse width",
+        "voltage": "Delivered FC bus readback, V"
+      },
+      "output_units": "Per-rotor axial thrust, N",
+      "equation": "T(u,V_FC)=sum c_ij*q^i*z^j [N]; q=(u-1550)/450; z=(V_FC-7.5)/0.5; i+j<=degree. u is a direct MSP motor command count, not RC throttle.",
+      "degree": 4,
+      "normalization": {
+        "command_center": 1550.0,
+        "command_scale": 450.0,
+        "voltage_center_V": 7.5,
+        "voltage_scale_V": 0.5
+      },
+      "coefficient_powers_q_z": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "coefficients_N": [
+        0.4351860670723993,
+        0.5888277923752726,
+        0.06950890424866808,
+        0.01179402592972459,
+        0.10562262294835595,
+        -0.0011361243966307624,
+        -0.017499290876433277,
+        -0.0661085749861192,
+        -0.08317616642876212,
+        -0.04690429869990815,
+        0.11547296925919813,
+        -0.09617320578422839,
+        0.005125530351877021,
+        0.05111545742066122,
+        0.03365082870191128
+      ],
+      "domain": {
+        "command_counts": [
+          1100,
+          2000
+        ],
+        "FC_voltage_V": [
+          6.963888888888889,
+          8.19
+        ],
+        "convex_hull_command_voltage_V": [
+          [
+            1950.0,
+            7.670526315789471
+          ],
+          [
+            1550.0,
+            8.089411764705883
+          ],
+          [
+            1500.0,
+            8.110624999999999
+          ],
+          [
+            1350.0,
+            8.16
+          ],
+          [
+            1250.0,
+            8.18
+          ],
+          [
+            1150.0,
+            8.19
+          ],
+          [
+            1100.0,
+            7.79
+          ],
+          [
+            1150.0,
+            7.58
+          ],
+          [
+            2000.0,
+            6.963888888888889
+          ],
+          [
+            2000.0,
+            7.520555555555556
+          ]
+        ],
+        "restriction": "Interpolation only inside the measured joint command/voltage hull. No startup/stop model or zero-output anchor is inferred."
+      },
+      "validation": {
+        "points": 393,
+        "weighting": "Equal total motor influence; equal source-voltage/command-condition influence within each motor",
+        "training_RMSE_N": 0.02494087491824444,
+        "held_out_command_RMSE_N": 0.03610402321311833,
+        "held_out_source_voltage_RMSE_N": 0.034894232681803784
+      },
+      "constraints": "Nonnegative thrust and slopes with command and voltage over supported joint coverage.",
+      "limits": [
+        "Use the same coefficients on all four motors.",
+        "No extrapolation outside the convex hull; no zero/idle/startup anchor is inferred.",
+        "Identified from isolated motors; summing at a requested command does not establish simultaneous collective thrust."
+      ]
+    },
+    "rotor_thrust_from_speed": {
+      "status": "Separate compact speed-conditioned law",
+      "equation": "T_i = kT * omega_i^2",
+      "input": "Mechanical angular speed, rad/s; derived from FC RPM with configured 12 poles",
+      "output": "Per-rotor thrust, N",
+      "kT_N_per_rad_s_squared": 3.2759217253132655e-08,
+      "domain": {
+        "omega_rad_s": [
+          78.55128382406431,
+          5883.8916304061995
+        ]
+      },
+      "validation": {
+        "points": 393,
+        "training_RMSE_N": 0.017991498889633736,
+        "held_out_command_RMSE_N": 0.018606343956557855
+      },
+      "individual_kT_spread_percent": [
+        -1.6881636204113981,
+        2.789402334873281
+      ],
+      "limits": [
+        "Separate relationship, not a substitute for the command-voltage map.",
+        "A joint command/voltage operating envelope is not implied by this speed interval."
+      ]
+    },
+    "ctbr_acro100_collective": {
+      "status": "Selected descriptive armed Acro collective bench model",
+      "configuration": {
+        "mode": "ACRO",
+        "vbat_sag_compensation": 100,
+        "rc_smoothing": true
+      },
+      "input_units": {
+        "command": "RC throttle count, not MSP_SET_MOTOR count",
+        "voltage": "PSU source setting, V; NOT delivered FC/battery voltage"
+      },
+      "output_units": "Aircraft-total axial thrust, N",
+      "equation": "T=sum(a_i*q^i,i=0..3)+z*(b0+b1*q+b2*q^2); q=(RC-1500)/400; z=(V_PSU-7.9)/0.3",
+      "degree": 3,
+      "normalization": {
+        "command_center": 1500.0,
+        "command_scale": 400.0,
+        "voltage_center_V": 7.9,
+        "voltage_scale_V": 0.3
+      },
+      "coefficient_order": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "b0",
+        "b1",
+        "b2"
+      ],
+      "coefficients_N": [
+        1.3751512704027196,
+        1.7484259770404111,
+        -0.02369185069063536,
+        -0.429314208428548,
+        0.03676390144354952,
+        0.10261973952005027,
+        0.08423619473347987
+      ],
+      "domain_by_source_V": [
+        {
+          "source_V": 7.6,
+          "x_min": 1100.0,
+          "x_max": 1700.0
+        },
+        {
+          "source_V": 7.8,
+          "x_min": 1100.0,
+          "x_max": 1800.0
+        },
+        {
+          "source_V": 8.0,
+          "x_min": 1100.0,
+          "x_max": 1850.0
+        },
+        {
+          "source_V": 8.2,
+          "x_min": 1100.0,
+          "x_max": 1900.0
+        }
+      ],
+      "validation": {
+        "points": 84,
+        "training_RMSE_N": 0.016472301401683334,
+        "held_out_command_RMSE_N": 0.020359501716780394
+      },
+      "highest_observed": {
+        "thrust_N": 2.9018340172856423,
+        "PSU_source_V": 8.2,
+        "RC": 1900
+      },
+      "limits": [
+        "Source-voltage bench fit pools wiring cohorts; live FC voltage must not be substituted.",
+        "For CTBR, compose with the SAME newton-to-RC mapping used in deployment.",
+        "Zero rate requests on a rigidly held aircraft; body-rate dynamics and nonzero-moment mixing not identified.",
+        "Restrict to measured voltage/command coverage; the highest observed thrust is not a voltage-independent flight rating."
+      ]
+    },
+    "observed_step_responses": {
+      "status": "Provisional observation-path fits, not identified flight dynamics",
+      "equation": "y(t)=y0+(yinf-y0)*(1-exp(-max(t-L,0)/tau))",
+      "time_zero": "Host command acknowledgement",
+      "fits": [
+        {
+          "cohort": "front",
+          "mode": "acro",
+          "compensation": 100,
+          "signal": "rpm",
+          "direction": "down",
+          "delay_s": 0.01823369007256482,
+          "time_constant_s": 0.06885979799339512,
+          "training_edges": 9,
+          "held_out_edges": 2,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.044900981844691476,
+          "held_out_shape_RMSE": 0.03665195191297544
+        },
+        {
+          "cohort": "front",
+          "mode": "acro",
+          "compensation": 100,
+          "signal": "rpm",
+          "direction": "up",
+          "delay_s": 0.02489600401007304,
+          "time_constant_s": 0.04257278904729232,
+          "training_edges": 9,
+          "held_out_edges": 3,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.035303968881791534,
+          "held_out_shape_RMSE": 0.03721038250985819
+        },
+        {
+          "cohort": "front",
+          "mode": "acro",
+          "compensation": 100,
+          "signal": "thrust",
+          "direction": "down",
+          "delay_s": 0.0350192705323127,
+          "time_constant_s": 0.04855109375875827,
+          "training_edges": 9,
+          "held_out_edges": 2,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.031964062610639714,
+          "held_out_shape_RMSE": 0.04185853881792277
+        },
+        {
+          "cohort": "front",
+          "mode": "acro",
+          "compensation": 100,
+          "signal": "thrust",
+          "direction": "up",
+          "delay_s": 0.04025421804897699,
+          "time_constant_s": 0.04388193290528556,
+          "training_edges": 9,
+          "held_out_edges": 3,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.031517504765054195,
+          "held_out_shape_RMSE": 0.025207671658900734
+        },
+        {
+          "cohort": "rear",
+          "mode": "direct",
+          "compensation": null,
+          "signal": "rpm",
+          "direction": "down",
+          "delay_s": 0.006000117758234226,
+          "time_constant_s": 0.03306989481682699,
+          "training_edges": 78,
+          "held_out_edges": 36,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.07910085931829441,
+          "held_out_shape_RMSE": 0.07851918758238394
+        },
+        {
+          "cohort": "rear",
+          "mode": "direct",
+          "compensation": null,
+          "signal": "rpm",
+          "direction": "up",
+          "delay_s": 0.006352906308467976,
+          "time_constant_s": 0.026885216185224815,
+          "training_edges": 78,
+          "held_out_edges": 36,
+          "held_out_source_V": 8.0,
+          "training_shape_RMSE": 0.11273364940108538,
+          "held_out_shape_RMSE": 0.08011216339422851
+        }
+      ],
+      "limits": [
+        "Displayed amplitudes are anchored to measured endpoints; held-out scores assess shape, not absolute gain.",
+        "Force includes HX711/fixture response; Acro also includes RC smoothing/mixing. RPM fits include telemetry timing.",
+        "Do not use as motor-only poles or body-rate time constants, or double-count transport/measurement delay.",
+        "Separate up/down fits are approximations; a one-pole observation fit does not establish physical system order."
+      ]
+    },
+    "yaw_reaction_torque": {
+      "status": "Provisional balanced-contrast estimate; not independently torque calibrated",
+      "equation": "Q_i = spin_sign_i * kQ * omega_i^2",
+      "kQ_Nm_per_rad_s_squared": 1.195442018390902e-10,
+      "validation": {
+        "balanced_contrasts": 38,
+        "RMSE_Nm": 7.083613143256242e-05
+      },
+      "calibration_assumptions": {
+        "transferred_force_calibration_counts_per_N": 21036.445,
+        "perpendicular_reaction_arm_m": 0.03
+      },
+      "limits": [
+        "Validate physical rotor spin signs separately.",
+        "Do not substitute individual-motor rig-reaction polynomials as aerodynamic drag.",
+        "Rig calibration/geometry uncertainty remains; not promoted to the legacy runtime parameters."
+      ]
+    }
+  },
+  "provenance": {
+    "source_scope": "Source-product names refer to local campaign archives outside this curated Git contribution. Full data, reports and reproduction archives are not included.",
+    "sources": [
+      {
+        "archive": "sanity_fullrange_id_20261020/thrust_command_voltage_surface.json",
+        "sha256": "6d337b0c8935188251514133c0a2e122ed87f5ef9a52cdbdea0ed92aff42170c"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/shared_actuator_model.json",
+        "sha256": "121637396c7cd4820d3957b97bbb5255fc0bc73b3532a6178166e9034bc3b2a8"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/combined_trend_models.json",
+        "sha256": "efc54274bf7655fc1d2dfdc6b0c16572cf01f55af87c1c17e87c0ee40b7a5ef0"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/step_response_overlay_models.json",
+        "sha256": "e8a10b69c705ba5455afa1f8072eea974ea272a42d28b2fdbfabb91b65d18bf6"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/report_audit.json",
+        "sha256": "9614bab02100f0cd5cf6391377afd46bf7439370bca1833c4ea5d6454110ff9f"
+      },
+      {
+        "archive": "sanity_regulated_id_20261020/provisional_yaw_model.json",
+        "sha256": "38b2a743b61449c096b6e2e173b60186913e9d39ac2abd2797e6e3c8f8ccdbb9"
+      }
+    ],
+    "audit": {
+      "raw_files_hash_verified": 4617,
+      "static_plateaus_reproduced": 767,
+      "step_signal_records_reproduced": 986
+    }
+  }
+}

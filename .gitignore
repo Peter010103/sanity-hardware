@@ -5,3 +5,8 @@ __pycache__/
 build/
 .DS_Store
 *.log
+
+# Keep only curated identification models and documentation in Git.
+# Full local campaigns, reports and generated archives remain analysis artifacts.
+/data/processed/actuator/20261020_regulated/
+/data/processed/actuator/20261020_fullrange/
