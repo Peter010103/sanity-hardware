@@ -1,6 +1,6 @@
 # Technical notes
 
-The actuator equations and API below describe the **13 October calibration**. For the newer selected direct-motor/voltage and CTBR bench models, use the [20 October model guide](actuator-results-20261020.md) and [compact parameters](../parameters/identified_actuators.json). These explicit offline models do not change the existing API.
+The actuator equations and API below describe the **13 October calibration**. For the newer selected direct-motor/voltage and CTBR bench models, use the [actuator modelling guide](actuator-modelling.md) and [compact parameters](../parameters/identified_actuators.json). These explicit offline models do not change the existing API.
 
 ## Geometry and frames
 

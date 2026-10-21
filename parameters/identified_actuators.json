@@ -377,22 +377,61 @@
       ]
     },
     "yaw_reaction_torque": {
-      "status": "Provisional balanced-contrast estimate; not independently torque calibrated",
+      "status": "Shared balanced-contrast estimate using measured bidirectional static rig calibration; aerodynamic interpretation and installation transfer remain conditional.",
       "equation": "Q_i = spin_sign_i * kQ * omega_i^2",
-      "kQ_Nm_per_rad_s_squared": 1.195442018390902e-10,
+      "kQ_Nm_per_rad_s_squared": 1.5888988281760603e-10,
       "validation": {
         "balanced_contrasts": 38,
-        "RMSE_Nm": 7.083613143256242e-05
+        "RMSE_Nm": 9.522739928574676e-05
       },
       "calibration_assumptions": {
-        "transferred_force_calibration_counts_per_N": 21036.445,
-        "perpendicular_reaction_arm_m": 0.03
+        "calibration_date": "2026-10-21",
+        "equation": "tau_operator_ACW_Nm=a1*delta_torque_1_counts+a2*delta_torque_2_counts; Q_report=-tau_operator_ACW_Nm",
+        "operator_ACW_coefficients_Nm_per_count": [
+          -1.74176576636578e-06,
+          -2.0314283064548136e-06
+        ],
+        "report_coefficients_Nm_per_count": [
+          1.74176576636578e-06,
+          2.0314283064548136e-06
+        ],
+        "tare": "Original per-run stopped raw-count baselines; calibration used a fresh bare-arm tare per orientation.",
+        "report_sign": "Historical positive rig moment is opposite operator-view ACW; rotor contrast vector [1,-1,-1,1]. This is not a verified drone body +Z convention.",
+        "transfer": "Assumes unchanged wiring, sensor response and mechanical reaction path between drone tests and deadweight calibration.",
+        "reference": {
+          "arm_mass_kg": 0.027,
+          "axis": "Horizontal through engraved zero",
+          "formula": "sign*added_mass_kg*9.80665*horizontal_distance_m; bare-arm moment removed by tare",
+          "moment_range_Nm": [
+            -0.024516625,
+            0.024516625
+          ],
+          "smallest_nonzero_magnitude_Nm": 0.004903325
+        },
+        "validation": {
+          "accepted_load_captures": 16,
+          "unique_unsigned_mass_distance_conditions": 6,
+          "training_RMSE_Nm": 9.07698997784171e-05,
+          "held_out_mass_distance_condition_RMSE_Nm": 0.0001419222890953056,
+          "held_out_condition_max_absolute_error_Nm": 0.00044852764147014154,
+          "grouping": "Both signs and all repeats of an unsigned (mass,distance) condition held out together. Fit balances direction/condition; quoted RMS averages held-out capture errors."
+        },
+        "calibration_source_sha256": "eb7a6c0515a5d263f73a65397f91b3a93b8022daa44f19c929072147c743ed13"
       },
       "limits": [
-        "Validate physical rotor spin signs separately.",
-        "Do not substitute individual-motor rig-reaction polynomials as aerodynamic drag.",
-        "Rig calibration/geometry uncertainty remains; not promoted to the legacy runtime parameters."
-      ]
+        "Validate physical rotor spin/body-axis signs separately.",
+        "Static calibration is transferred to the drone installation; free-axis rotational dynamics and dynamic torque response remain unmeasured.",
+        "Calibration references were nominal weights/distances. Balanced-yaw contrasts are below the smallest nonzero reference load; calibration residual is not a total uncertainty bound.",
+        "Do not substitute individual-motor rig-reaction polynomials as independently measured aerodynamic drag.",
+        "Not promoted to legacy runtime parameters."
+      ],
+      "revision": {
+        "previous_kQ_Nm_per_rad_s_squared": 1.195442018390902e-10,
+        "change_percent": 32.913081833509764,
+        "reason": "Replace transferred thrust-cell gradient/assumed 30 mm arms with measured separate torque-channel gains, then refit from counts; no single global rescaling.",
+        "historical_plateaus_reprocessed": 855,
+        "paired_torque_plateaus": 808
+      }
     }
   },
   "provenance": {
@@ -400,15 +439,15 @@
     "sources": [
       {
         "archive": "sanity_fullrange_id_20261020/thrust_command_voltage_surface.json",
-        "sha256": "6d337b0c8935188251514133c0a2e122ed87f5ef9a52cdbdea0ed92aff42170c"
+        "sha256": "bf082a2194518a4177f7e163997ce9285d00936a9fccd0b525062331446cc35b"
       },
       {
         "archive": "sanity_fullrange_id_20261020/shared_actuator_model.json",
-        "sha256": "121637396c7cd4820d3957b97bbb5255fc0bc73b3532a6178166e9034bc3b2a8"
+        "sha256": "77dde387e0f8e5d473cc5db87fbe6f830e269d60da1d105b1bb583f47bd28698"
       },
       {
         "archive": "sanity_fullrange_id_20261020/combined_trend_models.json",
-        "sha256": "efc54274bf7655fc1d2dfdc6b0c16572cf01f55af87c1c17e87c0ee40b7a5ef0"
+        "sha256": "a5bd922e16485184c076b4808324655c0d85d600ec71244c02cf241328c11b4e"
       },
       {
         "archive": "sanity_fullrange_id_20261020/step_response_overlay_models.json",
@@ -416,17 +455,28 @@
       },
       {
         "archive": "sanity_fullrange_id_20261020/report_audit.json",
-        "sha256": "9614bab02100f0cd5cf6391377afd46bf7439370bca1833c4ea5d6454110ff9f"
+        "sha256": "17410fe5a7736de432641ab928fc0ec5e00f40adc288b895f3de134b539d92c9"
       },
       {
         "archive": "sanity_regulated_id_20261020/provisional_yaw_model.json",
-        "sha256": "38b2a743b61449c096b6e2e173b60186913e9d39ac2abd2797e6e3c8f8ccdbb9"
+        "sha256": "8d7735cf1010205214431c00e8aa31b555f05a7e3e535d20ddf715d8b394ee65"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/torque_calibration.json",
+        "sha256": "eb7a6c0515a5d263f73a65397f91b3a93b8022daa44f19c929072147c743ed13"
+      },
+      {
+        "archive": "sanity_fullrange_id_20261020/torque_update_validation.json",
+        "sha256": "671d5237040922a267c1bd8cb2cd86a2307349b9e1eb97db0a28c282b4c430f2"
       }
     ],
     "audit": {
       "raw_files_hash_verified": 4617,
       "static_plateaus_reproduced": 767,
-      "step_signal_records_reproduced": 986
+      "step_signal_records_reproduced": 986,
+      "historical_plateaus_reprocessed_with_new_torque_calibration": 855,
+      "paired_torque_plateaus_recalculated": 808
     }
-  }
+  },
+  "torque_calibration_date": "2026-10-21"
 }

@@ -5,7 +5,7 @@ The larger campaign archives are intentionally not shipped in this repository.
 Usage: python tools/plot_identified_models.py --fullrange /path/to/sanity_fullrange_id_20261020
 The matching sanity_regulated_id_20261020 archive must be beside it, or pass --regulated.
 """
-import argparse,hashlib,json
+import argparse,csv,hashlib,json
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -54,9 +54,13 @@ def main():
   for e in a:ax.plot(z[e['key']+'_t']*1000,z[e['key']+'_normalized'],color=color,alpha=.23,lw=.9)
   t=np.linspace(-.05,.35,300);h=-np.expm1(-np.maximum(t-fit['delay_s'],0)/fit['time_constant_s']);ax.plot(t*1000,h,color=color,lw=2,label=direction.capitalize()+' model')
  ax.set(title='Observed force-step shape · 8.0 V source',xlabel='Time after host ACK [ms]',ylabel='Normalised transition progress',xlim=(-50,350),ylim=(-.15,1.15));ax.legend();fig.subplots_adjust(left=.075,right=.985,bottom=.17,top=.88,wspace=.28);save(fig,'ctbr-collective.svg')
- yaw=read(L/'provisional_yaw_model.json');fig,ax=plt.subplots(figsize=(7.2,4.1))
+ yaw=read(L/'provisional_yaw_model.json');cal=read(R/'torque_calibration.json');assert sha(R/'torque_calibration.json')==models['yaw_reaction_torque']['calibration_assumptions']['calibration_source_sha256'];assert yaw['fits'][0]['common_kQ_Nm_per_rad_s_squared']==models['yaw_reaction_torque']['kQ_Nm_per_rad_s_squared'];fig,axes=plt.subplots(1,2,figsize=(11.5,4.4));ax=axes[0]
+ calpoints=list(csv.DictReader((R/'torque_calibration_points.csv').open()))
+ for direction,color in [('ACW',COL[2]),('CW',COL[1])]:
+  a=[p for p in calpoints if p['direction']==direction];ax.scatter([1000*float(p['reference_Nm']) for p in a],[1000*float(p['prediction_Nm']) for p in a],s=28,alpha=.6,color=color,label=direction)
+ ax.plot([-25,25],[-25,25],color=INK,lw=1.7,label='Ideal');ax.set(title='Measured ACW/CW static calibration',xlabel='Applied reference [mN m]',ylabel='Calibrated moment [mN m]');ax.legend(fontsize=8);ax=axes[1]
  for j,V in enumerate(VS):
   a=[p for p in yaw['contrasts'] if p['source_V']==V];ax.scatter([p['signed_squared_speed_difference']/1e6 for p in a],[1000*p['torque_difference_Nm'] for p in a],color=COL[j],alpha=.45,s=28,label=f'{V:.1f} V source')
- x=np.array([min(p['signed_squared_speed_difference'] for p in yaw['contrasts']),max(p['signed_squared_speed_difference'] for p in yaw['contrasts'])]);ax.plot(x/1e6,1000*models['yaw_reaction_torque']['kQ_Nm_per_rad_s_squared']*x,color=INK,lw=2,label='Shared balanced-contrast fit');ax.set(title='Provisional yaw-reaction coefficient',xlabel=r'Signed squared-speed contrast [10⁶ (rad/s)²]',ylabel='Measured torque contrast [mN m]');ax.legend(fontsize=8);fig.subplots_adjust(left=.12,right=.98,bottom=.18,top=.88);save(fig,'yaw-torque.svg')
- sources=[R/'thrust_command_voltage_surface.json',R/'thrust_omega_voltage_surface.json',R/'results.json',L/'results.json',R/'audited_step_traces.npz',L/'provisional_yaw_model.json'];manifest=dict(scope='Three curated vector figures; raw/full analysis archives remain external. No device/network access.',models_sha256=sha(selected_path),plotting_script_sha256=sha(Path(__file__)),sources=[dict(archive=p.parent.name+'/'+p.name,sha256=sha(p)) for p in sources],assets=assets);(out/'provenance.json').write_text(json.dumps(manifest,indent=2)+'\n');print('Exported',len(assets),'vector SVGs;',sum((ROOT/a['path']).stat().st_size for a in assets),'bytes')
+ x=np.array([min(p['signed_squared_speed_difference'] for p in yaw['contrasts']),max(p['signed_squared_speed_difference'] for p in yaw['contrasts'])]);ax.plot(x/1e6,1000*models['yaw_reaction_torque']['kQ_Nm_per_rad_s_squared']*x,color=INK,lw=2,label='Shared balanced-contrast fit');ax.set(title='Recalibrated balanced-yaw estimate',xlabel=r'Signed squared-speed contrast [10⁶ (rad/s)²]',ylabel='Measured torque contrast [mN m]');ax.legend(fontsize=8);fig.subplots_adjust(left=.075,right=.985,bottom=.18,top=.88,wspace=.30);save(fig,'yaw-torque.svg')
+ sources=[R/'thrust_command_voltage_surface.json',R/'thrust_omega_voltage_surface.json',R/'results.json',L/'results.json',R/'audited_step_traces.npz',L/'provisional_yaw_model.json',R/'torque_calibration.json',R/'torque_calibration_points.csv',R/'torque_update_validation.json'];manifest=dict(scope='Three curated vector figures; raw/full analysis archives remain external. No device/network access.',models_sha256=sha(selected_path),plotting_script_sha256=sha(Path(__file__)),sources=[dict(archive=p.parent.name+'/'+p.name,sha256=sha(p)) for p in sources],assets=assets);(out/'provenance.json').write_text(json.dumps(manifest,indent=2)+'\n');print('Exported',len(assets),'vector SVGs;',sum((ROOT/a['path']).stat().st_size for a in assets),'bytes')
 if __name__=='__main__':main()

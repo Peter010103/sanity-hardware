@@ -12,7 +12,7 @@ python3 tools/inertia/analyze.py
 
 ## Regulated actuator campaign: 20 October
 
-The [selected model guide](../docs/actuator-results-20261020.md) and compact [identified model file](../parameters/identified_actuators.json) retain the direct command/FC-voltage thrust surface, speed law, Acro compensation-100 collective curve, observed response candidates and provisional balanced-yaw coefficient. The guide distinguishes measured models from provisional response/torque estimates.
+The [selected model guide](../docs/actuator-modelling.md) and compact [identified model file](../parameters/identified_actuators.json) retain the direct command/FC-voltage thrust surface, speed law, Acro compensation-100 collective curve, observed response candidates and balanced-yaw coefficient with measured static torque calibration. The guide documents the bidirectional torque calibration and distinguishes static rig models from provisional response and aerodynamic interpretations.
 
 The original raw audit reproduced 767 static plateaus and 986 step-signal records, with 4,617 matching file hashes. Source-product hashes are recorded in the compact parameter file. The large campaign dumps, traces, historical reports and figure/reproduction ZIPs remain local analysis artifacts; only the selected model parameters, concise documentation and three vector figures are retained for this update. The original 13 October runtime calibration remains unchanged.
 

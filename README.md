@@ -21,7 +21,7 @@ Sanity quadrotor hardware models, meshes, measured actuator dynamics and calibra
 |---|---|
 | [docs/build-instructions.md](docs/build-instructions.md) | Assembly instructions with photos |
 | [docs/inertia.md](docs/inertia.md) | Bifilar setup, measured results, fixture correction and reproduction |
-| [docs/actuator-results-20261020.md](docs/actuator-results-20261020.md) | Selected identified models, input conventions and validation |
+| [docs/actuator-modelling.md](docs/actuator-modelling.md) | Selected identified models, input conventions and validation |
 | [models/sanity.urdf](models/sanity.urdf) | Robot description in URDF (XML), including mass, CoM and inertia |
 | [models/sanity.xml](models/sanity.xml) | MuJoCo MJCF with a free base, rotor thrust and reaction-torque inputs |
 | [models/meshes/](models/meshes/) | Visual OBJ/MTL meshes and lightweight collision geometry |
@@ -44,7 +44,7 @@ The MuJoCo XML is generated from the URDF and uses the same meshes and physical 
 
 ## Actuator model
 
-The [selected model guide](docs/actuator-results-20261020.md) explains the compact [20 October parameter file](parameters/identified_actuators.json):
+The [selected model guide](docs/actuator-modelling.md) explains the compact [identified parameter file](parameters/identified_actuators.json):
 
 | Selected model | Meaning |
 |---|---|
