@@ -1,6 +1,6 @@
 # Actuator modelling
 
-[Compact parameter file](../parameters/identified_actuators.json) · [Measured mass and inertia](inertia.md)
+[Compact parameter file](../parameters/identified_actuators.json) · [Measured mass and inertia](inertia.md) · [Rigid-body MPC model and delays](mpc-model.md)
 
 The parameter file retains five useful model groups from the regulated campaign. It contains full-precision coefficients, input definitions, supported domains, validation scores and source hashes. The same per-rotor coefficients apply to every motor. These are explicit offline identification models; the original `SanityModel`/`SpinningModel` API still uses the [13 October calibration](../parameters/actuators.json). Importing the new file requires choosing the appropriate model and respecting its domain.
 

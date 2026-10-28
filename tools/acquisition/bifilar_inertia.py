@@ -36,7 +36,9 @@ def geometry(mass_g=87.38, length_cm=64.2, top_cm=15.6, bottom_cm=13.2):
                 inertia_per_T_squared=stiffness/(4*math.pi**2))
 
 
-def fit_oscillation(t, angle):
+def fit_oscillation(t, angle, min_frequency=.2, max_frequency=10.):
+    if not (0 < min_frequency < max_frequency):
+        raise ValueError("Require 0 < min_frequency < max_frequency")
     if len(t) < 100 or t[-1]-t[0] < 8:
         raise ValueError("Need at least eight seconds of usable free oscillation")
     if not np.isfinite(angle).all() or not np.isfinite(t).all() or np.any(np.diff(t) <= 0):
@@ -54,7 +56,9 @@ def fit_oscillation(t, angle):
         raise ValueError("No resolvable torsional oscillation (less than 0.15 deg RMS)")
     frequencies = np.fft.rfftfreq(len(grid), dt)
     power = abs(np.fft.rfft(detrended*np.hanning(len(grid))))**2
-    indices = np.flatnonzero((frequencies >= .2) & (frequencies <= 10))
+    indices = np.flatnonzero((frequencies >= min_frequency) & (frequencies <= max_frequency))
+    if not len(indices):
+        raise ValueError("Fit window has no resolvable frequency in the requested range")
     starts = indices[np.argsort(power[indices])[-5:]]
 
     def solve(parameters, return_model=False):
@@ -68,7 +72,7 @@ def fit_oscillation(t, angle):
         return (model, coefficients) if return_model else model-y
 
     solutions = [least_squares(solve, [frequencies[i], .02],
-                               bounds=([.2, 0.], [10., 1.]),
+                               bounds=([min_frequency, 0.], [max_frequency, 1.]),
                                xtol=1e-10, ftol=1e-10, gtol=1e-10)
                  for i in starts]
     result = min(solutions, key=lambda x: float(x.fun@x.fun))
@@ -89,7 +93,7 @@ def fit_oscillation(t, angle):
         failures.append("Fit residual exceeds 15% of oscillation RMS; inspect release, swing and tracking")
     if math.degrees(amplitude) < .5:
         failures.append("Fitted starting amplitude below 0.5 deg")
-    if frequency < .205 or frequency > 9.95 or decay > .98:
+    if frequency < min_frequency*1.025 or frequency > max_frequency*.995 or decay > .98:
         failures.append("Fit reached frequency/decay search boundary")
     if math.degrees(amplitude) > 12:
         warnings.append("Amplitude above 12 deg: small-angle approximation needs review")

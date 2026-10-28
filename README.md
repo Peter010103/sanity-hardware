@@ -19,9 +19,12 @@ Sanity quadrotor hardware models, meshes, measured actuator dynamics and calibra
 
 | File or directory | Contents |
 |---|---|
+| [parameters/cables.json](parameters/cables.json) | Cable identities and length measurements, including Cable 1 hover calibration |
 | [docs/build-instructions.md](docs/build-instructions.md) | Assembly instructions with photos |
 | [docs/inertia.md](docs/inertia.md) | Bifilar setup, measured results, fixture correction and reproduction |
+| [docs/actuator-test-plan.md](docs/actuator-test-plan.md) | Voltage-controlled thrust, torque, response and battery-sag experiment methods |
 | [docs/actuator-modelling.md](docs/actuator-modelling.md) | Selected identified models, input conventions and validation |
+| [docs/mpc-model.md](docs/mpc-model.md) | Full rigid-body equations, CTBR prediction models, MPC and delay accounting |
 | [models/sanity.urdf](models/sanity.urdf) | Robot description in URDF (XML), including mass, CoM and inertia |
 | [models/sanity.xml](models/sanity.xml) | MuJoCo MJCF with a free base, rotor thrust and reaction-torque inputs |
 | [models/meshes/](models/meshes/) | Visual OBJ/MTL meshes and lightweight collision geometry |

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "description": "Identified physical cables and measured or estimated lengths. Capture-window spread is not absolute length uncertainty.",
+  "cables": {
+    "cable_1": {
+      "label": "Cable 1",
+      "recorded_date": "2026-10-28",
+      "effective_length_m": 0.5213978625050628,
+      "effective_length_mm": 521.4,
+      "length_type": "Effective hook-to-aircraft-attachment cable length estimated from stable freely hanging mocap hover; not an independent ruler measurement.",
+      "method": "Median equivalent hook length during stable, freely hanging PID hover; frozen for this flight",
+      "capture_window_s": 2.000010763,
+      "capture_samples": 101,
+      "capture_peak_to_peak_spread_mm": 1.870569886571638,
+      "absolute_length_uncertainty_mm": null,
+      "aircraft": "sanity09",
+      "payload_frame": "23g_mass",
+      "payload_mass_kg": 0.02386,
+      "attachment_body_m": [
+        0.0,
+        0.0,
+        -0.029
+      ],
+      "payload_hook_to_centre_m": 0.0325,
+      "source_run_workspace_relative": "outputs/sanity_cable_20261028_011434",
+      "source_receipt_sha256": "fc635c1278935a0a9f4372d06416460b4333bf41a5a9551838b0df9401eb8f3d",
+      "note": "User identified this installed cable as Cable 1. Length includes any residual modelling/mocap offset; recapture if attachment or marker geometry changes."
+    },
+    "cable_2": {
+      "label": "Cable 2",
+      "recorded_date": "2026-10-28",
+      "length_m": 0.5204,
+      "length_mm": 520.4,
+      "source": "User-provided length in chat",
+      "measurement_method": "Not specified",
+      "absolute_length_uncertainty_mm": null
+    },
+    "cable_3": {
+      "label": "Cable 3",
+      "recorded_date": "2026-10-28",
+      "estimated_effective_length_m": 0.506,
+      "estimated_effective_length_mm": 506.0,
+      "source": "User identified changed cable/attachment as Cable 3 and requested recording the approximately506mm hover-derived estimate.",
+      "length_type": "Approximate effective hook-to-aircraft-attachment length inferred from recent hover observations.",
+      "calibration_accepted": false,
+      "status": "Provisional: all three hover calibrations timed out on qualification-window gates, so no final length was accepted.",
+      "source_runs_workspace_relative": [
+        "outputs/sanity_cable_20261028_020159",
+        "outputs/sanity_cable_20261028_020250",
+        "outputs/sanity_cable_20261028_020516"
+      ],
+      "source_review_workspace_relative": "outputs/strain_gauge/cable_calibration_review_20261028/review.json",
+      "absolute_length_uncertainty_mm": null
+    }
+  },
+  "current_aircraft_assignments_recorded_date": "2026-10-28",
+  "auw_definition": "User-reported AUW. Following the earlier session clarification: complete aircraft setup plus its cable, excluding the suspended payload; not aircraft-only mass.",
+  "current_aircraft_assignments": {
+    "sanity09": {
+      "cable_id": "cable_1",
+      "auw_g": 78.33,
+      "auw_kg": 0.07833,
+      "load_sensor_module_installed": true,
+      "hx711_acquisition_firmware_installed": true,
+      "strain_measurement_available": true,
+      "source": "User-provided current assignment and weighing, 28 October 2026"
+    },
+    "sanity15": {
+      "cable_id": "cable_2",
+      "auw_g": 71.9,
+      "auw_kg": 0.0719,
+      "load_sensor_module_installed": false,
+      "hx711_acquisition_firmware_installed": false,
+      "strain_measurement_available": false,
+      "source": "User-provided current assignment and weighing, 28 October 2026"
+    },
+    "sanity24": {
+      "cable_id": "cable_3",
+      "auw_g": 72.61,
+      "auw_kg": 0.07261,
+      "load_sensor_module_installed": false,
+      "hx711_acquisition_firmware_installed": false,
+      "strain_measurement_available": false,
+      "source": "User-provided current assignment and weighing, 28 October 2026"
+    }
+  },
+  "strain_measurement_scope": "Only sanity09 currently carries the load-sensor module and ESP firmware to read it. Do not treat other aircraft as providing measured cable tension."
+}

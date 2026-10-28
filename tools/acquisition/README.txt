@@ -1,3 +1,10 @@
+PROPOSED NEXT CAMPAIGN
+----------------------
+See ../../docs/actuator-test-plan.md for the Tenma 72-13360, three-load-cell,
+voltage-dependent direct-MSP and armed-Acro experiment plan. It is a design,
+not an implemented extension of the commands below; their existing limits and
+single-cell behaviour still apply.
+
 SANITY BENCH EXPERIMENTS — LOGGER v2
 
 Installed location: ~/sanity_thrust_test on unitree@192.168.123.15.
@@ -225,3 +232,44 @@ and failed data writes. See BENCH_EXPERIMENTS_VALIDATION.json for actual results
 and any real stopped acquisition check. No powered experiment was run while
 installing these scripts. Existing scripts, measurements and calibrations are
 preserved.
+
+
+ONBOARD ESP/HX711 TENSION CALIBRATION (27 October 2026)
+calibrate_onboard_tension.py: probe, interactive hanging-drone calibration,
+offline fit/plots and calibrated logging over read-only UDP7460. For the XIAO
+ESP32-S3 receiver optional HX711 build, not the older Jetson GPIO reader.
+See ../../docs/onboard-tension-calibration.md for wiring and commands.
+
+
+FREE TOUCH RECORDING (no weights/calibration prompts)
+./Sanity/sanity-hardware/tools/acquisition/run_onboard_tension_recording.sh
+Records until Ctrl-C, then saves raw.jsonl, samples.csv, summary.json and
+time_series.png/pdf in outputs/strain_gauge/tension_touch_TIMESTAMP. Add --duration 30 for a timed run. Same Wi-Fi UDP7460 endpoint.
+ADC flags and temporary missing data do not end the recording. No aircraft
+commands or force conversion; host arrival clock is the plotted timebase.
+
+
+GUIDED PULL/RELEASE ROUTINE
+./Sanity/sanity-hardware/tools/acquisition/run_onboard_tension_pull_test.sh
+Waits for live data;5s get-ready+5s baseline, then3x(pull3s/release5s).
+Prints commands and sounds high/low tones; stops/plots automatically (~34s).
+Options --cycles /--pull-s /--release-s /--baseline-s /--get-ready-s /--mute.
+Raw data, cue event timestamps and phase-shaded PNG/PDF in outputs/strain_gauge/tension_pull_*.
+
+
+KNOWN-WEIGHT ROUTINE / OUTPUT ORGANIZATION
+./Sanity/sanity-hardware/tools/acquisition/run_onboard_tension_pull_test.sh \
+  --weights-g 10 --cycles 3 --pull-s 5 --release-s 20
+Mass means total added grams including its hanger; unload fully between trials.
+Lists accepted as 5,10,20 or5 10 20;cycles repeats the full list. Optional
+--base-load-g 77.03 records a drone/preload that stays hanging.
+All default run directories are under outputs/strain_gauge/. Existing strain
+results/evidence moved there with names preserved; see INDEX.txt and
+relocation_manifest.json. Recorded measurement files were not rewritten.
+
+
+KNOWN WEIGHTS: ENTER TO START EACH INTERVAL
+With --weights-g, attach/remove each mass and pressEnter when ready/hands off.
+The loaded/unloaded timer starts afterEnter; raw recording continues during
+setup. Grey plot intervals identify setup; confirmed intervals are mass-labelled.
+Optional --auto-advance skips Enter waits. Hand-pull/free behavior unchanged.
