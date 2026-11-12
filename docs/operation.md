@@ -1,7 +1,8 @@
 # Operating the thrust stand
 
 Commands below run from the repository root unless they explicitly change directory.
-Complete the [wiring](wiring.md) first. Use one controller process for the stand.
+Inspect the [mechanical assembly](mechanical.md) and complete the
+[wiring](wiring.md) first. Use one controller process for the stand.
 
 ## 1. Release the shared equipment
 

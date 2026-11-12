@@ -12,6 +12,7 @@ require ROS, Zenoh, NatNet or an active motion-capture session.
 
 | Start here | Contents |
 |---|---|
+| [Mechanical assembly and CAD](docs/mechanical.md) | Fusion and STEP exports, load-cell placement and mounting arrangement |
 | [Connections](docs/wiring.md) | Jetson header pins, Grove signals, load-cell terminals, FC and PSU connections |
 | [Operation](docs/operation.md) | Installation, controller identity, calibration, stopped probe, powered runs and cleanup |
 | [Single-cell reference](docs/single-cell.md) | Battery-powered presets, data files, timing and stop behaviour |
