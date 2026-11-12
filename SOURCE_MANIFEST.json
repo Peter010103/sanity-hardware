@@ -1,0 +1,181 @@
+{
+  "source_repository_head": "f793dd57fc9bb5c41555c74fd6f2fc1fb2524a63",
+  "files": [
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/bench_experiments.py",
+      "destination": "tools/bench_experiments.py",
+      "original_sha256": "4b5ca36047acc4da904eddb1a54291982b8a8b38db97f536f3d2f4eb19c1e754"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/betaflight_motors.py",
+      "destination": "tools/betaflight_motors.py",
+      "original_sha256": "eec6f6067e894e5337518135e9591067f136992b7e85e092ed00bdffeabaae24"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/betaflight_msp.py",
+      "destination": "tools/betaflight_msp.py",
+      "original_sha256": "5a32b63fceb41c5dc451543be7b71fe037c09e6860bcf4425e8accac075688c6"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/hx711_jetson.py",
+      "destination": "tools/hx711_jetson.py",
+      "original_sha256": "117bb4af6c8489c06bbadd9c9e457f3f5c3783c01d840343bcf5cb8505667fb4"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/hx711_native.c",
+      "destination": "tools/hx711_native.c",
+      "original_sha256": "1c8f60d052fbe445dcbf99d9ae1aa59658d6ef391c5df3612da5877fa7106d2e"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/hx711_native.py",
+      "destination": "tools/hx711_native.py",
+      "original_sha256": "8820adede422de604118d86cd8f76580fc2f9f0a4a3c6a43cfacc30feec4dea4"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/hx711_pinmux.py",
+      "destination": "tools/hx711_pinmux.py",
+      "original_sha256": "e0d3e616d0694dc72e1f581ecf556271d4e03cdd78d835b4bd48749e66ced23c"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/calibrate_loadcell.py",
+      "destination": "tools/calibrate_loadcell.py",
+      "original_sha256": "35d88d4221e72fb13b921c546390b66f8e6441028e710007115ac988f7566273"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/plot_loadcell_calibration.py",
+      "destination": "tools/plot_loadcell_calibration.py",
+      "original_sha256": "0ca952e87d161935c1ca285665c848f4afdcc7083619df7e48696a5638b6146b"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/analyze_bench_experiment.py",
+      "destination": "tools/analyze_bench_experiment.py",
+      "original_sha256": "dac4f3fba685c21aebf144f3baf0377f357fece1ffa070622a971792c7f95ed5"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/probe_acquisition.py",
+      "destination": "tools/probe_acquisition.py",
+      "original_sha256": "9f8573b38fb54dfb327ae4c7260549d4661d96cdfb57a45a59341a2e97c41307"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_repeated_steps.py",
+      "destination": "tools/run_repeated_steps.py",
+      "original_sha256": "94da2d797f34b3907a7d3ac6322722d14c8bef15585f1a5b80926b7e23aa47a5"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_small_steps.py",
+      "destination": "tools/run_small_steps.py",
+      "original_sha256": "8e30faf24e23d15c343d72b01b6aef48dbbeb046bc42f2cc345263b7ac2f29c9"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_multilevel.py",
+      "destination": "tools/run_multilevel.py",
+      "original_sha256": "4375e7f18ca677d6835829ea55f5e89375b1916f97dc37f8ecbb6c5e51464cd7"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_individual_motors.py",
+      "destination": "tools/run_individual_motors.py",
+      "original_sha256": "e512a7423849d6752c366e565b0827df6bc856b8de949cf0ca3b12261547be8e"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_reference_pair.py",
+      "destination": "tools/run_reference_pair.py",
+      "original_sha256": "e7315f3252080ba13bbb11ea8f391ae75705e97aaf93b3504a739f16cfcf0549"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/run_weight_check.py",
+      "destination": "tools/run_weight_check.py",
+      "original_sha256": "f070bf7c7d28d19f3c7b37e4343d7bdbd9f590ee22c10a4596c7fe25c28c9010"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/test_bench_experiments.py",
+      "destination": "tools/test_bench_experiments.py",
+      "original_sha256": "9f0dff5a42d4ffb794d5cbdefabd5ed2700f68abc53b0842a27cdfc0a466a2f1"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/test_betaflight_motors.py",
+      "destination": "tools/test_betaflight_motors.py",
+      "original_sha256": "c712acf8287e35e1ea7fb9bfc48f83efab230ff4c5263360959ae4ad76767a60"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/test_betaflight_msp.py",
+      "destination": "tools/test_betaflight_msp.py",
+      "original_sha256": "2289b5df23085147b3f06e878099fedd36c7763ced24f27d7466cbdfb8f6aa5f"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/test_calibrate_loadcell.py",
+      "destination": "tools/test_calibrate_loadcell.py",
+      "original_sha256": "91e554a1ad80c9888c5972177649a3cfd098a9e2bda508b0b7a56bf04607ab75"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/test_hx711_jetson.py",
+      "destination": "tools/test_hx711_jetson.py",
+      "original_sha256": "6ffc3cce6e795453b33fcb055959b26a4f73e4f4ffb2d168499d444855099660"
+    },
+    {
+      "source": "outputs/sanity_fullrange_id_20261020/full_campaign.py",
+      "destination": "tools/full_campaign.py",
+      "original_sha256": "fd965a77883def0b91a3581d80f0b06ef928d68aa6ad43096f72a6518331309e"
+    },
+    {
+      "source": "outputs/sanity_fullrange_id_20261020/full_acro.py",
+      "destination": "tools/full_acro.py",
+      "original_sha256": "fab4737fe3adfd6e6b773a77446bda7190abaaed2a323fbef0857db0f9e97f71"
+    },
+    {
+      "source": "outputs/sanity_fullrange_id_20261020/test_fullrange_offline.py",
+      "destination": "tools/test_fullrange_offline.py",
+      "original_sha256": "b3261c839f2c3e0e25b28cc50d7dfd0b383127151fea05f60b59ce6d746e01db"
+    },
+    {
+      "source": "outputs/sanity_torque_campaign_20261020/campaign.py",
+      "destination": "tools/campaign.py",
+      "original_sha256": "4856527f774ad76789c41e3f846ed90bfec0c8fc7d29f718c5121522acdbee54"
+    },
+    {
+      "source": "outputs/sanity_torque_campaign_20261020/torque_check.py",
+      "destination": "tools/torque_check.py",
+      "original_sha256": "a7b12170714db7f526305b1c493732df97dd4908c35cd2bc843a43977a651134"
+    },
+    {
+      "source": "outputs/sanity_torque_campaign_20261020/previous_low_check.py",
+      "destination": "tools/previous_low_check.py",
+      "original_sha256": "df87c5188f28e1c26cf45ff9e5246dc75ae588010ec0bcfef11f3ef09c457e57"
+    },
+    {
+      "source": "outputs/sanity_regulated_id_20261020/hx711_slow10.c",
+      "destination": "tools/hx711_slow10.c",
+      "original_sha256": "c547dbd0c3cd519babb1c7fb531886abeb151fcac876dd551369d5c7b194fc05"
+    },
+    {
+      "source": "Sanity/sanity-hardware/data/raw/loadcell/calibration.json",
+      "destination": "examples/reference_loadcell_calibration.json",
+      "original_sha256": "6c355c2b3264f0f21dc990fb353e15814613d42a10949abb798d300c11986c29"
+    },
+    {
+      "source": "Sanity/sanity-hardware/tools/acquisition/fc_profile.json",
+      "destination": "tools/fc_profile.json",
+      "original_sha256": "48c83541e1b1b802d23015f6ed670e9db67b8e99b24bc56f65c962ab938ffe3b"
+    },
+    {
+      "source": "Sanity/sanity-hardware/licenses/MIT.txt",
+      "destination": "licenses/MIT.txt",
+      "original_sha256": "a61cf31fa29ac151b5d7f8d743ce4522c22c09922abf5d2ef42a1bebffd9d2d6"
+    },
+    {
+      "source": "Sanity/sanity-hardware/licenses/CC-BY-4.0.txt",
+      "destination": "licenses/CC-BY-4.0.txt",
+      "original_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "source": "deps/tenma-serial/LICENSE.txt",
+      "destination": "licenses/tenma-GPL-3.0.txt",
+      "original_sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227"
+    },
+    {
+      "source": "Sanity/sanity-hardware/docs/hx711-orin-wiring.md",
+      "destination": "docs/wiring.md",
+      "original_sha256": "5fa919d684ddc8b4c503ac0cdb0c74bc581404cfd5ada49b5023df2bc9937113"
+    }
+  ],
+  "note": "Original hashes before packaging changes. Runtime paths, explicit operator declarations, lock scope and test fixtures adapted for this standalone branch."
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.pytest_cache/
+deps/
+runs/
+build/
+bench_*/
+loadcell_calibration_*/
+config/*.json
+tools/pinmux_clock_original.json
+*.egg-info/

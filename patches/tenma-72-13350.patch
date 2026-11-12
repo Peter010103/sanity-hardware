@@ -1,0 +1,81 @@
+diff --git a/tenma/tenmaDcLib.py b/tenma/tenmaDcLib.py
+index c6a693d..1d4e070 100644
+--- a/tenma/tenmaDcLib.py
++++ b/tenma/tenmaDcLib.py
+@@ -31,6 +31,7 @@
+      * 72_2940 -> Set as manufacturer manual (not tested)
+      * 72_13320 -> Set as manufacturer manual (not tested)
+      * 72_13330 -> Tested on HW
++     * 72_13350 -> Tested on Multicomp Pro V2.3
+      * 72_13360 -> Tested on HW
+ 
+     Other units from Korad or Vellman might work as well since
+@@ -49,8 +50,9 @@ class TenmaException(Exception):
+ class SingleChannelAdapter:
+     """
+     Adapter to make single-channel devices compatible with multi-channel
+-    interface. This wrapper allows single-channel devices like Tenma72_13360 to
+-    be used with code that expects multi-channel device signatures.
++    interface. This wrapper allows single-channel devices like Tenma72_13350
++    and Tenma72_13360 to be used with code that expects multi-channel device
++    signatures.
+ 
+     TODO: For 2.x versions, we should simply strive for the same interface in
+     all Tenma power supplies.
+@@ -104,7 +106,10 @@ def instantiate_tenma_class_from_device_response(device, debug=False):
+         ver = powerSupply.getVersion(serialEol="\n")
+     powerSupply.close()
+ 
+-    for cls in findSubclassesRecursively(Tenma72Base):
++    # The channel-free family has a separate base, so scan both trees.
++    model_classes = (findSubclassesRecursively(Tenma72Base)
++                     + findSubclassesRecursively(Tenma72_13360_base))
++    for cls in model_classes:
+         for matchString in cls.MATCH_STR:
+             if matchString in ver:
+                 instance = cls(device, debug=debug)
+@@ -1277,7 +1282,7 @@ class Tenma72_13330(Tenma72_13320):
+ 
+ class Tenma72_13360_base(object):
+     """
+-        Tenma 72-13360 single channel programmable PSU
++        Shared protocol for Tenma/Multicomp Pro 72-13350 and 72-13360.
+         This PSU uses the RS485 protocol and only supports a single channel.
+         That means that the channel is never specified in the message to the PSU.
+         Because of this, the channel parameter removed from all methods.
+@@ -1286,6 +1291,7 @@ class Tenma72_13360_base(object):
+         STATUS? command returning more general settings.
+     """
+ 
++    NCHANNELS = 1
+     NCONFS = 5
+     MAX_MA = 15000
+     MAX_MV = 60000
+@@ -1411,9 +1417,9 @@ class Tenma72_13360_base(object):
+ 
+             :return: Current in Amps as a float
+         """
+-        commandCheck = "ISET?".format()
++        commandCheck = "ISET?"
+         self._sendCommand(commandCheck)
+-        return float(self.__readOutput()[:5])
++        return float(self.__readOutput().strip())
+ 
+     def setCurrent(self, mA):
+         """
+@@ -1710,3 +1716,15 @@ class Tenma72_13360_base(object):
+ 
+ class Tenma72_13360(Tenma72_13360_base):
+     MATCH_STR = ["72-13360"]
++
++
++class Tenma72_13350(Tenma72_13360_base):
++    """30 V / 30 A single-channel model, subject to its 300 W power rating.
++
++    Inherits the newline-terminated, channel-free 72-13360 protocol.
++    Hardware ratings are not experiment limits or connector current ratings.
++    """
++
++    MATCH_STR = ["72-13350"]
++    MAX_MA = 30000
++    MAX_MV = 30000

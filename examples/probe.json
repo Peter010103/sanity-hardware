@@ -1,0 +1,12 @@
+{
+  "label": "probe",
+  "kind": "probe",
+  "voltage_V": 8.0,
+  "command_ceiling": 1300,
+  "multi_motor_max": 1300,
+  "force_limit_N": 0.8,
+  "rear_terminals_confirmed": true,
+  "terminal_rating_A": 30,
+  "allow_torque_gaps": false,
+  "phases": []
+}

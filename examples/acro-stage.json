@@ -1,0 +1,29 @@
+{
+  "label": "acro-stage",
+  "kind": "collective",
+  "voltage_V": 8.0,
+  "command_ceiling": 1300,
+  "multi_motor_max": 1300,
+  "force_limit_N": 0.8,
+  "rear_terminals_confirmed": true,
+  "terminal_rating_A": 30,
+  "allow_torque_gaps": false,
+  "phases": [
+    {
+      "name": "collective_u1250",
+      "commands": [
+        1250,
+        1250,
+        1250,
+        1250
+      ],
+      "duration_s": 2.0,
+      "role": "acro_collective",
+      "cycle": 1,
+      "armed": true
+    }
+  ],
+  "control_mode": "acro",
+  "compensation": 100,
+  "capture_config": true
+}

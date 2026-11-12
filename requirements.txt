@@ -1,0 +1,2 @@
+# Three-channel PSU acquisition; v2 single-cell acquisition is stdlib-only.
+pyserial==3.5
