@@ -1,0 +1,219 @@
+Sanity CTBR MPC baseline: acados
+================================
+
+Select --controller mpc with the existing run_sanity_experiment.sh entry point.
+The default remains the learned policy. MPC replaces both the velocity planner
+and the learned velocity policy. No checkpoint is loaded by the deployment path.
+ROS2 still receives /tf (map -> sanity09); commands still use native Zenoh and
+the current ESP thrust/RPM/FC-voltage mapping. Firmware needs no changes.
+
+Solver setup (local installation; no sudo):
+  python Sanity/src/ros2_sanity_ws/scripts/install_sanity_acados.py
+This pins acados v0.6.0 at 503364817c872d474ab5bed219c26760ac267769,
+builds shared acados/HPIPM/BLASFEO libraries under .deps/acados-v0.6.0 and
+installs the wrapper into the deployment, training and Isaac virtualenvs.
+Use repeated --python PATH to select environments on another machine.
+Generated solver builds are cached under ~/.cache/sanity_ctbr_mpc/ by source,
+XML, configuration and acados binary hashes. SANITY_MPC_CACHE_DIR overrides it.
+A file lock prevents concurrent builds. Generation/compilation occurs before
+arming; cached startup requires no compiler or network access.
+
+Offline planning (does not open ROS recording, Zenoh, or hardware):
+  Sanity/src/ros2_sanity_ws/scripts/run_sanity_experiment.sh \
+    --controller mpc --mission circle --speed 0.3 --radius 0.5 --laps 2 \
+    --height 1.0 --plan-only
+
+Physical experiment, only when deliberately requested by the operator:
+  Sanity/src/ros2_sanity_ws/scripts/run_sanity_experiment.sh \
+    --controller mpc --fly --frames-confirmed \
+    --mission circle --speed 0.3 --radius 0.5 --laps 2 --height 1.0
+
+Use --mission lemniscate with the same speed/radius/laps options. Existing
+reference acceleration, geometry, runtime and flight-envelope checks apply.
+--command-speed-limit describes the learned velocity interface and is UNUSED
+by MPC. MPC is constrained by XML thrust/body-rate bounds and prediction tilt.
+--checkpoint, --residual and --residual-checkpoint cannot be combined with MPC.
+--sim is the legacy policy-only ROS-clock harness; use the direct runner below.
+
+Sequence and failure behavior
+----------------------------
+PD takeoff -> PD reposition -> existing gated 2-second blend -> MPC trajectory
+tracking -> PD braking/return/descent -> low-height dwell -> spool-down/disarm.
+Ctrl+C once requests the existing PD landing; a second interrupt terminates and
+requests disarm. Mocap/command age checks, receiver watchdog/interlocks, hard
+flight envelope and recording checks are retained. The solver runs in a child
+process through the existing asynchronous observation/selected-command queue.
+It never runs in the ROS control/command callbacks. Bad or late solutions cannot
+be selected; during active tracking the existing supervisor latches PD fallback
+and requests landing. There is no automatic rearm and no added output slew limit.
+
+Small library API
+-----------------
+Core: loco_mjx/experiments/sanity_ctbr_sim2sim/mpc_controller.py
+Runtime settings: config/sanity09_mpc.json; override with --mpc-config FILE.
+
+  from mpc_controller import CtbrMPC, MpcSolveError
+  mpc = CtbrMPC(model_xml, settings_dict)
+  preview = [[reference(t + dt)[key] for key in
+              ('position', 'velocity', 'acceleration')]
+             for dt in mpc.preview_times]
+  try:
+      ctbr = mpc.command(root_state, preview)
+  except MpcSolveError:
+      # No usable command was returned. Select the supervisor's PD fallback.
+      diagnostics = mpc.last
+
+root_state: [p_world(3), quaternion_wxyz(4), v_world(3), omega_world(3)].
+Quaternion rotates body to world; model axes x forward, y left, z up.
+Preview: [N+1, 3, 3], absolute root position, world velocity, world acceleration.
+The reference yaw is zero (matching the current circle/lemniscate missions).
+Output: [total_thrust_N, roll_rate_rad_s, pitch_rate_rad_s, yaw_rate_rad_s].
+The model XML supplies total mass and the four CTBR command ranges. MPC works
+at the root; it does not apply the policy IMU observation offset.
+
+Model and simplification
+------------------------
+This is an independent Agilicious-inspired implementation, not a copy of its
+rotor-level controller, its exact solver, or a reproduction of published results.
+Agilicious's local 13-state rotor-thrust/acados model is simplified to 10 states
+[p,q,v] with direct CTBR inputs, using CasADi symbolic definitions and acados-generated C with normalized RK4:
+  p_dot = v
+  v_dot = R(q) e_z * T/m + [0,0,-g] - R(q) D R(q)^T v
+  q_dot = 0.5 * q * [0,omega_body]
+D is optional body-axis linear drag in 1/s, zero by default; no drag was fitted.
+The actual measured body rates remain recorded but are not a prediction state:
+ideal FC body-rate tracking is assumed. No identified delay, torque allocation,
+motor dynamics or motor/voltage-dependent feasibility is claimed. Existing
+voltage-dependent thrust conversion/clamping remains in the transport path.
+
+The cost penalizes timed position/velocity error, quaternion attitude error,
+and departure from feedforward thrust/body rates. Feedforward attitude is built
+from reference acceleration + gravity; rates come from successive attitudes.
+Settings hold the weights. Ten 100 ms intervals give one second of preview;
+control selection remains 50 Hz. Hard predicted tilt is 30 degrees by default;
+XML thrust/body-rate bounds are enforced. The 25 ms deadline covers the whole
+command computation, including Python preparation, solver transfers, native
+solve and validation; the usual 40 ms source-state age still applies at
+selection. Core solve, solver interaction and total computation times are
+recorded separately. Previous optimal controls are interpolated by one 20 ms
+tick and rolled out from the new measured state for warm start.
+
+Backend: SQP_RTI, PARTIAL_CONDENSING_HPIPM, GAUSS_NEWTON. One nonlinear SQP
+iteration per tick; qp_max_iterations (50) limits the inner QP iterations.
+The former IPOPT max_iterations setting has been replaced by that QP setting.
+The least-squares cost retains the original sum-of-squares objective: acados's
+half-factor is accounted for in W and every stage has unit cost scaling.
+This is not an NLP solve to convergence. Raw solver states and dynamics defects
+are logged; predicted_state is the normalized nonlinear rollout of the optimized
+inputs from the current measured state. Acceptance checks the solver status,
+finite values, raw input bounds, and tilt on both raw and rolled-out predicted
+states. Nonlinear dynamics defects and KKT residuals are diagnostic, not a claim
+that the RTI iterate converged. No output slew limit or smoothing is added.
+
+The optimization and numerical linear algebra execute in compiled C. Python
+ctypes handles orchestration and solver calls; no C++ ROS bridge, INDI, GUI,
+or RPG estimator is needed. A C++/Cython wrapper is a later option if measured
+wrapper/IPC overhead becomes material. No C++ conversion is required to obtain
+the native solver speedup.
+
+Recording and comparison
+------------------------
+Same timestamped MCAP TF bag, JSONL control/reference, Zenoh wire/status logs,
+mission plan, source snapshot, and shutdown acknowledgement. MPC adds complete
+reference previews, optimizer status/iterations/time/constraint residuals,
+predicted states/commands, and acknowledgements of selected outgoing CTBR.
+receipt.controller and each control row's controller are 'mpc'. For existing
+analysis compatibility the tracking phase and authority fields retain their
+legacy names phase='policy', policy_weight and policy_start_s; they mean MPC
+tracking authority in an MPC run. controller_weight/controller_start_s aliases
+are also saved. There are no actor inputs or learned causal history: the assessor
+checks MPC inputs and exact selected-CTBR commits instead. It reports solver
+latency and rejected results. An ordinary newton/rad/s CTBR trace is comparable
+with the learned stack; there is no MPC desired-velocity policy input to plot.
+
+Simulation through the existing tracking experiment
+---------------------------------------------------
+Run the installer above for the Python running run_takeoff.py. CasADi 3.7.2
+and acados are installed in all three virtualenvs here. Use --backend isaac
+with .venv-sanity-isaac/bin/python for the matched Isaac/PhysX tests.
+The default --mpc-execution worker runs the deployed mpc_process.py in an
+isolated Python process, including preflight warmup, reset, inference and
+selected-CTBR acknowledgements. --mpc-execution inline is a profiling
+diagnostic: the simulator accumulates large raw-log histories, whose Python
+garbage collection can pause an inline command even when the native solve
+is fast. Shared-heap inline timing is not deployed worker latency.
+From loco_mjx/experiments:
+  ../../.venv-sanity-train/bin/python sanity_ctbr_sim2sim/run_takeoff.py \
+    --controller mpc --backend mujoco --modes hybrid \
+    --checkpoint ../../outputs/sanity_velocity_response_20261021/source/experiments/runs/sanity_ctbr/response_tracking_20261021_long/seed0/models/model_201326592.model \
+    --mission circle --speed 0.3 --radius 0.5 --laps 1 \
+    --height 1.0 --duration 85 --land-at 50 \
+    --deployment-config ../../Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/circle_sequence.yaml \
+    --output ../../outputs/sanity_mpc_circle_new
+The direct simulator currently retains its checkpoint-backed plant/fixture IPC;
+this loads the checkpoint but does not infer or commit actor history for MPC.
+Live MPC deployment does not need a checkpoint or the training Python.
+
+Software validation and receipts live in outputs/sanity_mpc_baseline_20261022/.
+A nominal low-speed simulation is a software check, not real-flight qualification
+or validation at 1.5--3 m/s. Compare the same timed trajectories and physical
+settings; do not attribute a full-stack difference solely to the inner policy.
+
+Previous IPOPT timing baseline, 22 October 2026
+------------------------------------------------
+The five grouped real-flight trajectory references were exercised in Isaac:
+circle 1.5 m/s R1, lemniscate 1.5 m/s R3.2, circle 2.2 m/s R1.5,
+and circle 3 m/s R2 / R1.9; five laps each, PD takeoff and landing.
+Both nominal static and bench-derived actuator-response cases rejected an
+IPOPT solve during the initial tracking hold, before moving along the path.
+All ten recovered with PD landing; none completed an MPC trajectory. This
+supersedes the low-speed MuJoCo result as a deployment-readiness indication:
+the previous IPOPT backend did NOT qualify for these real-time missions.
+
+Simulation-only run_takeoff.py --land-after-mission initiates PD landing on
+mission completion, latched tracking fallback, or runtime reserve. It preserves
+legacy --land-at, and records landing reason. Deployment configuration now
+supplies hard position/altitude and fallback tilt gates consistently. Recorded
+state_time_reference aligns metrics with the post-step simulated state;
+control-time reference is retained separately. --max-reference-tilt reproduces
+the individual recorded trajectory planning limits.
+
+Evidence: outputs/sanity_mpc_trajectories_20261022/. Offline bench diagnostics
+use the same MPC objective/model/constraints but a 1 s / 100-iteration solver
+budget, only through that output folder's offline_driver.py. They assess
+tracking without imposing real-time computation; no physical configuration or
+live timeout was changed. The report labels those results explicitly.
+
+The current acados port is motivated by these timing failures. New software,
+latency and matched-trajectory evidence is in outputs/sanity_acados_20261022/;
+it is separate from the historical IPOPT offline-computation diagnostic.
+
+acados implementation and timing evidence, 22 October 2026
+----------------------------------------------------------
+Pinned native libraries and the wrapper are installed. The C optimization runs
+behind Python ctypes; the normal ROS2/Zenoh deployment path remains unchanged.
+The final isolated-worker benchmark at 50 Hz completed 5000 valid inference/
+commit pairs over 100 seconds. Enqueue-to-result median / p99 / maximum:
+2.08 / 7.12 / 15.92 ms, all below the 20 ms control period. C solve median /
+p99: 0.132 / 0.323 ms. Eighteen current-tick results missed the earlier 10 ms
+selection point; all latest available results were fresh under the retained
+40 ms limit (maximum age 35.3 ms).
+This benchmark excludes mocap and Zenoh transport and is not a hard real-time
+guarantee. It supports retaining Python orchestration at the current 50 Hz.
+
+Initial inline Isaac runs completed all five bench-response missions and four
+nominal missions. A nominal lemniscate fell back after a 128 ms preparation
+pause while the C solve took 0.125 ms. An instrumented replay confirmed a
+112 ms generation-2 Python garbage collection pause inside preparation.
+The runner now defaults to the deployed isolated worker, without disabling GC
+or changing deadlines. Original inline runs and the diagnostic are retained.
+Matched isolated-worker reruns and paper-style plots are recorded separately
+under outputs/sanity_acados_20261022/worker_sweep/.
+
+Final worker sweep: all ten Isaac missions passed (five trajectories, each
+with nominal and bench-derived response), five laps and PD landing. No MPC
+result rejections or tracking fallbacks. Same-time moving XY RMSE 0.49--1.75 cm;
+active full-command computation p99 at most 4.71 ms, maximum 5.79 ms.
+Software validation: 69 tests passed, 11 optional legacy transport tests skipped.
+Source/data verification passed. These are software/plant tests; no physical
+MPC flight or complete mocap-to-actuator latency was tested.

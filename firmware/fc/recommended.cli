@@ -1,0 +1,7 @@
+# Current Sanity15 values, verified in the preserved postflash configuration.
+# Timing recovery is compiled into the adapter; these controller settings did not change.
+set indi_rate_gains = 200,200,80
+set paper_cutoff_hz = 12
+set paper_rate_ff_milli = 250,250,0
+set paper_rate_ff_cutoff = 20
+set paper_rate_ff_limit = 20,20,20

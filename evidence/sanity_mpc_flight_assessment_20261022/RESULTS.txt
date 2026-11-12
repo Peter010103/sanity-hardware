@@ -1,0 +1,29 @@
+MPC flight assessment,22October2026
+
+Six completed physical MPC flights,all five reference laps with normal PD landing.
+Excluded005017/cb132e:ROS argument parsing failed before controller startup.
+Metrics score full-MPC moving-reference ticks only,including ramps; no fitted phase shift or bias removal.
+Position at root vs recorded root reference. Velocity at root vs trajectory velocity,not actor input.
+3D velocity RMSE includes Z; figures show only X/Y velocity. XY plots subtract recorded takeoff origin only.
+Two5m/s repeats are separate columns A/B,not pooled. Geometry,voltage,ramp and limits differ across speeds.
+
+Run | mission | XY RMSE cm | velocity3D RMSE m/s | cruise mean speed m/s | peak tilt deg | FC voltage V
+2215e0 | Circle 1.5 m/s R1 | 9.59 | 0.159 | 1.380 | 15.84 | [7.74, 7.82]
+5dce40 | Lemniscate 1.5 m/s R3.2 | 11.09 | 0.120 | 1.449 | 21.48 | [7.38, 7.54]
+f7a876 | Circle 2.2 m/s R1.5 | 13.72 | 0.228 | 2.028 | 22.21 | [7.22, 7.28]
+2e3744 | Circle 3 m/s R2 | 18.02 | 0.312 | 2.757 | 29.11 | [7.09, 7.16]
+2c882c | Circle 5 m/s | A R2 | 25.03 | 0.650 | 4.283 | 54.46 | [7.44, 7.62]
+b49c62 | Circle 5 m/s | B R2 | 25.09 | 0.647 | 4.281 | 53.60 | [7.18, 7.42]
+
+Both5m/s runs complete the geometric laps but undershoot cruise speed:means4.283/4.281m/s,peaks4.526/4.552m/s.
+Their XY RMSE25.03/25.09cm,velocity RMSE.650/.647m/s,maximum tilt54.46/53.60deg.
+Circles show a smaller measured radius; this descriptive observation does not identify the dynamics cause.
+No invalid selected/worker MPC results or tracking fallbacks in the six flights. Moving full-command p99~2.44-2.52ms;
+largest moving full command4.886ms;25ms deadline retained. No host mapping saturation or voltage fallback.
+Some rate-bound activity occurs in5m/s runs,principally yaw2.42/3.14%of moving ticks; not proof it causes radius error.
+All recorded selected commands agree exactly with committed history. Raw source hashes recorded in assessment.json.
+CSV independently reproduces XY/XYZ position and3D velocity RMSE;matches original summary XY values.
+Figures:Avenir,lw0.8,dotted grid,large labels,short legends,X/Y position,Vx/Vy separate,greenMPC/amberblend.
+Fullmission position_velocity.pdf;motion-only moving_position_velocity.pdf;trajectories_one_row.pdf;
+9page flight_report.pdf plus per-flight diagnostics,PNG/SVG,metrics.csv,tracking CSVs and reproducible script.
+No deployment/model/firmware changes,physical commands or new simulations during this assessment.

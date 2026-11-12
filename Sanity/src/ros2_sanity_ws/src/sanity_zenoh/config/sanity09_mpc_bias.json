@@ -1,0 +1,40 @@
+{
+  "nodes": 10,
+  "prediction_dt_s": 0.1,
+  "position_weights": [
+    30.0,
+    30.0,
+    60.0
+  ],
+  "velocity_weights": [
+    4.0,
+    4.0,
+    6.0
+  ],
+  "attitude_weights": [
+    1.0,
+    1.0,
+    2.0
+  ],
+  "input_weights": [
+    0.02,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "terminal_multiplier": 2.0,
+  "tilt_limit_deg": 30.0,
+  "drag_per_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "qp_max_iterations": 50,
+  "max_solve_time_s": 0.025,
+  "disturbance_compensation": {
+    "enabled": true,
+    "time_constant_s": 2.0,
+    "window_s": 0.25,
+    "max_bias_m_s2": 0.6
+  }
+}

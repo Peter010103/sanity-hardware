@@ -1,0 +1,7 @@
+eclipse-zenoh==1.10.1
+numpy
+scipy
+matplotlib
+casadi==3.7.2
+
+# MPC native setup: python Sanity/src/ros2_sanity_ws/scripts/install_sanity_acados.py

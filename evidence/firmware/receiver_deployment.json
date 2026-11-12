@@ -1,0 +1,13 @@
+{
+  "host": "dolphin",
+  "device": 15,
+  "mac": "74:4d:bd:97:48:b8",
+  "port": "/dev/serial/by-id/usb-Espressif_USB_JTAG_serial_debug_unit_74:4D:BD:97:48:B8-if00",
+  "target_application": "/home/hw527/Projects/drones/outputs/sanity15_indi_flip_preparation_20261112/esp_build_all_axes_pin1/sanity_zenoh_receiver.bin",
+  "target_sha256": "0189505ec22955beb2b34543851fa9703d9db59067701c9352518a0cbaa83ab5",
+  "authorized_by": "User requested sync high speed ESP firmware whilst on bench",
+  "status": "Corrected PIN1+SZC6 receiver installed; all3 components hash-verified; combined disabled bench passed",
+  "started_unix": 1794469875.717502,
+  "FC_firmware_changed": false,
+  "completed_unix": 1794470455.2018604
+}

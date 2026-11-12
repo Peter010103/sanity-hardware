@@ -1,0 +1,6 @@
+# Select the retained Betaflight PID path at the next arm.
+batch start
+set indi_enabled = OFF
+set debug_mode = NONE
+set blackbox_disable_pids = OFF
+save

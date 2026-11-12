@@ -1,0 +1,30 @@
+# Pitch-mission-only marker-to-model tilt calibration. Ground level confirmed by user.
+# Source: sanity_pitch_20261022_020654_flight_81fcf5, initial0..0.45s; heading preserved.
+sanity_sequence:
+  ros__parameters:
+    drone_id: 9
+    listen: udp/10.0.0.200:7447
+    telemetry_listen: tcp/10.0.0.200:7448
+    transport_diagnostics: true
+    connect: ''
+    tf_topic: /tf
+    parent_frame: map
+    tracked_frame: sanity09
+    world_from_map_xyzw:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    marker_to_base_xyz:
+    - 0.0
+    - 0.0
+    - 0.0
+    marker_to_base_xyzw:
+    - 0.005740941344438956
+    - -0.01981705748539078
+    - -0.00011379278728325242
+    - 0.9997871337821377
+    velocity_filter_tau_s: 0.02
+    angular_rate_filter_tau_s: 0.05
+    position_filter_tau_s: 0.01
+    attitude_filter_tau_s: 0.01

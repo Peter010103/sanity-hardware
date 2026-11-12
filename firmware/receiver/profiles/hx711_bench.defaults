@@ -1,0 +1,4 @@
+# Raw sensor acquisition with the existing enabled-command rejection guard.
+CONFIG_SANITY_HX711=y
+CONFIG_SANITY_COMMS_TEST_ONLY=y
+CONFIG_GPIO_CTRL_FUNC_IN_IRAM=y

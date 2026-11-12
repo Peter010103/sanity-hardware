@@ -1,0 +1,167 @@
+{
+  "scope": "Offline airborne MPC/INDI cascade validation; no lab services or hardware.\n\nIndependent plant integration uses exact ZOH rate states, midpoint attitude and\ntranslation, thrust lag, measured mass, effective force gain, identified drag,\nstatic acceleration bias,15mscommand stage and explicit attitude-noise stress. This tests the\nimplementation and sensitivity, not takeoff, mocap occlusion or flight safety.\n",
+  "cases": [
+    {
+      "case": "legacy_ideal_predictor",
+      "shaped": false,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.005,
+      "duration_s": 61.868901608427095,
+      "position_RMS_m": 0.08968870173907785,
+      "axis_RMS_m": [
+        0.051056441208322575,
+        0.06649564311403974,
+        0.031868989278491855
+      ],
+      "position_max_m": 0.12079887697817221,
+      "tilt_max_deg": 10.96413554028168,
+      "rate_command_peak_rad_s": [
+        0.39871933563937567,
+        0.5019883897222518,
+        0.051309404060017556
+      ],
+      "compute_ms_p50_p95_max": [
+        1.0309699991921661,
+        1.1169403996973415,
+        11.195453000254929
+      ],
+      "wall_s": 7.193252012002631
+    },
+    {
+      "case": "mass_corrected_ideal_predictor",
+      "shaped": false,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.005,
+      "duration_s": 61.868901608427095,
+      "position_RMS_m": 0.0847767653979667,
+      "axis_RMS_m": [
+        0.05042825882915322,
+        0.06569261438214485,
+        0.01812652968553639
+      ],
+      "position_max_m": 0.11694342675465416,
+      "tilt_max_deg": 10.878998577792563,
+      "rate_command_peak_rad_s": [
+        0.3961527861387318,
+        0.4912200605460886,
+        0.05138883122410171
+      ],
+      "compute_ms_p50_p95_max": [
+        1.0289615001966013,
+        1.1030227014998673,
+        10.554659998888383
+      ],
+      "wall_s": 7.097777146002045
+    },
+    {
+      "case": "matched_INDI_predictor",
+      "shaped": false,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.005,
+      "duration_s": 61.868901608427095,
+      "position_RMS_m": 0.0401371749133174,
+      "axis_RMS_m": [
+        0.030579036780482464,
+        0.025980297355995767,
+        0.0009692620358696322
+      ],
+      "position_max_m": 0.047980885616975034,
+      "tilt_max_deg": 11.237916025334384,
+      "rate_command_peak_rad_s": [
+        0.5885332660685902,
+        0.8542463814282188,
+        0.04591615324229359
+      ],
+      "compute_ms_p50_p95_max": [
+        4.282050998881459,
+        4.540601200096717,
+        14.152661002299283
+      ],
+      "wall_s": 22.610908448001283
+    },
+    {
+      "case": "matched_INDI_shaped",
+      "shaped": true,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.005,
+      "duration_s": 64.11967954767384,
+      "position_RMS_m": 0.040136221552462915,
+      "axis_RMS_m": [
+        0.030650288694855685,
+        0.025895430388725077,
+        0.0009501412595430159
+      ],
+      "position_max_m": 0.048973533052904174,
+      "tilt_max_deg": 7.799379020218001,
+      "rate_command_peak_rad_s": [
+        0.5091703092401608,
+        0.7047587242664356,
+        0.05472991929074131
+      ],
+      "compute_ms_p50_p95_max": [
+        4.282857500584214,
+        4.525402249782928,
+        15.243813999404665
+      ],
+      "wall_s": 23.403262222000194
+    },
+    {
+      "case": "sensitivity_eta0.935_poles0.85",
+      "shaped": true,
+      "eta_true": 0.935,
+      "rate_pole_scale": 0.85,
+      "pose_age_s": 0.015,
+      "duration_s": 64.11967954767384,
+      "position_RMS_m": 0.042806745636611986,
+      "axis_RMS_m": [
+        0.03193276599622232,
+        0.02685253104073229,
+        0.00957379258886566
+      ],
+      "position_max_m": 0.05127833530993453,
+      "tilt_max_deg": 7.797038403572386,
+      "rate_command_peak_rad_s": [
+        0.5463257391705006,
+        0.6657449021106321,
+        0.05570233934688647
+      ],
+      "compute_ms_p50_p95_max": [
+        4.286873499950161,
+        4.549826248876343,
+        15.279718998499447
+      ],
+      "wall_s": 24.399512969997886
+    },
+    {
+      "case": "sensitivity_eta0.97_poles1.15",
+      "shaped": true,
+      "eta_true": 0.97,
+      "rate_pole_scale": 1.15,
+      "pose_age_s": 0.015,
+      "duration_s": 64.11967954767384,
+      "position_RMS_m": 0.042399681662522566,
+      "axis_RMS_m": [
+        0.03158349748169187,
+        0.02669423600959672,
+        0.00936127426001209
+      ],
+      "position_max_m": 0.051539877305117825,
+      "tilt_max_deg": 7.818267350229257,
+      "rate_command_peak_rad_s": [
+        0.5409253213993459,
+        0.7239466902003207,
+        0.057731935020921554
+      ],
+      "compute_ms_p50_p95_max": [
+        4.288904499844648,
+        4.576625249683275,
+        14.688496998132905
+      ],
+      "wall_s": 24.341853092002566
+    }
+  ]
+}

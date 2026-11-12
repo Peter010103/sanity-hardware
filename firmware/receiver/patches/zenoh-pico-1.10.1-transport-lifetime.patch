@@ -1,0 +1,65 @@
+--- a/src/transport/common/tx.c
++++ b/src/transport/common/tx.c
+@@ -13,6 +13,7 @@
+ //
+ 
+ #include "zenoh-pico/transport/common/tx.h"
++#include "zenoh-pico/session/utils.h"
+ 
+ #include "zenoh-pico/api/constants.h"
+ #include "zenoh-pico/protocol/codec/core.h"
+@@ -483,6 +484,20 @@
+     return ret;
+ }
+ 
++/* The session transport mutex outlives transport TX mutexes. Peer-loss clear
++ * already holds it. Hold the same recursive mutex from type lookup through send
++ * so an executor cannot destroy TX resources between lookup and acquisition.
++ * DROP must never wait for a reconnect or another sender. */
++static z_result_t _z_send_transport_lock(_z_session_t *zn, z_congestion_control_t policy) {
++#if Z_FEATURE_MULTI_THREAD == 1
++    return policy == Z_CONGESTION_CONTROL_BLOCK ? _z_mutex_rec_lock(&zn->_mutex_transport)
++                                               : _z_mutex_rec_try_lock(&zn->_mutex_transport);
++#else
++    _ZP_UNUSED(zn); _ZP_UNUSED(policy);
++    return _Z_RES_OK;
++#endif
++}
++
+ z_result_t _z_send_n_msg(_z_session_t *zn, const _z_network_message_t *z_msg, z_reliability_t reliability,
+                          z_congestion_control_t cong_ctrl, void *peer) {
+ #if defined(Z_TEST_HOOKS)
+@@ -494,7 +509,8 @@
+         }
+     }
+ #endif
+-    z_result_t ret = _Z_RES_OK;
++    z_result_t ret = _z_send_transport_lock(zn, cong_ctrl);
++    if (ret != _Z_RES_OK) return ret;
+     // Call transport function
+     switch (zn->_tp._type) {
+         case _Z_TRANSPORT_UNICAST_TYPE: {
+@@ -536,11 +552,13 @@
+             ret = _Z_ERR_TRANSPORT_NOT_AVAILABLE;
+             break;
+     }
++    _z_session_transport_mutex_unlock(zn);
+     return ret;
+ }
+ 
+ z_result_t _z_send_n_batch(_z_session_t *zn, z_congestion_control_t cong_ctrl) {
+-    z_result_t ret = _Z_RES_OK;
++    z_result_t ret = _z_send_transport_lock(zn, cong_ctrl);
++    if (ret != _Z_RES_OK) return ret;
+     // Call transport function
+     switch (zn->_tp._type) {
+         case _Z_TRANSPORT_UNICAST_TYPE:
+@@ -567,5 +585,6 @@
+             ret = _Z_ERR_TRANSPORT_NOT_AVAILABLE;
+             break;
+     }
+-    return ret;
+-}
++    _z_session_transport_mutex_unlock(zn);
++    return ret;
++}

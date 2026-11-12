@@ -1,0 +1,206 @@
+Sanity CTBR pitch-loop MPC — simulation only
+
+Purpose
+Develop the existing trajectory-to-CTBR MPC formulation into a full-attitude
+pitch-loop controller and test it in the native loco_mjx MJX plant before
+considering deployment. No ROS, Zenoh, ESP or flight-controller access exists
+in this runner. The deployed upright MPC and firmware remain unchanged.
+
+Reference
+p(phi) = [a sin(phi), 0, z_bottom + b(1-cos(phi))].
+Initial baseline a=0.50 m, b=0.65 m, z_bottom=0.50 m:1.0 m width,1.3 m height,
+reference top1.80 m. Phase cruise rate5.71949 rad/s (~1.10 s per loop).
+Quintic speed ramps of0.65 s give zero acceleration/jerk at hover boundaries.
+Two seconds initial hover, then requested loops, then four seconds recovery.
+The selected higher-clearance preset uses a=0.476923 m,b=0.62 m,top1.74 m,
+phase rate5.856231 rad/s and thrust-command cost0.1 (initial0.01).
+Its reference pitch-rate peak is8.69 rad/s,lag-inverse command peak8.93 rad/s.
+Positive-thrust reference F=m*|p_ddot+g*e_z|; pitch=unwrap(atan2(F_x,F_z)).
+Pitch is derived from acceleration+gravity, never set equal to ellipse phase.
+The same ellipse is used through entry/exit; there are no extra path lobes.
+
+Controller
+Acados SQP_RTI/HPIPM,20nodes*40 ms, two RTI passes per50 Hz command.
+State14: world position3, body-to-world quaternion wxyz4, world velocity3,
+body angular velocity3, collective force1. Input4: thrust N and body rates rad/s.
+Model: p_dot=v; q_dot=0.5*q*[0,omega];
+  v_dot=R*e_z*F/m-g*e_z;
+  I*omega_dot=torque_servo_with_rotor_headroom - omega cross I*omega;
+  F_dot=(command-F)/tau_up_or_down.
+Tau_up/down43.8819/48.5511 ms; rate servo and torque headroom use the same
+provisional parameters as the pinned plant. The simulator includes its native
+implicit servo and air drag. MPC prediction omits that passive aerodynamic drag.
+Inputs are optimized directly; no CTBR slew/output filter is applied.
+Simulation bounds:T<=2.85 N, roll/pitch/yaw rates<=2.3/9.5/2.6 rad/s.
+The 9.5 rad/s pitch bound is a SIMULATION-ONLY extrapolation, NOT an identified
+high-rate actuator model. Current deployed host/ESP pitch bound remains2.3 rad/s.
+The nominal reference needs ~8.49 rad/s (~486 deg/s), with ~8.71 rad/s lag-inverse
+feedforward.600 deg/s FC scaling alone does not establish high-rate controllability.
+
+Accepted command contract
+Finite control and nonlinear rollout; successful RTI/QP status; raw input
+violation<1e-4; nonlinear predicted height violation<1e-4; full computation<=25 ms.
+No claim that RTI status0 means a converged nonlinear optimum. Diagnostics record
+raw-vs-nonlinear-rollout disagreement and nonlinear residuals. Simulation trial
+limits are root height0.15..2.0 m and horizontal radius2 m; every trajectory starts
+around0.5 m.0.5 m is the starting/reference bottom height, not a strict actual floor.
+
+Causal observations and known delay
+The pinned mocap model samples poses, differentiates and filters velocity/rates,
+and selects a causal state. In causal mode the controller receives this state,
+not truth or true force. It approximately inverts the known derivative filter
+using model acceleration, maintains force estimates from command history, and
+propagates through observation age and the known queued command delay.
+No future physical state is supplied. The exact known-delay assumption is part
+of the test: it does not establish tolerance to unknown latency/jitter.
+'applied_command' in traces denotes input after the explicit fixed queue; any
+optional training delay occurs inside the physical plant afterward.
+
+Plant and provenance
+plant.py reuses the pinned SanityPlantEnvironment.advance implementation in
+outputs/sanity_pitch_flips_hover_20261021/source. It loads no learned policy.
+MJX runs4x5 ms substeps per50 Hz command, calibrated delivered-FC-voltage thrust
+conversion, firmware fixed-point/integer RC mapping, calibrated yaw allocation,
+collective-dependent torque headroom, implicit servo and passive air drag.
+plane.xml, Acro100 profile, FC-voltage profile and yaw-reaction calibration match
+byte-for-byte the response_tracking_20261021_long training snapshot. This does
+not imply identical entire training randomization or observation configuration.
+Chosen-voltage and sampled model/lag parameters are recorded for each episode.
+
+Repeat the selected simulation (from /home/hw527/Projects/drones)
+loco_mjx/experiments/sanity_pitch_mpc/run_selected.sh
+This automatically creates a new recording directory, runs eight perturbed-start
+five-loop causal-feedback episodes and uses the selected optimizer/reference.
+Pass --episodes, --seed, --voltage, --direction or --output to override.
+It accepts no physical flight mode. --randomized adds parameter uncertainty;
+--random-action-delay and --random-actuator-lag independently add timing stress.
+The combined stress suite is NOT fully successful; see final assessment.
+
+Repeat the initial baseline causal reference explicitly
+JAX_PLATFORMS=cuda .venv-sanity-train/bin/python \
+  loco_mjx/experiments/sanity_pitch_mpc/run.py \
+  --output outputs/my_pitch_mpc_test --observations causal \
+  --laps 5 --episodes 8 --seed 300 --perturbation 1
+
+Parameter uncertainty at7.1V
+Add --randomized --voltage 7.1.
+This randomizes model/servo parameters and mocap noise; collective lag stays
+nominal unless explicitly requested. The2 s hover is part of every episode.
+
+Reverse pitch direction and known40 ms command delay
+Add --direction -1 --delay-steps 2.
+Known delay is compensated using queued commands. Delay-step units are20 ms.
+
+Separate uncertainty factors
+--random-action-delay: additionally sample the training unknown action-delay
+  and jitter, while collective lag stays nominal unless also requested.
+--random-actuator-lag: additionally sample the training collective-response lag
+  variation, while random command delay stays disabled unless also requested.
+Both flags reproduce the coupled timing stress in the earlier training default.
+Important: the original training DefaultActionDelay sampled BOTH timing and
+collective lag. Removing that component also removed lag variation. Assessment
+must distinguish the nominal-lag parameter suite from full timing/lag stress.
+
+Geometry/timing
+--horizontal-radius, --vertical-radius, --phase-rate, --ramp-time, --laps,
+--direction are explicit. Full-force inversions and the2 m reference ceiling
+are checked before execution. Not every circle/ellipse timing is feasible.
+--pitch-limit 2.3 gives the current-rate counterexample; it did not flip.
+The nominal comparison using true state is available with --observations truth;
+that includes true force and is explicitly an oracle diagnostic, not deployment.
+
+Files and evidence
+Each run saves configuration, native worker log, summary and every recorded
+trial. Success requires actual body pitch turns, independent measured path
+windings, actual inverted intervals, no envelope/solver failure and sustained
+hover recovery. Early failures are retained; no auto-reset hides a failure.
+The first broad randomized batch had a native-C logging/JSON protocol error on
+its8th episode; its log and missing-trace count are retained. Native stdout now
+goes to stderr so solver diagnostics cannot corrupt the JSON channel.
+New runs snapshot their source before starting. Intermediate source hashes,
+solver build receipts, all earlier failed tuning cohorts and final source are
+kept under outputs/sanity_pitch_mpc_20261022/.
+
+Recreate the assessment and video
+.venv-sanity-deploy/bin/python loco_mjx/experiments/sanity_pitch_mpc/assess.py \
+  outputs/sanity_pitch_mpc_20261022
+MUJOCO_GL=egl .venv-sanity-train/bin/python \
+  loco_mjx/experiments/sanity_pitch_mpc/render.py \
+  outputs/sanity_pitch_mpc_20261022/causal_compensated --seed 20 \
+  --output outputs/sanity_pitch_mpc_20261022/videos/five_pitch_loops_causal.mp4
+
+Deployment boundary
+This is an experimental simulation extension, not a flight-ready flip mode.
+The live interface still clips pitch at2.3 rad/s and its upright tilt monitor
+rejects inversion. High-rate servo response, thrust/torque headroom, inverted
+mocap visibility and uncertain communication delay need real validation.
+A dedicated flip mission/recovery/command-freshness monitor is required before
+any real flip attempt; the current one-second command lease is not qualified
+for a maneuver needing ~500 deg/s pitch rates. No fly command is provided here.
+
+Final selected-reference results (22 October 2026)
+Nominal causal feedback:1/1 five-loop success,3D position RMSE1.04 cm.
+Reverse pitch plus known40 ms delay and parameter variation:4/4 successes.
+Joint unknown command delay/jitter and collective-lag variation at7.1V:5/8.
+Three runs rejected nonlinear predicted height violations; ceiling remains2 m.
+These are small matched-seed engineering tests, not a reliability estimate.
+The selected preset is NOT ready for real-world deployment.
+Final figures:outputs/sanity_pitch_mpc_20261022/simulation_report.pdf
+Final video:outputs/sanity_pitch_mpc_20261022/videos/five_pitch_loops_final.mp4
+
+
+22 October 2026: forward run-in implementation supersedes hover-start deployment
+The separate live pitch mission now uses run_in_reference.py/run_in_profile.json:
+PD takeoff -> PD move behind loop -> frozen-preview stable MPC hover -> level
+acceleration -> C4 pull-up -> ellipse -> C4 exit -> level braking -> recovered
+hover -> PD landing. The takeoff XY is loop centre; run-in begins at X=-1.779m,
+exit hover is X=+1.779m (direction=-1 mirrors). Reference height0.475..1.740m,
+default hover0.5m. Reserve room beyond the3.558m planned horizontal span.
+
+This is an offline constrained flatness construction, not a robust optimal
+control feasibility certificate: sampled height, positive thrust, lag-inverse
+CTBR, pitch torque and rotor headroom checks use the assumed calibrated model.
+Existing loop high-rate physics and inverted recovery remain unqualified.
+Do not mistake the previous85sim episodes for tests of this new entry.
+
+Simulation of the actual deployment adapter, causal observer, 20ms result
+selection +20ms output queue, unilateral ground support and full PD landing:
+  loco_mjx/experiments/sanity_pitch_mpc/run_run_in.sh
+Add --random-actuator-lag --random-action-delay to vary timing/lag alone.
+Add --randomized to also vary physical parameters and inject pose noise.
+The combined aircraft-variation suite exposes PD/preflight limitations;
+retained failures are summarized in outputs/sanity_pitch_run_in_20261022/.
+
+The live launcher exposes --hover-only to qualify MPC hover and land without
+starting a flip. Stable hover must be confirmed on the actual aircraft;
+nominal MJX success does not identify its high-rate actuator dynamics.
+No additional ESP flash or Betaflight change is needed for this implementation.
+
+
+22October2026: userrestoredpitchtransportcommand_lease_s=1.0 afterthree100ms
+leasefailuresbeforeanyrun-in. NoESPflash;hostfresh-state/commandchecks40ms
+andlatchedSTOPunchanged. Upto1s last-commandholdonnetworkloss. See
+outputs/sanity_pitch_comms_failures_20261022/RESULTS.txt;latencytailsremain.
+
+
+## Fitted-model pitch MPC and filtered pose inputs —22 October2026
+
+User requested using ordinary circle/lemniscate MPC for pitch and updating the pitch predictor, then requested mocap smoothing. Ordinary CtbrMPC uses an upright tilt constraint/positive-Z specific-force reference constructor, so cannot invert unchanged. PitchLoopMPC retains full-attitude quaternion/reference support but now defaults rate_prediction=flight from the measured flight_rate_20261022.json. Actual second-order roll/pitch dynamics replace the assumed40ms servo (no double lag), fitted internal deadtime approximated with3 first-order stages/axis. Retains collective lag, yaw, gyroscopic/physical torque and rotor headroom limits. External measured state14/preview18 retained; internal22state includes fitted response/delay. Causal6-state/axis linear observer models50ms-filtered mocap rates; its covariance assumptions are engineering choices, not identified noise. Old22.5ms derivative rate lead removed in flight mode; velocity preparation retained. Host uses unchanged20ms selection/15ms output prediction, no outgoing CTBR filter or slew limiter. Legacy mode remains available for comparisons.
+
+Found another simulator parity gap: frozen observer used20ms for both derivatives, physical uses20ms velocity/50ms rate. Live pitch simulator now has separate matched filters; frozen archives untouched. New optional position/quaternion-geodesic smoothing10ms enabled only in pitch YAML/config. Raw calibrated pose differences still drive existing20/50ms derivative filters; raw TF logging/source timestamps/receipt expiry/rejection/warmup retained. Each estimate logs causal mean pose age (steady200Hz7.707ms); MPC locally compensates pose lag using velocity and model-observed body rate before further forecasting. This is approximate lag compensation, not zero latency. Pose/covariance/filter/model metadata and source hashes retained. Ordinary callers keep unfiltered pose defaults. No firmware/FC/transport changes.
+
+Final code validation:51focused tests pass (14model/reference,22mission,14mocap,1ROS). Exactlauncher plan-only selects fitted model and10/10/20/50ms filters. Four final native-MJX ground-to-ground trials (seeds402/403,forward/reverse,and longer-delay response-timestamp plant) each completed5loops andlanded:20rotations total. Moving3D positionRMSE~1.49cm nominal/reverse,2.15cm longer-delay; peakheight1.731/1.754m. Solver+state-preparationmedian~3.3..3.4ms/max9.53ms in active phases. Actual deployment PitchMission, causal filtered observer,20ms result selection+20ms output queue. These are small engineering tests, not real-flight qualification or broad randomized robustness.
+
+Important retained limitation: old predictor also passed nominal50ms-filter hover, so finding that filter mismatch does NOT isolate the cause of the physical oscillation. Pre-pose-filter counterfactual replay on the physical172739PDhold reduced pitch-commandRMS1.736->1.010rad/s, yet new shadow median thrust0.494N remained different from actualPD0.716N. Replay uses fixed recorded states/selected histories, not closed-loop flight. Collective/trim/frame/timing mismatch remains unidentified; high-rate/inverted behavior remains extrapolated from small-rate data; reference feedforward retains its prior inverse-rate assumption while optimization uses new prediction. No physical flight or hardware access performed. Use --hover-only for physical requalification. All final/intermediate source snapshots, raw traces, tests and caveats: outputs/sanity_pitch_flight_prediction_20261022/RESULTS.txt, assessment.json.
+
+Reproduce the final filtered deployment simulation (fresh output directory):
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 JAX_PLATFORMS=cuda \
+  XLA_PYTHON_CLIENT_PREALLOCATE=false .venv-sanity-train/bin/python \
+  loco_mjx/experiments/sanity_pitch_mpc/run_deployment.py \
+  --output outputs/sanity_pitch_filtered_recheck --episodes 2 --seed 402 \
+  --laps 5 --voltage 7.4
+Add --direction -1 or --rate-timestamp response for the final sensitivities.
+--hover-only runs takeoff/reposition/MPC hover qualification/landing without loops.
+The historical run.py/run_selected.sh preset remains an explicitly inspectable
+legacy path unless its configuration selects rate_prediction=flight; the actual
+deployment adapter and its matched check are run_deployment.py plus the live JSON.

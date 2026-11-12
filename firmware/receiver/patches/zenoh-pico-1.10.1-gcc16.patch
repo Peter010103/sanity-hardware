@@ -1,0 +1,67 @@
+diff --git a/src/collections/string.c b/src/collections/string.c
+index 7f6eaeb..71d7e88 100644
+--- a/src/collections/string.c
++++ b/src/collections/string.c
+@@ -177,13 +177,15 @@ void _z_str_free(char **src) {
+ 
+ void _z_str_copy(char *dst, const char *src) {
+     size_t size = _z_str_size(src);
+-    strncpy(dst, src, size - 1);
++    memcpy(dst, src, size - 1);
+     dst[size - 1] = '\0';  // No matter what, strings are always null-terminated upon copy
+ }
+ 
+ void _z_str_n_copy(char *dst, const char *src, size_t size) {
+-    strncpy(dst, src, size - 1);
+-    dst[size - 1] = '\0';  // No matter what, strings are always null-terminated upon copy
++    if (size == 0) return;
++    size_t len = strnlen(src, size - 1);
++    memcpy(dst, src, len);
++    memset(dst + len, 0, size - len);
+ }
+ 
+ char *_z_str_clone(const char *src) {
+diff --git a/src/protocol/codec.c b/src/protocol/codec.c
+index 4fc01d3..5b36119 100644
+--- a/src/protocol/codec.c
++++ b/src/protocol/codec.c
+@@ -28,7 +28,7 @@ z_result_t _z_consolidation_mode_encode(_z_wbuf_t *wbf, z_consolidation_mode_t e
+ z_result_t _z_consolidation_mode_decode(z_consolidation_mode_t *en, _z_zbuf_t *zbf) {
+     z_result_t ret = _Z_RES_OK;
+ 
+-    _z_zint_t tmp;
++    _z_zint_t tmp = 0;
+     ret |= _z_zsize_decode(&tmp, zbf);
+     *en = tmp;
+ 
+@@ -40,7 +40,7 @@ z_result_t _z_query_target_encode(_z_wbuf_t *wbf, z_query_target_t en) { return
+ z_result_t _z_query_target_decode(z_query_target_t *en, _z_zbuf_t *zbf) {
+     z_result_t ret = _Z_RES_OK;
+ 
+-    _z_zint_t tmp;
++    _z_zint_t tmp = 0;
+     ret |= _z_zsize_decode(&tmp, zbf);
+     *en = tmp;
+ 
+@@ -52,7 +52,7 @@ z_result_t _z_whatami_encode(_z_wbuf_t *wbf, z_whatami_t en) { return _z_zsize_e
+ z_result_t _z_whatami_decode(z_whatami_t *en, _z_zbuf_t *zbf) {
+     z_result_t ret = _Z_RES_OK;
+ 
+-    _z_zint_t tmp;
++    _z_zint_t tmp = 0;
+     ret |= _z_zsize_decode(&tmp, zbf);
+     *en = _z_whatami_from_uint8((uint8_t)tmp);
+ 
+diff --git a/src/runtime/executor.c b/src/runtime/executor.c
+index 18fd56f..fe32d67 100644
+--- a/src/runtime/executor.c
++++ b/src/runtime/executor.c
+@@ -72,7 +72,7 @@ _z_executor_status_t _z_executor_get_next_fut(_z_executor_t *executor, _z_fut_da
+         z_clock_advance_ms(&wake_up_time, (unsigned long)wake_up_time_ms);
+         if (zp_clock_elapsed_ms_since(&now, &wake_up_time) > 0) {
+             // The sleeping task is ready to execute
+-            _z_fut_data_hmap_iter_t sleeping_idx;
++            _z_fut_data_hmap_iter_t sleeping_idx = *sleeping_idx_ptr;
+             _z_sleeping_fut_pqueue_pop(&executor->_sleeping_tasks, &sleeping_idx);
+             if (_z_fut_data_hmap_index_deque_pop_front(&executor->_ready_tasks, task_idx)) {
+                 // We have a non-sleeping task to execute, we should re-enqueue the ready sleeping task as non-sleeping

@@ -1,0 +1,9 @@
+Successful physical pitch-loop flights, 22 October 2026
+
+Run | requested/measured inversions | moving 3D position RMSE [m] | moving 3D velocity RMSE [m/s] | landed
+sanity_pitch_20261022_180739_flight_c35c23 | 1/1 | 0.1113 | 0.4049 | True
+sanity_pitch_20261022_180857_flight_bad56b | 10/10 | 0.1170 | 0.5626 | True
+sanity_pitch_20261022_181012_flight_8c8439 | 10/10 | 0.1144 | 0.5829 | True
+
+All three receipts report mission_complete landing, no controller error or MPC rejection. Metrics use filtered mocap without post-hoc phase shifts. Combined model/filter changes do not identify a single causal improvement.
+Priority standalone plots and detailed interpretation: /home/hw527/Projects/drones/outputs/sanity_pitch_20261022_181012_flight_8c8439/plots

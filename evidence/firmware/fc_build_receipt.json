@@ -1,0 +1,139 @@
+{
+  "artifacts": {
+    "outputs/sanity15_transient_robustness_20261110/fc/firmware/betaflight_4.5.1_STM32F405_BETAFPVF405.bin": {
+      "bytes": 582027,
+      "sha256": "05971cf1c4d44ea2c4c5c9e354c8260bef39e1792544d26ac834aca1a5e18d19"
+    },
+    "outputs/sanity15_transient_robustness_20261110/fc/firmware/betaflight_4.5.1_STM32F405_BETAFPVF405.hex": {
+      "bytes": 1546117,
+      "sha256": "7462b46ca3452cefa394e0d77d9b0f222ca0bebaa95d4833765b6983fe2de2ba"
+    },
+    "outputs/sanity15_transient_robustness_20261110/fc/obj/betaflight_STM32F405_BETAFPVF405.elf": {
+      "bytes": 961700,
+      "sha256": "370c34dc09d3e12953aa0548a47dc8b3162ae69b5b4ddd49a9113d1fc49d07f2"
+    }
+  },
+  "source_manifest_sha256": "5aeba3ad029e47575b9d7d91bb4587f2e3c247f855ae2cdd8dc9dee206d75811",
+  "modified_source_files": [
+    "src/main/flight/sanity_indi/paper_core.c",
+    "src/main/flight/sanity_indi/paper_core.h",
+    "src/main/flight/sanity_indi/paper_adapter.c",
+    "src/main/flight/sanity_indi/paper_adapter.h",
+    "src/main/flight/sanity_indi/paper_trace_fields.def"
+  ],
+  "trace_fields": 190,
+  "trace_version": 4,
+  "status_version": 2,
+  "new_parameter_groups": false,
+  "saved_settings_layout_changes": false,
+  "controller_gains_changed": false,
+  "command_limits_changed": false,
+  "observer_filter_config_changed": false,
+  "control_hz": 1000,
+  "gyro_hz": 2000,
+  "trace_hz": 250,
+  "flashed": false,
+  "physical_timing_verified": false,
+  "all_unchanged_source_bytes_verified": true,
+  "bin_config_sector_range_hex": [
+    "0x4000",
+    "0x8000"
+  ],
+  "bin_config_sector_all_FF": true,
+  "elf_size": {
+    "text": 543251,
+    "data": 6400,
+    "bss": 110464
+  },
+  "delta_from_previous_bytes": {
+    "text": 936,
+    "data": 0,
+    "bss": 328,
+    "bin": 936
+  },
+  "build_process": {
+    "host": "dolphin",
+    "hardware_access": false,
+    "started_unix": 1794346341.368664,
+    "pid": 81427,
+    "pgid": 81427,
+    "exit_code": 0,
+    "finished_unix": 1794346342.0838015,
+    "group_exited": true
+  },
+  "first_build_attempt": {
+    "host": "dolphin",
+    "hardware_access": false,
+    "started_unix": 1794346309.1746433,
+    "pid": 78889,
+    "pgid": 78889,
+    "exit_code": 2,
+    "finished_unix": 1794346318.866491,
+    "group_exited": true
+  },
+  "tests": {
+    "optimized_adapter": true,
+    "asan_ubsan_adapter": true,
+    "servo_transfer_policies_0_and_1_optimized_and_sanitized": true,
+    "190_field_binary_decoder": true,
+    "synthetic_clean_vs_gap_peak_external_counts": 1,
+    "recorded_input_clean_vs_gap_peak_external_counts": 11,
+    "recorded_replay_provenance": "outputs/sanity15_transient_robustness_20261110/fc/tests/replay_provenance.json",
+    "pure_rate_feedforward_optimized_and_sanitized": true,
+    "trace_versions_1_2_3_4_and_layout189": true
+  },
+  "limitations": [
+    "Timing thresholds and grace policy are engineering bounds; the original offending1kHz tick was not retained.",
+    "No hardware runtime or flight qualification. Appended trace costs have not been measured on the FC.",
+    "One accepted event requires already-ready observation history. A second anomalous interval including short catchup within100ms rejects.",
+    "Grace suppresses the timing gate only; invalid RPM, voltage, authority, allocation, model and nonfinite gates remain effective.",
+    "Coherent observer H rebase sets measured acceleration to zero for one tick and preserves servo I/FF. It temporarily drops pre-event filter/derivative history.",
+    "Recorded250Hz samples are held for four synthetic1kHz replay ticks; this is input-informed stress replay, not reconstruction of missing samples."
+  ],
+  "check_processes": [
+    {
+      "command": [
+        "python3",
+        "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/run_adapter_tests.py"
+      ],
+      "host": "dolphin",
+      "started_unix": 1794346398.2566853,
+      "hardware_access": false,
+      "pid": 81760,
+      "pgid": 81760,
+      "exit_code": 0,
+      "finished_unix": 1794346402.930691,
+      "group_exited": true
+    },
+    {
+      "command": [
+        "python3",
+        "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/run_servo_tests.py"
+      ],
+      "host": "dolphin",
+      "started_unix": 1794346402.9308312,
+      "hardware_access": false,
+      "pid": 81867,
+      "pgid": 81867,
+      "exit_code": 0,
+      "finished_unix": 1794346404.598547,
+      "group_exited": true
+    },
+    {
+      "command": [
+        "python3",
+        "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/test_decoder_v4.py"
+      ],
+      "host": "dolphin",
+      "started_unix": 1794346404.5987084,
+      "hardware_access": false,
+      "pid": 81904,
+      "pgid": 81904,
+      "exit_code": 0,
+      "finished_unix": 1794346404.813176,
+      "group_exited": true
+    }
+  ],
+  "cleanup_audit": "cleanup_audit.json",
+  "final_artifact_hashes_verified": true
+}

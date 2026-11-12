@@ -1,0 +1,18 @@
+{
+  "source": "Last saved Betaflight4.5.1 restored profile0, 2026-10-16; verify if FC configuration changes",
+  "min_check": 1050,
+  "dshot_idle_value": 1000,
+  "motor_output_limit": 100,
+  "thr_expo": 0,
+  "thrust_linear": 0,
+  "dyn_idle_min_rpm": 0,
+  "throttle_limit_type": "OFF",
+  "vbat_sag_compensation": 100,
+  "vbat_warning_cell_voltage": 350,
+  "battery_cells": 2,
+  "rate_full_scale_deg_s": [
+    600,
+    600,
+    600
+  ]
+}

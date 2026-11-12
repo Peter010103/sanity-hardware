@@ -1,0 +1,98 @@
+{
+  "pattern": "circle",
+  "cruise_speed_m_s": 1.5,
+  "radius_m": 1.0,
+  "laps": 5,
+  "path_length_per_lap_m": 6.283185307179586,
+  "planned_duration_s": 26.943951023931955,
+  "ramp_s": 2.0,
+  "hold_s": 2.0,
+  "position_gain_per_s": 0.75,
+  "velocity_gain": 0.5,
+  "acceleration_lead_s": 0.15,
+  "horizontal_command_limit_m_s": 1.875,
+  "yaw_target_rad": 0.0,
+  "command_limit_mode": "norm",
+  "vertical_gain_per_s": 1.0,
+  "vertical_command_limit_m_s": 0.8,
+  "yaw_gain_per_s": 1.5,
+  "yaw_rate_limit_rad_s": 1.0,
+  "parameterization": "Numerical arc length: constant tangential cruise speed, linear acceleration/deceleration",
+  "curve": "x=R cos(theta), y=R sin(theta); start=(R,0)",
+  "requested_radius_m": 1.0,
+  "auto_radius": false,
+  "minimum_radius_m": 0.6581451817144177,
+  "reference_acceleration_bound_m_s2": 2.371708245126285,
+  "reference_tilt_bound_deg": 13.591278941717203,
+  "reference_tilt_limit_deg": 20.0,
+  "acceleration_budget_m_s2": 3.5,
+  "fallback_speed_limit_m_s": 4.0,
+  "command_norm_limit_m_s": 1.875,
+  "world_xy_bounds_relative_to_origin_m": [
+    [
+      -1.0,
+      -1.0
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "pd_transfer_s": 6.0,
+  "minimum_nominal_mission_time_s": 55.44395102393196,
+  "nominal_landing_reserve_s": 38.333333333333336,
+  "braking_time_at_cruise_s": 2.8125,
+  "braking_distance_at_cruise_m": 2.109375,
+  "peak_nominal_outer_goal_m_s": 1.642976635278051,
+  "nominal_outer_goal_clipped_fraction": 0.0,
+  "braking_scope": "Normal path ramps to rest; manual landing/fallback uses a velocity-continuous PD braking reference. Flight space must also cover stopping and recovery.",
+  "policy_scope": "Standalone CTBR MPC replaces both the velocity policy and outer planner; no velocity-goal cap in this control path",
+  "fallback_position_tolerance_m": 1.0,
+  "fallback_tilt_limit_deg": 30.0,
+  "hard_position_error_limit_m": 1.5,
+  "hard_tilt_limit_deg": 45.0,
+  "target_height_m": 1.0,
+  "hard_altitude_limit_m": 1.5,
+  "checkpoint": null,
+  "checkpoint_explicit": false,
+  "minimum_requested_landing_time_s": 60.0,
+  "maximum_run_s": 300.0,
+  "checkpoint_speed_validation": "Reference feasibility and physical CTBR bounds only; no flight-performance claim",
+  "controller": "mpc",
+  "outer_controller": null,
+  "mpc_config": "/home/hw527/Projects/drones/Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc.json",
+  "mpc_configuration": {
+    "nodes": 10,
+    "prediction_dt_s": 0.1,
+    "position_weights": [
+      30.0,
+      30.0,
+      60.0
+    ],
+    "velocity_weights": [
+      4.0,
+      4.0,
+      6.0
+    ],
+    "attitude_weights": [
+      1.0,
+      1.0,
+      2.0
+    ],
+    "input_weights": [
+      0.02,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "terminal_multiplier": 2.0,
+    "tilt_limit_deg": 30.0,
+    "drag_per_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "qp_max_iterations": 50,
+    "max_solve_time_s": 0.025
+  }
+}

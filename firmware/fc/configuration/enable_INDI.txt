@@ -1,0 +1,25 @@
+# Apply after the UID-matched restore; propeller-free commissioning first.
+# Selection and settings are latched at the next arm.
+batch start
+set indi_rate_gains = 100,100,80
+set indi_sync_lowpass_hz = 15
+set indi_motor_tau_ms = 20,24,20,20
+set indi_max_iterations = 16
+set indi_require_rpm = ON
+set indi_rpm_timeout_ms = 25
+set indi_axis_weights = 50,50,50,5
+set debug_mode = SANITY_INDI
+set blackbox_device = SPIFLASH
+set blackbox_sample_rate = 1/4
+set blackbox_mode = NORMAL
+set blackbox_disable_gyro = OFF
+set blackbox_disable_gyrounfilt = OFF
+set blackbox_disable_setpoint = OFF
+set blackbox_disable_motors = OFF
+set blackbox_disable_rpm = OFF
+set blackbox_disable_acc = OFF
+set blackbox_disable_debug = OFF
+set blackbox_disable_pids = ON
+set indi_enabled = ON
+# Save inside the active batch: a CLI error blocks saving.
+save

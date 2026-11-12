@@ -1,0 +1,186 @@
+{
+  "flights": [
+    {
+      "run": "sanity_pitch_20261022_180739_flight_c35c23",
+      "label": "1 loop",
+      "requested_loops": 1,
+      "measured_inversions": 1,
+      "measured_pitch_turns": 0.9997899817894125,
+      "landed": true,
+      "landing_reason": "mission_complete",
+      "controller_error": null,
+      "mpc_rejection": null,
+      "moving_position_rmse_3d_m": 0.11129504405251679,
+      "moving_position_rmse_xyz_m": [
+        0.09868674745598777,
+        0.012144774923014091,
+        0.050000171492496644
+      ],
+      "moving_position_bias_xyz_m": [
+        -0.07397108753513666,
+        -0.009562427976559247,
+        -0.00863935821400626
+      ],
+      "moving_position_error_peak_m": 0.1735156565795676,
+      "loop_position_rmse_3d_m": 0.1158937024191889,
+      "moving_velocity_rmse_3d_m_s": 0.40493583736035904,
+      "moving_velocity_rmse_xyz_m_s": [
+        0.29763399264666657,
+        0.030697531842750397,
+        0.27284556133223514
+      ],
+      "moving_height_range_m": [
+        0.4609742011127503,
+        1.664801110133686
+      ],
+      "peak_speed_m_s": 3.5478880904384913,
+      "peak_pitch_command_rad_s": 9.235446475736113,
+      "pitch_command_limit_fraction": 0.0,
+      "maximum_command_thrust_N": 2.2910849174709194,
+      "mpc_start_s": 26.47008466400439,
+      "motion_start_s": 29.490085369965527,
+      "motion_end_s": 32.790235964988824,
+      "active_mpc_invalid_results": 0,
+      "solver_median_max_ms": [
+        3.8564580027014017,
+        8.66800791118294
+      ],
+      "max_state_age_ms": 2.966891,
+      "receiver_epochs": 1,
+      "receiver_failsafe_statuses": 0,
+      "unexpected_enabled_interlocks": [],
+      "receiver_voltage_range_V": [
+        7.13,
+        7.8
+      ],
+      "shutdown_disabled_acknowledged": true,
+      "cache_hit": true,
+      "cache": "/home/hw527/.cache/sanity_pitch_mpc/ac352382893958ea21fed12a2416b7b03419c6e0f268389a59c1c3a0b965f6a9",
+      "solver_ready_after_receiver_ack_s": 0.278380403,
+      "reference_source_sha256": "551648889cf12d1352156a2c111821398b2619919cc4e39aaec335e5ad200525",
+      "measurement_scope": "Recorded filtered mocap at50Hz control ticks, synchronized to logged reference without post-hoc phase shifts; rate uses50ms LP and velocity20ms LP."
+    },
+    {
+      "run": "sanity_pitch_20261022_180857_flight_bad56b",
+      "label": "10 loops (A)",
+      "requested_loops": 10,
+      "measured_inversions": 10,
+      "measured_pitch_turns": 10.003204353000655,
+      "landed": true,
+      "landing_reason": "mission_complete",
+      "controller_error": null,
+      "mpc_rejection": null,
+      "moving_position_rmse_3d_m": 0.117031666504898,
+      "moving_position_rmse_xyz_m": [
+        0.09541658861950965,
+        0.018800236108653685,
+        0.06510481321214133
+      ],
+      "moving_position_bias_xyz_m": [
+        -0.08128310990800335,
+        -0.01654631835487145,
+        -0.020518357101580162
+      ],
+      "moving_position_error_peak_m": 0.21821901989546086,
+      "loop_position_rmse_3d_m": 0.11626400413460793,
+      "moving_velocity_rmse_3d_m_s": 0.562554565870453,
+      "moving_velocity_rmse_xyz_m_s": [
+        0.3143185351984317,
+        0.04237743525087252,
+        0.464624204055239
+      ],
+      "moving_height_range_m": [
+        0.4740972030442304,
+        1.6970170409327152
+      ],
+      "peak_speed_m_s": 3.5835695455735563,
+      "peak_pitch_command_rad_s": 9.499999999999998,
+      "pitch_command_limit_fraction": 0.02107481559536354,
+      "maximum_command_thrust_N": 2.587427705326479,
+      "mpc_start_s": 22.940113415999804,
+      "motion_start_s": 25.940118203987367,
+      "motion_end_s": 38.88009246397996,
+      "active_mpc_invalid_results": 0,
+      "solver_median_max_ms": [
+        3.899679984897375,
+        12.193651986308396
+      ],
+      "max_state_age_ms": 2.889609,
+      "receiver_epochs": 1,
+      "receiver_failsafe_statuses": 0,
+      "unexpected_enabled_interlocks": [],
+      "receiver_voltage_range_V": [
+        6.65,
+        7.62
+      ],
+      "shutdown_disabled_acknowledged": true,
+      "cache_hit": true,
+      "cache": "/home/hw527/.cache/sanity_pitch_mpc/5e98e9f9622757f1eb34839e21b72c723e3740af1ef9c5a230384f0e95a557fc",
+      "solver_ready_after_receiver_ack_s": 0.282324544,
+      "reference_source_sha256": "551648889cf12d1352156a2c111821398b2619919cc4e39aaec335e5ad200525",
+      "measurement_scope": "Recorded filtered mocap at50Hz control ticks, synchronized to logged reference without post-hoc phase shifts; rate uses50ms LP and velocity20ms LP."
+    },
+    {
+      "run": "sanity_pitch_20261022_181012_flight_8c8439",
+      "label": "10 loops (B)",
+      "requested_loops": 10,
+      "measured_inversions": 10,
+      "measured_pitch_turns": 10.002485276221382,
+      "landed": true,
+      "landing_reason": "mission_complete",
+      "controller_error": null,
+      "mpc_rejection": null,
+      "moving_position_rmse_3d_m": 0.11438421163305626,
+      "moving_position_rmse_xyz_m": [
+        0.09092240889014457,
+        0.021405713265445776,
+        0.06602013989781205
+      ],
+      "moving_position_bias_xyz_m": [
+        -0.07724182421800321,
+        -0.017326516059455597,
+        -0.019214318592374643
+      ],
+      "moving_position_error_peak_m": 0.19588982037595426,
+      "loop_position_rmse_3d_m": 0.11375909623421675,
+      "moving_velocity_rmse_3d_m_s": 0.5829257730621678,
+      "moving_velocity_rmse_xyz_m_s": [
+        0.3145926428911498,
+        0.04336186086526866,
+        0.4888288810628809
+      ],
+      "moving_height_range_m": [
+        0.4903292829744603,
+        1.6891991819270122
+      ],
+      "peak_speed_m_s": 3.5624260369553324,
+      "peak_pitch_command_rad_s": 9.5,
+      "pitch_command_limit_fraction": 0.018947368421052633,
+      "maximum_command_thrust_N": 2.562305293430233,
+      "mpc_start_s": 23.110227944038343,
+      "motion_start_s": 26.1302091430407,
+      "motion_end_s": 39.07021222903859,
+      "active_mpc_invalid_results": 0,
+      "solver_median_max_ms": [
+        3.915948997018859,
+        9.42460703663528
+      ],
+      "max_state_age_ms": 5.615073999999999,
+      "receiver_epochs": 1,
+      "receiver_failsafe_statuses": 0,
+      "unexpected_enabled_interlocks": [],
+      "receiver_voltage_range_V": [
+        6.55,
+        7.47
+      ],
+      "shutdown_disabled_acknowledged": true,
+      "cache_hit": true,
+      "cache": "/home/hw527/.cache/sanity_pitch_mpc/5e98e9f9622757f1eb34839e21b72c723e3740af1ef9c5a230384f0e95a557fc",
+      "solver_ready_after_receiver_ack_s": 0.278400566,
+      "reference_source_sha256": "551648889cf12d1352156a2c111821398b2619919cc4e39aaec335e5ad200525",
+      "measurement_scope": "Recorded filtered mocap at50Hz control ticks, synchronized to logged reference without post-hoc phase shifts; rate uses50ms LP and velocity20ms LP."
+    }
+  ],
+  "measured_inversions_total": 21,
+  "scope": "Separate physical flights; tracking metrics use filtered mocap, not independent ground truth. Combined model/filter changes do not isolate causality."
+}

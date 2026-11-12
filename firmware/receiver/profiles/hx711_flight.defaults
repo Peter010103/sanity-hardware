@@ -1,0 +1,5 @@
+# Separate flight-COMPATIBLE raw telemetry profile; requires explicit --flight.
+# Build success is NOT hardware/coexistence/flight qualification. No sensor control.
+CONFIG_SANITY_HX711=y
+# CONFIG_SANITY_COMMS_TEST_ONLY is not set
+CONFIG_GPIO_CTRL_FUNC_IN_IRAM=y

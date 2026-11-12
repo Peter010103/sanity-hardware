@@ -1,0 +1,7 @@
+# Network identity only; keep the password and Zenoh host in a private defaults file.
+CONFIG_SANITY_DEVICE_ID=9
+CONFIG_SANITY_WIFI_SSID="robotlab"
+CONFIG_SANITY_STATIC_IP=y
+CONFIG_SANITY_IPV4_ADDRESS="10.0.0.109"
+CONFIG_SANITY_IPV4_NETMASK="255.255.255.0"
+CONFIG_SANITY_IPV4_GATEWAY="10.0.0.1"

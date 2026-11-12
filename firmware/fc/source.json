@@ -1,0 +1,8 @@
+{
+  "upstream": "https://github.com/betaflight/betaflight.git",
+  "revision": "77d01ba3b76a22909d5f09cb0628820141f95eaa",
+  "board_configuration_revision": "bc5da0e66be6d907c694448c3443fdcf6666c1ba",
+  "patch_sha256": "bb6d5ffecc56612f7b0447f51c98ec2a9efc9fa2e9e15f285bfa0e3c9d3f2dd0",
+  "assembled_from": "outputs/sanity15_transient_robustness_20261110/fc/source",
+  "scope": "Current Sanity15 PIN1/measured-RPM rotational INDI + rate feedforward + timing transient recovery. No build or flash during packaging."
+}

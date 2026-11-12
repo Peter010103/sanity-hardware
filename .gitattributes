@@ -1,0 +1,5 @@
+# Preserve historical Windows-formatted records and valid unified-diff context.
+*.csv whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol
+*.patch whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+firmware/fc/configuration/*_reference_dump.txt whitespace=cr-at-eol,-blank-at-eol

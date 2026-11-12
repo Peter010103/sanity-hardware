@@ -1,0 +1,489 @@
+{
+  "selection": "All six completed MPC flight recordings after the failed ROS-argument startup; two5m/s attempts remain separate, never pooled.",
+  "excluded": [
+    {
+      "run": "sanity_experiment_20261022_005017_flight_cb132e",
+      "reason": "ROS parser failed before controller initialization; no trajectory"
+    }
+  ],
+  "position_method": "Root position vs recorded time-varying root trajectory; full MPC authority and moving reference only. XY display subtracts only the recorded takeoff XY origin. No fitted shifts, phase alignment, scaling or bias removal.",
+  "velocity_method": "Root world velocity vs trajectory world velocity, both from the same recorded control tick. 3D RMSE includes Z; panels show X/Y only. MPC has no actor velocity input.",
+  "time_axes": "Full view uses mission elapsed time. Moving view subtracts first moving full-MPC tick per flight, without fitted phase shifts. Recorded state is the causal latest mocap estimate at each tick.",
+  "comparison_caveat": "Geometry, voltage and high-bank configuration differ across speeds;5m/s repeats use a different reference ramp. Six observed successes do not establish a general flight envelope.",
+  "style": {
+    "font": "/home/hw527/.local/share/fonts/Avenir Regular.ttf",
+    "line_width": 0.8,
+    "grid": ":",
+    "legend_handle_length": 1.1
+  },
+  "runs": [
+    {
+      "run": "sanity_experiment_20261022_005139_flight_2215e0",
+      "label": "Circle 1.5 m/s",
+      "start_utc": "2026-10-22T00:51:39.942576+00:00",
+      "pattern": "circle",
+      "speed_m_s": 1.5,
+      "radius_m": 1.0,
+      "laps": 5,
+      "ramp_profile": "linear",
+      "ramp_s": 2.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 4115,
+      "moving_full_mpc_samples": 1147,
+      "moving_start_s": 30.550396578,
+      "moving_end_s": 53.470397642,
+      "xy_rmse_m": 0.09589216475936026,
+      "xyz_rmse_m": 0.09627333294854575,
+      "velocity_reference_3d_rmse_m_s": 0.15897122151974397,
+      "velocity_reference_xy_rmse_m_s": 0.15839552047390876,
+      "mean_position_error_xyz_m": [
+        0.011539246374406717,
+        0.033754835341411896,
+        -0.007921815386209263
+      ],
+      "peak_position_error_m": 0.14634600993962832,
+      "peak_moving_speed_m_s": 1.45120563366958,
+      "cruise_speed_mean_m_s": 1.3803692875108313,
+      "peak_moving_tilt_deg": 15.84330936754226,
+      "peak_moving_thrust_N": 0.7408065178254821,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.118079002480954,
+        2.502008334267884,
+        2.6633880333974957
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.10123098036274314,
+        0.20133861107751724,
+        0.22248004097491503
+      ],
+      "maximum_moving_state_age_ms": 4.223852,
+      "maximum_moving_policy_age_ms": 17.900917,
+      "reported_FC_voltage_range_V": [
+        7.74,
+        7.82
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 45.0,
+      "fallback_tilt_deg": 30.0,
+      "mpc_tilt_deg": 30.0,
+      "origin_xy_m": [
+        0.575412392616272,
+        0.20716702938079834
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "a945e0b26a6053aacf2c67a41abc2697e48638e780f7837d5685b2ce514fc390",
+        "manifest.json": "e2579edfb42d0503c70e793d60a05da3f80f3ed67708f9ab86858a30cd9bc678",
+        "summary.json": "12db5a437052bfd28454a915b494f8ca952b09608fa0bb91a8d8b9490fa7c258",
+        "controller/receipt.json": "d87baf76b7092cf3fd9828d30208f6f7be154345425363e624c14414a4a81284",
+        "controller/control.jsonl": "78dec1e2317f58f5df1d84857118f38d06aa1cb195354da5a8b4a42a3cf623f7",
+        "controller/history.jsonl": "4c59afefefa07c45354f65e2ed6b96ced9dc9510c2fb11a8ee8b63c282b36eec",
+        "controller/commands.jsonl": "381a69ac84a508efa53a470289372ac832f2beba332c99bab6cdffc4973aba6b"
+      }
+    },
+    {
+      "run": "sanity_experiment_20261022_005309_flight_5dce40",
+      "label": "Lemniscate 1.5 m/s",
+      "start_utc": "2026-10-22T00:53:09.713655+00:00",
+      "pattern": "lemniscate",
+      "speed_m_s": 1.5,
+      "radius_m": 3.2,
+      "laps": 5,
+      "ramp_profile": "linear",
+      "ramp_s": 2.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 5926,
+      "moving_full_mpc_samples": 3351,
+      "moving_start_s": 31.130418496,
+      "moving_end_s": 98.13041832,
+      "xy_rmse_m": 0.11090339407613549,
+      "xyz_rmse_m": 0.11123829968289811,
+      "velocity_reference_3d_rmse_m_s": 0.11993655754341642,
+      "velocity_reference_xy_rmse_m_s": 0.1185798576164476,
+      "mean_position_error_xyz_m": [
+        0.013426774547057789,
+        0.029527992500398715,
+        0.00468260827117164
+      ],
+      "peak_position_error_m": 0.16185891174610445,
+      "peak_moving_speed_m_s": 1.5785121545310419,
+      "cruise_speed_mean_m_s": 1.4489027300856823,
+      "peak_moving_tilt_deg": 21.479125876410087,
+      "peak_moving_thrust_N": 0.7797947990020686,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.1224080226384103,
+        2.4898900010157377,
+        4.023262998089194
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.10152702452614903,
+        0.21145399659872055,
+        0.32379297772422433
+      ],
+      "maximum_moving_state_age_ms": 12.541279,
+      "maximum_moving_policy_age_ms": 22.786595,
+      "reported_FC_voltage_range_V": [
+        7.38,
+        7.54
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 45.0,
+      "fallback_tilt_deg": 30.0,
+      "mpc_tilt_deg": 30.0,
+      "origin_xy_m": [
+        0.5728891491889954,
+        0.22061388194561005
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "d886f087b6734bb34666d0f85b557caa79902fe790410fcb0b5e2128ccafe01d",
+        "manifest.json": "ed6bc5e627bcb6f03aba55895c92c3115b146476c95eeec9ec5b2584494624a5",
+        "summary.json": "f3016b859ce96b59bd9c577eec3c1d318f221e9ad70407c7fb24a92689c0f721",
+        "controller/receipt.json": "58b5ae18c9d9f582dfd8b4b64b35038ed3062ac86f46a478d005deb177bc35ff",
+        "controller/control.jsonl": "b000fdcb4dcf80b5ffe55d79860934ac8f97bfa5a640a87c63b7a331b2436b8d",
+        "controller/history.jsonl": "63ddc5de040981530c2d0c684746fa339ea846f098f964cecf3477b37e618461",
+        "controller/commands.jsonl": "0b0004cece4500f3eb8816981cffaefcfbe2bd80982373be72865ab4fd27880c"
+      }
+    },
+    {
+      "run": "sanity_experiment_20261022_005516_flight_f7a876",
+      "label": "Circle 2.2 m/s",
+      "start_utc": "2026-10-22T00:55:16.838927+00:00",
+      "pattern": "circle",
+      "speed_m_s": 2.2,
+      "radius_m": 1.5,
+      "laps": 5,
+      "ramp_profile": "linear",
+      "ramp_s": 2.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 4513,
+      "moving_full_mpc_samples": 1171,
+      "moving_start_s": 36.130403104,
+      "moving_end_s": 59.530398201,
+      "xy_rmse_m": 0.13716047380735455,
+      "xyz_rmse_m": 0.13838540293521315,
+      "velocity_reference_3d_rmse_m_s": 0.22796626214212182,
+      "velocity_reference_xy_rmse_m_s": 0.22708772982553718,
+      "mean_position_error_xyz_m": [
+        0.01262414379622354,
+        0.035460297280707424,
+        0.01728540755662014
+      ],
+      "peak_position_error_m": 0.20467446486434215,
+      "peak_moving_speed_m_s": 2.131497194266974,
+      "cruise_speed_mean_m_s": 2.0284569814821585,
+      "peak_moving_tilt_deg": 22.206332813857767,
+      "peak_moving_thrust_N": 0.7315337558772754,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.097235013730824,
+        2.435165672795846,
+        2.575421007350087
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.0885479967109859,
+        0.18925988115370268,
+        0.27649098774418235
+      ],
+      "maximum_moving_state_age_ms": 4.0504489999999995,
+      "maximum_moving_policy_age_ms": 13.902859,
+      "reported_FC_voltage_range_V": [
+        7.22,
+        7.28
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 45.0,
+      "fallback_tilt_deg": 30.0,
+      "mpc_tilt_deg": 30.0,
+      "origin_xy_m": [
+        0.5390262603759766,
+        0.24775958061218262
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "07f1bd9c83ac7a12c1b2d3d886d7037cf50fcbf8c0530a904260741011823e01",
+        "manifest.json": "f2aebfca3d587c7d1f42cc3f7227ef21e06bb90dcd592d917223bb1b724c4e11",
+        "summary.json": "5483ec92caf66e3eda31c8b414d98309e4b8a39f3b7e42a8d84f537f18a00c9e",
+        "controller/receipt.json": "f55cf5c53c768d4c1c96da2539ceda34a90a957d4a030791a594974d39eeb5d4",
+        "controller/control.jsonl": "862dc7ada083a643a6caffea3075a87ba487d62a1f875c45a1984b222988eb49",
+        "controller/history.jsonl": "a7ed88007e7bcae824218f9b75127ecbe075f17f20b096f4830ca20709b6373f",
+        "controller/commands.jsonl": "cd756dba9ef8ee1db4c071f53fd02f4606f91bfc70d44d178c067f98bfb7dcf5"
+      }
+    },
+    {
+      "run": "sanity_experiment_20261022_005725_flight_2e3744",
+      "label": "Circle 3 m/s",
+      "start_utc": "2026-10-22T00:57:25.163510+00:00",
+      "pattern": "circle",
+      "speed_m_s": 3.0,
+      "radius_m": 2.0,
+      "laps": 5,
+      "ramp_profile": "linear",
+      "ramp_s": 2.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 4552,
+      "moving_full_mpc_samples": 1148,
+      "moving_start_s": 31.950393217,
+      "moving_end_s": 54.890395586,
+      "xy_rmse_m": 0.1802275590970704,
+      "xyz_rmse_m": 0.1841131099750322,
+      "velocity_reference_3d_rmse_m_s": 0.3118132705289665,
+      "velocity_reference_xy_rmse_m_s": 0.3105307907389099,
+      "mean_position_error_xyz_m": [
+        0.014775735589260416,
+        0.03305163493346016,
+        0.03608936071395874
+      ],
+      "peak_position_error_m": 0.2578040105966093,
+      "peak_moving_speed_m_s": 2.892917681398713,
+      "cruise_speed_mean_m_s": 2.756867478471056,
+      "peak_moving_tilt_deg": 29.112401635840058,
+      "peak_moving_thrust_N": 0.7477419054495166,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.1220370070077479,
+        2.4815061094705015,
+        2.576187951490283
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.10071450378745794,
+        0.1988728920696303,
+        0.2373700262978673
+      ],
+      "maximum_moving_state_age_ms": 12.076437,
+      "maximum_moving_policy_age_ms": 27.194409,
+      "reported_FC_voltage_range_V": [
+        7.09,
+        7.16
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 45.0,
+      "fallback_tilt_deg": 30.0,
+      "mpc_tilt_deg": 30.0,
+      "origin_xy_m": [
+        0.5276431441307068,
+        0.2614041566848755
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "b0a7034a45a5b176758ece3cb5770afce7fe4ab872d818be61f109858df29c03",
+        "manifest.json": "e9005c8636721fa77c0d2250dce4a32ad04f7fdbc17cbcfea16706b03e2ac228",
+        "summary.json": "0b4f2dc063a677c2e4592b03f37cca29482db2337f55bd00c353c7eb2914ed6c",
+        "controller/receipt.json": "040b5fe3327383ce9e99131f1a6d63ab5fc0f9abdebfc208fbd303f4517b53ef",
+        "controller/control.jsonl": "d46d3533fa1a72b50efdd253164f4a3bb9884ed3c0361ae0209ff060fb0159de",
+        "controller/history.jsonl": "ae2371d615605fb40cd1055a006f97616082be9b64fd898854903716ca0fb21f",
+        "controller/commands.jsonl": "d2e61658b9e6028d009b29ea36696af346c6f77b43832ad84b9c5d1c3828b369"
+      }
+    },
+    {
+      "run": "sanity_experiment_20261022_010724_flight_2c882c",
+      "label": "Circle 5 m/s | A",
+      "start_utc": "2026-10-22T01:07:24.390599+00:00",
+      "pattern": "circle",
+      "speed_m_s": 5.0,
+      "radius_m": 2.0,
+      "laps": 5,
+      "ramp_profile": "smoothstep",
+      "ramp_s": 4.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 4539,
+      "moving_full_mpc_samples": 828,
+      "moving_start_s": 30.670583373,
+      "moving_end_s": 47.210587925,
+      "xy_rmse_m": 0.2503343194611203,
+      "xyz_rmse_m": 0.2509566040689873,
+      "velocity_reference_3d_rmse_m_s": 0.6503149154596053,
+      "velocity_reference_xy_rmse_m_s": 0.6473364926211638,
+      "mean_position_error_xyz_m": [
+        0.02430224230665856,
+        0.043259450745409704,
+        0.001933340505125442
+      ],
+      "peak_position_error_m": 0.40233006746725275,
+      "peak_moving_speed_m_s": 4.52612363532331,
+      "cruise_speed_mean_m_s": 4.283299861427096,
+      "peak_moving_tilt_deg": 54.457524315940724,
+      "peak_moving_thrust_N": 1.113898971420142,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.0,
+        0.024154589371980676
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.1254384880885482,
+        2.482633034233004,
+        4.885503964032978
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.11359946802258492,
+        0.22073664993513392,
+        0.27832097839564085
+      ],
+      "maximum_moving_state_age_ms": 16.906682999999997,
+      "maximum_moving_policy_age_ms": 21.701938000000002,
+      "reported_FC_voltage_range_V": [
+        7.44,
+        7.62
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 75.0,
+      "fallback_tilt_deg": 65.0,
+      "mpc_tilt_deg": 60.0,
+      "origin_xy_m": [
+        0.5579255223274231,
+        0.24797983467578888
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "4c38febc67c1490d270aed6b49b436303ac7f8c1b3576005b24e0f4146465458",
+        "manifest.json": "8dbd3c9fa139a8ddf043f62eb64cf7e69ca2a0ed10f4dc1ddaea4f5617827e3d",
+        "summary.json": "8b543b262a6a9775b3c899e85b979f9d48eb88a832f4846b2f1c49184940b879",
+        "controller/receipt.json": "a477e581dce7637432169daae66bb5444be4bc8611993af82d96401cea26b156",
+        "controller/control.jsonl": "a48cfb9a818ecc8d9f06748a5c255fdef5bddf6d47d7116856a6c95f0c8a5864",
+        "controller/history.jsonl": "e7d8ec9cdc3742496181d42b8d0fe147299e716e441915bb661b8a429ed192c2",
+        "controller/commands.jsonl": "6ddd681b681b0d97306f6a8e47669c532a31d01b62211fef387fc6db67264859"
+      }
+    },
+    {
+      "run": "sanity_experiment_20261022_010935_flight_b49c62",
+      "label": "Circle 5 m/s | B",
+      "start_utc": "2026-10-22T01:09:35.039798+00:00",
+      "pattern": "circle",
+      "speed_m_s": 5.0,
+      "radius_m": 2.0,
+      "laps": 5,
+      "ramp_profile": "smoothstep",
+      "ramp_s": 4.0,
+      "completed_reference_laps": 5.0,
+      "normal_mission_completed": true,
+      "fallback": false,
+      "landed": true,
+      "controller_error": null,
+      "summary_passed": true,
+      "samples": 4534,
+      "moving_full_mpc_samples": 829,
+      "moving_start_s": 31.210404881,
+      "moving_end_s": 47.770400474,
+      "xy_rmse_m": 0.25090593864279515,
+      "xyz_rmse_m": 0.2517972517833151,
+      "velocity_reference_3d_rmse_m_s": 0.6466283839710351,
+      "velocity_reference_xy_rmse_m_s": 0.6435449364534804,
+      "mean_position_error_xyz_m": [
+        0.026143668483143354,
+        0.04558544355371896,
+        0.011400596655464862
+      ],
+      "peak_position_error_m": 0.410829647607352,
+      "peak_moving_speed_m_s": 4.552011865564301,
+      "cruise_speed_mean_m_s": 4.281463132176527,
+      "peak_moving_tilt_deg": 53.59508777176207,
+      "peak_moving_thrust_N": 1.1132144246300117,
+      "rate_bound_fraction_roll_pitch_yaw": [
+        0.0,
+        0.007237635705669481,
+        0.031363088057901084
+      ],
+      "selected_command_limited_ticks": 0,
+      "invalid_selected_mpc_results": 0,
+      "invalid_worker_results": 0,
+      "mpc_total_ms_p50_p99_max": [
+        1.1275089927949011,
+        2.5152810593135664,
+        2.66344501869753
+      ],
+      "mpc_core_ms_p50_p99_max": [
+        0.10944600217044353,
+        0.22310178028419614,
+        0.27161004254594445
+      ],
+      "maximum_moving_state_age_ms": 39.469818999999994,
+      "maximum_moving_policy_age_ms": 39.481048,
+      "reported_FC_voltage_range_V": [
+        7.18,
+        7.42
+      ],
+      "moving_mapping_voltage_fallback_commands": 0,
+      "moving_mapping_saturated_high_commands": 0,
+      "hard_tilt_deg": 75.0,
+      "fallback_tilt_deg": 65.0,
+      "mpc_tilt_deg": 60.0,
+      "origin_xy_m": [
+        0.552056610584259,
+        0.24206991493701935
+      ],
+      "history_action_max_error": 0.0,
+      "raw_sha256": {
+        "mission_plan.json": "4c38febc67c1490d270aed6b49b436303ac7f8c1b3576005b24e0f4146465458",
+        "manifest.json": "4a0798b82461e269950a7e0a58f8777a83f87bde3a9469679aa2176a28d878a4",
+        "summary.json": "baedb5711a530524ecb4ff9f5a71736d426e50c4c99b77e9d0ac6e6752eddf0e",
+        "controller/receipt.json": "f332a986b28e7d10f1ab89d1b3a9ec4e38c6258babea4d57913e93ecf4bfaf78",
+        "controller/control.jsonl": "24a1df1873c6e854ac049e88479ac3a700e4f6bff70b6ee13276ec36574f5526",
+        "controller/history.jsonl": "392de042ef3a4bf8da4415f0b0b9c073dd049424489c721d814368a268975d28",
+        "controller/commands.jsonl": "22d0f3fa9ee65d29f56dcce9dd73623fd1c6e9a51d23d7ab9ad813da20f9b67f"
+      }
+    }
+  ]
+}

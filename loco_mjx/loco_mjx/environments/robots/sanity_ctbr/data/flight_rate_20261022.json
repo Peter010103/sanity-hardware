@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "kind": "Sanity_CTBR_flight_rate_response",
+  "measurement_date": "2026-10-22",
+  "mass_kg": 0.06985,
+  "model": "G(s)=K*wn^2*(1+Tz*s)/(s^2+2*zeta*wn*s+wn^2)*exp(-Td*s)",
+  "nominal_timestamp": "query_write_begin_plus_1ms_proxy",
+  "timestamp_uncertainty": "Query/response have no FC sample timestamp. Fit both query+1ms and response endpoints; ~20ms query RTT is not assigned wholesale to physics or network delay.",
+  "scope": "Small upright roll/pitch commands, recorded gains only. Yaw and collective retain prior calibration. No identified inverted/high-rate dynamics. Host-to-UART transport remains separate.",
+  "fc_gains": {
+    "roll": {
+      "P": 74,
+      "I": 92,
+      "D": 39,
+      "D_min": 39,
+      "F": 124
+    },
+    "pitch": {
+      "P": 77,
+      "I": 97,
+      "D": 46,
+      "D_min": 46,
+      "F": 143
+    },
+    "feedforward_boost": 15
+  },
+  "axes": {
+    "roll": {
+      "gain": 1.0180892652701528,
+      "natural_frequency_hz": 16.303520655754337,
+      "damping_ratio": 0.35358394818544275,
+      "zero_time_s": 0.007340247236624696,
+      "internal_delay_s": 0.010362241942090383,
+      "response_timestamp_sensitivity_parameters": [
+        1.0098622763041332,
+        15.3117340400492,
+        0.385087775894167,
+        0.009588613051420416,
+        0.028487484019239725
+      ]
+    },
+    "pitch": {
+      "gain": 1.025765996878065,
+      "natural_frequency_hz": 12.150924232375198,
+      "damping_ratio": 0.4742319560313014,
+      "zero_time_s": 0.013468911501254675,
+      "internal_delay_s": 0.01039952166409464,
+      "response_timestamp_sensitivity_parameters": [
+        1.0106250880592642,
+        10.734953553561434,
+        0.566628904252559,
+        0.021583659041648176,
+        0.0285912462215219
+      ]
+    }
+  },
+  "source_sha256": {
+    "outputs/sanity_identification_20261022_062849_autotune_flight_f8464a/events.jsonl": "e86acbb8fb1a3c75fb64645416e9ff68068086f2dc94dd2927351ed82d3a4a31",
+    "outputs/sanity_identification_20261022_064205_autotune_flight_9d50bd/events.jsonl": "ec8734ea174c5dbaf136b0487407c0e246e860540f112db06fb603a623fe03d3",
+    "outputs/sanity_identification_20261022_065255_autotune_flight_4e07f9/events.jsonl": "7402331c59d3f8e5723618d2a213312ddd2656653e5be29b97ff016d1967fc75",
+    "outputs/sanity_identification_20261022_071428_autotune_flight_8f9187/events.jsonl": "ecb71d332179c486751f36f463156366923ebe908d0b85292fcab39c3ca02758",
+    "outputs/sanity_identification_20261022_074745_autotune_flight_a5d768/events.jsonl": "8ff7debeed99d442fb30cdcd323217cb958f5dc9dfe8ef02eb988bdfc4d4800e",
+    "outputs/sanity_identification_20261022_161954_rate_sine_flight_197596/events.jsonl": "e5dd1f3102aa4af3c879da1af770df7ebd84dae1bafbe5e6f838f3596acc9058",
+    "outputs/sanity_identification_20261022_162903_rate_sine_flight_039f43/events.jsonl": "dc8f7292a29680e38799eaccf8661e024917406b4a6a52678dffb0a7490ed94a"
+  }
+}

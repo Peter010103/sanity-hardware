@@ -1,0 +1,1993 @@
+{
+  "scope": "Final standalone payload; this manifest is excluded from its own hashes",
+  "files": {
+    ".gitattributes": {
+      "sha256": "5b1ab5ee509151bcd6d77ff2cdc40caf52c05dfe6079e7146a348acabbd50706",
+      "bytes": 281
+    },
+    ".gitignore": {
+      "sha256": "fa6b7d95a2d6e731938e9bc467845ca69eeedb54ff926b815390b79805a9c60d",
+      "bytes": 339
+    },
+    "LICENSES.md": {
+      "sha256": "4a314353f354b0b46ce4fba0cee5383d941d6866da6a62985005aee82c06fb7e",
+      "bytes": 1781
+    },
+    "README.md": {
+      "sha256": "79c068719ecf457c6ece170761fcac58aa2c30e494a2106b4a7e01a1c06c4073",
+      "bytes": 6820
+    },
+    "SOURCE_MANIFEST.json": {
+      "sha256": "e479d064b9a862f0cedd4185eaf7d82246a59d226beb42df680ec20637d5009e",
+      "bytes": 125947
+    },
+    "Sanity/sanity-hardware/data/processed/actuator/static_points.csv": {
+      "sha256": "39039bbc4de3aaf043262e746da6090fd2c4d0d85a68f4fc8bcf223f78698cec",
+      "bytes": 14996
+    },
+    "Sanity/sanity-hardware/parameters/actuators.json": {
+      "sha256": "99d02a1ffe7f10ce9a1d0b0b44f1b1c4ad0d33b5ebc81bd37e078ca7ba14e5e6",
+      "bytes": 2622
+    },
+    "Sanity/sanity-hardware/parameters/identified_actuators.json": {
+      "sha256": "0360b6767a68b21dd7305d3d94ab9658805538c46c5d7cd03dc5441c4f5c6e03",
+      "bytes": 16445
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/analyze_sanity_control_tests.py": {
+      "sha256": "c0bca2d71a03df1dc108ba44cef73053845c4b467d9225761be22cbebde15031",
+      "bytes": 7015
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/assess_landing.py": {
+      "sha256": "6d40328d2033d9626b0e77365d09746e78b2268650b6988c365dc05eab91d855",
+      "bytes": 13497
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/assess_ros_sequence.py": {
+      "sha256": "5d5bb44b66c0a8df0dc66ea8d30522e4aac4434313329ffa85902675454964de",
+      "bytes": 9091
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/install_sanity_acados.py": {
+      "sha256": "9b48eece8a8615ee52c75449500dbe069db9ad01489fd3664ae89c4164844428",
+      "bytes": 2831
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/plot_sanity_flips.py": {
+      "sha256": "6a7cfe195462da6b938f81ca88f1e39db2a0c267d1e72c77c86bb28283a718fa",
+      "bytes": 4771
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_control_test.sh": {
+      "sha256": "999be082dbf0d8cf19fdf79d112dbb5c01245e6468c27b5c337210bd9c02ee1e",
+      "bytes": 151
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_experiment.sh": {
+      "sha256": "d8766814829287ace4042be58d23ac7f18f4c53d987778f528146336198619a9",
+      "bytes": 514
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_full_indi_estimator_hover.sh": {
+      "sha256": "4bd38f26bd4df4bd73e22456c74a478fbfe99a0dbed278820767c8d850281d1d",
+      "bytes": 679
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_mpc_benchmark.py": {
+      "sha256": "e83f65f5e822f360f245ea3721460a4c11eaaaf2ceca435068bd4d382d66963a",
+      "bytes": 18638
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_mpc_benchmark.sh": {
+      "sha256": "d005a8c269ff1f50dfb7cf1888d457996eaf414975f9a835adeb2252ad46d951",
+      "bytes": 255
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/run_sanity_pitch_loop.sh": {
+      "sha256": "9b681e2a88b9ba8da2b9739748cb0ed3a5305614ed5c9a66a63941a453f743d4",
+      "bytes": 520
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/sanity_clock_preflight.sh": {
+      "sha256": "5a317e050c68d41cb16fedbf2c6421b46c3c4aa9af9fbfe0d8eb955f25881e32",
+      "bytes": 833
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/sanity_control_analysis.py": {
+      "sha256": "ac5beb08334d397347cc45481d471cb310c40ea49f16bc517d48484bf13abdad",
+      "bytes": 20683
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/sanity_control_analysis_plots.py": {
+      "sha256": "33d5f80cd058ecf486d80357c484a089e4b5f0ec72f7f0fe79bfd706860cfa68",
+      "bytes": 16061
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/sanity_control_report_findings.py": {
+      "sha256": "e0e3a22478ed5a7153cc56e25f2268caadb72060451fedaa3569d103f17b2318",
+      "bytes": 16654
+    },
+    "Sanity/src/ros2_sanity_ws/scripts/sync_sanity_clock.py": {
+      "sha256": "c6161915b5268bf94e95f8856e077f1ebbae1a83054a0cd5bdc4cac858af26df",
+      "bytes": 9693
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/circle_sequence.yaml": {
+      "sha256": "b844ba5cba3bafc4107bcc48c816d422273485d746ca404bed6198ffc275bd36",
+      "bytes": 1937
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/dds_robotlab.xml": {
+      "sha256": "0ef74af5d44b0d781f3d62cb0835539151cb7fa52f0010768fa94fe00540cd65",
+      "bytes": 842
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/fleet_hover_three.yaml": {
+      "sha256": "fcee2961c28a5ad89356a5bae5227913dbdf181561bbcb4b4a6cedb0bd0f018b",
+      "bytes": 3377
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/pitch_loop_sequence.yaml": {
+      "sha256": "c9666eaf8e2d550bc2500c1a33edd300fa51aa30e08c27057dfe03e218796233",
+      "bytes": 804
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_motor_collective.json": {
+      "sha256": "325681aa9e061149ce4a04359bd52b5f0a07023211edd42575e86302441e04b3",
+      "bytes": 435
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc.json": {
+      "sha256": "fa556292ace4c5764a99326f48197ecbaa21a194e516e93ecfa70dddfa513870",
+      "bytes": 435
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_5ms.yaml": {
+      "sha256": "282dc3b3ff050ff567614273a29ba1f2de0968deb0efbf445b4744441386c9ef",
+      "bytes": 1776
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_bias.json": {
+      "sha256": "852227c4cab0ee5528e1b4a4d81ecc85f25ad0b43bfdedd70b4413df29244a4d",
+      "bytes": 568
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_high_bank.json": {
+      "sha256": "ca52094f601dd7ab9b002e81ffa9a1ab8a7bd92bcd9b4a946e7bfda50d3deb05",
+      "bytes": 435
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_pitch_loop.json": {
+      "sha256": "78f9bf16d8d9c0ecbd3af8ad724f3bde77f710aa840656cda6b4d8d949b22c65",
+      "bytes": 1605
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_full_indi_estimator_hover.json": {
+      "sha256": "8b35ac9a92b86c09448db2457e345ea8e38ed81bd6f40338c252c197884d049e",
+      "bytes": 2144
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_full_indi_estimator_hover_1khz.json": {
+      "sha256": "936692088fa5813b6f478ed2387b2c936e03f3a42a609cf243b7f9f11f99cea3",
+      "bytes": 3021
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_full_indi_lemniscate_1khz.json": {
+      "sha256": "9923b10faed7d0044e1fb9aff7eaf412da4f9fb80390d87bc187a46e0101690d",
+      "bytes": 2539
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_estimator_hover.json": {
+      "sha256": "0417d839abb308cfee61a292af405c0e84412446f03c463709e08efde09cb052",
+      "bytes": 1503
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_hover.json": {
+      "sha256": "1f50a3ae2654f9cb9040475c5fa26b588d4a33cf26d4414644888b02b29ad6f1",
+      "bytes": 712
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength.json": {
+      "sha256": "cddf7eb35d429ae257be837bb59fa6cec0c3ad51ddeda716afcc6732cfac88bc",
+      "bytes": 3538
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength_pid.json": {
+      "sha256": "77113ea5cfcb2eac5625f908d7293490cfca724efa73e650f3392c8557f75a83",
+      "bytes": 3284
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_mpc_variable_angular.json": {
+      "sha256": "161520f5bcfba01d775d5f9eb5ebf6da8aa9c2b85b0a3ca81f54e13978300d30",
+      "bytes": 3534
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_mpc_variable_angular_pid.json": {
+      "sha256": "12ebe75a7454ae74fa7cfdd15868623c6b4816f710df9cfe01728120bb75d489",
+      "bytes": 3280
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_mpc_indi_rate_model.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_pid_estimator_hover_1khz.json": {
+      "sha256": "d945c91fe47cbe93114c4c538a10d974401d3cff844b1dbcdb8f6a9f33dcbcbe",
+      "bytes": 1591
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/__init__.py": {
+      "sha256": "9dfcdc4cbf75c9b6bc40b6a941f28e3efcdb412c2b0b4e23e7b3a87c920c6ec8",
+      "bytes": 84
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/arrival_metrics.py": {
+      "sha256": "4c6a874403126d0344995e105baec8ec74a9e3d0c619beefab8609a357985fdb",
+      "bytes": 2066
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/async_policy.py": {
+      "sha256": "981f81d9fd22808cd84e98a1b0b7edddfc24fa6a136b5eb173e6b6af9773dc7a",
+      "bytes": 5852
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/cli.py": {
+      "sha256": "12be0183a751f06275e1d6e3bc8cf85a29f9145cfae8c777c86cc5204385c516",
+      "bytes": 5359
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/client.py": {
+      "sha256": "d62ff8b22e765af54a115129075c7191e8de1ae0fef2574864f70afe2f7426f5",
+      "bytes": 28027
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/collective.py": {
+      "sha256": "5b952a75d4e216b568255d4b3810ac47cb9a582d59e40c8ab808420a949f6104",
+      "bytes": 6235
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/command_prediction.py": {
+      "sha256": "c85ea269ff7b7fa8981a441f99a1ddaa582a887bd5048bc0e7e4e9ebad2523e8",
+      "bytes": 4855
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/command_timing.py": {
+      "sha256": "44653940172827e7539c452c92907cb15735fee02db89d19a12c96bbf3f203eb",
+      "bytes": 9729
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/controller_status.py": {
+      "sha256": "76ef82a303f35ebb5d80e543d31ef300e6995882f13498b4950c467104a7b1f5",
+      "bytes": 3057
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/controller_timing.py": {
+      "sha256": "84f2e4d6a6a97697f455f55217892045fb76f47d08840895acb4d1bef62872d2",
+      "bytes": 2748
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/estimator_protocol.py": {
+      "sha256": "d2dc85e64f0bf7f76f71bad67c95a952048cc0377e0c89fcd34dcbd83606f4fe",
+      "bytes": 6997
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/estimator_tools.py": {
+      "sha256": "e1a02b11a6e794e9ad2b7877b33cefbeedb0dc47da44f6e051a62c41816fd8e2",
+      "bytes": 15794
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/experiment.py": {
+      "sha256": "9bc256ab10a42268e5d11e01b744ee73fac45172845df9c8b01ac9be782b7b16",
+      "bytes": 23403
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/fc_blackbox.py": {
+      "sha256": "a1fb3f03bea23d8d6d59f91a6067901e9c5042247e2b14673bfbce7e5d937d3f",
+      "bytes": 21873
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/fc_telemetry.py": {
+      "sha256": "f6b63c969922932d445183ac657f85f5b8829becd5b8e6e192178b90ec0783dc",
+      "bytes": 8919
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/firmware_collective.py": {
+      "sha256": "3cc3b1399c5ab920c0dfb33dc1fdaab2a259f5d30bcd99a6a5403b1e1f5bf503",
+      "bytes": 3931
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/full_indi_mission.py": {
+      "sha256": "7f175ddb3ef687e029dfe484347b40117b31efa45988eb3f9fef75fec9795bd3",
+      "bytes": 22550
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/high_speed_lemniscate.py": {
+      "sha256": "7c41b0bf5bfd570a5c804497ecfaaa026c74a9a07695eb9067ea4cf6795c098a",
+      "bytes": 4544
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/hover_observations.py": {
+      "sha256": "9637b71aa92b68b22dddd29bd1f5fa7572834cfed63b30f3e894f94fcda93222",
+      "bytes": 4250
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/indi_diagnostics.py": {
+      "sha256": "a0feab6cff39e38c7ce5931c79cc91f7ce4a55c3730c56bd028566cc1eda7420",
+      "bytes": 12523
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/indi_hover.py": {
+      "sha256": "3e60c8c256c108d6de7667cc047ed361c468a6f479df3726ae174c42bb8cbd7f",
+      "bytes": 37351
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/indi_hover_mission.py": {
+      "sha256": "ee1e65aefb1b589e07d4aa219961e5bae33405e65426564907c1d6525b47f29d",
+      "bytes": 16155
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/indi_lemniscate.py": {
+      "sha256": "6d9c519fde4c0142dfa2016fba5619bb34d5c7925f0000942925c6cc2f3cc045",
+      "bytes": 15147
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/indi_mpc_benchmark.py": {
+      "sha256": "520c55e7a765f1442921448034abd598e499d23678638a83ce1349ac82b51391",
+      "bytes": 22783
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/landing.py": {
+      "sha256": "827a33108bd91456ae0242ca65f8d4ee2c8157856d7d58cd30d652ff89ecfc71",
+      "bytes": 5340
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/local_policy.py": {
+      "sha256": "8923874ff672bd703f3e3e21d699432113c08769176d7f11cc6492271149bc42",
+      "bytes": 19175
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mission_clock.py": {
+      "sha256": "8b9ee23e99d1f3dc33a67519208d428a51b0badaa8202507a13e393f900e242c",
+      "bytes": 1004
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mocap.py": {
+      "sha256": "739705a0e9073c566537c4bd37a5e510807f51c16ae75a084b627a5da1e2003d",
+      "bytes": 8705
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mocap_diagnostics.py": {
+      "sha256": "d3ad9fae2965bb66c8245291f535c347a213a821259a9d3c676e8e2e4e544c7e",
+      "bytes": 5810
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mocap_protocol.py": {
+      "sha256": "969f3e24112faf83db091bcc8ed3607d8bd3d736eba499b95c0bf47a5f579a27",
+      "bytes": 4113
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mocap_stream.py": {
+      "sha256": "309dc700d91912b4c84492d9d2203be3bf435f348094c108b9575e8b2a2c1b9d",
+      "bytes": 9756
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mocap_stream_node.py": {
+      "sha256": "95252e85f3754682eec2e6be8cf13775fdbc8e83f6b97b6195ecc622a9bb9681",
+      "bytes": 3890
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mpc_benchmark_config.py": {
+      "sha256": "ccae547167c112a9282a817d9987152fd26ce57457d55c0e8daf797b89ca7fbe",
+      "bytes": 7742
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/mpc_process.py": {
+      "sha256": "80a14a0a196686e1b54231af7126e1fff9886d4b549ab62c25d324d09a0397cb",
+      "bytes": 5893
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/paper_status.py": {
+      "sha256": "375a80c1fc511408c83a4a9bcbff009b43ae610fd65d22a6149a41181c43dde8",
+      "bytes": 2215
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/pitch_experiment.py": {
+      "sha256": "247dff9f00b159916bf83902e988ad151e5f8f3b0376d29f07897efda73602be",
+      "bytes": 19533
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/pitch_mission.py": {
+      "sha256": "46cc13eb11156f3d5b2a1a2c51c3f369097061cfebd0389600b1ec3294391ed9",
+      "bytes": 23540
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/protocol.py": {
+      "sha256": "d7f86354b36105a297473e15376b885f901032c5caa950b7bf67eb62bdff022c",
+      "bytes": 7290
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/rate_analysis.py": {
+      "sha256": "e338f1b337ff2c8e61252fe23617c92922f314e0a3a5db14e18173c3c1e35db9",
+      "bytes": 1855
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/receiver_health.py": {
+      "sha256": "6c799486ef61f589352b97803b378ca0f5bbe0e4f6a012c0546917edd6ba7d64",
+      "bytes": 1581
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/recording.py": {
+      "sha256": "f42af21b484d55147c68b378fbfc3916813d91c46372d8993df1ced069356c6f",
+      "bytes": 5206
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/recording_process.py": {
+      "sha256": "53b4ede2cf3081ef111e46e9bd62cc9d2cff02a9b1624e49734c4bd32ad6dd5f",
+      "bytes": 1615
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/residual_runtime.py": {
+      "sha256": "bec5c8365f3fa996c2f9a14d6f4cac1e8e4eac2e5f6bf2404c52be58cde4233c",
+      "bytes": 5180
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/ros_sequence.py": {
+      "sha256": "eb33f51220662b6ed8b791506a10e7f2ed2f281433390c6fa5723c1b5de44e0b",
+      "bytes": 43406
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/standalone_paths.py": {
+      "sha256": "13f6ac96ec6182450e0bc95f373ec9b30b76b760048f630a0be3f74d39f92b00",
+      "bytes": 726
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/telemetry_capture.py": {
+      "sha256": "a19883ae56813468e64c67ee0f22a29f1f34d82b5dbcebfc3410c23611d65ab1",
+      "bytes": 7321
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/transport.py": {
+      "sha256": "cbe10868db54366efd496549b3740e27e011111660d0b2080e00c5ab86ae3c68",
+      "bytes": 1929
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/sanity_zenoh/transport_test.py": {
+      "sha256": "f3378affdf3b0968ffc90f6e97d0cfcdd9ad7dbaf02a5e89230d937e7206c66c",
+      "bytes": 16831
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_assess_landing.py": {
+      "sha256": "7c00a2eadd43aafecb85a1a847e8835adcfb797f7b5b6dc8c254850b9e993ab8",
+      "bytes": 2498
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_async_policy.py": {
+      "sha256": "010e3399da686fc7839a8ffae7580a18dbfae249841096a409a4e31b48c01750",
+      "bytes": 4707
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_command_prediction.py": {
+      "sha256": "a4711025885b8dc3af98c46f3de24d006cd8a737a20f6fc66add5cc79a0a5e3e",
+      "bytes": 3211
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_controller_snapshot_age.py": {
+      "sha256": "8134e8fabf4beffed564bf74d2bef6e645010ecd32521af713c8a9fcd70700d4",
+      "bytes": 6078
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_experiment.py": {
+      "sha256": "2c9953a38c615de5330951bf6dc60e92baacebd66b350679f37547607120057a",
+      "bytes": 3677
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_full_indi_mission.py": {
+      "sha256": "984d8e1cfd36f5ae00baa504fd2acba5a97f481a8a76099282004fc83932def3",
+      "bytes": 17744
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_climb_on_ack.py": {
+      "sha256": "b57ccce020574c3b1088c1e466c519d34449680775233e8e3f8c9f1e572fca88",
+      "bytes": 9394
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_hover.py": {
+      "sha256": "a7143612da877ad66dbd7840ffb3af336b07664a6dd33da7ab5c103b59b175d1",
+      "bytes": 5320
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_launch_boost.py": {
+      "sha256": "98ca0d20a0e155523426f993413025c8847cc9f9e7e280d50b643e0c4b4dc814",
+      "bytes": 10399
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_lemniscate.py": {
+      "sha256": "27725c7e266a89d5ac905035e9069f7a7bb34af0c399e9864e34ec56ca165e52",
+      "bytes": 9405
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_mpc_benchmark.py": {
+      "sha256": "a26f294ad3151c5ba28f68f4e49b878eb2ae4956bca9cd1497fb9e7cc2a5d52e",
+      "bytes": 25611
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_rate_model.py": {
+      "sha256": "566a68e58950e5d6caf2ec74c8608d1ccbe8ec061f3de6dffcc4a5a42089e0ff",
+      "bytes": 5752
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_indi_shaped_trajectory.py": {
+      "sha256": "c8c4f1df7a6f95dfc5ccc8f6e4b7e616e02374e60dc315033ead25055934ff3d",
+      "bytes": 6957
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_landing.py": {
+      "sha256": "b82f9e09f990b282a4b2a0a8a83cda95c1e206d96ddac32581ed3b4f5ea003a1",
+      "bytes": 6729
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mission_clock.py": {
+      "sha256": "dc0c68eeaea19433dbe901a6d73dea4092befaac9cbddfa8a8513f5a3f763f2c",
+      "bytes": 13488
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mocap.py": {
+      "sha256": "006d6a1c1903753e30ebfadb1ab975b9b9821471450fd158eea6c76fa612c19b",
+      "bytes": 12235
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mocap_diagnostics.py": {
+      "sha256": "0995ceb335564bc55cc307697b4dd14c7d9da5b950703dff70d8a1199260bed5",
+      "bytes": 9453
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mocap_pose_filter.py": {
+      "sha256": "fb3789f7d28f98eba4757c56fe40f3a430955bb33c9a260b0f04246f04fa7c5e",
+      "bytes": 3619
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mocap_stream.py": {
+      "sha256": "a931765cb5420e0604ae428e5f1b2560f64c32ce95bb50121b68d9599ef760fe",
+      "bytes": 16545
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mpc.py": {
+      "sha256": "1bc4e091bb63ec24f3644529d7f57ed72cf4deef2405038f2f1301ee18ec80c4",
+      "bytes": 14407
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mpc_benchmark_launcher.py": {
+      "sha256": "e2eead65eab06ca55bb967dcc368a08f59bbc8d69ddc146113d1a4677299958e",
+      "bytes": 10552
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mpc_bias_integration.py": {
+      "sha256": "ef089edbd008368546cda4f8e03c22548e8b07f5037e1b638c10c1986b450f45",
+      "bytes": 6111
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mpc_disturbance.py": {
+      "sha256": "6c883bc64f052d5e3855067dc3159b73f47d24482e48b6d824047d64aad11d90",
+      "bytes": 5795
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_mpc_speed_envelope.py": {
+      "sha256": "d62a3fc172e5eb3223e3aaf9a6a295815727b9b1641438a51e866efb677854f6",
+      "bytes": 4987
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_pitch_mission.py": {
+      "sha256": "8e8a70a0a31c63c8221fb49355a7cc2b086de5dbbacc9bd5994ddd59e3043b73",
+      "bytes": 14244
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_pitch_startup.py": {
+      "sha256": "7943f5f1738854cb6682a1baa68163425f9710cc899b8eb844cdafd93fc88d44",
+      "bytes": 2373
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_receiver_health.py": {
+      "sha256": "6052d201dbcf6284103863c4f546fbedabfe69192bce68c05c0aacfd13fe719e",
+      "bytes": 3017
+    },
+    "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/test/test_ros_mocap_filter.py": {
+      "sha256": "f8937a000632e0e5122f8629caab089162c4ab3a965e9fa4ccb03c0d35bd647a",
+      "bytes": 1929
+    },
+    "Sanity/src/ros2_sanity_ws/src/udp_broadcaster/udp_broadcaster/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Sanity/src/ros2_sanity_ws/src/udp_broadcaster/udp_broadcaster/ctbr_protocol.py": {
+      "sha256": "c411ccf733c13d887799e4fc9c9cb60a01ce2a3fabcec9df92f8f4e47d20adc1",
+      "bytes": 6539
+    },
+    "VALIDATION.md": {
+      "sha256": "277beea62f178c057dad766efc24e1e83f1f2b9961dc8200f8a3a4501f0263b5",
+      "bytes": 3816
+    },
+    "config/lab.example.json": {
+      "sha256": "e2a729fdf3850345c6519169ac00215b3906c19f1d7243cb6cdf6d711db05fe3",
+      "bytes": 1225
+    },
+    "docs/archive/FLEET_FLIPS.md": {
+      "sha256": "d06789d65b9fd2a3552b95cd19bcbfb4200542e2c716c2273c56e5eaeb6e73bd",
+      "bytes": 13384
+    },
+    "docs/archive/FULL_INDI_FLIGHT.txt": {
+      "sha256": "2a4dd4f683f5a1fd6e3529afe9294f7222bcbcce059a9e645d3874240d592356",
+      "bytes": 5320
+    },
+    "docs/archive/MPC_BASELINE.txt": {
+      "sha256": "86947c9c3a5014fa9b7902548a6681a860a9c9509920a3622d654e37677c409b",
+      "bytes": 13574
+    },
+    "docs/archive/requirements.txt": {
+      "sha256": "05462f904d6e7f63e44b15ea32dfccb06d002f597822c8ec0b3393c070d076a2",
+      "bytes": 146
+    },
+    "docs/controllers.md": {
+      "sha256": "82891360c2516ef4b19dab0c4ccbe9573db6c8edef634684f8ebd8338a32c443",
+      "bytes": 9512
+    },
+    "docs/flights.md": {
+      "sha256": "68ae2c5870af69c2cfba136ed4a33472f12253aba1050a2db566f3773aaf42e6",
+      "bytes": 14321
+    },
+    "docs/hardware.md": {
+      "sha256": "e80e82a33c724610fe3b16a42e8ccb70c69f07f78cf6b2669781b81da4c57faa",
+      "bytes": 9053
+    },
+    "docs/results.md": {
+      "sha256": "4d0602effeb415fbe0e374243aa52b3a20284a3614ebcc3255acdaa0bff28910",
+      "bytes": 6204
+    },
+    "evidence/firmware/fc_build_receipt.json": {
+      "sha256": "f86b3661c2a4a4f651c4145b5b3e043be31525e396b3f8c57ac586dc306cae65",
+      "bytes": 4954
+    },
+    "evidence/firmware/receiver_deployment.json": {
+      "sha256": "48fe8907c6974fcc329f337adcda3c693166c6e1bd4427434ffe6fbfbf61cb1a",
+      "bytes": 713
+    },
+    "evidence/indi3-recomputed-metrics.json": {
+      "sha256": "48f36b9f530fd48189d1f1c46dbdf6e28a34601bb130b135b372f3a36ea0034e",
+      "bytes": 980
+    },
+    "evidence/indi4-recomputed-metrics.json": {
+      "sha256": "e2c3f5430b6924884416838cd6fc86c27de40c507c9fd17206022d85eaeb997b",
+      "bytes": 981
+    },
+    "evidence/pid-flip10-recomputed-metrics.json": {
+      "sha256": "b22a39f681ca5cf78e2a041356123539352a3a5f9d0680508e5c1e934fe19796",
+      "bytes": 936
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_005139_flight_2215e0.json": {
+      "sha256": "a945e0b26a6053aacf2c67a41abc2697e48638e780f7837d5685b2ce514fc390",
+      "bytes": 2904
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_005309_flight_5dce40.json": {
+      "sha256": "d886f087b6734bb34666d0f85b557caa79902fe790410fcb0b5e2128ccafe01d",
+      "bytes": 2900
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_005516_flight_f7a876.json": {
+      "sha256": "07f1bd9c83ac7a12c1b2d3d886d7037cf50fcbf8c0530a904260741011823e01",
+      "bytes": 2897
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_005725_flight_2e3744.json": {
+      "sha256": "b0a7034a45a5b176758ece3cb5770afce7fe4ab872d818be61f109858df29c03",
+      "bytes": 2910
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_010724_flight_2c882c.json": {
+      "sha256": "4c38febc67c1490d270aed6b49b436303ac7f8c1b3576005b24e0f4146465458",
+      "bytes": 2970
+    },
+    "evidence/pid_launch_plans/sanity_experiment_20261022_010935_flight_b49c62.json": {
+      "sha256": "4c38febc67c1490d270aed6b49b436303ac7f8c1b3576005b24e0f4146465458",
+      "bytes": 2970
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_1.5mps_indi-shaped-angular_R2m_2026-11-12_07-00-29Z/configuration.json": {
+      "sha256": "c4ff2862f01c25885c183f9986d9b7560f6ac894845461172641dd165bbf5060",
+      "bytes": 5589
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_1.5mps_indi-shaped-angular_R2m_2026-11-12_07-00-29Z/ground_reference.json": {
+      "sha256": "1b4ebd09b1b44586d756621094c709e02abed7187ba426cdfac5fc4d2f1072aa",
+      "bytes": 418
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_1.5mps_indi-shaped-angular_R2m_2026-11-12_07-00-29Z/run_summary.json": {
+      "sha256": "6b9813ecd59335224e83ac1315587b84040d5c9625f66863732e09d1617315e5",
+      "bytes": 3665
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-25-26Z/configuration.json": {
+      "sha256": "c492f05b932f9a264ef980c6c6ffc26704f631d68d414eb22e4cc1206e4bbbd3",
+      "bytes": 8004
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-25-26Z/ground_reference.json": {
+      "sha256": "fe40b6bb4e6d034ec08947349dc954ae5630f6d45605dc2fbecdb0900c89592a",
+      "bytes": 414
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-25-26Z/run_summary.json": {
+      "sha256": "c627ad6e701f5d67d23d0ec55d5ed2e3b11ed38652bf66d0155f4464d35325a0",
+      "bytes": 3808
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-26-04Z/configuration.json": {
+      "sha256": "8ef55064a82b4706fdd8d7c018f02bb905fc48cde025fd36e2ac50664a09d254",
+      "bytes": 8004
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-26-04Z/ground_reference.json": {
+      "sha256": "377479630a44c7e85ae8e7747bf3abf9507a7046be331505c9f4c1a7966d8c34",
+      "bytes": 415
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-26-04Z/run_summary.json": {
+      "sha256": "665ab0f0755dd0ecc70cd392a9c5fa99bcbce4f22fe9763e5014a90c2f19b832",
+      "bytes": 3823
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-27-00Z/configuration.json": {
+      "sha256": "cfbc316a46269018910f81dd956707ee8a1932f5f95dfd38990d0ad260e15e17",
+      "bytes": 8004
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-27-00Z/ground_reference.json": {
+      "sha256": "a20ee5cbb2b8e58e1bfd5ce722c69e4b983ec3a131762b83cbe73a2d0411908d",
+      "bytes": 416
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-27-00Z/run_summary.json": {
+      "sha256": "5a83d0ab4aaaaf92ee03b0bf5a75dcc2208cfcf579de88d993aec9084db015eb",
+      "bytes": 3817
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-37-10Z/configuration.json": {
+      "sha256": "5f48920633c23cff8d5b790f338503bad7cf7ef78bbc5c5742cf5a45b6b08c27",
+      "bytes": 8004
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-37-10Z/ground_reference.json": {
+      "sha256": "5e50f11a5839f6f140db4832e879e2508c3aa3671a8461923a457347c7739433",
+      "bytes": 413
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-37-10Z/run_summary.json": {
+      "sha256": "2203e92036cd7dad84f5066f9c359432aae7d00f6534708fa883ec50d2b66293",
+      "bytes": 3806
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-47-59Z/configuration.json": {
+      "sha256": "8de37338411d78c1533615a90f1a7fe673f2963d3d32e27ca107cd9bdb9a6666",
+      "bytes": 8420
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-47-59Z/ground_reference.json": {
+      "sha256": "566b75d9d3b9db009ddb02a25078a01eba12d51b239fbde68b3c04eca9f81da5",
+      "bytes": 418
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-47-59Z/run_summary.json": {
+      "sha256": "85843f2273df34ff3252b14e41b879521ea81f50a1331965432855e602007449",
+      "bytes": 3692
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-19-19Z/configuration.json": {
+      "sha256": "51139f5b9b35a21296b2e5628039d7d6f6b14e92f463a33dda4f43150b0a8a05",
+      "bytes": 9266
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-19-19Z/ground_reference.json": {
+      "sha256": "eb4fa0870730b84d7f6e83616f45602691ce7b94654e98ae09b1a60332a8a34d",
+      "bytes": 417
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-19-19Z/run_summary.json": {
+      "sha256": "b4d008fcdd3a438d80bd713cd60118efc2e5db4bdd61315740282c104e60d62a",
+      "bytes": 3821
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-23-22Z/configuration.json": {
+      "sha256": "dbae50cdf5a1d99131fce8922d2e97202d1d6567e7dc31d9d141cf8d9dba68ce",
+      "bytes": 9266
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-23-22Z/ground_reference.json": {
+      "sha256": "2deeba4cfaaf39cdfe450da8f3183f61ecf0647e4879f7fc19fd6c29be7fb989",
+      "bytes": 416
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_2026-11-12_08-23-22Z/run_summary.json": {
+      "sha256": "01176fd299dc29a5e3f0a274cb98e2f1849c97c5206d03012cdea0ee062fef2a",
+      "bytes": 3687
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-17-48Z/configuration.json": {
+      "sha256": "b03b485c6bfa25ffd53402afeb1c60a5a7214a9c18cad098194c583318f08dc9",
+      "bytes": 9292
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-17-48Z/ground_reference.json": {
+      "sha256": "b0b2947f8008b931ab3119842b24b4274f147b14e8c4a5de0d89b7984f4d20ea",
+      "bytes": 418
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-17-48Z/run_summary.json": {
+      "sha256": "b9a4ee4d80f00a02bc593e86c502b55a20e9491cc38c3d81c734493e3bfb2f53",
+      "bytes": 3811
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-24-18Z/configuration.json": {
+      "sha256": "277539fca0ff5a8287bff8e2b19037aee560f91432c3e2adb90815177255618c",
+      "bytes": 9292
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-24-18Z/ground_reference.json": {
+      "sha256": "63daa53f9f9823779cc0d802d27a3a4925ab86ace42c085120dbb98debb5c436",
+      "bytes": 417
+    },
+    "evidence/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_2026-11-12_08-24-18Z/run_summary.json": {
+      "sha256": "cfa879736c1f8dd07a9b8d0f3b65440b93b692f99634b27ad52b21a4f6bd4af3",
+      "bytes": 3820
+    },
+    "evidence/sanity15_indi_trajectory_shaping_20261110/README.txt": {
+      "sha256": "4c6d019bb5c24639442f269792fbae96c8fcd90ecc3c9b0fc0c5b4dd62e03542",
+      "bytes": 2875
+    },
+    "evidence/sanity15_indi_trajectory_shaping_20261110/comparison.json": {
+      "sha256": "ac7f14d2fa1270e28491226f43b64226df83678db5805c92826270ece504a92c",
+      "bytes": 5914
+    },
+    "evidence/sanity15_mpc_indi_update_20261110/README.txt": {
+      "sha256": "2f6343eaefff8f716587cce9e67ad894b468718180f386e3fa7db591bd2492e2",
+      "bytes": 4559
+    },
+    "evidence/sanity15_mpc_indi_update_20261110/closed_loop_results.json": {
+      "sha256": "3efb47ea973046d2d673fbd7196bc49a162e1d6c4182aadf7fb7d032c09cbfdf",
+      "bytes": 4883
+    },
+    "evidence/sanity15_mpc_indi_update_20261110/delay_sensitivity.json": {
+      "sha256": "924d5656405cef01ff0b743b274c00d0828cb2ecc936d1ff4c6339f26f9d32d1",
+      "bytes": 1663
+    },
+    "evidence/sanity_mpc_flight_assessment_20261022/RESULTS.txt": {
+      "sha256": "99f0ee3fa0e0f1ed79917cb583b4f56920aded31375b8334e5d06526be6393f1",
+      "bytes": 2462
+    },
+    "evidence/sanity_mpc_flight_assessment_20261022/assessment.json": {
+      "sha256": "b6c1751b498029b48f9608ef3524544c7ea198eff72c021923375e55813b7eb5",
+      "bytes": 18890
+    },
+    "evidence/sanity_pitch_successful_flights_20261022/RESULTS.txt": {
+      "sha256": "53aecd43f5974a19593631b58290cff2597437bc852568f771362182f7640efc",
+      "bytes": 754
+    },
+    "evidence/sanity_pitch_successful_flights_20261022/assessment.json": {
+      "sha256": "e614ffb7ea7d73e08ab384cded8780d76a54a958e7605801fa5577c866e783fb",
+      "bytes": 7027
+    },
+    "firmware/fc/DEPLOYMENT_CURRENT.json": {
+      "sha256": "125b105acf35d88ed2663cc87164b7f9df4d912c1581351d5c5db97f408776b2",
+      "bytes": 1331
+    },
+    "firmware/fc/configuration/airframes.json": {
+      "sha256": "5b04ddf1488916c253530dc4c124c02173221da6f71dab36678a41185a7bb292",
+      "bytes": 7546
+    },
+    "firmware/fc/configuration/disable_INDI.txt": {
+      "sha256": "ebc5c65e26a0d8ee63fd08adca4701b1489b9e2a1546ed203384f02332757667",
+      "bytes": 153
+    },
+    "firmware/fc/configuration/enable_INDI.txt": {
+      "sha256": "b956f9f17b18c63c942118d691c5d53c0e58490d23f90f8276f8a48aeb0cf034",
+      "bytes": 829
+    },
+    "firmware/fc/configuration/sanity15_Kv20_FF025_reference_dump.txt": {
+      "sha256": "8e90769b4c11a26dd790ad70a78248c03c64b34d8f9642ed66ac86dd825c2138",
+      "bytes": 41112
+    },
+    "firmware/fc/rebuild.py": {
+      "sha256": "727f66ab0453ee3ef644db534449650fe11aaf449b833e6528395033e311e10c",
+      "bytes": 3382
+    },
+    "firmware/fc/recommended.cli": {
+      "sha256": "25ee338d96eb396ae6332ad2b5bc4be0d2c17ec9a9adaa1b1fc13822a55c5c2a",
+      "bytes": 327
+    },
+    "firmware/fc/source.json": {
+      "sha256": "7780b14e5e1301eaf61ccb3a996132002dd52c02d4bf23cf824d4536dd58babb",
+      "bytes": 516
+    },
+    "firmware/fc/source.patch": {
+      "sha256": "bb6d5ffecc56612f7b0447f51c98ec2a9efc9fa2e9e15f285bfa0e3c9d3f2dd0",
+      "bytes": 413604
+    },
+    "firmware/fc/tests/adapter/adapter_env.h": {
+      "sha256": "198afbee49096d7bb99f07629733809870fadb53a65a04af0684f421d519f192",
+      "bytes": 2589
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/common/axis.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/common/maths.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/common/time.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/config/config.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/drivers/dshot.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/drivers/motor.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/drivers/time.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/fc/core.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/fc/rc.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/fc/runtime_config.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/flight/imu.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/flight/mixer.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/flight/mixer_init.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/flight/pid.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/pg/motor.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/pg/pg.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/platform.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/rx/rx.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/sensors/battery.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/adapter_stubs/sensors/gyro.h": {
+      "sha256": "f68195827eaa5921699693dbe41a335176ed22b6be0ef16ac191f94cfa7f7358",
+      "bytes": 38
+    },
+    "firmware/fc/tests/adapter/controller_fixture.bin": {
+      "sha256": "f984d0fcf8900ade32c4fa9d564ae649c1431b463aa9b7a247767f3497b4c5cc",
+      "bytes": 80
+    },
+    "firmware/fc/tests/adapter/controller_timing_fixture.bin": {
+      "sha256": "dbde9526ee72888aa0aac1e51a409b831c29c6802d3da49ed7cbd19826973139",
+      "bytes": 80
+    },
+    "firmware/fc/tests/adapter/extracted_adapter_functions.c": {
+      "sha256": "30d2d107ddc2e331c8e0f08f47736d6391dd6194a7f3e6747ece1a5493c709c2",
+      "bytes": 2459
+    },
+    "firmware/fc/tests/adapter/paper_trace_fixture_state.bin": {
+      "sha256": "0bd6c2b24c94ac753fa3ef1a80f01ba9300275c551948ec025c7b56921e4784a",
+      "bytes": 760
+    },
+    "firmware/fc/tests/adapter/replay_native_samples.h": {
+      "sha256": "06b54173fe349f4ba45ad72e0597b86fee45e2a63381a4eb106711f6a4342c1b",
+      "bytes": 19951
+    },
+    "firmware/fc/tests/adapter/sips_v2_low_voltage.bin": {
+      "sha256": "2a64f18eaaa6e7d927de52341cd9b5cb0d971e79a1e42c71a9385d290dd79ca0",
+      "bytes": 80
+    },
+    "firmware/fc/tests/adapter/test_adapter.c": {
+      "sha256": "85ecd9f039e8aecddd242422a361d36babadde910a878cfb8a0edbaff302c8ea",
+      "bytes": 50304
+    },
+    "firmware/fc/tests/adapter/trace_fixture_before.bin": {
+      "sha256": "21bfd8fc86a13bc98853fea7cae73bd09c6446b8de9019f6285721b218c973b4",
+      "bytes": 80
+    },
+    "firmware/fc/tests/adapter/trace_fixture_state.bin": {
+      "sha256": "ccc25cff6a0259391231b6daa6fcb0b4a915d022a9823d31b59d8c4998d4ef4d",
+      "bytes": 260
+    },
+    "firmware/fc/tests/blackbox_layout_test.c": {
+      "sha256": "acacf570d9fcc3d0dc5f10f96f91d9e2dfa7526ca193067f571ce96e5380a163",
+      "bytes": 3137
+    },
+    "firmware/fc/tests/replay_provenance.json": {
+      "sha256": "952a1c486ba42d4915a9861a86b7825b47dab93d2265a26d91edca92d8831afd",
+      "bytes": 430
+    },
+    "firmware/fc/tests/run_adapter_tests.py": {
+      "sha256": "a2f348a2b7ff4a3eee16b14c0ca5d520b6a144a884e2e512bc6d4af4326df45e",
+      "bytes": 2067
+    },
+    "firmware/fc/tests/run_feedforward_tests.py": {
+      "sha256": "2fd7c46bfb2a46bc33a1afa02ecfb35cd9292c0f3f9578e0e7eebe2a75aabeb7",
+      "bytes": 2882
+    },
+    "firmware/fc/tests/run_real_model_tests.py": {
+      "sha256": "f4212e3c0aa1eb706a8675f084ffe6905d2968f5abeffbde05e2a41b3e22faeb",
+      "bytes": 1084
+    },
+    "firmware/fc/tests/run_servo_tests.py": {
+      "sha256": "eab41a832421765a8448d6cba89910c1dbd40fb00edb638455a4ca6487c02188",
+      "bytes": 1705
+    },
+    "firmware/fc/tests/servo_test_hashes.json": {
+      "sha256": "e2dc0a0ab84a60c73b7f562400dc49a563902ea7924920b3f3c3062dc6295a15",
+      "bytes": 928
+    },
+    "firmware/fc/tests/speed_model_test_stub.h": {
+      "sha256": "a327d17f2be878e8f2f48061e80a611b0af28a0d3e18a86c99d02e4422d54ced",
+      "bytes": 802
+    },
+    "firmware/fc/tests/test_decoder_v3.py": {
+      "sha256": "306e47409ec736ab4466ada38df8d83451f4ffffb8d9c6340ee679e82c418b1c",
+      "bytes": 2500
+    },
+    "firmware/fc/tests/test_decoder_v4.py": {
+      "sha256": "a88d23673b6247de86f1c0530e5b60661745f0e6147a262f7db0b82a25930343",
+      "bytes": 2500
+    },
+    "firmware/fc/tests/test_rate_feedforward.c": {
+      "sha256": "cfded0ecd87b1b814da0b50b59eeb22b29e9539c1d87f7a5232bfc4103ba53c0",
+      "bytes": 2337
+    },
+    "firmware/fc/tests/test_real_model.c": {
+      "sha256": "39418359ec2c00568e51b05752c9bae99a6e133bfba9e5ccf20b9638f2fdfca9",
+      "bytes": 2420
+    },
+    "firmware/fc/tests/test_servo.c": {
+      "sha256": "3861e82d72a262fb271200af266cd1d2dab3be93034c7c3cae6a10371c04f907",
+      "bytes": 7158
+    },
+    "firmware/receiver/CMakeLists.txt": {
+      "sha256": "5e8ad25c2a0ad6dcd75f0007b2e44a8f7d0c30009e1ebbbca1790ef5943ce46c",
+      "bytes": 673
+    },
+    "firmware/receiver/HX711_TIMING.md": {
+      "sha256": "9de2639f6089c1898e06e24eb9b68d6c32fbe13f9eeac526a0aaf275224ff069",
+      "bytes": 12950
+    },
+    "firmware/receiver/README.md": {
+      "sha256": "00e6eaff5ce23103d633b0c7543e91f00863e5d9f45120bb4e309bea19582a68",
+      "bytes": 48670
+    },
+    "firmware/receiver/TELEMETRY.md": {
+      "sha256": "7064ea07c803cc6e9f4abf7d8520fa4e66df8168281da4e6e91f608633022440",
+      "bytes": 7859
+    },
+    "firmware/receiver/main/CMakeLists.txt": {
+      "sha256": "cb50f716739ecf1a9d100e1cbeefcd3636695f0b4fbf317ff4734a02acc42a2f",
+      "bytes": 2232
+    },
+    "firmware/receiver/main/Kconfig.projbuild": {
+      "sha256": "f91af35ade132b1ce694464bbf852b3d6295c460c3faf8cd36e397ecbb3ba28c",
+      "bytes": 8877
+    },
+    "firmware/receiver/main/actuator_profile.h": {
+      "sha256": "1eb62f0b8fa64d0ba994d0723db195fdc4b8c8f43e12012212e9c40c9031265a",
+      "bytes": 1036
+    },
+    "firmware/receiver/main/bench.c": {
+      "sha256": "bdcf7a6e8cfe0703e0a464f99624c5ebb986463e07c5f40ead60e9d68ea71955",
+      "bytes": 4082
+    },
+    "firmware/receiver/main/bench.h": {
+      "sha256": "64f34715551a0e67ea1b147aefc8d6f92554fc7062856360ecebcb4a575db4ba",
+      "bytes": 698
+    },
+    "firmware/receiver/main/bridge_stream.c": {
+      "sha256": "97e0f67e901ad5aac4744f48f3f0e2508b4ed6032243854caf97862576986ec5",
+      "bytes": 732
+    },
+    "firmware/receiver/main/bridge_stream.h": {
+      "sha256": "a4c38c7f1a948f9896386335b88e91583f614f9ce56f290c52b106ad26b02b16",
+      "bytes": 373
+    },
+    "firmware/receiver/main/control.c": {
+      "sha256": "3d6e42a505c7958f9b00f760c3590bd15a4fde112794690db3f07522f6a09984",
+      "bytes": 16004
+    },
+    "firmware/receiver/main/control.h": {
+      "sha256": "cd2b4fc617f0de6d8cd1fe0ba732b84e641caf7e731b3b11bf4f21a95f5aedae",
+      "bytes": 3078
+    },
+    "firmware/receiver/main/diagnostics.c": {
+      "sha256": "031a847e556aa7efa660aa76894c50cfc9ced800051fcbfaef855d9c1d5d49a1",
+      "bytes": 8902
+    },
+    "firmware/receiver/main/diagnostics.h": {
+      "sha256": "8408c9d8447ff80fd8456e430f7dd7018d3108273da933c4af61f0a910d52c73",
+      "bytes": 1425
+    },
+    "firmware/receiver/main/estimator/eskf.c": {
+      "sha256": "4ce897b8ab457b36ece2365c586863633b5af3902602328e4b1f7b776132bfce",
+      "bytes": 15902
+    },
+    "firmware/receiver/main/estimator/eskf.h": {
+      "sha256": "8bd778236e37c6b0ba8ef6ad29460019779ed0a0d2f155a5efdb37a61fbe55b0",
+      "bytes": 2003
+    },
+    "firmware/receiver/main/estimator/host_api.c": {
+      "sha256": "a0788e56884f84ff3354347dd73261617dcf2a8a97952b64b898d440a9fc482b",
+      "bytes": 3279
+    },
+    "firmware/receiver/main/estimator/runtime.c": {
+      "sha256": "43cd982451ec61a1e35567f04303ebccee7093dec386a2ccf79e195954129e6a",
+      "bytes": 16905
+    },
+    "firmware/receiver/main/estimator/runtime.h": {
+      "sha256": "d986d856db9967a14951439a7a674301bae316ec4c700ba5a76205e9a84c38c4",
+      "bytes": 466
+    },
+    "firmware/receiver/main/estimator/sensor_wire.c": {
+      "sha256": "f21c49ff840bfefc15150e83be7f8e188810e7fbaa45378fe7070d881b79127b",
+      "bytes": 6736
+    },
+    "firmware/receiver/main/estimator/sensor_wire.h": {
+      "sha256": "ec96155d3f82f44bd3649bb06b8769a65ae848599878ea40071b8259b09f00ff",
+      "bytes": 2321
+    },
+    "firmware/receiver/main/fc_telemetry.c": {
+      "sha256": "3252b49015197eec569bb454d7e89ada52fe144e413f71b8d5b21b25315d84d3",
+      "bytes": 5770
+    },
+    "firmware/receiver/main/fc_telemetry.h": {
+      "sha256": "fe58e1a8d9485de70fc1da8cad39f799f83fb85455a72936cab0bfbbb79d13f1",
+      "bytes": 1873
+    },
+    "firmware/receiver/main/hx711.c": {
+      "sha256": "ff2c9e44a64b04e5ccee639d270df2b9d9e020e4ee3e56f5b3179648101927a6",
+      "bytes": 7354
+    },
+    "firmware/receiver/main/hx711.h": {
+      "sha256": "c94c3867972f0abc9b34c5cbf602dae2ecea8cd0f46119e0087684aa09376ea0",
+      "bytes": 278
+    },
+    "firmware/receiver/main/hx711_core.c": {
+      "sha256": "6b29d7a0cab1699c4b75da2b442b5d9e941d8e91a54f114bec3839b9f1a28d04",
+      "bytes": 2535
+    },
+    "firmware/receiver/main/hx711_core.h": {
+      "sha256": "cf5095a3a50f32251950cff4641e1cbcbe1232dd1346a1dd5d1bf03c680c078c",
+      "bytes": 1389
+    },
+    "firmware/receiver/main/idf_component.yml": {
+      "sha256": "69a8a7b6d505fbe6ed43119eda5ef331cb8fbc84ce079e211e14e16a095f868f",
+      "bytes": 228
+    },
+    "firmware/receiver/main/main.c": {
+      "sha256": "451b60ee3394215269ca1fdaef2cb4bd820d98994bf94bbf125beb2348effdb0",
+      "bytes": 56041
+    },
+    "firmware/receiver/main/mocap_clock_udp.c": {
+      "sha256": "4da1e4bd3db4fd97e5cef9534b010778bc7a698970966017beb336e92aefc4f1",
+      "bytes": 3118
+    },
+    "firmware/receiver/main/mocap_clock_udp.h": {
+      "sha256": "de766bf20960031ebd7f7dc36c00643c884823e617140904025d2bdc2b00144d",
+      "bytes": 254
+    },
+    "firmware/receiver/main/mocap_state.c": {
+      "sha256": "59c48cc3e0c025b8fb8867bab67a3c4168754347034ece7920ac2524a2f37526",
+      "bytes": 3776
+    },
+    "firmware/receiver/main/mocap_state.h": {
+      "sha256": "928f43b47efdaebbaf3a65acc621316ce51868d632441b14e0af90aa1af5d564",
+      "bytes": 1669
+    },
+    "firmware/receiver/main/msp_tune.c": {
+      "sha256": "2b88725009ade55d896f4d8e2885f60a97c0d6e8d5aa834fe9c8227acd2adfff",
+      "bytes": 11079
+    },
+    "firmware/receiver/main/msp_tune.h": {
+      "sha256": "1f84ee66a23a100facef9eb018dc19a48dd9a6fa26744dd370a2f5661fae76be",
+      "bytes": 1347
+    },
+    "firmware/receiver/main/passthrough.c": {
+      "sha256": "f096bd9d20739922861eaa105fd70628ed9359dd28fa216e0db40d8ba00cfd30",
+      "bytes": 3821
+    },
+    "firmware/receiver/main/passthrough.h": {
+      "sha256": "0977bdd6d4cc32d228a920fb4f63eb945182ef66fdf55bc71ada0d811b628f88",
+      "bytes": 110
+    },
+    "firmware/receiver/main/session_watch.c": {
+      "sha256": "dae4d99051a69545d2a6816ba241156422cefecdc7e51ef407f6222dae448f31",
+      "bytes": 1007
+    },
+    "firmware/receiver/main/session_watch.h": {
+      "sha256": "d856c3b56d7e574332f9db8e53ae0a0eb28d2d8e64ca1690cf9e0ca3cff9fb05",
+      "bytes": 388
+    },
+    "firmware/receiver/main/telemetry_profile.c": {
+      "sha256": "8361a2852028f7bd476dab4cd751ee630fa91f2384b2dcb292efa1737b14cf0a",
+      "bytes": 931
+    },
+    "firmware/receiver/main/telemetry_profile.h": {
+      "sha256": "434d41ab32065819d2d4b69b00f1c7c31ab5157af45fe290ef6d1db9d6659143",
+      "bytes": 443
+    },
+    "firmware/receiver/main/test_config.c": {
+      "sha256": "09dc8deada88703485e9752302a0986e484023cd62cb16361ae6a761d5116ac9",
+      "bytes": 645
+    },
+    "firmware/receiver/main/test_config.h": {
+      "sha256": "beaad1fce5594c0d35021ae83be5360eb8ca2e6ba30e2496d98ead3cc9e1a944",
+      "bytes": 356
+    },
+    "firmware/receiver/main/timing_wire.c": {
+      "sha256": "4acfe3d8ff2d28c9a6409060e7f7843211c23d0e6c00304671b2817d4c87b920",
+      "bytes": 4706
+    },
+    "firmware/receiver/main/timing_wire.h": {
+      "sha256": "df41ae6894ddffde70021fab2f4c0f39524ef0a3ff273720f96950879d2fd831",
+      "bytes": 3021
+    },
+    "firmware/receiver/patches/zenoh-pico-1.10.1-gcc16.patch": {
+      "sha256": "8107fbb1cba619efacc062d8ccc7e02841fd9a18ce9dcf1922b6d8086f1fac4c",
+      "bytes": 2804
+    },
+    "firmware/receiver/patches/zenoh-pico-1.10.1-transport-lifetime.patch": {
+      "sha256": "6a23b8ef562599c40bf00d0f61eb92d6882fe16864e3de671c5f793cce555713",
+      "bytes": 2161
+    },
+    "firmware/receiver/profiles/command_timing.defaults": {
+      "sha256": "f8904b01ccd5a4d8e89870d84d92c6381802beb54ed3c5b4761c153bcede3183",
+      "bytes": 236
+    },
+    "firmware/receiver/profiles/hx711_bench.defaults": {
+      "sha256": "b877e5c284c61302bf6ce09ad2f94754ca099c00760edfb816403c1af3359abc",
+      "bytes": 162
+    },
+    "firmware/receiver/profiles/hx711_flight.defaults": {
+      "sha256": "fd9b7299fb4f70eb020f23134d9b1b330cc6a226c484075bd99320c7b3ed6472",
+      "bytes": 262
+    },
+    "firmware/receiver/profiles/passthrough_default.defaults": {
+      "sha256": "79f929b7f4debc0512a5f3ccf0755eacdf13414e2ce1503050ca750900b36c59",
+      "bytes": 39
+    },
+    "firmware/receiver/profiles/robotlab.defaults": {
+      "sha256": "ebc4f37ab1e497fe769fc1ce8e40cd4beffbaea358f8f21854a450d5c2e47199",
+      "bytes": 294
+    },
+    "firmware/receiver/profiles/stamp_p4_c6.defaults": {
+      "sha256": "303681bc0a559148bd04ea03816b32db8e295b4f0c0aff442bf37893f53b53e7",
+      "bytes": 1587
+    },
+    "firmware/receiver/profiles/wgb.defaults": {
+      "sha256": "f3f17acbb12cde47ef4013b31ff4e1d50cdc8b89590929c8585ad63dbb0afbcf",
+      "bytes": 241
+    },
+    "firmware/receiver/profiles/xiao_s3_native.example.defaults": {
+      "sha256": "b26b2ded67249812d6fb7646f7282db451e46281dfa2dc4c774f8a0fbd53e37a",
+      "bytes": 1419
+    },
+    "firmware/receiver/profiles/xiao_s3_uart4.defaults": {
+      "sha256": "83d92d68f5cb55c98a34e57c6b7372c9d9174d410e5ed34d7079293f1f62e5ba",
+      "bytes": 598
+    },
+    "firmware/receiver/scripts/build_comms_firmware.py": {
+      "sha256": "9eae8ad335f6c797376108f0d9d03e707affab5a5786e223a9efc94c946a5851",
+      "bytes": 14162
+    },
+    "firmware/receiver/scripts/generate_collective_profile.py": {
+      "sha256": "6c87320632cfa3a8ada393027265a4657222b247aeda45083da7c659e5c6a096",
+      "bytes": 8425
+    },
+    "firmware/receiver/scripts/measure_command_latency.py": {
+      "sha256": "3ed28638a13dcb99882b55838fd55e141b1f9e50f7c06e7b97f2e49513fb7e66",
+      "bytes": 15833
+    },
+    "firmware/receiver/scripts/measure_transport_timing.py": {
+      "sha256": "353ac37dab266228a04a57c5c4b8d308b75c2cd0affcbbe17dfc9f8472cf44c4",
+      "bytes": 11492
+    },
+    "firmware/receiver/scripts/prepare_pico.py": {
+      "sha256": "589ddd515725c4e394f15ec693b62757c05bc2090a186eb707adabd5a0c81f78",
+      "bytes": 1619
+    },
+    "firmware/receiver/scripts/uart4_mode.py": {
+      "sha256": "99454b658ea6b6a7f6df25a77f4500d5f55e9672697f890a716ca36b5d84db68",
+      "bytes": 9967
+    },
+    "firmware/receiver/scripts/verify_msp_bench.py": {
+      "sha256": "1ff5fd1a81bf60dea8d4ae0fc31aa54aec1341648bd5fbf827c84ccabd2fcd7c",
+      "bytes": 6478
+    },
+    "firmware/receiver/scripts/verify_msp_modes.py": {
+      "sha256": "cd198f201aafdd1e76cca2a1c54a3a80fe0ed2d6b31bd9cb030738d8477223dc",
+      "bytes": 6175
+    },
+    "firmware/receiver/sdkconfig.defaults": {
+      "sha256": "99a5bf9bbe253ab5504b765eb8f5047c5e85296c1b5dfb10046484434c87f592",
+      "bytes": 136
+    },
+    "firmware/receiver/tests/CMakeLists.txt": {
+      "sha256": "6f33a9bc9dd019ce99a97b0d092da9d9b14fb26527d90ad44be35db482f20609",
+      "bytes": 2198
+    },
+    "firmware/receiver/tests/comms_emulator.c": {
+      "sha256": "809cbb6b2b8f00ecc75a23a950a7210be63fe987e42d4309bfd69e51cb2759aa",
+      "bytes": 8434
+    },
+    "firmware/receiver/tests/control_layout.c": {
+      "sha256": "712b5b80623da635a0b950c3fe7797601d6a72aaaac6e1d7c5e9f62a03b9e89a",
+      "bytes": 257
+    },
+    "firmware/receiver/tests/estimator_fakes/esp_random.h": {
+      "sha256": "2bbb355902703165abf48a6d1c4af464888281901802b9752aa8e06dc6a02e86",
+      "bytes": 124
+    },
+    "firmware/receiver/tests/estimator_fakes/esp_timer.h": {
+      "sha256": "ad5a97a6557f928cd83410659cb267f19a151b71a41c1a1a6bf0d29405559179",
+      "bytes": 111
+    },
+    "firmware/receiver/tests/estimator_fakes/freertos/FreeRTOS.h": {
+      "sha256": "1aff0e0321b76b959276d4b19dcf6660f21814dbe97cf5f0272b5af10756063c",
+      "bytes": 472
+    },
+    "firmware/receiver/tests/estimator_fakes/freertos/queue.h": {
+      "sha256": "ced7e0a2bbf0050f51581763fc60fc57dfe880c2a5537a3c05742cf17181900f",
+      "bytes": 746
+    },
+    "firmware/receiver/tests/estimator_fakes/freertos/task.h": {
+      "sha256": "d4cb42764c4d9ea0399ef6e19c347f4b97377d48689f1252e8e2941fd4004d66",
+      "bytes": 372
+    },
+    "firmware/receiver/tests/estimator_fc_fakes/drivers/time.h": {
+      "sha256": "082e2bf2a48ebca9246e33e48a4a1c5d03fd77b6e89678f56986f2d2c70182fd",
+      "bytes": 116
+    },
+    "firmware/receiver/tests/estimator_fc_fakes/fc/runtime_config.h": {
+      "sha256": "6fd68ee37e2afe75a25eea84199c8068f29c4babbf3299dd98b71148a9f53382",
+      "bytes": 41
+    },
+    "firmware/receiver/tests/estimator_fc_fakes/platform.h": {
+      "sha256": "0ff9343850bc307d022a8ffe5752768d3cf99be4d50599b32631003ac4e63f6d",
+      "bytes": 33
+    },
+    "firmware/receiver/tests/estimator_fc_native.c": {
+      "sha256": "8d921c0d8e6df5990b021cdd0373cb6c36d983a7549ea131a7e1f5bb4ed0a641",
+      "bytes": 1956
+    },
+    "firmware/receiver/tests/estimator_native.c": {
+      "sha256": "87fd95f1b6fc3352a66b7725eb337470ef8c115da2f2beffeb7b4e28ea523e86",
+      "bytes": 8471
+    },
+    "firmware/receiver/tests/estimator_runtime_native.c": {
+      "sha256": "23bdc9ef9453b3f725852f99d6a5337d50bc4880a1811731da7b6709b4b9122f",
+      "bytes": 6231
+    },
+    "firmware/receiver/tests/fc_telemetry_wrapper.c": {
+      "sha256": "472846494491f052546ab528c4b3b8037bee18af776e9e18c215e9acb35be336",
+      "bytes": 1908
+    },
+    "firmware/receiver/tests/hx711_fakes/driver/gpio.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_attr.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_cpu.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_log.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_random.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_rom_sys.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/esp_timer.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/freertos/FreeRTOS.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/freertos/queue.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/freertos/task.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/hx711_native_shim.h": {
+      "sha256": "d1505bb1f0dbbae2befcd8ac654317ea2fe6765fffe35583f3ee2f26d3db8eba",
+      "bytes": 2150
+    },
+    "firmware/receiver/tests/hx711_fakes/lwip/inet.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_fakes/lwip/sockets.h": {
+      "sha256": "26c2d92125829fdee5b938a7e9d03f571b26c1aca4669516a8488cafa1eaf18e",
+      "bytes": 31
+    },
+    "firmware/receiver/tests/hx711_native.c": {
+      "sha256": "da00f4cec61bbca1c94abef129703397dc41d3a7cc63c18304b111b219595477",
+      "bytes": 6782
+    },
+    "firmware/receiver/tests/mocap_emulator.c": {
+      "sha256": "677b2ec7a738800e3bd7d8260ff8888e969192720ca491d5eaad716a28653a5f",
+      "bytes": 5216
+    },
+    "firmware/receiver/tests/paper_native_golden.json": {
+      "sha256": "0b0d20b1d9310cd321e826dde2a1b839020a06e4e635902ba4c6fe4a1766051e",
+      "bytes": 1082
+    },
+    "firmware/receiver/tests/receiver_emulator.c": {
+      "sha256": "d11cda15aa01c679177b333751cbbb26da65f99fb200f14b136023d2c5d1e2ea",
+      "bytes": 5392
+    },
+    "firmware/receiver/tests/session_watch_emulator.c": {
+      "sha256": "686376235a7b3ec43abaad5ca01bb4077283382151865a14ec19e8f0a3b24178",
+      "bytes": 4225
+    },
+    "firmware/receiver/tests/test_arrival_window.py": {
+      "sha256": "75cea651deaa3af3c41063e1f097cfef8addad66da748a6725975157130d1f83",
+      "bytes": 3863
+    },
+    "firmware/receiver/tests/test_bridge_stream.py": {
+      "sha256": "31fe6a321df7134b137f4670461b6b50fb1bd49157deeae4b6c7e23aa35ed706",
+      "bytes": 4020
+    },
+    "firmware/receiver/tests/test_command_timing.py": {
+      "sha256": "1e8e41a1c202a4c2c4793ba3a907fa8b6c442667bb7be6922f37928efaba0482",
+      "bytes": 5990
+    },
+    "firmware/receiver/tests/test_control.py": {
+      "sha256": "282efdee63a063143281f964604839ec0b7e08162084c3393667a0226895ea41",
+      "bytes": 15404
+    },
+    "firmware/receiver/tests/test_estimator.py": {
+      "sha256": "d7a07a94ddef1933b0fb968773e6b81bdbff4ff08f18f756a01a81890271ad09",
+      "bytes": 14964
+    },
+    "firmware/receiver/tests/test_estimator_hover_builder.py": {
+      "sha256": "9c36337cd1d3cff267b1c33ae1065bf15ec3e3f9bea87a2526a2843fb07c3b53",
+      "bytes": 6567
+    },
+    "firmware/receiver/tests/test_estimator_hover_profile.py": {
+      "sha256": "65770b2675690d630ff64ad07bffcaeb1b8a8f70a24e7af67e72228921255481",
+      "bytes": 5911
+    },
+    "firmware/receiver/tests/test_fc_telemetry.py": {
+      "sha256": "13645ef18e3863abbe6998f9f77a6f6a25f27b02fff8a8b95b3af2089f886521",
+      "bytes": 12540
+    },
+    "firmware/receiver/tests/test_hx711.py": {
+      "sha256": "217f1c5a1cb33ecb63b2474f1cd038d1f3674443ee6431f950e49f385b8230cf",
+      "bytes": 7530
+    },
+    "firmware/receiver/tests/test_indi_control.py": {
+      "sha256": "d48803c75cef97879582deb04517c91426a771abafa1c2da0c135973d308391f",
+      "bytes": 1843
+    },
+    "firmware/receiver/tests/test_latency_tools.py": {
+      "sha256": "c9299e41fb6a6c908f0960568a5de85698ea7df8fa19eb15a4b1fddbb357b838",
+      "bytes": 3056
+    },
+    "firmware/receiver/tests/test_msp_tune.py": {
+      "sha256": "03d929efae9d467133f1db92560c3a868520ba67676196e371e0fde790a01ad7",
+      "bytes": 8921
+    },
+    "firmware/receiver/tests/test_paper_kconfig.py": {
+      "sha256": "055eef12e652c4bdae1b93053202d13a6e596d00ca749dfb03a09b8a8fca8f37",
+      "bytes": 1328
+    },
+    "firmware/receiver/tests/test_paper_native.py": {
+      "sha256": "d360cb7f51b221f28beaf9c23d93e9ae741ec88d2907a65d39df18af864f7fd2",
+      "bytes": 7848
+    },
+    "firmware/receiver/tests/test_pitch_wire.py": {
+      "sha256": "53cbe90a49bddf9f5359f6eb1be379342aaaf846f119d3356a11948b8a45a1de",
+      "bytes": 4241
+    },
+    "firmware/receiver/tests/test_session_watch.py": {
+      "sha256": "3f3a4639d6d7b4db05f8a80db84735b8e4d34af2d4aa76311940d666a23e882f",
+      "bytes": 4452
+    },
+    "firmware/receiver/tests/test_si_control.py": {
+      "sha256": "af1ac7d5d700bc0d3080464464c83ad7ea75b22e0062a3cc3f7d09258097b49c",
+      "bytes": 5336
+    },
+    "firmware/receiver/tests/test_timing_wire.py": {
+      "sha256": "7e013adf0ef3f3f783ebf3c1e3e43207eaecd6613d91038a417a0ae79ac32b47",
+      "bytes": 2146
+    },
+    "firmware/receiver/tests/test_transport_config.py": {
+      "sha256": "e6495802bb2b948b96720b0a40e474887e0791c35f054b08b295b823c21cee0e",
+      "bytes": 3703
+    },
+    "firmware/receiver/tests/test_transport_lifetime.py": {
+      "sha256": "e9645d5dddd4e703be3498ae20429a4f37de49c8fb9f4dd238ea088d116dba99",
+      "bytes": 1599
+    },
+    "firmware/receiver/tests/test_uart4_mode.py": {
+      "sha256": "2f7e61b4249ccc0bc9ed16d22f0fb39630a94d09c4f6da64095e892d61f8396e",
+      "bytes": 3005
+    },
+    "firmware/receiver/tests/transport_lifetime_emulator.c": {
+      "sha256": "9aa9bec10f9aa6fafc308c36ba6ac7efbe0c65b89c5f9d3aef84639ef2780e6a",
+      "bytes": 2930
+    },
+    "firmware/receiver/tests/wrapper.c": {
+      "sha256": "ce8b8403d7de93ef06f6b6a0fb60492f180f12e347f2cbc7358a178c19294edb",
+      "bytes": 3248
+    },
+    "licenses/ActiveSetCtlAlloc-LICENSE": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    "licenses/Betaflight-GPL-3.0.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    "licenses/CC-BY-4.0.txt": {
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "bytes": 18656
+    },
+    "licenses/MIT.txt": {
+      "sha256": "a61cf31fa29ac151b5d7f8d743ce4522c22c09922abf5d2ef42a1bebffd9d2d6",
+      "bytes": 1092
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/geometric_controller.py": {
+      "sha256": "b860ef64b026fa38fb42d19c6280e9c233d636fa35b9e44e7d569b7652c03e2f",
+      "bytes": 1120
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/indi_rate_model.py": {
+      "sha256": "dea69c77a6b04a514c054da3ca7245ce79c04bc96daca3e71b0737f29ee4d21c",
+      "bytes": 9777
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/missions.py": {
+      "sha256": "5784151b3fa2cd77b25d018e65bbcb09ef27e9d92f92fb7fd4f32fdd5607931a",
+      "bytes": 22523
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/mpc_controller.py": {
+      "sha256": "5f0203c9485561044daadb44797ca7f5f2df1e0a8064974c698c003117a4d93c",
+      "bytes": 25859
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/mpc_disturbance.py": {
+      "sha256": "12dcefed9f871b0c93f892a90cf8b32963c08722413510a5a4628bcfe374be5b",
+      "bytes": 8022
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/takeoff_controller.py": {
+      "sha256": "a7c294fa942fcbba7870eff000cb98d70a45cf819a4a2e2ec2dfc8af88090188",
+      "bytes": 22111
+    },
+    "loco_mjx/experiments/sanity_ctbr_sim2sim/verify_contract.py": {
+      "sha256": "65943256c3eec4bd8d728d465fa026384d8934343a0bb23bfe36f67df18b58e9",
+      "bytes": 7356
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/RUNBOOK.txt": {
+      "sha256": "a85e6ca8fe45a2d315955b27a12600fb8869d9c7d8f169f61899fc2a3364e974",
+      "bytes": 15383
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/assess.py": {
+      "sha256": "cb06553ab4b16568e7f4a10cb857f18363819ddf51d17d487acef216caa66b33",
+      "bytes": 15232
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/controller.py": {
+      "sha256": "63f051c5284ba32ce658b25d2d72f2f05bf712027fea0524ffdb910acff114aa",
+      "bytes": 18489
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/flight_prediction.py": {
+      "sha256": "0a526f933f9d7355bd149893735cc86664751cf608f9fb0dd5ee20079137edce",
+      "bytes": 5362
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/reference.py": {
+      "sha256": "c3d9ce8ade358bb3f7591e92127ab1b42544c8b4e96ceef80cccf723738899ee",
+      "bytes": 4127
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/run_in_profile.json": {
+      "sha256": "9c09f7135f56d5a0ae205768ca032128914d877a019c258d82dbdee91dbbbcd2",
+      "bytes": 1551
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/run_in_reference.py": {
+      "sha256": "551648889cf12d1352156a2c111821398b2619919cc4e39aaec335e5ad200525",
+      "bytes": 8862
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/test_flight_prediction.py": {
+      "sha256": "05c5f00258d093f68a325ed8634c7f711db33147fedffa056d6ee4f119ce0bde",
+      "bytes": 5787
+    },
+    "loco_mjx/experiments/sanity_pitch_mpc/test_pitch_mpc.py": {
+      "sha256": "ae610d9a614c5d03ffebed3a1defa688499300045c2ace3a7c24837dbbb2e31e",
+      "bytes": 5618
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/acro100_profile.json": {
+      "sha256": "33491e51259d66f522daa2052e80fd66aa3ccf7a317b1450d71b3817cf14843d",
+      "bytes": 35673
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/default_hfield_80.png": {
+      "sha256": "6b10bf178692209d0f4882bbc69e409a647c25664631018f9a57e5cf86fb7d73",
+      "bytes": 487
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/collision/envelope.obj": {
+      "sha256": "273fa9d96f5ec3ca2cdd9c5accd11137dab0a1c31bb7bc69c5be9085f70a2539",
+      "bytes": 446
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_0.obj": {
+      "sha256": "c260bb169654e45e438c005ec1be6d0b1a5e32515de07dd748dd79499685abe9",
+      "bytes": 262351
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_1.obj": {
+      "sha256": "9ed9e845b7668fa700b39aafeee1b97ed5fb397daf0847d6d47c7a298e9fa1ff",
+      "bytes": 42558
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_2.obj": {
+      "sha256": "a5163596a1909d13d00dbb31ce94be63a99fc800c8e1e4f9b86b008b5cd17bde",
+      "bytes": 9254
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_3.obj": {
+      "sha256": "f606f2b0c7f7cc6b66e2b07892dcea71e58e25978a621678732f2e9eb11ade1e",
+      "bytes": 1123094
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_4.obj": {
+      "sha256": "315b1067671257dbecc7b106a53244bbe1892085c57d02e8cc9bd41a0dd57f0c",
+      "bytes": 333051
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/material_5.obj": {
+      "sha256": "3d39a297e05ac986ba08e70944d473b8296e6c47f080f5cf656413d64db5a739",
+      "bytes": 4315153
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/assets/meshes/visual/materials.mtl": {
+      "sha256": "124fea73a3fe2f77f7af2c6faaa4abb9b0f635aa2af50accb44c6c4c4bd8815b",
+      "bytes": 365
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/fc_voltage_profile.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/flight_rate_20261022.json": {
+      "sha256": "942ee8fb83311bb3b9fc4b8e76baed860e72be2b6e0ba31b3f3ce38e07e6f440",
+      "bytes": 2917
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/plane.xml": {
+      "sha256": "4eb77c8c210dc30606b0e87c1a64e33c3e48b0cbdeb717be7127a11ab735dd4d",
+      "bytes": 6039
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/plane_sanity15.xml": {
+      "sha256": "87143d6b03c0838159add7c3a7d4b453adb004a3ba23a3a2c44f074f280011a6",
+      "bytes": 6039
+    },
+    "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/yaw_reaction_20261021.json": {
+      "sha256": "b7b43423249758ce9d324222f506c1b674efbc4f83575ccf9a302561ec027b9d",
+      "bytes": 4134
+    },
+    "media/indi3-tracking.pdf": {
+      "sha256": "976d9c38f1d1f22521cabe61221e7b229526472ce79eacc7e70f6de4a27df2ce",
+      "bytes": 79686
+    },
+    "media/indi3-tracking.png": {
+      "sha256": "747936eba24c1ad771c0fbd41762777e92d7f66144d7819904b9b4fb6eb1e6f0",
+      "bytes": 335029
+    },
+    "media/pid-flip10-tracking.pdf": {
+      "sha256": "b6b4e3b2e66d035eb167e39de5d3a45c763a9c5d5ceeb90bb94a9f1d8abba498",
+      "bytes": 92245
+    },
+    "media/pid-flip10-tracking.png": {
+      "sha256": "eb7b7fd6ada3f0f54ae987ebeecca060ed3d0aab1a3b727108dfcefa613c3c6c",
+      "bytes": 365634
+    },
+    "releases/high-speed/README.txt": {
+      "sha256": "d662e195b82bb6bb472e3b25ea5146fded008dfc5da1143366f7887bc159a0ce",
+      "bytes": 4709
+    },
+    "releases/high-speed/RECEIVER_MATCH.json": {
+      "sha256": "c8f7ece4981f595eda0977ae07028e73abf34db93ef5b1c6463a7958317d85da",
+      "bytes": 743
+    },
+    "releases/high-speed/SZC6_PROTOCOL_SZC6.md": {
+      "sha256": "1dea3cf83dfceb898540b021a0959ab52f5980351f300c975105cfabb8cc7038",
+      "bytes": 2538
+    },
+    "releases/high-speed/assets": {
+      "sha256": "0d4decd1cd506fb34a78905bee5026a16eb98cf5fd976ba260504374a912b908",
+      "bytes": 67
+    },
+    "releases/high-speed/host/sanity_zenoh/config/circle_sequence.yaml": {
+      "sha256": "b844ba5cba3bafc4107bcc48c816d422273485d746ca404bed6198ffc275bd36",
+      "bytes": 1937
+    },
+    "releases/high-speed/host/sanity_zenoh/config/dds_robotlab.xml": {
+      "sha256": "0ef74af5d44b0d781f3d62cb0835539151cb7fa52f0010768fa94fe00540cd65",
+      "bytes": 842
+    },
+    "releases/high-speed/host/sanity_zenoh/config/pitch_loop_sequence.yaml": {
+      "sha256": "c9666eaf8e2d550bc2500c1a33edd300fa51aa30e08c27057dfe03e218796233",
+      "bytes": 804
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_motor_collective.json": {
+      "sha256": "325681aa9e061149ce4a04359bd52b5f0a07023211edd42575e86302441e04b3",
+      "bytes": 435
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_mpc.json": {
+      "sha256": "fa556292ace4c5764a99326f48197ecbaa21a194e516e93ecfa70dddfa513870",
+      "bytes": 435
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_mpc_5ms.yaml": {
+      "sha256": "282dc3b3ff050ff567614273a29ba1f2de0968deb0efbf445b4744441386c9ef",
+      "bytes": 1776
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_mpc_bias.json": {
+      "sha256": "852227c4cab0ee5528e1b4a4d81ecc85f25ad0b43bfdedd70b4413df29244a4d",
+      "bytes": 568
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_mpc_high_bank.json": {
+      "sha256": "ca52094f601dd7ab9b002e81ffa9a1ab8a7bd92bcd9b4a946e7bfda50d3deb05",
+      "bytes": 435
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity09_pitch_loop.json": {
+      "sha256": "78f9bf16d8d9c0ecbd3af8ad724f3bde77f710aa840656cda6b4d8d949b22c65",
+      "bytes": 1605
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover.json": {
+      "sha256": "8b35ac9a92b86c09448db2457e345ea8e38ed81bd6f40338c252c197884d049e",
+      "bytes": 2144
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_indi_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength.json": {
+      "sha256": "cddf7eb35d429ae257be837bb59fa6cec0c3ad51ddeda716afcc6732cfac88bc",
+      "bytes": 3538
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength_pid.json": {
+      "sha256": "77113ea5cfcb2eac5625f908d7293490cfca724efa73e650f3392c8557f75a83",
+      "bytes": 3284
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular.json": {
+      "sha256": "161520f5bcfba01d775d5f9eb5ebf6da8aa9c2b85b0a3ca81f54e13978300d30",
+      "bytes": 3534
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular_pid.json": {
+      "sha256": "12ebe75a7454ae74fa7cfdd15868623c6b4816f710df9cfe01728120bb75d489",
+      "bytes": 3280
+    },
+    "releases/high-speed/host/sanity_zenoh/config/sanity15_mpc_indi_rate_model.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/__init__.py": {
+      "sha256": "9dfcdc4cbf75c9b6bc40b6a941f28e3efcdb412c2b0b4e23e7b3a87c920c6ec8",
+      "bytes": 84
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/arrival_metrics.py": {
+      "sha256": "4c6a874403126d0344995e105baec8ec74a9e3d0c619beefab8609a357985fdb",
+      "bytes": 2066
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/async_policy.py": {
+      "sha256": "981f81d9fd22808cd84e98a1b0b7edddfc24fa6a136b5eb173e6b6af9773dc7a",
+      "bytes": 5852
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/cli.py": {
+      "sha256": "12be0183a751f06275e1d6e3bc8cf85a29f9145cfae8c777c86cc5204385c516",
+      "bytes": 5359
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/client.py": {
+      "sha256": "78ed52e8399ede837e354e11357b294109e991ad0e40665b261d6e3410e8987d",
+      "bytes": 28518
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/collective.py": {
+      "sha256": "5b952a75d4e216b568255d4b3810ac47cb9a582d59e40c8ab808420a949f6104",
+      "bytes": 6235
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/command_prediction.py": {
+      "sha256": "c85ea269ff7b7fa8981a441f99a1ddaa582a887bd5048bc0e7e4e9ebad2523e8",
+      "bytes": 4855
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/command_timing.py": {
+      "sha256": "44653940172827e7539c452c92907cb15735fee02db89d19a12c96bbf3f203eb",
+      "bytes": 9729
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/controller_status.py": {
+      "sha256": "76ef82a303f35ebb5d80e543d31ef300e6995882f13498b4950c467104a7b1f5",
+      "bytes": 3057
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/controller_timing.py": {
+      "sha256": "84f2e4d6a6a97697f455f55217892045fb76f47d08840895acb4d1bef62872d2",
+      "bytes": 2748
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/estimator_protocol.py": {
+      "sha256": "d2dc85e64f0bf7f76f71bad67c95a952048cc0377e0c89fcd34dcbd83606f4fe",
+      "bytes": 6997
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/estimator_tools.py": {
+      "sha256": "e1a02b11a6e794e9ad2b7877b33cefbeedb0dc47da44f6e051a62c41816fd8e2",
+      "bytes": 15794
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/experiment.py": {
+      "sha256": "af3cafe7fafd156858b56c897dc22ac1eac6648dc2dd20e75e882f5609310031",
+      "bytes": 23320
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/fc_blackbox.py": {
+      "sha256": "a1fb3f03bea23d8d6d59f91a6067901e9c5042247e2b14673bfbce7e5d937d3f",
+      "bytes": 21873
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/fc_telemetry.py": {
+      "sha256": "f6b63c969922932d445183ac657f85f5b8829becd5b8e6e192178b90ec0783dc",
+      "bytes": 8919
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/firmware_collective.py": {
+      "sha256": "34ca90148158d83499c38df248a7338507c57d4aa6813f4bbad162d0b01da5a6",
+      "bytes": 4256
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/full_indi_mission.py": {
+      "sha256": "7f175ddb3ef687e029dfe484347b40117b31efa45988eb3f9fef75fec9795bd3",
+      "bytes": 22550
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/high_speed_lemniscate.py": {
+      "sha256": "7c41b0bf5bfd570a5c804497ecfaaa026c74a9a07695eb9067ea4cf6795c098a",
+      "bytes": 4544
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/hover_observations.py": {
+      "sha256": "9637b71aa92b68b22dddd29bd1f5fa7572834cfed63b30f3e894f94fcda93222",
+      "bytes": 4250
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/indi_diagnostics.py": {
+      "sha256": "a0feab6cff39e38c7ce5931c79cc91f7ce4a55c3730c56bd028566cc1eda7420",
+      "bytes": 12523
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/indi_hover.py": {
+      "sha256": "0afd9f5db0c654ba6e3bc9a32b313fb90cefaa6dc421eaf939b1c536c5426b5d",
+      "bytes": 37464
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/indi_hover_mission.py": {
+      "sha256": "ee1e65aefb1b589e07d4aa219961e5bae33405e65426564907c1d6525b47f29d",
+      "bytes": 16155
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/indi_lemniscate.py": {
+      "sha256": "6d9c519fde4c0142dfa2016fba5619bb34d5c7925f0000942925c6cc2f3cc045",
+      "bytes": 15147
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/indi_mpc_benchmark.py": {
+      "sha256": "508e8d9a73acfbd009da81364c1cb9f947ccbce49d4206700684c2c95a898889",
+      "bytes": 23070
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/landing.py": {
+      "sha256": "827a33108bd91456ae0242ca65f8d4ee2c8157856d7d58cd30d652ff89ecfc71",
+      "bytes": 5340
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/local_policy.py": {
+      "sha256": "8923874ff672bd703f3e3e21d699432113c08769176d7f11cc6492271149bc42",
+      "bytes": 19175
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mission_clock.py": {
+      "sha256": "8b9ee23e99d1f3dc33a67519208d428a51b0badaa8202507a13e393f900e242c",
+      "bytes": 1004
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mocap.py": {
+      "sha256": "739705a0e9073c566537c4bd37a5e510807f51c16ae75a084b627a5da1e2003d",
+      "bytes": 8705
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mocap_diagnostics.py": {
+      "sha256": "d3ad9fae2965bb66c8245291f535c347a213a821259a9d3c676e8e2e4e544c7e",
+      "bytes": 5810
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mocap_protocol.py": {
+      "sha256": "969f3e24112faf83db091bcc8ed3607d8bd3d736eba499b95c0bf47a5f579a27",
+      "bytes": 4113
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mocap_stream.py": {
+      "sha256": "309dc700d91912b4c84492d9d2203be3bf435f348094c108b9575e8b2a2c1b9d",
+      "bytes": 9756
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mpc_benchmark_config.py": {
+      "sha256": "ff3e2c83b79e576529008a5a82d7583ce4bb8806e55d0355a87ad4584a5dbe85",
+      "bytes": 9113
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/mpc_process.py": {
+      "sha256": "80a14a0a196686e1b54231af7126e1fff9886d4b549ab62c25d324d09a0397cb",
+      "bytes": 5893
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/paper_status.py": {
+      "sha256": "375a80c1fc511408c83a4a9bcbff009b43ae610fd65d22a6149a41181c43dde8",
+      "bytes": 2215
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/pitch_experiment.py": {
+      "sha256": "327a343031ba4c3e31d3cdf7637bceaf14febd4920b9e71352e332f5b4633bfc",
+      "bytes": 19448
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/pitch_mission.py": {
+      "sha256": "46cc13eb11156f3d5b2a1a2c51c3f369097061cfebd0389600b1ec3294391ed9",
+      "bytes": 23540
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/protocol.py": {
+      "sha256": "27266ddc5530911eeccc908930c068acd30e1833f648fc7a69c5ea0fc8952463",
+      "bytes": 7742
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/rate_analysis.py": {
+      "sha256": "e338f1b337ff2c8e61252fe23617c92922f314e0a3a5db14e18173c3c1e35db9",
+      "bytes": 1855
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/receiver_health.py": {
+      "sha256": "6c799486ef61f589352b97803b378ca0f5bbe0e4f6a012c0546917edd6ba7d64",
+      "bytes": 1581
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/recording.py": {
+      "sha256": "f42af21b484d55147c68b378fbfc3916813d91c46372d8993df1ced069356c6f",
+      "bytes": 5206
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/recording_process.py": {
+      "sha256": "53b4ede2cf3081ef111e46e9bd62cc9d2cff02a9b1624e49734c4bd32ad6dd5f",
+      "bytes": 1615
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/residual_runtime.py": {
+      "sha256": "bec5c8365f3fa996c2f9a14d6f4cac1e8e4eac2e5f6bf2404c52be58cde4233c",
+      "bytes": 5180
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/ros_sequence.py": {
+      "sha256": "eb33f51220662b6ed8b791506a10e7f2ed2f281433390c6fa5723c1b5de44e0b",
+      "bytes": 43406
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/standalone_paths.py": {
+      "sha256": "13f6ac96ec6182450e0bc95f373ec9b30b76b760048f630a0be3f74d39f92b00",
+      "bytes": 726
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/telemetry_capture.py": {
+      "sha256": "a19883ae56813468e64c67ee0f22a29f1f34d82b5dbcebfc3410c23611d65ab1",
+      "bytes": 7321
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/transport.py": {
+      "sha256": "cbe10868db54366efd496549b3740e27e011111660d0b2080e00c5ab86ae3c68",
+      "bytes": 1929
+    },
+    "releases/high-speed/host/sanity_zenoh/sanity_zenoh/transport_test.py": {
+      "sha256": "f3378affdf3b0968ffc90f6e97d0cfcdd9ad7dbaf02a5e89230d937e7206c66c",
+      "bytes": 16831
+    },
+    "releases/high-speed/indi_rate_model.py": {
+      "sha256": "dea69c77a6b04a514c054da3ca7245ce79c04bc96daca3e71b0737f29ee4d21c",
+      "bytes": 9777
+    },
+    "releases/high-speed/model_3mps.xml": {
+      "sha256": "6a33dab1b3b8009dd41c3003c93e9721d1ff45fb2bb85c755676b1696befafc0",
+      "bytes": 6046
+    },
+    "releases/high-speed/model_4mps.xml": {
+      "sha256": "32a55348f67352ef77c8b77e99e1e6880e09040dd10cd766377c30807e0cb4a0",
+      "bytes": 6046
+    },
+    "releases/high-speed/model_5mps.xml": {
+      "sha256": "613b3afac040a93f91de04d20c1184de67a679dc6cf5bc9140363c7aa54b1b27",
+      "bytes": 6046
+    },
+    "releases/high-speed/model_6mps.xml": {
+      "sha256": "518e0b4b8710d3fb86e69ba172fb6e2bbd39bdb1068393e6f2985a2eae268e9e",
+      "bytes": 6046
+    },
+    "releases/high-speed/mpc_3mps.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "releases/high-speed/mpc_4mps.json": {
+      "sha256": "236a5bc915b687580ebebe34150c7bc7715c36a18b82c1f03eb02892b0e4a02a",
+      "bytes": 946
+    },
+    "releases/high-speed/mpc_5mps.json": {
+      "sha256": "9a2710bd7dea11cbc35401eae493ef0718e5e243d230c84521ea1aa69c015e3a",
+      "bytes": 946
+    },
+    "releases/high-speed/mpc_6mps.json": {
+      "sha256": "5faedc75b25c4812b7e48095ba5a3be8ddf3bb93f118a5962e60361edf3ed8ce",
+      "bytes": 946
+    },
+    "releases/high-speed/mpc_controller.py": {
+      "sha256": "7ac39cb5e941caa8fc02b0019837bedb486dc856ffe38a12232f1e66f904fcd4",
+      "bytes": 25859
+    },
+    "releases/high-speed/mpc_disturbance.py": {
+      "sha256": "12dcefed9f871b0c93f892a90cf8b32963c08722413510a5a4628bcfe374be5b",
+      "bytes": 8022
+    },
+    "releases/high-speed/physical_plant.py": {
+      "sha256": "4ac6cb3715d822c6765f696890348f5271cc667d004aa3274c403d4c029f72bc",
+      "bytes": 5003
+    },
+    "releases/high-speed/run_high_speed_hover.sh": {
+      "sha256": "cc1be0f6ca16ba1e6d00f15dd1106c6e731fdde060dd201b022f101aab52ba46",
+      "bytes": 435
+    },
+    "releases/high-speed/run_high_speed_lemniscate.py": {
+      "sha256": "6c81795bc563e0f4b14a0e055f42bc4306304efbad33df87a727459237676c2f",
+      "bytes": 18898
+    },
+    "releases/high-speed/test/test_highspeed_guards.py": {
+      "sha256": "6b399f8863c249960c4874594c0b2ac3a6be1a2450705b141ea0fe8d54b7dc06",
+      "bytes": 6205
+    },
+    "releases/high-speed/test/test_szc6.py": {
+      "sha256": "608c66c7a92a5f360110ad9846e446264117e5d4ffdcc3f8605e2b8a742cc12e",
+      "bytes": 3945
+    },
+    "requirements-dev.txt": {
+      "sha256": "b2cf40cfde63ffcd654d233d12aebeb06ea2092d1cbd22aa25c34efacfcfd804",
+      "bytes": 33
+    },
+    "requirements.txt": {
+      "sha256": "0dc25e3af0c5b9e9c6eb13245d24462c345cb9ef05502e97d352c4ee51ca9e9a",
+      "bytes": 98
+    },
+    "scripts/analyze_flight.py": {
+      "sha256": "2dfd3d9ff28c16873f1855771629e32174cf7d582c1413def3523db1660afc63",
+      "bytes": 6097
+    },
+    "scripts/configure_lab.py": {
+      "sha256": "d82172809368206cad0bedcf5464710173bf0a9d856c3762055388c3503eb043",
+      "bytes": 4544
+    },
+    "scripts/prepare_solver.py": {
+      "sha256": "1baf2fb2be6205c34935128dd969a4ec7479a1dea088c63e264f0faa56d98811",
+      "bytes": 1168
+    },
+    "scripts/recipes.py": {
+      "sha256": "47812b32f345d5ea54071a15fb4adf6929d888a4176627f7e00a0f0b67cc3eea",
+      "bytes": 2522
+    },
+    "scripts/run_mpc.py": {
+      "sha256": "760a25cae3b9459503fdfd459c3ba2c586137e183e954caae7d07e56562033cf",
+      "bytes": 7712
+    },
+    "scripts/run_mpc.sh": {
+      "sha256": "ab325a69a74c6cdc1a86321d5662d0615eac77f3b5ac70ce8d0a977962ebab1d",
+      "bytes": 174
+    },
+    "scripts/session.py": {
+      "sha256": "c5b7038bd7a60614bff01234757c2b5a59ec59ac99fba09b49857098121bbe0a",
+      "bytes": 4158
+    },
+    "scripts/setup.sh": {
+      "sha256": "104d77966fc73946d6aef1799623eab0b7f881185a98fe0536de8dc6f2fe53d0",
+      "bytes": 525
+    },
+    "scripts/test.sh": {
+      "sha256": "1de34b18b0c3865789c869f057f5b30f7f9a9be31fd63792119180846c8815d8",
+      "bytes": 938
+    },
+    "scripts/verify_package.py": {
+      "sha256": "a8502f4aa21b9426e4b286dcfb99086da83cdbebed5e8593f0912d97d2019a2e",
+      "bytes": 1025
+    },
+    "tests/conftest.py": {
+      "sha256": "36eb6f9ad2001f6cf2dfd67172dd4d9661d0080433c3472ece67372274dd0769",
+      "bytes": 106
+    },
+    "tests/fixtures/historical_missions.py": {
+      "sha256": "87c989833ab8dc5730407fa20486c45ebe66c3a5b9efc0191528558c5731b691",
+      "bytes": 20758
+    },
+    "tests/test_standalone.py": {
+      "sha256": "2e55b26298f932e774fb1c9db08eed56535f3a29fadd24d7be2672386dd3b70f",
+      "bytes": 3094
+    }
+  }
+}

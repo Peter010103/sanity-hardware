@@ -1,0 +1,230 @@
+menu "Sanity Zenoh receiver"
+config SANITY_PAPER_NATIVE
+    bool "Plain paper native thrust/angular acceleration PIN1 transport"
+    depends on SANITY_MSP_UNIFIED && SANITY_MOCAP_STREAM && !SANITY_RAW_UDP && !SANITY_SPLIT_TELEMETRY && !SANITY_MSP_TUNING && !SANITY_HX711
+    default n
+    help
+        Selectable native SZC5 path, with FC capability admission and existing
+        RC authority. Estimator remains observation only. No firmware flashing.
+
+config SANITY_ESTIMATOR_EXPERIMENT
+    bool "Timestamped FC sensor / S3 ESKF logging experiment"
+    depends on SANITY_MSP_UNIFIED && SANITY_MOCAP_STREAM && (SANITY_COMMS_TEST_ONLY || SANITY_ESTIMATOR_PID_HOVER || SANITY_ESTIMATOR_INDI_HOVER || SANITY_PAPER_NATIVE) && !SANITY_RAW_UDP && !SANITY_SPLIT_TELEMETRY
+    default n
+    help
+        Dedicated 921600 8N1 sensor experiment, logging and estimation only.
+        Requires matching FC USE_SANITY_SENSOR_STREAM build and configured UART.
+        Normally keeps the disarmed-only communications guard. The separate
+        PID and INDI hover profiles permit host CTBR while the estimator only
+        logs. There is no estimator control consumer in any profile.
+
+choice SANITY_ESTIMATOR_HOVER_PROFILE
+    prompt "Explicit flight controller profile with estimator logging"
+    depends on !SANITY_PAPER_NATIVE && SANITY_MSP_UNIFIED && SANITY_MOCAP_STREAM && !SANITY_COMMS_TEST_ONLY && !SANITY_RAW_UDP && !SANITY_SPLIT_TELEMETRY && !SANITY_MSP_TUNING && !SANITY_HX711
+    optional
+
+config SANITY_ESTIMATOR_PID_HOVER
+    bool "Explicit PID-only hover with estimator logging"
+    help
+        Flight-capable experiment: accepts only SZC4 host CTBR with INDI
+        request low. Direct motor commands and INDI requests are rejected.
+        Requires matching FC sensor firmware/UART, permission OFF, disarmed
+        initialization, and independent host mocap control. No ESKF feedback.
+
+config SANITY_ESTIMATOR_INDI_HOVER
+    bool "Explicit INDI-capable hover with estimator logging"
+    help
+        Flight-capable experiment: accepts only SZC4 host CTBR with explicit
+        controller selection. Host requests may select PID or INDI; legacy
+        packets and direct motor commands are rejected before mode changes.
+        Requires matching FC sensor/INDI firmware and UART, permission OFF,
+        disarmed initialization, and independent host mocap control. The ESKF
+        only logs and provides no control feedback. Disable/watchdog keeps
+        the INDI request low.
+endchoice
+
+config SANITY_MOCAP_CLOCK_UDP_PORT
+    int "Observation experiment UDP clock port"
+    depends on SANITY_ESTIMATOR_EXPERIMENT
+    range 1024 65535
+    default 7461
+    help
+        Separate request/reply timing path. Uses the active Zenoh epoch.
+        Accepts only clock probes; no command or configuration interface.
+
+config SANITY_MOCAP_STREAM
+    bool "Receive compact mocap state into an observation-only cache"
+    depends on !SANITY_RAW_UDP
+    default n
+    help
+        Adds state/mocap and clock keys to the existing control Zenoh session.
+        Publishes cache freshness; never forwards state to the FC or changes commands.
+config SANITY_RAW_UDP
+    bool "Use explicit UDP unicast instead of Zenoh (comparison backend)"
+    default n
+config SANITY_DATAGRAM_HOST
+    string "Explicit host IPv4 for UDP unicast"
+    default "10.0.0.200"
+config SANITY_DATAGRAM_PORT
+    int "ESP UDP unicast receive port"
+    range 1024 65535
+    default 7451
+config SANITY_DATAGRAM_HOST_PORT
+    int "Shared host UDP unicast receive port"
+    range 1024 65535
+    default 7450
+config SANITY_DIAGNOSTIC_LEVEL
+    int "Diagnostics: 0 full characterization, 1 sampled flight, 2 control/health only"
+    range 0 2
+    default 0
+    help
+        Levels1/2 report bounded 5Hz command-arrival counters instead of every
+        command/UART trace. Level1 samples FC messages; level2 sends health only.
+        FC polling, controller outputs, command leases and watchdogs are unchanged.
+config SANITY_MSP_TUNING
+    bool "Enable bounded owner-scoped MSP rate-gain tuning"
+    depends on SANITY_MSP_UNIFIED && !SANITY_COMMS_TEST_ONLY
+    default n
+config SANITY_TIMING_DIAGNOSTICS
+    bool "Enable optional timing probes and command/UART traces (measurement build)"
+    default n
+    help
+        Publishes diagnostics on separate keys. Probes never issue control commands.
+        The normal command/status packet formats and control deadlines are unchanged.
+config SANITY_COMMS_TEST_ONLY
+    bool "Disarmed-only transport test image (reject all enabled commands)"
+    default n
+config SANITY_COMMAND_TIMING_TRACE
+    bool "Record each command decision and active UART submission (schema1)"
+    depends on SANITY_TIMING_DIAGNOSTICS
+    default n
+    help
+        Optional measurement overlay. Adds SZT1 record types9/10 without changing
+        command/status wire formats, control policy or watchdog deadlines.
+        Measures receiver callback/decision and UART API enqueue times, not FC
+        application times. Queue loss is counted; benchmark under actual load.
+config SANITY_SPLIT_TELEMETRY
+    bool "Publish FC telemetry on an independent Zenoh session/task"
+    default n
+config SANITY_TELEMETRY_ENDPOINT
+    string "Independent host telemetry endpoint"
+    depends on SANITY_SPLIT_TELEMETRY
+    default "tcp/10.0.0.200:7448"
+config SANITY_DEVICE_ID
+    int "Drone ID"
+    range 1 255
+    default 9
+config SANITY_WIFI_SSID
+    string "Wi-Fi SSID"
+    default ""
+config SANITY_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+config SANITY_STATIC_IP
+    bool "Use a static IPv4 address instead of DHCP"
+    default n
+config SANITY_IPV4_ADDRESS
+    string "Static IPv4 address"
+    depends on SANITY_STATIC_IP
+    default "10.0.0.109"
+config SANITY_IPV4_NETMASK
+    string "IPv4 subnet mask"
+    depends on SANITY_STATIC_IP
+    default "255.255.255.0"
+config SANITY_IPV4_GATEWAY
+    string "IPv4 gateway"
+    depends on SANITY_STATIC_IP
+    default "10.0.0.1"
+config SANITY_ZENOH_ENDPOINT
+    string "Host Zenoh endpoint (explicit unicast)"
+    default "tcp/10.0.0.1:7447"
+choice SANITY_OUTPUT_MODE
+    prompt "FC output interface (requires matching wiring and FC configuration)"
+    default SANITY_CTBR
+config SANITY_CTBR
+    bool "CTBR via SBUS"
+config SANITY_MSP_UNIFIED
+    bool "Unified MSP: CTBR RC input and direct disarmed motor bench"
+config SANITY_DIRECT_BENCH
+    bool "Direct motor thrust via MSP (disarmed bench testing only)"
+endchoice
+config SANITY_UART_TX
+    int "ESP32 TX GPIO"
+    default 43
+config SANITY_UART_RX
+    int "ESP32 RX GPIO"
+    default 44
+config SANITY_SBUS_INVERT
+    bool "Invert SBUS TX"
+    default y
+config SANITY_MSP_BAUD
+    int "MSP UART baud"
+    default 115200
+config SANITY_BENCH_LIMIT_S
+    int "Maximum continuous enabled bench duration (seconds)"
+    range 1 60
+    default 60
+endmenu
+
+menu "Sanity USB passthrough"
+config SANITY_USB_PASSTHROUGH
+    bool "Include USB Serial/JTAG to FC UART passthrough"
+    default n
+    help
+        Startup-selectable bench mode. USB consoles must be disabled to preserve
+        the binary MSP/CLI stream. No Wi-Fi, Zenoh or flight output starts here.
+config SANITY_PASSTHROUGH_DEFAULT_ON
+    bool "Start in passthrough unless BOOT is pressed during the startup window"
+    depends on SANITY_USB_PASSTHROUGH
+    default n
+config SANITY_PASSTHROUGH_BAUD
+    int "FC MSP UART baud (USB host baud selection does not change it)"
+    depends on SANITY_USB_PASSTHROUGH
+    range 9600 921600
+    default 115200
+config SANITY_PASSTHROUGH_BUTTON_GPIO
+    int "Startup selector GPIO (active low; XIAO BOOT is GPIO0)"
+    depends on SANITY_USB_PASSTHROUGH
+    range 0 48
+    default 0
+config SANITY_PASSTHROUGH_LED_GPIO
+    int "Active-low status LED GPIO; -1 disables (XIAO user LED is GPIO21)"
+    depends on SANITY_USB_PASSTHROUGH
+    range -1 48
+    default -1
+config SANITY_PASSTHROUGH_WINDOW_MS
+    int "Startup selection window (milliseconds)"
+    depends on SANITY_USB_PASSTHROUGH
+    range 1000 10000
+    default 4000
+endmenu
+
+menu "Optional HX711 raw telemetry"
+config SANITY_HX711
+    bool "Acquire quarter-bridge HX711 (no force feedback)"
+    select GPIO_CTRL_FUNC_IN_IRAM
+    default n
+    help
+        Independent low-priority acquisition and bounded nonblocking UDP tasks,
+        channel A/gain128. V1 raw fields/flags plus timing_v=1 metadata.
+        No taring, no control commands, no changes to FC telemetry protocol.
+config SANITY_HX711_DOUT
+    int "DOUT GPIO (XIAO D0)"
+    depends on SANITY_HX711
+    range 1 1
+    default 1
+config SANITY_HX711_SCK
+    int "SCK GPIO (XIAO D1)"
+    depends on SANITY_HX711
+    range 2 2
+    default 2
+config SANITY_HX711_HOST
+    string "Raw telemetry host IPv4"
+    depends on SANITY_HX711
+    default "10.0.0.200"
+config SANITY_HX711_PORT
+    int "Raw telemetry UDP port"
+    depends on SANITY_HX711
+    range 1024 65535
+    default 7460
+endmenu

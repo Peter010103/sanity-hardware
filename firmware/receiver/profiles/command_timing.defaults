@@ -1,0 +1,4 @@
+# Optional measurement overlay; combine after the selected estimator/flight profile.
+# Does not select flight authority or modify command/status formats/deadlines.
+CONFIG_SANITY_TIMING_DIAGNOSTICS=y
+CONFIG_SANITY_COMMAND_TIMING_TRACE=y

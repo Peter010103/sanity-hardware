@@ -1,0 +1,151 @@
+# Sanity09 now targets receiver09; requires its updated firmware (no ID01 fallback).
+# Sanity09/09, Sanity15/15, Sanity24/24; native Zenoh, ROS2 /tf input.
+# User confirmed Motive bodies aligned and authorized this closer hover experiment.
+# Home/hover centres captured from stationary /tf on 2026-10-26 (see setup evidence).
+# Independent bounded world-XY acceleration compensation in each MPC worker.
+# Concurrent takeoff, then hover vertically at these homes; no row or lateral transfer is required.
+# Opt-in stationary_hover uses circular buffers, not full-speed braking reservations.
+# Existing speed/region/proximity/freshness/lease checks and group landing remain.
+# 15/24 use the inherited Sanity09 calibration/model; not individually identified physics.
+# If the aircraft are relocated by >0.10m, recapture homes before flight.
+version: 1
+transport:
+  listen: udp/10.0.0.200:7447
+  telemetry_listen: tcp/10.0.0.200:7448
+mocap:
+  topic: /tf
+  parent_frame: map
+  world_from_map_xyzw:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+mission:
+  kind: hover
+  height_m: 1.0
+  hover_s: 20.0
+  length_m: 1.0
+  speed_m_s: 0.3
+  cycles: 2
+  endpoint_hold_s: 1.0
+safety:
+  body_radius_m: 0.15
+  tracking_margin_m: 0.15
+  timing_uncertainty_s: 0.15
+  max_speed_m_s: 0.6
+  ready_dwell_s: 1.0
+  start_lead_s: 0.5
+  startup_timeout_s: 150.0
+  maximum_run_s: 300.0
+  individual_failure: group_land
+  separation_mode: stationary_hover
+  takeoff_mode: simultaneous
+drones:
+- id: 9
+  ip: 10.0.0.109
+  tracked_frame: sanity09
+  hardware_confirmed: true
+  calibration: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_esp_collective.json
+  controller:
+    type: mpc
+    config: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_bias.json
+  placement:
+    center_xy:
+    - -0.6409
+    - 1.1627
+    direction_xy:
+    - 1.0
+    - 0.0
+    reverse: false
+  home_xy:
+  - -0.6409
+  - 1.1627
+  region:
+  - - -1.0409
+    - 0.7627
+    - 0.0
+  - - -0.2409
+    - 1.5627
+    - 1.5
+  marker_to_base_xyz:
+  - 0.0
+  - 0.0
+  - 0.0
+  marker_to_base_xyzw:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  sequence_config: null
+- id: 15
+  ip: 10.0.0.115
+  tracked_frame: sanity15
+  hardware_confirmed: true
+  calibration: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_esp_collective.json
+  controller:
+    type: mpc
+    config: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_bias.json
+  placement:
+    center_xy:
+    - -0.7326
+    - -0.6098
+    direction_xy:
+    - 1.0
+    - 0.0
+    reverse: false
+  home_xy:
+  - -0.7326
+  - -0.6098
+  region:
+  - - -1.1326
+    - -1.0098
+    - 0.0
+  - - -0.3326
+    - -0.2098
+    - 1.5
+  marker_to_base_xyz:
+  - 0.0
+  - 0.0
+  - 0.0
+  marker_to_base_xyzw:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  sequence_config: null
+- id: 24
+  ip: 10.0.0.124
+  tracked_frame: sanity24
+  hardware_confirmed: true
+  calibration: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity24_esp_collective.json
+  controller:
+    type: mpc
+    config: Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_mpc_bias.json
+  placement:
+    center_xy:
+    - -0.6426
+    - 0.2899
+    direction_xy:
+    - 1.0
+    - 0.0
+    reverse: false
+  home_xy:
+  - -0.6426
+  - 0.2899
+  region:
+  - - -1.0426
+    - -0.1101
+    - 0.0
+  - - -0.2426
+    - 0.6899
+    - 1.5
+  marker_to_base_xyz:
+  - 0.0
+  - 0.0
+  - 0.0
+  marker_to_base_xyzw:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  sequence_config: null

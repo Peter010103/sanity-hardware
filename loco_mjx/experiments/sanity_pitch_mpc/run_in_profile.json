@@ -1,0 +1,58 @@
+{
+  "kind": "c4_polynomial_run_in",
+  "horizontal_radius_m": 0.4769230769230769,
+  "vertical_radius_m": 0.62,
+  "phase_rate_rad_s": 5.856231172724236,
+  "entry_phase_rad": 0.55,
+  "entry_s": 0.40821511815058803,
+  "acceleration_s": 0.8,
+  "run_in_speed_m_s": 2.4,
+  "run_in_distance_m": 1.778664385340788,
+  "pull_up_distance_m": 0.818664385340788,
+  "entry_coefficients_xz": [
+    [
+      -0.818664385340788,
+      0.9797162835614113,
+      0.0,
+      0.0,
+      0.0,
+      12.641857256231058,
+      -91.28479202251391,
+      328.1922819424444,
+      -715.5404189823755,
+      1000.059100130227,
+      -902.8203069798672,
+      509.89720366238856,
+      -164.00808671963284,
+      22.951391416367873
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -9.559041339976705,
+      11.585472202173179,
+      206.7601580875562,
+      -1032.9642982058601,
+      2311.7296116287175,
+      -2930.2925738245813,
+      2172.444630522308,
+      -880.8814789810224,
+      151.2689547070088
+    ]
+  ],
+  "construction": "C4 level acceleration to2.4m/s; normalized-u polynomial matches that level motion to ellipse phase0.55rad through snap. Exit reflects the time-reversed full entry and brakes to hover.",
+  "optimizer": {
+    "method": "SLSQP",
+    "objective": 0.8314879681813697,
+    "sampled_min_constraint": 0.015289954966332429,
+    "entry_relative_height_range_m": [
+      -0.024710045033667572,
+      0.09143479632282797
+    ],
+    "peak_thrust_command_N": 2.326649019522421,
+    "peak_pitch_command_rad_s": 4.919804619844188
+  }
+}

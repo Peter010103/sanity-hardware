@@ -1,0 +1,5 @@
+# Local deployment: open wgb network, PC Wi-Fi address on 2026-10-16.
+# Update the endpoint if the PC DHCP address changes.
+CONFIG_SANITY_WIFI_SSID="wgb"
+CONFIG_SANITY_WIFI_PASSWORD=""
+CONFIG_SANITY_ZENOH_ENDPOINT="tcp/192.168.193.100:7447"

@@ -1,0 +1,61 @@
+{
+  "scope": "30s one-lap-segment input delay sensitivity; nominal prediction15ms, actual0/30ms; other plant assumptions in closed_loop.py",
+  "cases": [
+    {
+      "case": "actual_delay_0.0",
+      "shaped": true,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.015,
+      "actual_command_delay_s": 0.0,
+      "duration_s": 30.0,
+      "position_RMS_m": 0.04165513977800706,
+      "axis_RMS_m": [
+        0.031698518377838984,
+        0.02700841857153602,
+        0.0009486457926004779
+      ],
+      "position_max_m": 0.05035333802858167,
+      "tilt_max_deg": 7.799917376669287,
+      "rate_command_peak_rad_s": [
+        0.269201834040111,
+        0.42848738609794895,
+        0.04553478673560917
+      ],
+      "compute_ms_p50_p95_max": [
+        4.270478999387706,
+        4.499080001551192,
+        13.634409999212949
+      ],
+      "wall_s": 11.09696151600292
+    },
+    {
+      "case": "actual_delay_0.03",
+      "shaped": true,
+      "eta_true": 0.953,
+      "rate_pole_scale": 1.0,
+      "pose_age_s": 0.015,
+      "actual_command_delay_s": 0.03,
+      "duration_s": 30.0,
+      "position_RMS_m": 0.04168095335490527,
+      "axis_RMS_m": [
+        0.03170353843213816,
+        0.02704253733540551,
+        0.0009427077590260257
+      ],
+      "position_max_m": 0.05063581148593447,
+      "tilt_max_deg": 7.8096403839496045,
+      "rate_command_peak_rad_s": [
+        0.27280794893668614,
+        0.42741972862538397,
+        0.0461321011014914
+      ],
+      "compute_ms_p50_p95_max": [
+        4.276118997950107,
+        4.468086997803766,
+        14.575879999028984
+      ],
+      "wall_s": 11.1055225529999
+    }
+  ]
+}

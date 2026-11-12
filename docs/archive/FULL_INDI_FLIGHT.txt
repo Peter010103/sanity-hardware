@@ -1,0 +1,86 @@
+Ground-acknowledged INDI takeoff, hover and landing
+
+The separate sanity15_full_indi_estimator_hover.json profile selects
+flight_profile=indi_full_flight. Existing PID and PID→INDI→PID hover profiles
+retain their existing mission class and behavior.
+
+Healthy sequence:
+  waiting → arming → ground_spinup → ground_indi_request → takeoff →
+  indi_hover → landing → stopped
+
+The native FC initially arms in PID. The host deliberately holds INDI request
+LOW after arming, ramps ground thrust over1.5s to40% of declared weight
+(0.27260028N at69.47g), and waits at least0.6s for RPM/filter warmup plus0.5s
+of eligible/RPM-mask15 feedback. This allows the native500ms readiness dwell.
+The ground engagement attempt is bounded to8s. Request then goes HIGH while
+ground thrust remains bounded to40% weight. No takeoff trajectory starts until
+fresh actual FC mode=indi and exact indi_weight=1 are acknowledged.
+
+A measured height increase over4cm before that acknowledgement disables the
+ground attempt. The mocap ground-reference check is not an independent contact
+sensor. Denied/unacknowledged entry stops on the ground; it cannot silently
+continue with a PID takeoff.
+
+After acknowledgement, collective stays continuous at or above the ground hold
+value. It does NOT restart the old zero-thrust settle/spool, which could cause
+native IDLE/PID fallback. The subsequent bounded ramp raises0.4→0.7weight before
+the existing5s climb reference. All commanded climb,20s INDI hover, and healthy
+landing maintain INDI request HIGH. Actual FC mode/weight remain monitored.
+The planned sequence contains no airborne PID return. At confirmed touchdown,
+the existing dwell/spool-down completes and the host disables normally.
+
+The collective profile maps the40% ground command above native SI_RC_MIN1100:
+aboutRC1207 at8V andRC1277 at low clamped voltage. Profile tests cover6.6–8.5V.
+During ordinary descent the bounded PD collective remains above the idle
+threshold; reductions to zero occur in the touchdown spool-down/disable path.
+Positive touchdown spool commands map at leastRC1100, so native idle is not
+requested simply because the healthy flight enters landing.
+
+Native faults or loss of actual INDI authority permit fault fallback and a PD
+landing with request LOW. This is distinct from the healthy planned flight.
+Faults during planned landing change the recorded outcome from test_complete
+and retain the current landing reference. Stale feedback, hard envelopes,
+takeoff guard, unexpected disarm and emergency disable retain immediate-stop
+semantics. The airborne envelope is60cm soft/75cm hard position,15/35deg
+tilt,1.5m absolute altitude and0.6rad/s command limits. Startup tilt10deg and
+the current FC gyro stationarity check are retained, with legacy TF-rate
+fallback only for inputs without native gyro fields.
+
+Desktop calibrated TF supplies PD feedback. ESKF remains observation/logging
+only; mocap forwarding25Hz, IMU observation approximately200Hz, desktop control
+50Hz and sender100Hz use the existing runner. Ground height in this profile is
+the measured arena_exit_fix placement0.057778554m; configuration captures the
+actual value used. Force observer/compensation remains OFF as configured.
+
+Offline plan (no ROS/network/device action):
+  PYTHONPATH=Sanity/src/ros2_sanity_ws/src/sanity_zenoh:Sanity/src/ros2_sanity_ws/src/udp_broadcaster \
+  .venv-sanity-deploy/bin/python -m sanity_zenoh.indi_hover --plan-only \
+    --config Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_full_indi_estimator_hover.json \
+    --loco-root loco_mjx
+
+The separate wrapper is:
+  Sanity/src/ros2_sanity_ws/scripts/run_sanity_full_indi_estimator_hover.sh
+It accepts the existing --plan-only, --simulate, --bench-check and --fly actions
+and requires a new output directory for captures. The wrapper invokes the same
+explicit frame/clock and receiver/logger admission already used by the runner.
+Hardware actions require an explicit --bench-check or --fly invocation.
+
+Validation covers approximate rigid-body complete flights, ground warmup and
+deliberate low/high request ordering, exact authority acknowledgement before
+takeoff, continuous post-ACK thrust, denied/missing-RPM/unacknowledged entry,
+unintended ground lift, stale feedback, airborne authority loss/RPM fallback,
+planned and operator/soft-envelope landing with request retained, hard tilt,
+unexpected disarm and legacy profile isolation. Simulations validate mission
+logic and bounded outputs, not FC timing, ground aerodynamics or flight stability.
+
+After the first full-INDI arena test, the diagnostic-status freshness limit was
+increased from150ms to300ms at the user's request. Its actual stop had a163.8ms
+ESP-sample age, while mocap and receiver heartbeat were fresh; it did not hit
+the40cm distance threshold. The soft position threshold is now60cm. Command
+watchdog/receiver heartbeat and40ms mocap checks retain their original limits.
+Controller diagnostic host/sample ages and receiver ages are logged each tick.
+
+For this desktop-mocap flight, estimator_logging.require_initialized=false.
+Fresh, matching-epoch observation records and intact recording remain required;
+ESKF initialization and fault flags are recorded as experimental results and
+do not gate flight. They never provide control feedback in this profile.

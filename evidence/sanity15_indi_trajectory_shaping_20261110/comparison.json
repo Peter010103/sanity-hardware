@@ -1,0 +1,148 @@
+{
+  "scope": "Analytic lap reference sampled at50Hz; excludes transfers, MPC, closed-loop model, motors and hardware. Geometric fixed-yaw body rates derived from acceleration/jerk, not measured demand.",
+  "rows": [
+    {
+      "speed_m_s": 0.8,
+      "schedule": "variable_angular",
+      "ramp_s": 2.0,
+      "duration_s": 108.6291905158008,
+      "maximum_speed_m_s": 0.7999998287065804,
+      "maximum_acceleration_m_s2": 0.7468976853530823,
+      "maximum_jerk_m_s3": 1.2324044324235603,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.12552322143585018,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.09202112940866329,
+        0.0853616616704401,
+        0.0030542956378102172
+      ],
+      "maximum_tilt_deg": 4.3538922228557135,
+      "design": null
+    },
+    {
+      "speed_m_s": 0.8,
+      "schedule": "indi_shaped_angular",
+      "ramp_s": 2.0,
+      "duration_s": 108.6291905158008,
+      "maximum_speed_m_s": 0.7999998287065804,
+      "maximum_acceleration_m_s2": 0.7468976853530823,
+      "maximum_jerk_m_s3": 1.2324044324235603,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.12552322143585018,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.09202112940866329,
+        0.0853616616704401,
+        0.0030542956378102172
+      ],
+      "maximum_tilt_deg": 4.3538922228557135,
+      "design": {
+        "schedule": "indi_shaped_angular",
+        "requested_ramp_s": 2.0,
+        "effective_ramp_s": 2.0,
+        "maximum_acceleration_m_s2": 1.5,
+        "maximum_jerk_m_s3": 2.0,
+        "conservative_acceleration_bound_m_s2": 0.9736067977499789,
+        "conservative_jerk_bound_m_s3": 1.8564815557366336,
+        "angular_cruise_rad_s": 0.17677669529663687,
+        "reference_rate_proxy_limit_rad_s": 0.2038735983690112,
+        "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+        "geometry_and_peak_speed_preserved": true,
+        "sensing_scope": "Same geometry still crosses the observed mocap-loss region"
+      }
+    },
+    {
+      "speed_m_s": 1.0,
+      "schedule": "variable_angular",
+      "ramp_s": 2.0,
+      "duration_s": 87.30335241264065,
+      "maximum_speed_m_s": 0.9999995301274415,
+      "maximum_acceleration_m_s2": 0.9314948988576373,
+      "maximum_jerk_m_s3": 1.5946281383060474,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.1623616388363317,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.12106314149318667,
+        0.10820916788180156,
+        0.005002980006440617
+      ],
+      "maximum_tilt_deg": 5.424178221083799,
+      "design": null
+    },
+    {
+      "speed_m_s": 1.0,
+      "schedule": "indi_shaped_angular",
+      "ramp_s": 2.369569543357246,
+      "duration_s": 87.6729219559979,
+      "maximum_speed_m_s": 0.9999999643344598,
+      "maximum_acceleration_m_s2": 0.7843221779378268,
+      "maximum_jerk_m_s3": 1.1794145821910846,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.12014777835781644,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.0910561107204543,
+        0.07837505641061494,
+        0.003169918086796205
+      ],
+      "maximum_tilt_deg": 4.571148253472263,
+      "design": {
+        "schedule": "indi_shaped_angular",
+        "requested_ramp_s": 2.0,
+        "effective_ramp_s": 2.369569543357246,
+        "maximum_acceleration_m_s2": 1.5,
+        "maximum_jerk_m_s3": 2.0,
+        "conservative_acceleration_bound_m_s2": 1.140668580558617,
+        "conservative_jerk_bound_m_s3": 2.0,
+        "angular_cruise_rad_s": 0.22097086912079605,
+        "reference_rate_proxy_limit_rad_s": 0.2038735983690112,
+        "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+        "geometry_and_peak_speed_preserved": true,
+        "sensing_scope": "Same geometry still crosses the observed mocap-loss region"
+      }
+    },
+    {
+      "speed_m_s": 1.5,
+      "schedule": "variable_angular",
+      "ramp_s": 2.0,
+      "duration_s": 58.868901608427095,
+      "maximum_speed_m_s": 1.4999992951911623,
+      "maximum_acceleration_m_s2": 1.3870782285980277,
+      "maximum_jerk_m_s3": 2.6715889226294456,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.27193002320060283,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.21201438095430966,
+        0.17021643061732936,
+        0.012973040985312215
+      ],
+      "maximum_tilt_deg": 8.047947991564035,
+      "design": null
+    },
+    {
+      "speed_m_s": 1.5,
+      "schedule": "indi_shaped_angular",
+      "ramp_s": 4.25077793924674,
+      "duration_s": 61.11967954767384,
+      "maximum_speed_m_s": 1.4999999947116436,
+      "maximum_acceleration_m_s2": 0.7470703124404886,
+      "maximum_jerk_m_s3": 0.9364382153101324,
+      "maximum_ideal_fixed_yaw_body_rate_norm_rad_s": 0.09543762025995751,
+      "maximum_ideal_fixed_yaw_body_rate_per_axis_rad_s": [
+        0.0826295893224295,
+        0.04852208587909537,
+        0.002282395557308113
+      ],
+      "maximum_tilt_deg": 4.354894647565933,
+      "design": {
+        "schedule": "indi_shaped_angular",
+        "requested_ramp_s": 2.0,
+        "effective_ramp_s": 4.25077793924674,
+        "maximum_acceleration_m_s2": 1.5,
+        "maximum_jerk_m_s3": 2.0,
+        "conservative_acceleration_bound_m_s2": 1.4477612439820275,
+        "conservative_jerk_bound_m_s3": 1.9999999999999998,
+        "angular_cruise_rad_s": 0.3314563036811941,
+        "reference_rate_proxy_limit_rad_s": 0.2038735983690112,
+        "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+        "geometry_and_peak_speed_preserved": true,
+        "sensing_scope": "Same geometry still crosses the observed mocap-loss region"
+      }
+    }
+  ],
+  "source_sha256": "fe31793e772eef08cbfca7cdf60546ec096f5d739e7841521b83de9ec4e96e6f",
+  "analysis_sha256": "aa78f355112d02a2556220d17557794bfdb7f1f8d26c17393e5a6dcecae5f13e"
+}

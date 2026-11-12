@@ -1,0 +1,19 @@
+{
+  "samples": 2371,
+  "moving_full_mpc_samples": 1091,
+  "method": "Same-tick causal mocap root state minus recorded reference; full MPC weight>=0.999 and reference speed>0.001m/s. No post-hoc phase/time/bias fitting.",
+  "limitation": "Filtered host state and endpoint receipts are observations, not independent truth or proof of flight qualification.",
+  "xy_position_rmse_m": 0.04097994502949951,
+  "xyz_position_rmse_m": 0.04213275378068209,
+  "velocity_3d_rmse_m_s": 0.08556971582028486,
+  "peak_measured_speed_m_s": 3.1346491120453988,
+  "peak_reference_speed_m_s": 2.9999842134581374,
+  "peak_measured_tilt_deg": 32.5595097257366,
+  "mpc_total_ms_p50_p99_max": [
+    5.766404006863013,
+    11.528526895563113,
+    14.251068991143256
+  ],
+  "source": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_2026-11-12_07-47-59Z/flight/events.jsonl",
+  "source_sha256": "34fc8b96131a763fe9c9b50752c0990560c00c7fc37cae0d723b64af8969cd55"
+}

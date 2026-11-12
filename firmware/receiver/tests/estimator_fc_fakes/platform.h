@@ -1,0 +1,1 @@
+#define USE_SANITY_SENSOR_STREAM

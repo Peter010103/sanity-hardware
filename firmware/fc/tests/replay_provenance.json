@@ -1,0 +1,8 @@
+{
+  "source_csv": "/home/hw527/Projects/drones/outputs/sanity15_shaped_trajectory_assessment_20261110_2118/cache/7c0bdfcf12f272be_3f6de0e1/read1.03.csv",
+  "source_sha256": "9e8faf5bdeef6e50e9d54723e27a46abdee6ad918b35f8db422c0ba818cb7893",
+  "rows": 199,
+  "nominal_upsampling": "zero-order hold four synthetic ticks per250Hz row; not recovered1kHz samples",
+  "injected_gap_us": 2045,
+  "exact_original_trigger_unknown": true
+}

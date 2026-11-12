@@ -1,0 +1,27 @@
+{
+  "host_ip": "10.0.0.200",
+  "mocap_ntp_server": "10.0.0.251",
+  "tf_topic": "/tf",
+  "parent_frame": "map",
+  "world_from_map_xyzw": [0, 0, 0, 1],
+  "pid": {
+    "device": 9,
+    "tracked_frame": "sanity09",
+    "ground_m": 0.0152,
+    "marker_to_base_xyz": [0, 0, 0],
+    "marker_to_base_xyzw": [0, 0, 0, 1],
+    "collective_profile": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_esp_collective.json"
+  },
+  "indi": {
+    "device": 15,
+    "tracked_frame": "sanity15",
+    "expected_uid": "56003f001451333231343731",
+    "ground_m": 0.03573773056268692,
+    "marker_to_base_xyz": [0, 0, 0],
+    "marker_to_base_xyzw": [0, 0, 0, 1],
+    "clock_endpoint": "udp/10.0.0.115:7461",
+    "collective_profile": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_collective.json"
+  },
+  "reference_only": "Historical lab identities. Copy to lab.json and check current aircraft, axes, calibration, ground, rate profile and network before a live session. PID flips need their own measured marker-to-body calibration; use pid_flip_marker_to_base_xyzw only after measuring it.",
+  "pid_flip_marker_to_base_xyzw": [0.005740941344438956, -0.01981705748539078, -0.00011379278728325242, 0.9997871337821377]
+}

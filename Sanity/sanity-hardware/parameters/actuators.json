@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "output_order": ["M1", "M2", "M3", "M4"],
+  "speed_source": {
+    "units": "rad/s",
+    "conversion": "FC mechanical RPM * 2*pi/60",
+    "configured_motor_poles": 12,
+    "physical_motor_poles": null
+  },
+  "thrust": {
+    "equation": "T_i = k * omega_i^2",
+    "k_N_per_rad_s_squared": 3.135940456614356e-08,
+    "measured_speed_range_rad_s": [20.943951023931955, 5288.347633542818],
+    "usable_thrust_range_N": null,
+    "reaction_torque_coefficient_Nm_per_rad_s_squared": null
+  },
+  "response": {
+    "equation": "domega/dt = (omega_target(u(t-delay), V) - omega) / tau",
+    "tau_s": 0.03741163154618727,
+    "delay_s": 0.01928848119734354,
+    "scope": "Already spinning; delay includes USB and telemetry. Startup/stop not modelled."
+  },
+  "command_to_speed": {
+    "equation": "omega_target = (V / 8) * (a + b*q + c*q^2); q = (u - 1350) / 100",
+    "coefficients_a_b_c_rad_s": [
+      [2452.314683173012, 773.1848784748311, -20.656931862452687],
+      [2532.059941647188, 749.6159603033368, -49.7513179479204],
+      [2472.331334669701, 784.4780734224935, -14.465018262415466],
+      [2393.74534727326, 750.9976739793324, -20.65447243855458]
+    ],
+    "command_range_counts": [1250, 1450],
+    "voltage_range_V": [7.513333333333333, 8.112499999999999]
+  },
+  "rotor_frames": {
+    "rotor_1_rear_right": {
+      "hardware_output": null,
+      "rotation_direction": null
+    },
+    "rotor_2_front_right": {
+      "hardware_output": null,
+      "rotation_direction": null
+    },
+    "rotor_3_front_left": {
+      "hardware_output": null,
+      "rotation_direction": null
+    },
+    "rotor_4_rear_left": {
+      "hardware_output": null,
+      "rotation_direction": null
+    }
+  },
+  "thrust_axis_body": [0, 0, 1],
+  "rotation_convention": "CW/CCW viewed from above, looking along -body Z",
+  "bench_command": {
+    "protocol": "USB MSP_SET_MOTOR (214)",
+    "units": "external motor-test counts",
+    "range_counts": [1000, 2000],
+    "stop_counts": 1000,
+    "arming": "FC disarmed; bypasses attitude controller",
+    "deadband_counts": null
+  },
+  "hardware": {
+    "flight_controller": "BETAFPV F405 2-3S 20A V1.0",
+    "firmware": "Betaflight 4.5.1",
+    "esc_protocol": "DSHOT300, bidirectional",
+    "esc_firmware": null,
+    "motor": null,
+    "propeller": null,
+    "battery_model": null,
+    "battery_cells": 2
+  },
+  "notes": ["High-speed static data include low-battery readings; observed ranges are not rated limits.", "Flight control uses roll, pitch, yaw rate and collective thrust; see docs/technical-notes.md."],
+  "fit_report": "data/processed/actuator/fit_report.json"
+}

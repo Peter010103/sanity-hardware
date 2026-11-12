@@ -1,0 +1,55 @@
+sanity_sequence:
+  ros__parameters:
+    use_sim_time: false
+    controller: policy  # --controller mpc selects the standalone CTBR baseline
+    mpc_config: ""
+    enable_output: false
+    simulation: false
+    start_at_current_xy: true
+    landing_enabled: true
+    land_on_policy_fallback: true
+    landing_exit_height_m: 0.10
+    landing_exit_dwell_s: 2.0
+    bypass_voltage_check: false
+    motor_data_root: ""
+    motor_profile: ""
+    recorder_ready_file: ""
+    drone_id: 9
+    listen: udp/10.0.0.200:7447
+    telemetry_listen: tcp/10.0.0.200:7448
+    transport_diagnostics: true
+    connect: ""
+    ctbr_map: ""
+    tf_topic: /tf
+    parent_frame: map
+    tracked_frame: sanity09
+    frames_confirmed: false
+    world_from_map_xyzw: [0.0, 0.0, 0.0, 1.0]
+    marker_to_base_xyz: [0.0, 0.0, 0.0]
+    marker_to_base_xyzw: [0.0, 0.0, 0.0, 1.0]
+    velocity_filter_tau_s: 0.02
+    angular_rate_filter_tau_s: 0.05
+    ground_root_height_m: 0.0152
+    target_height_m: 1.0
+    maximum_altitude_m: 1.5
+    # Require settled positioning before policy transfer; fallback remains lenient.
+    handover_thrust_tolerance_n: 0.20  # temporary; previous limit0.15N
+    pd_integral_gains: [0.8, 0.8, 1.2]  # world acceleration integral gains,1/s^3
+    pd_integral_limits_m_s2: [0.45, 0.45, 0.8]
+    handover_position_tolerance_m: 0.06
+    fallback_position_tolerance_m: 1.0
+    fallback_tilt_limit_deg: 30.0
+    hard_position_error_limit_m: 1.5
+    fallback_speed_limit_m_s: 4.0  # user-selected deployment limit; total measured 3D speed
+    origin_xy: [0.0, 0.0]
+    mission_pattern: circle
+    radius_m: 0.5
+    speed_m_s: 0.3
+    command_speed_limit_m_s: 0.0  # auto=min(3.0,max(0.8,1.25*cruise)); velocity norm
+    mission_ramp_s: 2.0
+    auto_radius: false
+    max_reference_acceleration_m_s2: 3.5
+    maximum_run_s: 300.0
+    laps: 2
+    duration_s: 60.0
+    control_cpu: -1  # optional Linux CPU affinity; no system-wide scheduler changes

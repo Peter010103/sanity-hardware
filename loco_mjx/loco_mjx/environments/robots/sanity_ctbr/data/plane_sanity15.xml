@@ -1,0 +1,85 @@
+<mujoco model="sanity">
+  <compiler strippath="false" assetdir="assets" angle="radian" autolimits="true" />
+
+  <option cone="pyramidal" impratio="1" solver="Newton" iterations="4" ls_iterations="4" density="1.2" viscosity="0.00002">
+    <flag eulerdamp="disable" />
+  </option>
+
+  <default>
+    <site size="0.01 0.005 0.005" group="5" />
+    <default class="reward_collision_sphere">
+      <geom type="sphere" contype="0" conaffinity="0" group="5" margin="0" gap="0" density="0" rgba="1 0 0 1" />
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="material_0" file="meshes/visual/material_0.obj" content_type="model/obj" />
+    <mesh name="material_1" file="meshes/visual/material_1.obj" content_type="model/obj" />
+    <mesh name="material_2" file="meshes/visual/material_2.obj" content_type="model/obj" />
+    <mesh name="material_3" file="meshes/visual/material_3.obj" content_type="model/obj" />
+    <mesh name="material_4" file="meshes/visual/material_4.obj" content_type="model/obj" />
+    <mesh name="material_5" file="meshes/visual/material_5.obj" content_type="model/obj" />
+    <mesh name="envelope" file="meshes/collision/envelope.obj" content_type="model/obj" />
+    <texture type="skybox" builtin="gradient" rgb1="0.95 0.95 0.95" rgb2="0.95 0.95 0.95" width="100" height="100" />
+    <texture name="texplane" type="2d" builtin="checker" rgb1="0.3 0.55 0.3" rgb2="0.3 0.55 0.3" mark="edge" markrgb="1.0 1.0 1.0" width="512" height="512" />
+    <material name="MatPlane" texture="texplane" texrepeat="2 2" texuniform="true" reflectance="0.0" shininess="0.5" specular="0.9" rgba="1 1 1 1" />
+  </asset>
+
+  <worldbody>
+    <geom name="floor" type="plane" contype="0" conaffinity="1" group="0" margin="0" gap="0" material="MatPlane" rgba="1 1 1 1" pos="0 0 0" size="100 100 0.125" />
+    <light name="toplight1" directional="true" diffuse="0.2 0.2 0.2" specular="0.3 0.3 0.3" castshadow="true" dir="1 0 -0.5" ambient="0.01 0.01 0.01" />
+    <light name="toplight2" directional="true" diffuse="0.2 0.2 0.2" specular="0.3 0.3 0.3" castshadow="true" dir="-1 0 -0.5" ambient="0.01 0.01 0.01" />
+    <light name="toplight3" directional="true" diffuse="0.2 0.2 0.2" specular="0.3 0.3 0.3" castshadow="true" dir="0 1 -0.5" ambient="0.01 0.01 0.01" />
+    <light name="toplight4" directional="true" diffuse="0.2 0.2 0.2" specular="0.3 0.3 0.3" castshadow="true" dir="0 -1 -1" ambient="0.01 0.01 0.01" />
+    <light name="spotlight" diffuse="0.4 0.4 0.4" specular="0.3 0.3 0.3" castshadow="false" pos="0 0 2" cutoff="10" target="trunk" mode="targetbodycom" />
+    <body name="trunk">
+      <camera name="track" mode="trackcom" pos="0 -2 0" xyaxes="1 0 0 0 0 1" />
+      <freejoint />
+      <site name="imu" pos="-5.1853841e-10 8.9142767e-10 0.0039749999" quat="1 0 0 0" />
+      <site name="actuation" pos="0 0 0" />
+      <site name="rotor_1_rear_right" pos="-0.028461048 -0.028461048 0" quat="1 0 0 0" />
+      <site name="rotor_2_front_right" pos="0.028461048 -0.028461048 0" quat="1 0 0 0" />
+      <site name="rotor_3_front_left" pos="0.028461048 0.028461048 0" quat="1 0 0 0" />
+      <site name="rotor_4_rear_left" pos="-0.028461048 0.028461048 0" quat="1 0 0 0" />
+      <site name="posture" pos="0 0 0" size="0.005" group="5" xyaxes="1 0 0 0 1 0" />
+      <inertial pos="0 0 0" quat="0 0.707107 0 0.707107" mass="0.07151" diaginertia="5.43e-05 4.28e-05 3.32e-05" />
+      <geom name="material_0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_0" rgba="0.854306 0.34919 0.34919 1" />
+      <geom name="material_1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_1" rgba="0.0998528 0.0998528 0.0998528 1" />
+      <geom name="material_2" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_2" rgba="0.896244 0.791787 0.618031 1" />
+      <geom name="material_3" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_3" rgba="0.247059 0.247059 0.247059 1" />
+      <geom name="material_4" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_4" rgba="0.0998528 0.0998528 0.0998528 1" />
+      <geom name="material_5" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="material_5" rgba="0.0998528 0.0998528 0.0998528 1" />
+      <geom name="conservative_envelope" type="mesh" contype="0" conaffinity="0" group="3" mesh="envelope" rgba="0.0998528 0.0998528 0.0998528 1" />
+      <geom class="reward_collision_sphere" margin="0" gap="0" density="0" pos="-2.5926918e-10 4.457138e-10 -0.00045000017" size="0.0615553 0 0" />
+      <camera name="ego_camera" pos="0.050857901 -0.010016038 0.0038" quat="-0.5 -0.5 0.5 0.5" />
+      <body name="rotor_1_rear_right" pos="-0.028461 -0.028461 0">
+        <inertial pos="0 0 0" mass="0" diaginertia="1e-08 1e-08 1e-08" />
+      </body>
+      <body name="rotor_2_front_right" pos="0.028461 -0.028461 0">
+        <inertial pos="0 0 0" mass="0" diaginertia="1e-08 1e-08 1e-08" />
+      </body>
+      <body name="rotor_3_front_left" pos="0.028461 0.028461 0">
+        <inertial pos="0 0 0" mass="0" diaginertia="1e-08 1e-08 1e-08" />
+      </body>
+      <body name="rotor_4_rear_left" pos="-0.028461 0.028461 0">
+        <inertial pos="0 0 0" mass="0" diaginertia="1e-08 1e-08 1e-08" />
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="body_thrust" gear="0 0 1 0 0 0" ctrlrange="0 3.2" site="actuation" />
+    <velocity name="roll_rate" gear="0 0 0 1 0 0" kv="0.00083" ctrlrange="-2.3 2.3" forcerange="-0.032 0.032" site="actuation" />
+    <velocity name="pitch_rate" gear="0 0 0 0 1 0" kv="0.00107" ctrlrange="-2.3 2.3" forcerange="-0.032 0.032" site="actuation" />
+    <velocity name="yaw_rate" gear="0 0 0 0 0 1" kv="0.000543" ctrlrange="-2.6 2.6" forcerange="-0.011 0.011" site="actuation" />
+  </actuator>
+
+  <sensor>
+    <gyro site="imu" name="imu_angular_velocity" />
+    <velocimeter site="imu" name="imu_linear_velocity" />
+  </sensor>
+
+  <keyframe>
+    <key name="home" qpos="0 0 1 1 0 0 0" />
+  </keyframe>
+</mujoco>

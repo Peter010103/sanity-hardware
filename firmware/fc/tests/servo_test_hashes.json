@@ -1,0 +1,7 @@
+{
+  "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/source/src/main/flight/sanity_indi/paper_core.c": "880d4ed1bcc4fdd42167307e9f492815d72376edc2f2699afa1cf74466b12ace",
+  "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/source/src/main/flight/sanity_indi/paper_core.h": "cfcf33a84480cdf5915d1babb1ba0cd344b340b322b00e2ad6edc2653c95b5c6",
+  "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/test_servo.c": "3861e82d72a262fb271200af266cd1d2dab3be93034c7c3cae6a10371c04f907",
+  "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/speed_model_test_stub.h": "a327d17f2be878e8f2f48061e80a611b0af28a0d3e18a86c99d02e4422d54ced",
+  "/home/hw527/Projects/drones/outputs/sanity15_transient_robustness_20261110/fc/tests/run_servo_tests.py": "eab41a832421765a8448d6cba89910c1dbd40fb00edb638455a4ca6487c02188"
+}

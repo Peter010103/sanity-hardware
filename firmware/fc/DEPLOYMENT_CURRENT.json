@@ -1,0 +1,43 @@
+{
+  "device": 15,
+  "fc_flashed": true,
+  "fc_receipt": "outputs/sanity15_transient_robustness_20261110/fc_deployment/deployment_receipt.json",
+  "fc_firmware_sha256": "05971cf1c4d44ea2c4c5c9e354c8260bef39e1792544d26ac834aca1a5e18d19",
+  "fc_source": "outputs/sanity15_transient_robustness_20261110/fc/source",
+  "configuration_preserved": true,
+  "new_rate_ff_gain": [
+    0.25,
+    0.25,
+    0
+  ],
+  "rate_ff_cutoff_hz": 20,
+  "rate_ff_limit_rad_s2": [
+    20,
+    20,
+    20
+  ],
+  "ESP_firmware_unchanged": true,
+  "esp_receipt": "outputs/sanity15_motor_model_fix_20261110/esp_deployment/verification.json",
+  "disarmed": true,
+  "flight_battery_absent": true,
+  "all_owned_processes_exited": true,
+  "physical_motor_timing_verified": false,
+  "updated_unix": 1794346548.365904,
+  "current_rate_gains_per_s": [
+    20,
+    20,
+    8
+  ],
+  "current_rate_ff_gain": [
+    0.25,
+    0.25,
+    0
+  ],
+  "latest_configuration_receipt": "/home/hw527/Projects/drones/outputs/sanity15_Kv20_FF025_configuration_20261110_201156Z/deployment/receipt.json",
+  "configuration_updated_unix": 1794341534.3731859,
+  "controller_gain_or_filter_settings_changed": false,
+  "timing_transient_recovery": true,
+  "trace_version": 4,
+  "trace_fields": 190,
+  "timing_policy": "outputs/sanity15_transient_robustness_20261110/fc/timing_policy.json"
+}

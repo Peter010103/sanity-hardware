@@ -1,0 +1,19 @@
+{
+  "samples": 3314,
+  "moving_full_mpc_samples": 643,
+  "method": "Same-tick causal mocap root state minus recorded reference; full MPC weight>=0.999 and reference speed>0.001m/s. No post-hoc phase/time/bias fitting.",
+  "limitation": "Filtered host state and endpoint receipts are observations, not independent truth or proof of flight qualification.",
+  "xy_position_rmse_m": 0.09362970424037387,
+  "xyz_position_rmse_m": 0.1146946314178773,
+  "velocity_3d_rmse_m_s": 0.5851219283819488,
+  "peak_measured_speed_m_s": 3.5624260369553324,
+  "peak_reference_speed_m_s": 3.630854023736314,
+  "peak_measured_tilt_deg": 178.9891881398709,
+  "mpc_total_ms_p50_p99_max": [
+    3.9481999701820314,
+    8.189342274563405,
+    9.42460703663528
+  ],
+  "source": "/home/hw527/Projects/drones/outputs/sanity_pitch_20261022_181012_flight_8c8439/events.jsonl",
+  "source_sha256": "3da2094f3ad897d8bee67b490c7429c02e7b973beae8a7552dcca42890ff3826"
+}

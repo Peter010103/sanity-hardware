@@ -1,0 +1,150 @@
+{
+  "target": "BETAFPVF405",
+  "snapshot_only_no_hardware_access": true,
+  "shared_model_note": "All profiles use the same initial nominal physical model; choose restore by UID.",
+  "airframes": [
+    {
+      "label": "Sanity03",
+      "cli_mcu_id": "002500353133470235383735",
+      "msp_uid": "350025000247333135373835",
+      "restore_file": "Sanity03_002500353133470235383735_restore_PID.txt",
+      "source": "outputs/sanity03_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "2b11326bd0880e0128e3135443eb5669257a5242cd0b761c90b2310eefb15597",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity06",
+      "cli_mcu_id": "001d00313133471633353636",
+      "msp_uid": "31001d001647333136363533",
+      "restore_file": "Sanity06_001d00313133471633353636_restore_PID.txt",
+      "source": "outputs/sanity06_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "3c924ec942394b05d22ef3b220e80e8629bd094372cfdd21aab2acde231caae1",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity07",
+      "cli_mcu_id": "003000573233511431373431",
+      "msp_uid": "570030001451333231343731",
+      "restore_file": "Sanity07_003000573233511431373431_restore_PID.txt",
+      "source": "outputs/sanity07_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "7c382f7a171651c78d7e761b1e61ff853ba2a321627830b49e39af7171e1edf6",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity08",
+      "cli_mcu_id": "0029003e3233511231373431",
+      "msp_uid": "3e0029001251333231343731",
+      "restore_file": "Sanity08_0029003e3233511231373431_restore_PID.txt",
+      "source": "outputs/sanity08_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "051bf8b1a9c258bd2508bedd48bb2fcd055904e56df7c28f3b964469d52b0197",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity10",
+      "cli_mcu_id": "0052003d3233511431373431",
+      "msp_uid": "3d0052001451333231343731",
+      "restore_file": "Sanity10_0052003d3233511431373431_restore_PID.txt",
+      "source": "outputs/sanity10_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "a557c3a10e996ff3110e0f177912369666078ee8bfc7963f57eb788df3bb248d",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity11",
+      "cli_mcu_id": "003f00283233511631373431",
+      "msp_uid": "28003f001651333231343731",
+      "restore_file": "Sanity11_003f00283233511631373431_restore_PID.txt",
+      "source": "outputs/sanity11_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "a5df2c228259db126bf4f9978831512b66b66b6eb8aeecd7e25624048c92aec9",
+      "source_board_config_revision": "16ac022",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity14",
+      "cli_mcu_id": "001f00453233511931373431",
+      "msp_uid": "45001f001951333231343731",
+      "restore_file": "Sanity14_001f00453233511931373431_restore_PID.txt",
+      "source": "outputs/sanity14_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "e1b178f97f756674d23edd6b5bd9d52957070eae04d5d4f1ec2b25bdd298a2ac",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity18",
+      "cli_mcu_id": "002700313133470235383735",
+      "msp_uid": "310027000247333135373835",
+      "restore_file": "Sanity18_002700313133470235383735_restore_PID.txt",
+      "source": "outputs/sanity18_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "4ad19623572014c76e87dd49ade84a4bd63e4c5494bf13f6ac8559546b7a3fe0",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity21",
+      "cli_mcu_id": "003f00563233511431373431",
+      "msp_uid": "56003f001451333231343731",
+      "restore_file": "Sanity21_003f00563233511431373431_restore_PID.txt",
+      "source": "outputs/sanity21_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "522c3890095689f43fd96d8f11eb285c869b6a54882e637ad023edb5351a00ac",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": true,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity22",
+      "cli_mcu_id": "0023003d3133470235383735",
+      "msp_uid": "3d0023000247333135373835",
+      "restore_file": "Sanity22_0023003d3133470235383735_restore_PID.txt",
+      "source": "outputs/sanity22_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "b60304ae58f3bffa998ebb85fe4e526955d026972f02956a2862c8b6274bb68f",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity23",
+      "cli_mcu_id": "005400433233511931373431",
+      "msp_uid": "430054001951333231343731",
+      "restore_file": "Sanity23_005400433233511931373431_restore_PID.txt",
+      "source": "outputs/sanity23_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "ed198bade00006412658a7f65723211d4c611dd54b1416595e23fdf9d5259b2b",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity24",
+      "cli_mcu_id": "005400403233511431373431",
+      "msp_uid": "400054001451333231343731",
+      "restore_file": "Sanity24_005400403233511431373431_restore_PID.txt",
+      "source": "outputs/sanity24_betaflight_setup_20261026/after_dump_all.txt",
+      "source_sha256": "3bc64f5130228a2c807801130b857fdc3e6889d23670b552a6d827f6e3bfea31",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    },
+    {
+      "label": "Sanity_original_USB_20261016",
+      "cli_mcu_id": "0039002a3133470a35383735",
+      "msp_uid": "2a0039000a47333135373835",
+      "restore_file": "Sanity_original_USB_20261016_0039002a3133470a35383735_restore_PID.txt",
+      "source": "outputs/sanity_betaflight_ctbr_setup_20261016/restored_after_dump_all.txt",
+      "source_sha256": "972d3f3b5879d552cce0475ae76f29a4ef0b4de2746f34fbb66118bf93ad0ba3",
+      "source_board_config_revision": "bc5da0e",
+      "actuator_campaign_board": false,
+      "selection": "latest saved fleet after snapshot, or original restored-after snapshot"
+    }
+  ]
+}
