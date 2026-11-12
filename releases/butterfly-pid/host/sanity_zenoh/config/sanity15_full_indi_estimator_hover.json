@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "device": 15,
+  "flight_profile": "indi_full_flight",
+  "listen": [
+    "udp/10.0.0.200:7447",
+    "tcp/10.0.0.200:7447"
+  ],
+  "telemetry_listen": "",
+  "collective_profile": "sanity15_indi_collective.json",
+  "limits": {
+    "expected_uid": "56003f001451333231343731",
+    "pid_only": false,
+    "ground_m": 0.057778554037213326,
+    "height_m": 1.0,
+    "pid_hold_s": 20.0,
+    "indi_hold_s": 20.0,
+    "maximum_run_s": 75.0,
+    "maximum_altitude_m": 1.5,
+    "maximum_startup_tilt_deg": 10.0,
+    "soft_position_m": 0.6,
+    "hard_position_m": 0.75,
+    "soft_tilt_deg": 15.0,
+    "hard_tilt_deg": 35.0,
+    "controller_status_max_age_s": 0.3
+  },
+  "ground_indi": {
+    "thrust_weight": 0.4,
+    "spool_s": 1.5,
+    "warmup_s": 0.6,
+    "eligible_dwell_s": 0.5,
+    "maximum_wait_s": 8.0,
+    "maximum_height_m": 0.04
+  },
+  "mocap": {
+    "topic": "/tf",
+    "parent_frame": "map",
+    "tracked_frame": "sanity15",
+    "world_from_map_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "marker_to_base_xyz": [
+      0,
+      0,
+      0
+    ],
+    "marker_to_base_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "commissioning": "Full INDI airborne flight: native FC arms in PID with request low, bounded40%weight ground warmup, then acknowledged FC INDI/weight1 before takeoff. All healthy climb,20s hover and landing retain INDI request; no planned airborne PID return. Native fault fallback and hard disable retained. Force observer/compensation OFF; onboard ESKF logs only; desktop TF/PD controls. Ground from arena_bench_exit_fix01 placement; update for actual placement. User requested more tolerance: soft tracking error60cm, controller diagnostic age300ms; command-watchdog, receiver status and mocap freshness checks retained. ESKF is observation-only: require fresh recording stream, while estimator initialization/fault flags are recorded rather than gating this desktop-mocap flight.",
+  "estimator_logging": {
+    "maximum_rate_hz": 25.0,
+    "clock_rate_hz": 20.0,
+    "clock_endpoint": "udp/10.0.0.115:7461",
+    "flight_profile": "indi_full_flight",
+    "require_initialized": false
+  }
+}

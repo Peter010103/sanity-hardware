@@ -1,5 +1,8 @@
 # MPC flight runbook
 
+See the [latest butterfly update](latest-butterfly.md) for the additional six-eight
+3D recipes, current paired evidence and scoped emergency-controller changes.
+
 Run commands from the checkout root. All supplied top-level recipes default to
 planning; the live flags are explicit. The scripts do not flash firmware, install
 room services, automatically change FC gains, or select another aircraft when an

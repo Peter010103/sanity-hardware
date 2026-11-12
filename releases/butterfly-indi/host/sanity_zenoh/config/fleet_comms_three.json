@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "transport": {
+    "listen": "udp/10.0.0.200:7447",
+    "telemetry_listen": "tcp/10.0.0.200:7448"
+  },
+  "devices": [
+    {
+      "id": 9,
+      "name": "sanity09",
+      "ip": "10.0.0.109",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_esp_collective.json"
+    },
+    {
+      "id": 15,
+      "name": "sanity15",
+      "ip": "10.0.0.115",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_esp_collective.json"
+    },
+    {
+      "id": 24,
+      "name": "sanity24",
+      "ip": "10.0.0.124",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity24_esp_collective.json"
+    }
+  ]
+}

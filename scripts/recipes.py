@@ -16,3 +16,10 @@ RECIPES = {
  'indi-lemniscate-r2-5': dict(family='high-speed', inner='indi', speed=5., radius=2., schedule='indi_shaped_angular', evidence='physical attempts stopped on envelope; not a completed flight'),
  'indi-lemniscate-r2-6': dict(family='high-speed', inner='indi', speed=6., radius=2., schedule='indi_shaped_angular', evidence='prepared/simulated reference; no completed physical evidence included'),
 }
+
+# November12 matched 4x3m, alternating inclined-plane reference: three cycles/six eights.
+for inner,speeds in [('indi',(3,4,5)),('pid',(3,5))]:
+    for speed in speeds:
+        RECIPES[f'{inner}-butterfly-{speed}']=dict(family='butterfly-'+inner,inner=inner,speed=float(speed),radius=2.,schedule='indi_shaped_angular',
+            evidence='completed six-eight physical flight,12November' if speed in (3,4) else 'interrupted physical attempt; see paired report',
+            width_m=3.,butterfly_height_m=.3,butterfly_cycles=3)

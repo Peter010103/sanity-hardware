@@ -1,0 +1,17 @@
+{
+  "mode": "shadow",
+  "source_ip": "10.0.0.109",
+  "device_id": 9,
+  "bind": "0.0.0.0",
+  "port": 7460,
+  "baseline_capture_s": 2.0,
+  "baseline_max_age_s": 30.0,
+  "baseline_drift_bound_counts_per_s": null,
+  "maximum_baseline_uncertainty_counts": null,
+  "loading_polarity": null,
+  "taut_on_counts": null,
+  "slack_off_counts": null,
+  "fusion_timing_uncertainty_s": null,
+  "relative_speed_bound_m_s": null,
+  "path_clear_confirmed": false
+}

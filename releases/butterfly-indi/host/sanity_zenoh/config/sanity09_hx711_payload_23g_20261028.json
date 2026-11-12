@@ -1,0 +1,123 @@
+{
+  "scope": "simulation_only_cable_control",
+  "mass_kg": 0.07707,
+  "inertia_kg_m2": [
+    [
+      3.3200000000000014e-05,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.280000000000001e-05,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.4300000000000026e-05
+    ]
+  ],
+  "rate_kv": [
+    0.00083,
+    0.00107,
+    0.000543
+  ],
+  "torque_limits_Nm": [
+    0.032,
+    0.032,
+    0.011
+  ],
+  "allocation_per_m": [
+    [
+      -8.783935152352788,
+      8.783935152352788,
+      -48.26676731743555
+    ],
+    [
+      -8.783935152352788,
+      -8.783935152352788,
+      48.26676731743555
+    ],
+    [
+      8.783935152352788,
+      -8.783935152352788,
+      -48.26676731743555
+    ],
+    [
+      8.783935152352788,
+      8.783935152352788,
+      48.26676731743555
+    ]
+  ],
+  "physical_force_range_N": [
+    0.031382950872716045,
+    3.101025119936554
+  ],
+  "torque_reserve_fraction": 0.7,
+  "collective_tau_up_s": 0.04388193290528556,
+  "collective_tau_down_s": 0.04855109375875827,
+  "pitch_limit_rad_s": 2.3,
+  "maximum_thrust_N": 2.85,
+  "solver_type": "SQP_RTI",
+  "rti_iterations": 1,
+  "control_cost": [
+    0.1,
+    0.03,
+    0.03,
+    0.03
+  ],
+  "reference_mode": "run_in",
+  "host_selection_delay_s": 0.02,
+  "host_output_delay_s": 0.015,
+  "command_lease_s": 1.0,
+  "handover_rate_tolerance_rad_s": 1.0,
+  "handover_thrust_tolerance_N": 0.3,
+  "rate_prediction": "flight",
+  "flight_rate_profile": "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/flight_rate_20261022.json",
+  "angular_rate_filter_tau_s": 0.05,
+  "position_filter_tau_s": 0.01,
+  "attitude_filter_tau_s": 0.01,
+  "airframe_mass_kg": 0.07707,
+  "cable_mass_kg": 0.00134,
+  "payload_mass_kg": 0.02386,
+  "cable_length_m": 0.49,
+  "cable_radius_m": 0.00075,
+  "cable_damping_Nms": 0.0004590515209444675,
+  "attachment_body_m": [
+    0.0,
+    0.0,
+    -0.029
+  ],
+  "nodes": 40,
+  "prediction_dt_s": 0.04,
+  "body_tilt_limit_deg": 35.0,
+  "cable_swing_limit_deg": 55.0,
+  "minimum_endpoint_height_m": 0.12,
+  "maximum_height_m": 2.0,
+  "solver_deadline_ms": 25.0,
+  "voltage_V": 7.4,
+  "payload_shape": "cube",
+  "payload_size_m": [
+    0.045,
+    0.045,
+    0.045
+  ],
+  "payload_com_offset_below_hook_m": 0.0325,
+  "payload_transverse_inertia_kg_m2": 8.05275e-06,
+  "payload_inertia_source": "Uniform 45 mm cube proxy scaled to 23.86 g; mass distribution unmeasured. User confirmed same dimensions, hook position and centre-origin geometry.",
+  "payload_clearance_below_hook_m": 0.07147114317029973,
+  "payload_mocap_frame": "23g_mass",
+  "payload_hook_joint_damping_Nms": 0.0,
+  "attachment_source": "User confirmed actual string attachment directly below FC/body origin: [0,0,-29]mm, 28 October 2026.",
+  "cable_internal_joint_damping_Nms": 0.0,
+  "cable_joint_armature_kg_m2": 0.0,
+  "straight_cable_reference": true,
+  "cable_damping_source": "Inherited 45g_mass fixed-support fit as an unvalidated modelling approximation for the lighter payload; not re-identified.",
+  "reference_load_com_height_m": 0.6632559523809525,
+  "cable_length_source": "490mm is an initial seed only. User requested 400..600mm stable-hover capture on28October2026; median effective hook length is frozen for the run.",
+  "payload_mass_source": "User confirmed 23.86 g including markers, excluding cable, 24 October 2026.",
+  "airframe_mass_source": "User measured 78.41g drone plus cable, excluding payload, 28 October 2026. Subtract retained 1.34g cable mass: aircraft 77.07g.",
+  "cable_mass_source": "Retained prior isolated 1.34g measurement; not reweighed for the HX711 attachment.",
+  "inertia_source": "Inherited pre-HX711 airframe inertia proxy; new mount/ESP/HX711 inertia and centre-of-mass shift have not been reidentified."
+}

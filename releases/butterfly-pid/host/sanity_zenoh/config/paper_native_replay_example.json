@@ -1,0 +1,72 @@
+{
+  "schema": "PIN1-replay-v1",
+  "frame": "FRD",
+  "model_contract_id": 1346981425,
+  "qualification": "software example, not flight trajectory",
+  "commands": [
+    {
+      "time_s": 0,
+      "enabled": false,
+      "thrust_n": 0,
+      "alpha_rad_s2": [
+        0,
+        0,
+        0
+      ],
+      "fallback_rate_rad_s": [
+        0,
+        0,
+        0
+      ],
+      "paper_requested": false
+    },
+    {
+      "time_s": 0.25,
+      "enabled": true,
+      "thrust_n": 0,
+      "alpha_rad_s2": [
+        0,
+        0,
+        0
+      ],
+      "fallback_rate_rad_s": [
+        0,
+        0,
+        0
+      ],
+      "paper_requested": false
+    },
+    {
+      "time_s": 0.5,
+      "enabled": true,
+      "thrust_n": 0.8,
+      "alpha_rad_s2": [
+        0,
+        0,
+        0
+      ],
+      "fallback_rate_rad_s": [
+        0,
+        0,
+        0
+      ],
+      "paper_requested": true
+    },
+    {
+      "time_s": 0.75,
+      "enabled": false,
+      "thrust_n": 0,
+      "alpha_rad_s2": [
+        0,
+        0,
+        0
+      ],
+      "fallback_rate_rad_s": [
+        0,
+        0,
+        0
+      ],
+      "paper_requested": false
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "scope": "Exact analytic geometry and numerically optimized analytic reference acceleration/jerk; full-rotation fixed-heading drag equilibrium rates from finite rotation increments. Not closed-loop or measured flight.",
+  "peak_3d_speed_m_s": 5.0,
+  "mass_kg": 0.07151,
+  "eta": 0.953,
+  "body_drag_per_s": [
+    0.587,
+    0.82,
+    0.0
+  ],
+  "butterfly": {
+    "cycles": 3,
+    "eight_laps": 6,
+    "height_above_ground_m": [
+      0.7,
+      1.3
+    ],
+    "duration_s": 39.55905639240339,
+    "segment_duration_s": 6.593176065400565
+  },
+  "cases": {
+    "Original planar 4x2": {
+      "max_sample_dt_s": 0.0009999936074862603,
+      "tilt_peak_deg": 54.98568743353855,
+      "body_rate_axis_peak_rad_s": [
+        4.582419849320801,
+        1.3470590074857254,
+        2.6320291263744537
+      ],
+      "thrust_peak_N": 1.2346968229557342,
+      "equilibrium_residual_m_s2": 7.697015914699652e-12,
+      "duration_s": 12.66291905158008,
+      "angular_cruise_rad_s": 1.7677669529663687,
+      "width_m": 2.0,
+      "vertical_amplitude_m": 0.0,
+      "exact_geometry_footprint_xy_m": [
+        4.0,
+        2.0
+      ],
+      "speed_peak_m_s": 5.0,
+      "acceleration_peak_m_s2": {
+        "value": 13.281249999999982,
+        "time_s": 2.3151756971745288,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "jerk_peak_m_s3": {
+        "value": 46.50369209273423,
+        "time_s": 1.8799388063483509,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "curvature_peak_per_m": 2.395144703098966,
+      "fine_dt_axis_peak_rad_s": [
+        4.582427395462745,
+        1.3470619726803377,
+        2.6320590654278035
+      ],
+      "axis_peak_dt_refinement_difference_rad_s": [
+        7.546141944203555e-06,
+        2.9651946122921657e-06,
+        2.9939053349803402e-05
+      ]
+    },
+    "Planar 4x3": {
+      "max_sample_dt_s": 0.0009999748655786789,
+      "tilt_peak_deg": 52.04900926961788,
+      "body_rate_axis_peak_rad_s": [
+        3.382287041947007,
+        0.9345536546169981,
+        1.2953128084950751
+      ],
+      "thrust_peak_N": 1.1518346251812341,
+      "equilibrium_residual_m_s2": 9.781919615955282e-12,
+      "duration_s": 15.592608078966771,
+      "angular_cruise_rad_s": 1.386750490563073,
+      "width_m": 3.0,
+      "vertical_amplitude_m": 0.0,
+      "exact_geometry_footprint_xy_m": [
+        4.0,
+        3.0
+      ],
+      "speed_peak_m_s": 5.0,
+      "acceleration_peak_m_s2": {
+        "value": 11.858974358974358,
+        "time_s": 3.84181006795324,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "jerk_peak_m_s3": {
+        "value": 32.44336124180668,
+        "time_s": 7.796304039483386,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "curvature_peak_per_m": 3.2546418953669045,
+      "fine_dt_axis_peak_rad_s": [
+        3.382292865499807,
+        0.9345578330995506,
+        1.2953168188751971
+      ],
+      "axis_peak_dt_refinement_difference_rad_s": [
+        5.823552799988363e-06,
+        4.1784825525192915e-06,
+        4.010380121988177e-06
+      ]
+    },
+    "Butterfly plane A (+0.3m)": {
+      "max_sample_dt_s": 0.000999875047831722,
+      "tilt_peak_deg": 57.91106783005398,
+      "body_rate_axis_peak_rad_s": [
+        3.3546184574213176,
+        0.9637113769229209,
+        1.248475751477613
+      ],
+      "thrust_peak_N": 1.2494358506102063,
+      "equilibrium_residual_m_s2": 5.750664750433413e-12,
+      "duration_s": 6.593176065400565,
+      "angular_cruise_rad_s": 1.367939137911457,
+      "width_m": 3.0,
+      "vertical_amplitude_m": 0.3,
+      "exact_geometry_footprint_xy_m": [
+        4.0,
+        3.0
+      ],
+      "speed_peak_m_s": 5.0,
+      "acceleration_peak_m_s2": {
+        "value": 11.755713938859452,
+        "time_s": 3.8804988575857404,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "jerk_peak_m_s3": {
+        "value": 31.741102750939493,
+        "time_s": 3.2965880327002823,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "curvature_peak_per_m": 3.3088934435777952,
+      "fine_dt_axis_peak_rad_s": [
+        3.354621458083789,
+        0.9637122138984111,
+        1.2484785404273688
+      ],
+      "axis_peak_dt_refinement_difference_rad_s": [
+        3.000662471386306e-06,
+        8.36975490248193e-07,
+        2.7889497558053478e-06
+      ]
+    },
+    "Butterfly plane B (-0.3m)": {
+      "max_sample_dt_s": 0.000999875047831722,
+      "tilt_peak_deg": 58.65223049341973,
+      "body_rate_axis_peak_rad_s": [
+        3.337470431402522,
+        0.8928941296528324,
+        1.3091445795290095
+      ],
+      "thrust_peak_N": 1.249347410191575,
+      "equilibrium_residual_m_s2": 9.348903741856442e-12,
+      "duration_s": 6.593176065400565,
+      "angular_cruise_rad_s": 1.367939137911457,
+      "width_m": 3.0,
+      "vertical_amplitude_m": -0.3,
+      "exact_geometry_footprint_xy_m": [
+        4.0,
+        3.0
+      ],
+      "speed_peak_m_s": 5.0,
+      "acceleration_peak_m_s2": {
+        "value": 11.755713938859452,
+        "time_s": 3.8804988575857404,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "jerk_peak_m_s3": {
+        "value": 31.741102750939493,
+        "time_s": 3.2965880327002823,
+        "method": "Numerically optimized norm of analytic reference; dense bracketing plus bounded scalar extrema"
+      },
+      "curvature_peak_per_m": 3.3088934435777952,
+      "fine_dt_axis_peak_rad_s": [
+        3.3374736028899035,
+        0.8928954940353123,
+        1.3091470990130485
+      ],
+      "axis_peak_dt_refinement_difference_rad_s": [
+        3.171487381603555e-06,
+        1.3643824798847959e-06,
+        2.5194840389541895e-06
+      ]
+    }
+  },
+  "caution": "Width/inclination do not uniformly reduce curvature or controller demand. Existing high-rate model is retained pending independent refit validation; no flight qualification."
+}

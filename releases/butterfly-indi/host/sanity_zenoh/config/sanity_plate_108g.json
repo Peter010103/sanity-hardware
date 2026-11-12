@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "cpu_affinity": {
+    "solver": [2],
+    "control": [4],
+    "reader": [5],
+    "ros": [6],
+    "background": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+  },
+  "geometry_confirmed": false,
+  "mission_profile": "loco_mjx/experiments/sanity_plate_transport/configs/three_drone_108g_200mm.json",
+  "mocap": {
+    "topic": "/tf",
+    "parent_frame": "map",
+    "plate_frame": "plate_payload",
+    "world_from_map_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "frames_confirmed": false,
+    "maximum_age_s": 0.04,
+    "maximum_skew_s": 0.012
+  },
+  "drones": [
+    {
+      "id": 9,
+      "frame": "sanity09",
+      "attachment_body_m": [0.0, 0.0, -0.029],
+      "aircraft_and_cable_mass_g": 78.33,
+      "cable_length_m": 0.5214,
+      "cable_length_provisional": false,
+      "hardware_confirmed": false,
+      "marker_to_body_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "marker_to_body_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "aircraft_model": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_hx711_payload_23g_20261028.json",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity09_esp_collective.json"
+    },
+    {
+      "id": 15,
+      "frame": "sanity15",
+      "attachment_body_m": [0.0, 0.0, -0.029],
+      "aircraft_and_cable_mass_g": 71.90,
+      "cable_length_m": 0.5204,
+      "cable_length_provisional": false,
+      "hardware_confirmed": false,
+      "marker_to_body_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "marker_to_body_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "aircraft_model": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity_cable_payload_23g.json",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_esp_collective.json"
+    },
+    {
+      "id": 24,
+      "frame": "sanity24",
+      "attachment_body_m": [0.0, 0.0, -0.029],
+      "aircraft_and_cable_mass_g": 72.61,
+      "cable_length_m": 0.5209,
+      "cable_length_provisional": true,
+      "hardware_confirmed": false,
+      "marker_to_body_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "marker_to_body_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "aircraft_model": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity_cable_payload_23g.json",
+      "calibration": "Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity24_esp_collective.json"
+    }
+  ],
+  "transport": {
+    "listen": "udp/10.0.0.200:7447",
+    "telemetry_listen": "tcp/10.0.0.200:7448"
+  },
+  "timing": {
+    "control_period_s": 0.02,
+    "solver_budget_s": 0.035,
+    "output_delay_s": 0.015,
+    "countdown_s": 5.0,
+    "startup_timeout_s": 60.0
+  },
+  "supervision": {
+    "floor_height_m": 0.0,
+    "maximum_start_height_m": 0.20,
+    "landing_body_height_m": 0.016,
+    "pd_attitude_gain": 6.0,
+    "coordinated_pickup": {
+      "enabled": true,
+      "approach_speed_m_s": 0.03,
+      "takeup_speed_m_s": 0.01,
+      "acceleration_m_s2": 0.03,
+      "xy_tolerance_m": 0.05,
+      "z_tolerance_m": 0.04,
+      "maximum_speed_m_s": 0.15,
+      "maximum_tilt_deg": 10.0,
+      "minimum_separation_m": 0.26,
+      "engagement_margin_m": 0.008,
+      "release_margin_m": 0.016,
+      "maximum_extension_m": 0.012,
+      "engagement_dwell_s": 0.2,
+      "settle_s": 0.5,
+      "phase_timeout_s": 60.0,
+      "abort_speed_m_s": 0.025
+    },
+    "climb_s": 12.0,
+    "hover_dwell_s": 1.0,
+    "acquire_timeout_s": 25.0,
+    "blend_s": 0.5,
+    "mpc_hover_s": 3.0,
+    "level_s": 3.0,
+    "landing_speed_m_s": 0.18,
+    "landing_timeout_s": 15.0,
+    "cutoff_height_m": 0.05,
+    "initial_formation_tolerance_m": 0.05,
+    "maximum_run_s": 180.0,
+    "mpc_loss_s": 0.1,
+    "takeoff_land_only": false,
+    "start_airborne": false
+  },
+  "calibration_note": "User measurements 28 October 2026, mount0/+X=sanity09, mount120=sanity15, mount240=sanity24. Plate assembly111g=108g+3g, excluding cables. AUW includes aircraft plus cable, excludes plate; retain 1.34 g per cable and subtract it for aircraft-only dynamics. User requested Sanity24 cable520.9mm=(521.4+520.4)/2; assumed provisional length, not an independent measurement. User confirms all three aircraft hooks are [0,0,-29]mm in their FC/body frames. Sanity09 uses its current HX711 aircraft model; other dynamics remain inherited. No new inertia, actuator or force calibration."
+}

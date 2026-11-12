@@ -1,0 +1,12 @@
+{
+  "image": "/home/hw527/Projects/drones/outputs/sanity15_indi_flip_preparation_20261112/esp_build_all_axes_pin1/sanity_zenoh_receiver.bin",
+  "sha256": "0189505ec22955beb2b34543851fa9703d9db59067701c9352518a0cbaa83ab5",
+  "bytes": 948672,
+  "hardware_verification_receipt": "/home/hw527/Projects/drones/outputs/sanity15_highspeed_esp_deployment_20261112/verification.json",
+  "status": "Root reports installed and hardware readback verified; PIN1 and SZC6 disabled-bench capabilities passed",
+  "superseded": {
+    "sha256": "195ab650cdcbd7c7165f325bb86b91b6af7287be3d71fcc306ea682b9652cb6f",
+    "reason": "Earlier all-axis image lacked PIN1; retained only as historical build evidence"
+  },
+  "higher_speed_physical_flight_claim": false
+}

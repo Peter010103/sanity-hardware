@@ -1,0 +1,58 @@
+{
+  "nodes": 20,
+  "prediction_dt_s": 0.05,
+  "position_weights": [
+    30.0,
+    30.0,
+    60.0
+  ],
+  "velocity_weights": [
+    4.0,
+    4.0,
+    6.0
+  ],
+  "attitude_weights": [
+    1.0,
+    1.0,
+    2.0
+  ],
+  "input_weights": [
+    0.02,
+    0.1,
+    0.1,
+    0.1
+  ],
+  "terminal_multiplier": 2.0,
+  "tilt_limit_deg": 62.0,
+  "drag_per_s": [
+    0.587,
+    0.82,
+    0.0
+  ],
+  "qp_max_iterations": 50,
+  "max_solve_time_s": 0.025,
+  "rate_response": {
+    "enabled": true,
+    "roll": {
+      "wn_rad_s": 19.539538607015643,
+      "zeta": 0.20901800130226725,
+      "zero_s": 0.013882601625106522
+    },
+    "pitch": {
+      "wn_rad_s": 21.638114015504577,
+      "zeta": 0.3811939339013334,
+      "zero_s": 0.014269212879903905
+    },
+    "yaw": {
+      "tau_s": 0.125,
+      "identified": false
+    }
+  },
+  "thrust_effectiveness": 0.953,
+  "command_delay_s": 0.015,
+  "rate_acceleration_weights": [
+    0.002,
+    0.002,
+    0.001
+  ]
+}

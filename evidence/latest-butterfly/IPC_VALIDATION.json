@@ -1,0 +1,119 @@
+{
+  "host": "dolphin",
+  "created_unix": 1794474953.2810988,
+  "scope": "Finite offline IPC jobs; no ROS/network/hardware output. Worker startup source/config hashes checked against packaged files.",
+  "current_result": "worker_smoke_precomputed/result.json",
+  "success": true,
+  "run_history": {
+    "worker_smoke": {
+      "host": "dolphin",
+      "parent_pid": 296811,
+      "hardware_or_network": false,
+      "scope": "Synthetic exact-reference full-duration 50Hz actual pipe/selection/timing smoke; independent physical plant validation is separate",
+      "source": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_controller.py",
+      "source_sha256": "7ac39cb5e941caa8fc02b0019837bedb486dc856ffe38a12232f1e66f904fcd4",
+      "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_5mps.json",
+      "config_sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143",
+      "maximum_compute_ms_allowed": 25.0,
+      "maximum_source_age_s_allowed": 0.04,
+      "worker_pid": 296812,
+      "startup_s": 0.2815502230077982,
+      "success": false,
+      "error": "RuntimeError: RuntimeError: Policy worker exited; see policy_worker.log",
+      "child_exit_code": 1,
+      "child_reaped": true,
+      "final_worker_error": "RuntimeError: Policy worker exited; see policy_worker.log",
+      "final_runtime_error": null
+    },
+    "worker_smoke_full": {
+      "host": "dolphin",
+      "parent_pid": 296852,
+      "hardware_or_network": false,
+      "scope": "Synthetic exact-reference full-duration 50Hz actual pipe/selection/timing smoke; independent physical plant validation is separate",
+      "source": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_controller.py",
+      "source_sha256": "7ac39cb5e941caa8fc02b0019837bedb486dc856ffe38a12232f1e66f904fcd4",
+      "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_5mps.json",
+      "config_sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143",
+      "maximum_compute_ms_allowed": 25.0,
+      "maximum_source_age_s_allowed": 0.04,
+      "worker_pid": 296853,
+      "startup_s": 0.2846174360020086,
+      "success": false,
+      "ticks": 2079,
+      "completed_reference_eights": 6.0,
+      "health_counts": {
+        "no_result": 1,
+        "ok": 2065,
+        "tick_age": 13
+      },
+      "wall_s": 41.56216187099926,
+      "compute_p50_p95_max_ms": [
+        6.062871005269699,
+        6.519728797138669,
+        37.45428399997763
+      ],
+      "tick_lateness_p95_max_ms": [
+        0.17757510649971664,
+        14.914524013875052
+      ],
+      "stream_observed": 2079,
+      "stream_committed": 2079,
+      "child_exit_code": -15,
+      "child_reaped": true,
+      "final_worker_error": null,
+      "final_runtime_error": null
+    },
+    "worker_smoke_precomputed": {
+      "host": "dolphin",
+      "parent_pid": 297334,
+      "hardware_or_network": false,
+      "scope": "Synthetic exact-reference full-duration 50Hz actual pipe/selection/timing smoke; independent physical plant validation is separate",
+      "source": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_controller.py",
+      "source_sha256": "7ac39cb5e941caa8fc02b0019837bedb486dc856ffe38a12232f1e66f904fcd4",
+      "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_5mps.json",
+      "config_sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143",
+      "maximum_compute_ms_allowed": 25.0,
+      "maximum_source_age_s_allowed": 0.04,
+      "worker_pid": 297349,
+      "startup_s": 0.29382309201173484,
+      "success": true,
+      "ticks": 2079,
+      "completed_reference_eights": 6.0,
+      "health_counts": {
+        "no_result": 1,
+        "ok": 2078
+      },
+      "wall_s": 41.56192340099369,
+      "compute_p50_p95_max_ms": [
+        5.762943503214046,
+        6.14077885838924,
+        15.23504700162448
+      ],
+      "tick_lateness_p95_max_ms": [
+        0.17478408117312938,
+        0.5004809936508536
+      ],
+      "stream_observed": 2079,
+      "stream_committed": 2079,
+      "child_exit_code": -15,
+      "child_reaped": true,
+      "final_worker_error": null,
+      "final_runtime_error": null
+    }
+  },
+  "interpretation": {
+    "worker_smoke": "Harness omitted inherited PYTHONPATH; worker exited, reaped; matched live shell environment before repeat.",
+    "worker_smoke_full": "Synthetic pose/drag generation in timed callback added non-flight work;13 tick-age misses and one37ms compute outlier. Preserved as failed timed stress, not called passed.",
+    "worker_smoke_precomputed": "Synthetic poses precomputed before timed loop to isolate real mission preview and production worker; full six-eights50Hz stream passed without changing deadlines."
+  },
+  "owned_pids": [
+    296811,
+    296812,
+    296852,
+    296853,
+    297334,
+    297349
+  ],
+  "pids_still_running": [],
+  "no_experiment_services_started": true
+}

@@ -19,9 +19,13 @@ WS=ROOT/'Sanity/src/ros2_sanity_ws'
 PYTHON=ROOT/'.venv-sanity-deploy/bin/python'
 
 
+def release_dir(family):
+    return ROOT/'releases'/('high-speed' if family=='high-speed' else family)
+
+
 def environment(family,lab):
     env=os.environ.copy()
-    package=ROOT/'releases/high-speed/host/sanity_zenoh' if family=='high-speed' else PACKAGE
+    package=release_dir(family)/'host/sanity_zenoh' if family in ('high-speed','butterfly-indi','butterfly-pid') else PACKAGE
     env['PYTHONPATH']=str(package)+':'+str(WS/'src/udp_broadcaster')+(':'+env['PYTHONPATH'] if env.get('PYTHONPATH') else '')
     env.update(SANITY_MOCAP_NTP_SERVER=lab['mocap_ntp_server'],OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',MKL_NUM_THREADS='1')
     return env
@@ -49,16 +53,17 @@ def command_for(recipe,config,args,lab):
         if args.prepare_only:
             # Build exactly the chosen mission/config with no ROS, sender or devices.
             sys.path[:0]=[str(PACKAGE),str(WS/'src/udp_broadcaster')]
-            if family=='high-speed':sys.path.insert(0,str(ROOT/'releases/high-speed/host/sanity_zenoh'))
+            if family in ('high-speed','butterfly-indi','butterfly-pid'):sys.path.insert(0,str(release_dir(family)/'host/sanity_zenoh'))
             from sanity_zenoh.mpc_benchmark_config import build_config
             actual=build_config(json.loads(config.read_text()),pattern='lemniscate',inner=recipe['inner'],speed=recipe['speed'],
-                schedule=recipe['schedule'],radius_m=recipe['radius'],ground_m=lab['indi' if recipe['inner']=='indi' else 'pid']['ground_m'])
+                schedule=recipe['schedule'],radius_m=recipe['radius'],ground_m=lab['indi']['ground_m'],**(dict(width_m=3.,butterfly_height_m=.3,butterfly_cycles=3) if family.startswith('butterfly') else {}))
             write_config(args.output/'prepared_configuration.json',actual)
-            source=ROOT/'releases/high-speed/mpc_controller.py' if family=='high-speed' else ROOT/'loco_mjx/experiments/sanity_ctbr_sim2sim/mpc_controller.py'
+            source=release_dir(family)/'mpc_controller.py' if family in ('high-speed','butterfly-indi','butterfly-pid') else ROOT/'loco_mjx/experiments/sanity_ctbr_sim2sim/mpc_controller.py'
             return [str(PYTHON),str(ROOT/'scripts/prepare_solver.py'),'--source',str(source),'--config',actual['mpc']['config'],'--model',actual['mpc']['model'],'--output',str(args.output/'solver')]
-        launcher=ROOT/'releases/high-speed/run_high_speed_lemniscate.py' if family=='high-speed' else WS/'scripts/run_sanity_mpc_benchmark.py'
+        launcher=release_dir(family)/'run_high_speed_lemniscate.py' if family in ('high-speed','butterfly-indi','butterfly-pid') else WS/'scripts/run_sanity_mpc_benchmark.py'
         result=[str(PYTHON),str(launcher),'--inner',recipe['inner'],'--pattern','lemniscate','--schedule',recipe['schedule'],
             '--speed',str(recipe['speed']),'--radius-m',str(recipe['radius']),'--base-config',str(config),'--output',str(args.output/'capture'),mode]
+    if family.startswith('butterfly') and not args.prepare_only:result+=['--width-m','3','--butterfly-height-m','.3','--butterfly-cycles','3']
     if args.frames_confirmed:result+=['--frames-confirmed']
     return result
 
@@ -76,7 +81,7 @@ def main():
     if not args.recipe:p.error('Choose a recipe or --list')
     recipe=RECIPES[args.recipe];live=args.fly or args.bench_check
     if live and (not args.frames_confirmed or not args.lab_config):p.error('Live runs require --frames-confirmed and an explicit --lab-config')
-    if args.bench_check and recipe['family'] not in ('benchmark','high-speed'):p.error('Disabled combined bench applies to native benchmark recipes; use the legacy receiver commissioning procedure for PID/flip profiles')
+    if args.bench_check and recipe['family'] not in ('benchmark','high-speed','butterfly-indi','butterfly-pid'):p.error('Disabled combined bench applies to native benchmark recipes; use the legacy receiver commissioning procedure for PID/flip profiles')
     if args.hover_only and recipe['family']!='pitch':p.error('--hover-only is a pitch qualification mode')
     lab=load_lab((args.lab_config or ROOT/'config/lab.example.json').resolve())
     os.chdir(ROOT)

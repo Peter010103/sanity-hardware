@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "device": 15,
+  "flight_profile": "indi_mpc_benchmark",
+  "listen": "tcp/10.0.0.200:7447",
+  "telemetry_listen": "",
+  "collective_profile": "/home/hw527/Projects/drones/Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_collective.json",
+  "limits": {
+    "expected_uid": "56003f001451333231343731",
+    "pid_only": false,
+    "ground_m": 0.03069985657930374,
+    "height_m": 1.0,
+    "pid_hold_s": 20.0,
+    "indi_hold_s": 5.0,
+    "maximum_run_s": 120.0,
+    "maximum_altitude_m": 1.5,
+    "maximum_startup_tilt_deg": 10.0,
+    "soft_position_m": 0.6,
+    "hard_position_m": 0.75,
+    "soft_tilt_deg": 15.0,
+    "hard_tilt_deg": 35.0,
+    "controller_status_max_age_s": 0.3,
+    "expected_control_period_us": 1000,
+    "mass_kg": 0.07151
+  },
+  "ground_indi": {
+    "thrust_weight": 0.4,
+    "spool_s": 1.5,
+    "warmup_s": 0.6,
+    "eligible_dwell_s": 0.5,
+    "maximum_wait_s": 12.0,
+    "maximum_height_m": 0.04,
+    "start_climb_on_ack": true,
+    "launch_boost_weight": 1.2,
+    "launch_boost_max_s": 0.5,
+    "launch_slew_up_N_s": 3.0
+  },
+  "mocap": {
+    "topic": "/tf",
+    "parent_frame": "map",
+    "tracked_frame": "sanity15",
+    "world_from_map_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "marker_to_base_xyz": [
+      0,
+      0,
+      0
+    ],
+    "marker_to_base_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "commissioning": "Explicit matched MPC+INDI benchmark; lemniscate, indi_shaped_angular,radius2.0m,6eightlaps,peak5.0m/s. Common measured mass, geometry, command bounds and envelope; INDI uses identified prediction dynamics, PID uses the legacy ideal-rate predictor; takeoff differs: INDI0.4weight ground warmup then immediate climb on guarded ACK, bounded1.2weight launch floor for at most0.5s with3N/s upward slew until confirmed liftoff; PID retains0.4weight and legacy timing with boost disabled. Circle centeredworldXY[0,0] starts[0,-R]; lemniscate startsworldcenter. Ground supplied by caller: physical launcher must obtain a fresh stationary disabled-bench capture before flight. limits.pid_only=false selects the common permission-ON guarded protocol; inner_controller and actual native FC ACK determine inner identity. BUTTERFLY: 3 cycles, 6 complete eight laps, alternating +h/-h planes with h=0.3m; each eight stops at center with zeroV/A/J.  Explicit width_m=3; footprint4x3m. Explicit reference acceleration/jerk shaping lengthens phase ramps for the selected geometry and peak speed. Mocap coverage is not established by reference shaping. HIGH-SPEED PREPARATION: reference bounds explicitly increased to preserve requested peak and two-second ramps; reference screen is not flight qualification.",
+  "estimator_logging": {
+    "maximum_rate_hz": 25.0,
+    "clock_rate_hz": 20.0,
+    "clock_endpoint": "udp/10.0.0.115:7461",
+    "flight_profile": "indi_mpc_benchmark",
+    "require_initialized": false
+  },
+  "command_timing": {
+    "enabled": true,
+    "requires_receiver_build_option": "CONFIG_SANITY_COMMAND_TIMING_TRACE",
+    "scope": "Optional measurement stream; commands and leases unchanged."
+  },
+  "controller_backend": "paper_measured_rpm_ctbr_compatibility",
+  "liftoff_options": {
+    "clearance_m": 0.02,
+    "airborne_dwell_s": 0.04,
+    "blend_s": 0.2,
+    "ground_rate_limit_rad_s": 0.15
+  },
+  "spool_leveling": false,
+  "trajectory": {
+    "kind": "paired_mpc_gerono",
+    "center_xy_m": [
+      0.0,
+      0.0
+    ],
+    "radius_m": 2.0,
+    "peak_speed_m_s": 5.0,
+    "ramp_s": 2.0,
+    "transfer_speed_m_s": 0.4,
+    "entry_dwell_s": 1.0,
+    "entry_timeout_s": 10.0,
+    "entry_position_m": 0.15,
+    "entry_speed_m_s": 0.25,
+    "entry_tilt_deg": 6.0,
+    "final_hold_s": 2.0,
+    "schedule": "indi_shaped_angular",
+    "laps": 6,
+    "pattern": "lemniscate",
+    "width_m": 3.0,
+    "reference_kind": "butterfly",
+    "butterfly_height_m": 0.3,
+    "butterfly_cycles": 3,
+    "maximum_acceleration_m_s2": 16.733515673243588,
+    "maximum_jerk_m_s3": 72.8374001968332
+  },
+  "benchmark_envelope": {
+    "soft_position_m": 1.0,
+    "hard_position_m": 1.5,
+    "soft_tilt_deg": 72.0,
+    "hard_tilt_deg": 82.0,
+    "mpc_rate_limit_rad_s": 9.5,
+    "blend_s": 2.0,
+    "mpc_thrust_weight": 2.2,
+    "maximum_speed_m_s": 6.5
+  },
+  "mpc": {
+    "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_proposed_braking_2rad_s/mpc_5mps.json",
+    "model": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_proposed_braking_2rad_s/model_5mps.xml"
+  },
+  "inner_controller": "indi",
+  "takeoff_provenance": {
+    "ground_thrust_weight": 0.4,
+    "start_climb_on_ack": true,
+    "launch_boost_weight": 1.2,
+    "launch_boost_max_s": 0.5,
+    "launch_slew_up_N_s": 3.0,
+    "scope": "host-only bounded launch candidate; existing SZC4 and FC firmware; not flight qualified"
+  },
+  "high_speed_wire": true,
+  "benchmark_provenance": {
+    "pattern": "lemniscate",
+    "inner_controller": "indi",
+    "speed_m_s": 5.0,
+    "schedule": "indi_shaped_angular",
+    "radius_m": 2.0,
+    "width_m": 3.0,
+    "footprint_xy_m": [
+      4.0,
+      3.0
+    ],
+    "ground_thrust_weight": 0.4,
+    "start_climb_on_ack": true,
+    "launch_boost_weight": 1.2,
+    "launch_boost_max_s": 0.5,
+    "launch_slew_up_N_s": 3.0,
+    "requested_laps": 6,
+    "butterfly_cycles": 3,
+    "butterfly_height_m": 0.3,
+    "reference_kind": "butterfly",
+    "ground_m": 0.03069985657930374,
+    "mpc_predictor": "identified_INDI",
+    "runtime_rule": "max(120,ceil(reference_duration_s+60)), capped180s; ordinary hover cap120s unchanged",
+    "reference_duration_s": 39.55905639240339,
+    "reference_design": {
+      "schedule": "indi_shaped_angular",
+      "radius_m": 2.0,
+      "width_m": 3.0,
+      "vertical_amplitude_m": 0.3,
+      "footprint_xy_m": [
+        4.0,
+        3.0
+      ],
+      "derivative_norm_bounds_m": [
+        3.655133376499413,
+        6.437390775772433,
+        12.4
+      ],
+      "requested_ramp_s": 2.0,
+      "effective_ramp_s": 2.0,
+      "maximum_acceleration_m_s2": 16.733515673243588,
+      "maximum_jerk_m_s3": 72.8374001968332,
+      "conservative_acceleration_bound_m_s2": 16.733515673226854,
+      "conservative_jerk_bound_m_s3": 72.83740019676036,
+      "angular_cruise_rad_s": 1.367939137911457,
+      "reference_rate_proxy_limit_rad_s": 7.4248114369860545,
+      "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+      "geometry_and_peak_speed_preserved": true,
+      "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+      "reference_kind": "butterfly",
+      "cycles": 3,
+      "eight_laps": 6,
+      "plane_sequence": [
+        "z=center_z+h*sin(2theta)",
+        "z=center_z-h*sin(2theta)"
+      ],
+      "segment_duration_s": 6.593176065400565,
+      "total_duration_s": 39.55905639240339,
+      "plane_handoff": "C3 rest at center after each complete eight",
+      "height_bounds_m": [
+        0.7306998565793037,
+        1.3306998565793038
+      ]
+    }
+  },
+  "high_speed_preparation": {
+    "reference_screen": {
+      "scope": "Sampled fixed-yaw full-rotation reference equilibrium with fitted body drag; not measured flight or closed-loop guarantee",
+      "speed_m_s": 5.0,
+      "radius_m": 2.0,
+      "width_m": 3.0,
+      "footprint_xy_m": [
+        4.0,
+        3.0
+      ],
+      "center_xy_m": [
+        0.0,
+        0.0
+      ],
+      "height_m": 1.0,
+      "laps": 6,
+      "butterfly_cycles": 3,
+      "butterfly_height_m": 0.3,
+      "duration_s": 39.55905639240339,
+      "effective_ramp_s": 2.0,
+      "sample_dt_max_s": 0.0019999522948666026,
+      "speed_peak_m_s": 4.999999999999999,
+      "acceleration_peak_m_s2": 11.755713702641424,
+      "jerk_peak_m_s3": 31.741102750939493,
+      "tilt_peak_deg": 58.65222757810676,
+      "thrust_peak_N": 1.2494361035776507,
+      "thrust_peak_weight": 1.7810588335095245,
+      "body_rate_axis_peak_rad_s": [
+        3.354606264412442,
+        0.9637042266421487,
+        1.309132225879432
+      ],
+      "equilibrium_residual_m_s2": 9.349059790897186e-12,
+      "ordinary_envelope_violations": [
+        "MPC tilt limit 30 deg",
+        "airborne thrust cap 1.5 weight",
+        "SZC4 selected-INDI body-rate cap 2.3 rad/s"
+      ],
+      "reference_design": {
+        "schedule": "indi_shaped_angular",
+        "radius_m": 2.0,
+        "width_m": 3.0,
+        "vertical_amplitude_m": 0.3,
+        "footprint_xy_m": [
+          4.0,
+          3.0
+        ],
+        "derivative_norm_bounds_m": [
+          3.655133376499413,
+          6.437390775772433,
+          12.4
+        ],
+        "requested_ramp_s": 2.0,
+        "effective_ramp_s": 2.0,
+        "maximum_acceleration_m_s2": 16.733515673243588,
+        "maximum_jerk_m_s3": 72.8374001968332,
+        "conservative_acceleration_bound_m_s2": 16.733515673226854,
+        "conservative_jerk_bound_m_s3": 72.83740019676036,
+        "angular_cruise_rad_s": 1.367939137911457,
+        "reference_rate_proxy_limit_rad_s": 7.4248114369860545,
+        "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+        "geometry_and_peak_speed_preserved": true,
+        "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+        "reference_kind": "butterfly",
+        "cycles": 3,
+        "eight_laps": 6,
+        "plane_sequence": [
+          "z=center_z+h*sin(2theta)",
+          "z=center_z-h*sin(2theta)"
+        ],
+        "segment_duration_s": 6.593176065400565,
+        "total_duration_s": 39.55905639240339,
+        "plane_handoff": "C3 rest at center after each complete eight",
+        "height_bounds_m": [
+          0.7,
+          1.3
+        ]
+      },
+      "qualification": "offline model study; high-speed small-angle identified rate response is unvalidated"
+    },
+    "ordinary_live_supported": false,
+    "required_release": "isolated high-speed MPC/envelope plus matched SZC6 receiver/host when rates exceed2.3rad/s",
+    "scope": "Requested peaks and R2 geometry preserved; Measured trajectory tilt guards use the reviewed speed-specific expanded thresholds; PD takeoff/landing command caps and native guards unchanged. The explicit3m/s airborne/braking envelope is40deg soft,60deg hard and4m/s. Offline model study is not flight qualification.",
+    "selected_release_supported": true,
+    "selected_wire": "SZC6",
+    "status": "experimental host profile; matched receiver capability ACK required before enabling",
+    "PD_takeoff_and_landing_thrust_weight": 1.5,
+    "airborne_and_braking_envelope": {
+      "soft_position_m": 1.0,
+      "hard_position_m": 1.5,
+      "soft_tilt_deg": 72.0,
+      "hard_tilt_deg": 82.0,
+      "mpc_rate_limit_rad_s": 9.5,
+      "blend_s": 2.0,
+      "mpc_thrust_weight": 2.2,
+      "maximum_speed_m_s": 6.5,
+      "scope": "Latches after MPC admission through fault landing; pre-admission speed2m/s and ordinary PD/native guards unchanged"
+    },
+    "speed_headroom_rationale": "Caps5/6.5/7.5m/s for requested4/5/6 are above requested peaks and prior nominal model peaks;6cap also exceeds severe model peak6.538m/s. These are hard interruption thresholds, not reference speed changes or room-coverage validation."
+  },
+  "emergency_braking_configuration": {
+    "rate_limit_rad_s": 2.0,
+    "ordinary_PD_rate_limit_rad_s": 0.6,
+    "scope": "Isolated proposal; requires user choice before public wrapper points here"
+  }
+}

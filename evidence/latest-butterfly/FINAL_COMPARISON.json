@@ -1,0 +1,4959 @@
+{
+  "report": "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/MPC_INDI_vs_MPC_PID_butterfly_comparison.pdf",
+  "main_pages": 4,
+  "total_pages": 12,
+  "page_index": [
+    {
+      "page": 1,
+      "title": "Direct outcome and metric table"
+    },
+    {
+      "page": 2,
+      "title": "Paired3m/s raw paths and tracking"
+    },
+    {
+      "page": 3,
+      "title": "Paired5m/s first9.98s; unpaired continuation labeled"
+    },
+    {
+      "page": 4,
+      "title": "Failure-mode comparison and engineering conclusions"
+    },
+    {
+      "page": 5,
+      "title": "Appendix:MPC+PID3host trajectory"
+    },
+    {
+      "page": 6,
+      "title": "Appendix:MPC+PID5host trajectory"
+    },
+    {
+      "page": 7,
+      "title": "Appendix:MPC+PID3native measurements"
+    },
+    {
+      "page": 8,
+      "title": "Appendix:MPC+PID5native measurements"
+    },
+    {
+      "page": 9,
+      "title": "Appendix:MPC+PID5stale-tick timing and emergency chronology"
+    },
+    {
+      "page": 10,
+      "title": "Appendix:MPC+PID5physical motor response"
+    },
+    {
+      "page": 11,
+      "title": "Appendix:MPC+INDI5native precursor"
+    },
+    {
+      "page": 12,
+      "title": "Appendix:MPC+INDI5actual recovery"
+    }
+  ],
+  "comparison": {
+    "pid": 315841,
+    "host": "dolphin",
+    "scope": "Matched reference, paired MPC+PID versus MPC+INDI host audit.\nNo measurement smoothing, resampling or fitted time shifts. Common windows are\nfrom each recorded trajectory's start through the shorter tracking duration;\nerrors use each flight's own recorded reference and freshly measured ground.\n",
+    "comparisons": [
+      {
+        "speed_m_s": 3.0,
+        "PID_run": "sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z",
+        "INDI_run": "sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-52-31Z",
+        "reference_options_equal": true,
+        "reference_duration_s": 57.93176065400564,
+        "ground_m": {
+          "PID": 0.02761646918952465,
+          "INDI": 0.03106836974620819
+        },
+        "whole_host_common_window_end_s": 57.91996612699586,
+        "whole_host_common": {
+          "PID": {
+            "samples": 2896,
+            "last_sample_s": 57.900002984999446,
+            "completed_eights": 5.999999959264586,
+            "RMS_m": 0.0534658092392354,
+            "max_m": 0.1154677401299399,
+            "peak_speed_m_s": 3.0348287061307357,
+            "peak_tilt_deg": 28.27062645941717
+          },
+          "INDI": {
+            "samples": 2897,
+            "last_sample_s": 57.91996612699586,
+            "completed_eights": 5.99999999921561,
+            "RMS_m": 0.038015081297658196,
+            "max_m": 0.0772569336804368,
+            "peak_speed_m_s": 2.997392597332165,
+            "peak_tilt_deg": 30.898821716069936
+          }
+        },
+        "common_window_end_s": 57.91996612699586,
+        "common_scope": "First9.98s at5mps avoidsnativeINDIfallbackand~20msalignmentuncertainty; fullcommonhostprefixretainedseparately",
+        "common": {
+          "PID": {
+            "samples": 2896,
+            "last_sample_s": 57.900002984999446,
+            "completed_eights": 5.999999959264586,
+            "RMS_m": 0.0534658092392354,
+            "max_m": 0.1154677401299399,
+            "peak_speed_m_s": 3.0348287061307357,
+            "peak_tilt_deg": 28.27062645941717
+          },
+          "INDI": {
+            "samples": 2897,
+            "last_sample_s": 57.91996612699586,
+            "completed_eights": 5.99999999921561,
+            "RMS_m": 0.038015081297658196,
+            "max_m": 0.0772569336804368,
+            "peak_speed_m_s": 2.997392597332165,
+            "peak_tilt_deg": 30.898821716069936
+          }
+        },
+        "full": {
+          "PID": {
+            "samples": 2897,
+            "last_sample_s": 57.9200006989995,
+            "completed_eights": 5.99999999922475,
+            "RMS_m": 0.05346308383395922,
+            "max_m": 0.1154677401299399,
+            "peak_speed_m_s": 3.0348287061307357,
+            "peak_tilt_deg": 28.27062645941717
+          },
+          "INDI": {
+            "samples": 2897,
+            "last_sample_s": 57.91996612699586,
+            "completed_eights": 5.99999999921561,
+            "RMS_m": 0.038015081297658196,
+            "max_m": 0.0772569336804368,
+            "peak_speed_m_s": 2.997392597332165,
+            "peak_tilt_deg": 30.898821716069936
+          }
+        },
+        "MPC_config_differences": {
+          "rate_response": {
+            "PID": {
+              "enabled": false
+            },
+            "INDI": {
+              "enabled": true,
+              "roll": {
+                "wn_rad_s": 26.330658216209617,
+                "zeta": 0.39412051784888885,
+                "zero_s": 0.008673465080118252
+              },
+              "pitch": {
+                "wn_rad_s": 21.638114015504577,
+                "zeta": 0.3811939339013334,
+                "zero_s": 0.014269212879903905
+              },
+              "yaw": {
+                "tau_s": 0.125,
+                "identified": false
+              }
+            }
+          }
+        },
+        "MPC_sources": [
+          {
+            "path": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z/source/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_3mps.json",
+            "sha256": "3e25a8913dafd8e370c6804b21cfc21aa86e9a07b7f778c26237a0bc5695f7b8"
+          },
+          {
+            "path": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-52-31Z/source/outputs/sanity15_5mps_refit_4x3_20261112/release_proposed_braking_2rad_s/mpc_3mps.json",
+            "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009"
+          }
+        ],
+        "interpretation": "Paired MPC+inner systems, not an isolated inner-loop gain experiment. Same spatial/time reference above measured ground and same saved non-rate-response MPC parameters; ideal-rate PID and identified-rate INDI prediction models differ.",
+        "native_frontend_rate_tracking": {
+          "PID": {
+            "samples": 14369,
+            "RMS_axes_FRD_rad_s": [
+              0.2989140362053308,
+              0.2980323772115742,
+              0.056956561169625775
+            ],
+            "RMS_vector_rad_s": 0.42593068540223,
+            "gyro_abs_peak_FRD_rad_s": [
+              2.453351,
+              2.398675,
+              0.434508
+            ],
+            "target_abs_peak_FRD_rad_s": [
+              1.566713,
+              0.983663,
+              0.229737
+            ],
+            "native_modes": {
+              "0": 14369
+            },
+            "native_INDI_weight_min_max": [
+              0.0,
+              0.0
+            ],
+            "scope": "Frontend getSetpointRate target(p46) minus common earlygyro(p28), same native-row FRD clock. Different actualcommands/internalfilters disclosed; no resampling/filter/lag fit.5mps9.98swindowendsbeforenativefallback."
+          },
+          "INDI": {
+            "samples": 14370,
+            "RMS_axes_FRD_rad_s": [
+              0.2421686737865221,
+              0.16482419761220168,
+              0.04540988727936882
+            ],
+            "RMS_vector_rad_s": 0.2964367395326595,
+            "gyro_abs_peak_FRD_rad_s": [
+              1.755212,
+              0.895569,
+              0.24853299999999998
+            ],
+            "target_abs_peak_FRD_rad_s": [
+              1.4413589999999998,
+              0.752609,
+              0.18484
+            ],
+            "native_modes": {
+              "2": 14370
+            },
+            "native_INDI_weight_min_max": [
+              1.0,
+              1.0
+            ],
+            "scope": "Frontend getSetpointRate target(p46) minus common earlygyro(p28), same native-row FRD clock. Different actualcommands/internalfilters disclosed; no resampling/filter/lag fit.5mps9.98swindowendsbeforenativefallback."
+          }
+        }
+      },
+      {
+        "speed_m_s": 5.0,
+        "PID_run": "sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z",
+        "INDI_run": "sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z",
+        "reference_options_equal": true,
+        "reference_duration_s": 39.55905639240339,
+        "ground_m": {
+          "PID": 0.027845676988363266,
+          "INDI": 0.03069985657930374
+        },
+        "whole_host_common_window_end_s": 10.140038090001326,
+        "whole_host_common": {
+          "PID": {
+            "samples": 508,
+            "last_sample_s": 10.13996022901847,
+            "completed_eights": 1.5544712694125309,
+            "RMS_m": 0.08312307926151893,
+            "max_m": 0.21822990282340887,
+            "peak_speed_m_s": 5.1775043846260385,
+            "peak_tilt_deg": 58.59776468316448
+          },
+          "INDI": {
+            "samples": 508,
+            "last_sample_s": 10.140038090001326,
+            "completed_eights": 1.5544882208600146,
+            "RMS_m": 0.07576406127229014,
+            "max_m": 0.17569597000773468,
+            "peak_speed_m_s": 5.241018157846868,
+            "peak_tilt_deg": 71.43284203903241
+          }
+        },
+        "common_window_end_s": 9.98,
+        "common_scope": "First9.98s at5mps avoidsnativeINDIfallbackand~20msalignmentuncertainty; fullcommonhostprefixretainedseparately",
+        "common": {
+          "PID": {
+            "samples": 499,
+            "last_sample_s": 9.960014913027408,
+            "completed_eights": 1.5152946052853808,
+            "RMS_m": 0.08292671800279187,
+            "max_m": 0.21822990282340887,
+            "peak_speed_m_s": 5.1775043846260385,
+            "peak_tilt_deg": 58.59776468316448
+          },
+          "INDI": {
+            "samples": 500,
+            "last_sample_s": 9.979999708011746,
+            "completed_eights": 1.5196455804493594,
+            "RMS_m": 0.0760500940875097,
+            "max_m": 0.17569597000773468,
+            "peak_speed_m_s": 5.241018157846868,
+            "peak_tilt_deg": 71.43284203903241
+          }
+        },
+        "full": {
+          "PID": {
+            "samples": 723,
+            "last_sample_s": 14.440491496003233,
+            "completed_eights": 2.0681339835125154,
+            "RMS_m": 0.08151939844156593,
+            "max_m": 0.21822990282340887,
+            "peak_speed_m_s": 5.1775043846260385,
+            "peak_tilt_deg": 58.59776468316448
+          },
+          "INDI": {
+            "samples": 508,
+            "last_sample_s": 10.140038090001326,
+            "completed_eights": 1.5544882208600146,
+            "RMS_m": 0.07576406127229014,
+            "max_m": 0.17569597000773468,
+            "peak_speed_m_s": 5.241018157846868,
+            "peak_tilt_deg": 71.43284203903241
+          }
+        },
+        "MPC_config_differences": {
+          "rate_response": {
+            "PID": {
+              "enabled": false
+            },
+            "INDI": {
+              "enabled": true,
+              "roll": {
+                "wn_rad_s": 19.539538607015643,
+                "zeta": 0.20901800130226725,
+                "zero_s": 0.013882601625106522
+              },
+              "pitch": {
+                "wn_rad_s": 21.638114015504577,
+                "zeta": 0.3811939339013334,
+                "zero_s": 0.014269212879903905
+              },
+              "yaw": {
+                "tau_s": 0.125,
+                "identified": false
+              }
+            }
+          }
+        },
+        "MPC_sources": [
+          {
+            "path": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/source/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_5mps.json",
+            "sha256": "6b3625bb20112612b19930f474b0270db4b2bc17d93cca74134e2d840770c261"
+          },
+          {
+            "path": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z/source/outputs/sanity15_5mps_refit_4x3_20261112/release_proposed_braking_2rad_s/mpc_5mps.json",
+            "sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143"
+          }
+        ],
+        "interpretation": "Paired MPC+inner systems, not an isolated inner-loop gain experiment. Same spatial/time reference above measured ground and same saved non-rate-response MPC parameters; ideal-rate PID and identified-rate INDI prediction models differ.",
+        "native_frontend_rate_tracking": {
+          "PID": {
+            "samples": 2473,
+            "RMS_axes_FRD_rad_s": [
+              0.3261297771635141,
+              0.5375676377871061,
+              0.08877199402448789
+            ],
+            "RMS_vector_rad_s": 0.6349961131155185,
+            "gyro_abs_peak_FRD_rad_s": [
+              5.254427,
+              5.376037999999999,
+              1.326198
+            ],
+            "target_abs_peak_FRD_rad_s": [
+              4.736719,
+              3.04058,
+              1.235681
+            ],
+            "native_modes": {
+              "0": 2473
+            },
+            "native_INDI_weight_min_max": [
+              0.0,
+              0.0
+            ],
+            "scope": "Frontend getSetpointRate target(p46) minus common earlygyro(p28), same native-row FRD clock. Different actualcommands/internalfilters disclosed; no resampling/filter/lag fit.5mps9.98swindowendsbeforenativefallback."
+          },
+          "INDI": {
+            "samples": 2476,
+            "RMS_axes_FRD_rad_s": [
+              1.6979668764143612,
+              0.5787249141719699,
+              0.2321587466778466
+            ],
+            "RMS_vector_rad_s": 1.8088426474800754,
+            "gyro_abs_peak_FRD_rad_s": [
+              10.310149,
+              3.167442,
+              1.2716459999999998
+            ],
+            "target_abs_peak_FRD_rad_s": [
+              5.816224999999999,
+              2.1353139999999997,
+              1.2772599999999998
+            ],
+            "native_modes": {
+              "2": 2476
+            },
+            "native_INDI_weight_min_max": [
+              1.0,
+              1.0
+            ],
+            "scope": "Frontend getSetpointRate target(p46) minus common earlygyro(p28), same native-row FRD clock. Different actualcommands/internalfilters disclosed; no resampling/filter/lag fit.5mps9.98swindowendsbeforenativefallback."
+          }
+        }
+      }
+    ],
+    "PID5_abort": {
+      "run": "sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z",
+      "trajectory_abort_time_s": 14.459972242009826,
+      "initial_reason": "mpc_tick_age",
+      "final_reason": "hard_flight_envelope",
+      "guard_criterion": [
+        "altitude"
+      ],
+      "stop_after_abort_s": 0.459988999995403,
+      "first_health": {
+        "valid": false,
+        "reason": "tick_age",
+        "source_age_s": 0.042700008000000005,
+        "result_tick": 1676,
+        "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+        "total_ms": 13.934181974036619
+      },
+      "initial_emergency": {
+        "version": 1,
+        "phase": "emergency_brake",
+        "active_braking": true,
+        "fail_reason": null,
+        "start_s": 158875.318917531,
+        "last_advance_s": 158875.318917531,
+        "advance_count": 0,
+        "last_nominal_cells": 0,
+        "braking_deadline_s": 158883.318917531,
+        "timeout_s": 158900.318917531,
+        "settled_since_s": null,
+        "latched_at_s": null,
+        "height_target_m": 1.2838356494903564,
+        "heading_target_rad": 0.02666370386378484,
+        "settling_checks": null,
+        "requested_yaw_rad": -0.0815380512980233,
+        "initial_state": [
+          0.8731508851051331,
+          1.2189912796020508,
+          1.2838356494903564,
+          0.9900187667594571,
+          0.0947265086006674,
+          0.10430491523495258,
+          0.0031960429034874898,
+          1.8208114071956403,
+          1.9664468120927048,
+          0.46141026746372216,
+          3.105553466881156,
+          -0.29415568817835286,
+          0.356592307835947
+        ],
+        "initial_thrust_N": 0.6705194929488876,
+        "previous_selected_ctbr": [
+          0.6705194929488876,
+          3.090519197600479,
+          -0.40208162253225477,
+          0.6691547285269375
+        ],
+        "initial_nominal_active_ctbr": [
+          0.6705194929488876,
+          3.090519197600479,
+          -0.40208162253225477,
+          0.6691547285269375
+        ],
+        "stopping_anchor": null,
+        "nominal_guard": {
+          "position": [
+            0.8731508851051331,
+            1.2189912796020508,
+            1.2838356494903564
+          ],
+          "velocity": [
+            1.8208114071956403,
+            1.9664468120927048,
+            0.46141026746372216
+          ],
+          "quaternion_wxyz": [
+            0.9900187667594571,
+            0.0947265086006674,
+            0.10430491523495258,
+            0.0031960429034874898
+          ],
+          "body_rate": [
+            2.9568116589701687,
+            -0.1800341192385709,
+            1.0406731032562968
+          ],
+          "thrust_N": 0.6705194929488876,
+          "acceleration": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "selected_ctbr": [
+            0.6666058294896854,
+            1.732272189847644,
+            -2.0,
+            0.0554875206051344
+          ],
+          "delay_s": 0.035,
+          "rate_tau_s": 0.05,
+          "collective_tau_s": 0.025
+        },
+        "last_command": [
+          0.6666058294896854,
+          1.732272189847644,
+          -2.0,
+          0.0554875206051344
+        ],
+        "command_detail": {
+          "horizontal_acceleration_target_m_s2": [
+            -4.076481122583176,
+            -4.402533549812314
+          ],
+          "vertical_acceleration_target_m_s2": -1.3842308023911665,
+          "desired_body_to_world": [
+            [
+              0.9187604505939905,
+              -0.02375569574430849,
+              -0.3941001158893908
+            ],
+            [
+              -0.15953859387193622,
+              0.8907264298406952,
+              -0.42562173845870976
+            ],
+            [
+              0.36114632974695005,
+              0.4539185985426823,
+              0.8145742657409172
+            ]
+          ],
+          "body_log_error_rad": [
+            0.288712031641274,
+            -0.6111332172468951,
+            0.009247920100855733
+          ],
+          "actual_Rzz": 0.9602947464523143,
+          "drag_world_m_s2": [
+            1.0201636629415156,
+            1.6713061647366125,
+            0.10522767612631809
+          ],
+          "unclipped_required_vertical_force_N": 0.6100515864408007,
+          "required_vertical_force_N": 0.6100515864408007,
+          "vertical_force_numerator_limited": false,
+          "requested_thrust_N": 0.6666058294896854,
+          "capped_thrust_N": 0.6666058294896854,
+          "selected_thrust_N": 0.6666058294896854,
+          "thrust_cap_overrode_slew": false
+        },
+        "limits": {
+          "rate_rad_s": 2.0,
+          "thrust_N": 1.5433288200000004,
+          "thrust_slew_N_s": 4.0,
+          "horizontal_decel_m_s2": 6.0,
+          "height_accel_m_s2": 2.0
+        },
+        "guard_scope": "PID branch engineering guard: first-order rate50ms,collective25ms,totaldelay35ms; independent initial-state model, no measured-velocity anchor updates; hard error1.5unchanged"
+      },
+      "rows": [
+        {
+          "t_s": 0.0,
+          "epoch": 158875.318917531,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            0.8731508851051331,
+            1.2189912796020508,
+            1.2838356494903564,
+            0.9900187667594571,
+            0.0947265086006674,
+            0.10430491523495258,
+            0.0031960429034874898,
+            1.8208114071956403,
+            1.9664468120927048,
+            0.46141026746372216,
+            3.105553466881156,
+            -0.29415568817835286,
+            0.356592307835947
+          ],
+          "selected": [
+            0.6666058294896854,
+            1.732272189847644,
+            -2.0,
+            0.0554875206051344
+          ],
+          "actual_z_m": 1.2838356494903564,
+          "actual_vz_m_s": 0.46141026746372216,
+          "nominal_z_m": 1.2838356494903564,
+          "nominal_vz_m_s": 0.46141026746372216,
+          "vertical_accel_target_m_s2": -1.3842308023911665,
+          "drag_world_z_m_s2": 0.10522767612631809,
+          "health": {
+            "valid": false,
+            "reason": "tick_age",
+            "source_age_s": 0.042700008000000005,
+            "result_tick": 1676,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 13.934181974036619
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.019996295013697818,
+          "epoch": 158875.338913826,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            0.910828709602356,
+            1.25596022605896,
+            1.2931193113327026,
+            0.986943244118018,
+            0.1266396415190806,
+            0.0993787659959722,
+            0.005412481393863563,
+            1.8476227914955616,
+            1.8872142730507344,
+            0.4568789691043281,
+            3.0535591559151984,
+            -0.38182386179873223,
+            0.13350174006161902
+          ],
+          "selected": [
+            0.6808050645191769,
+            1.282464123974556,
+            -2.0,
+            0.092875911396294
+          ],
+          "actual_z_m": 1.2931193113327026,
+          "actual_vz_m_s": 0.4568789691043281,
+          "nominal_z_m": 1.292780523966165,
+          "nominal_vz_m_s": 0.43275389613161214,
+          "vertical_accel_target_m_s2": -1.4077715546823693,
+          "drag_world_z_m_s2": 0.2005010416324176,
+          "health": {
+            "valid": false,
+            "reason": "tick_age",
+            "source_age_s": 0.042761039,
+            "result_tick": 1677,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 13.99933302309364
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.039996031002374366,
+          "epoch": 158875.358913562,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            0.9482226371765137,
+            1.2915102243423462,
+            1.3030110597610474,
+            0.9835143118746952,
+            0.1555255656131399,
+            0.09157563028340858,
+            0.01119378026201672,
+            1.8621921600793516,
+            1.8180186170262411,
+            0.48549003894833914,
+            3.111264488925082,
+            -0.6109937194316233,
+            0.20465822079755533
+          ],
+          "selected": [
+            0.6873961893327762,
+            0.8978468164418034,
+            -2.0,
+            0.07407549083221274
+          ],
+          "actual_z_m": 1.3030110597610474,
+          "actual_vz_m_s": 0.48549003894833914,
+          "nominal_z_m": 1.3011129459171689,
+          "nominal_vz_m_s": 0.3999547768624438,
+          "vertical_accel_target_m_s2": -1.533171757927781,
+          "drag_world_z_m_s2": 0.28715537478472586,
+          "health": {
+            "valid": false,
+            "reason": "tick_age",
+            "source_age_s": 0.042895457000000005,
+            "result_tick": 1678,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 11.829352006316185
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.0614138160017319,
+          "epoch": 158875.380331347,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            0.9861792922019958,
+            1.3251172304153442,
+            1.3127599954605103,
+            0.9798775637547905,
+            0.18076537434971598,
+            0.08329184359034413,
+            0.015043546041586395,
+            1.8842074364774477,
+            1.7299268439213435,
+            0.48962683221769693,
+            2.774851295736158,
+            -0.7061429037352358,
+            0.13875479405782207
+          ],
+          "selected": [
+            0.6988233818479862,
+            0.5154477720142914,
+            -2.0,
+            0.07930886682171386
+          ],
+          "actual_z_m": 1.3127599954605103,
+          "actual_vz_m_s": 0.48962683221769693,
+          "nominal_z_m": 1.309257313438822,
+          "nominal_vz_m_s": 0.3599079391901365,
+          "vertical_accel_target_m_s2": -1.584577880533706,
+          "drag_world_z_m_s2": 0.3498119406156782,
+          "health": {
+            "valid": false,
+            "reason": "invalid_solver",
+            "source_age_s": 0.024336758,
+            "result_tick": 1680,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 12.11900101043284
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.07999756900244392,
+          "epoch": 158875.3989151,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.024850845336914,
+            1.3560429811477661,
+            1.3232765197753906,
+            0.9813259856794486,
+            0.183136537984294,
+            0.05808323631683422,
+            0.009308917463844964,
+            1.8984447144053467,
+            1.587853263595769,
+            0.508316997711594,
+            0.9342361120984384,
+            -1.931957658457033,
+            -0.6832721317090926
+          ],
+          "selected": [
+            0.688503934972153,
+            0.3955090830416028,
+            -2.0,
+            0.09741120990768004
+          ],
+          "actual_z_m": 1.3232765197753906,
+          "actual_vz_m_s": 0.508316997711594,
+          "nominal_z_m": 1.3156069477489465,
+          "nominal_vz_m_s": 0.3234560875584086,
+          "vertical_accel_target_m_s2": -1.6827144742749187,
+          "drag_world_z_m_s2": 0.37088534306810317,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022983831,
+            "result_tick": 1681,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 12.86068098852411
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.10014674699050374,
+          "epoch": 158875.419064278,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.0631659030914307,
+            1.385109543800354,
+            1.3344073295593262,
+            0.9821656804399058,
+            0.18490220346588,
+            0.0330262924561799,
+            0.008427059159514054,
+            1.9087585218231276,
+            1.4926009281242498,
+            0.5405281675900152,
+            0.4780126288000048,
+            -2.1756499106223988,
+            -0.6324935234471035
+          ],
+          "selected": [
+            0.6771613167905199,
+            0.31122892418719406,
+            -2.0,
+            0.0572342760278626
+          ],
+          "actual_z_m": 1.3344073295593262,
+          "actual_vz_m_s": 0.5405281675900152,
+          "nominal_z_m": 1.3217334191670247,
+          "nominal_vz_m_s": 0.2848309878929179,
+          "vertical_accel_target_m_s2": -1.8238712230459244,
+          "drag_world_z_m_s2": 0.40151606736431905,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022963133,
+            "result_tick": 1682,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.360648006899282
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.12004707899177447,
+          "epoch": 158875.43896461,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.1010069847106934,
+            1.4112075567245483,
+            1.3463523387908936,
+            0.982229296074221,
+            0.18707028101464931,
+            0.014591560753736238,
+            0.00417207974641629,
+            1.8933546587304533,
+            1.3582859946968922,
+            0.5732081640104078,
+            0.19683303348220912,
+            -1.9034384456949547,
+            -0.7656018545006944
+          ],
+          "selected": [
+            0.6661793647871939,
+            0.14129702284137757,
+            -2.0,
+            0.1024109274339716
+          ],
+          "actual_z_m": 1.3463523387908936,
+          "actual_vz_m_s": 0.5732081640104078,
+          "nominal_z_m": 1.3270432139749675,
+          "nominal_vz_m_s": 0.2492430473915719,
+          "vertical_accel_target_m_s2": -1.9696912492333718,
+          "drag_world_z_m_s2": 0.4125753929192601,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022959164,
+            "result_tick": 1683,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.165376991499215
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.14005085499957204,
+          "epoch": 158875.458968386,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.1383808851242065,
+            1.4359028339385986,
+            1.3584117889404297,
+            0.9815532973874374,
+            0.19116057420085628,
+            0.00046708195351568605,
+            0.0032467050215113378,
+            1.8646233976273692,
+            1.266984291196638,
+            0.5924110583187396,
+            0.34495290443491267,
+            -1.5426560595630814,
+            -0.4654788440753469
+          ],
+          "selected": [
+            0.6667784162766917,
+            -0.049063936245194006,
+            -2.0,
+            0.12939808472920658
+          ],
+          "actual_z_m": 1.3584117889404297,
+          "actual_vz_m_s": 0.5924110583187396,
+          "nominal_z_m": 1.3317024103357926,
+          "nominal_vz_m_s": 0.2170492502559579,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.42659075411865666,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022970844,
+            "result_tick": 1684,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 12.509831984061748
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.16005606300313957,
+          "epoch": 158875.478973594,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.1757084131240845,
+            1.4580779075622559,
+            1.3701679706573486,
+            0.9811406907703336,
+            0.19208774638544518,
+            -0.021089050016162274,
+            -0.004527093183195318,
+            1.8709366372155554,
+            1.1718516140245625,
+            0.5922513095043392,
+            0.24512614607643457,
+            -1.789103444066964,
+            -0.7940825174334254
+          ],
+          "selected": [
+            0.6697262943474307,
+            -0.2010933613862948,
+            -2.0,
+            0.22008901561340927
+          ],
+          "actual_z_m": 1.3701679706573486,
+          "actual_vz_m_s": 0.5922513095043392,
+          "nominal_z_m": 1.3357542522838284,
+          "nominal_vz_m_s": 0.18856582605766115,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.44872721993950704,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022897630000000002,
+            "result_tick": 1685,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 12.143653992097825
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.18000852901604958,
+          "epoch": 158875.49892606,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.2123026847839355,
+            1.478134036064148,
+            1.3820260763168335,
+            0.9787705812182174,
+            0.19844684836929088,
+            -0.0499590879505561,
+            -0.01144933383203323,
+            1.846883093941899,
+            1.0519562164819758,
+            0.5875779942520106,
+            0.5143054183408549,
+            -2.6127422877133117,
+            -1.279486471696449
+          ],
+          "selected": [
+            0.6793520482098011,
+            -0.4652485611248908,
+            -2.0,
+            0.3244967500489804
+          ],
+          "actual_z_m": 1.3820260763168335,
+          "actual_vz_m_s": 0.5875779942520106,
+          "nominal_z_m": 1.339266143547477,
+          "nominal_vz_m_s": 0.16385566885380684,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.48531809971630124,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023023133,
+            "result_tick": 1686,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 7.801399013260379
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.20007002100464888,
+          "epoch": 158875.518987552,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.2474535703659058,
+            1.4961967468261719,
+            1.3937121629714966,
+            0.9798643404177486,
+            0.18873503790226337,
+            -0.06355075031699889,
+            -0.014361823695762435,
+            1.805495135098934,
+            0.9587519805971016,
+            0.5854179510376525,
+            -0.3738201036030107,
+            -2.0184907453832652,
+            -0.9909549537002722
+          ],
+          "selected": [
+            0.6745414239488908,
+            -0.5012658688217593,
+            -2.0,
+            0.3536859536940895
+          ],
+          "actual_z_m": 1.3937121629714966,
+          "actual_vz_m_s": 0.5854179510376525,
+          "nominal_z_m": 1.342333562744407,
+          "nominal_vz_m_s": 0.14251344209884767,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.4664447911705327,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022971703000000003,
+            "result_tick": 1687,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 4.967007989762351
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.22001513201394118,
+          "epoch": 158875.538932663,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.2813324928283691,
+            1.5133075714111328,
+            1.404987096786499,
+            0.9785259846414268,
+            0.19022929443564077,
+            -0.07866212632655992,
+            -0.010582192675851218,
+            1.7147477619002225,
+            0.8782513088349171,
+            0.5657282323655479,
+            -0.026765610983554677,
+            -1.733695974473782,
+            -0.347277636113962
+          ],
+          "selected": [
+            0.6782067678254501,
+            -0.6705175818527949,
+            -1.9504770195790455,
+            0.32904876940203964
+          ],
+          "actual_z_m": 1.404987096786499,
+          "actual_vz_m_s": 0.5657282323655479,
+          "nominal_z_m": 1.344996366646357,
+          "nominal_vz_m_s": 0.1249340827924221,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.46233399093798716,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023036921000000002,
+            "result_tick": 1688,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.322813987731934
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.240007804997731,
+          "epoch": 158875.558925336,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.3149476051330566,
+            1.5280905961990356,
+            1.4156033992767334,
+            0.9763878566059304,
+            0.18973624671583733,
+            -0.10262355189636899,
+            -0.011632572838260852,
+            1.6902069042259413,
+            0.7880643070775821,
+            0.5453551483891121,
+            -0.0853560469525616,
+            -2.128960053494665,
+            -0.49041086894204566
+          ],
+          "selected": [
+            0.685418314847471,
+            -0.822355291404459,
+            -1.6401777669433668,
+            0.3573540689315632
+          ],
+          "actual_z_m": 1.4156033992767334,
+          "actual_vz_m_s": 0.5453551483891121,
+          "nominal_z_m": 1.347345873094338,
+          "nominal_vz_m_s": 0.11042523084233699,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.4743608594620381,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022867381000000003,
+            "result_tick": 1689,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.227385991020128
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.260140116995899,
+          "epoch": 158875.579057648,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.3467028141021729,
+            1.5409258604049683,
+            1.4260152578353882,
+            0.9770726814621018,
+            0.17550949136257896,
+            -0.11994942601681856,
+            -0.011727266533294707,
+            1.62762704577203,
+            0.6965641922464847,
+            0.53111213044643,
+            -1.0420628159939458,
+            -1.8642920429495458,
+            -0.46870817514900565
+          ],
+          "selected": [
+            0.6815984800145468,
+            -0.8140794218320537,
+            -1.3559221970924065,
+            0.34672428592604393
+          ],
+          "actual_z_m": 1.4260152578353882,
+          "actual_vz_m_s": 0.53111213044643,
+          "nominal_z_m": 1.3494433615732622,
+          "nominal_vz_m_s": 0.09827004434537916,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.4525358235829254,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023054747,
+            "result_tick": 1690,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.030178988818079
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.28005503700114787,
+          "epoch": 158875.598972568,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.3774267435073853,
+            1.5524742603302002,
+            1.4357073307037354,
+            0.9758361330242312,
+            0.16745939892925393,
+            -0.13973062022283467,
+            -0.013287022492258887,
+            1.5429146027534384,
+            0.606963376458381,
+            0.4935511147054472,
+            -0.9727829771504082,
+            -1.8279131856557855,
+            -0.5456499719196372
+          ],
+          "selected": [
+            0.6839725060054909,
+            -0.8731203969150136,
+            -0.9997924098003906,
+            0.36936024456939287
+          ],
+          "actual_z_m": 1.4357073307037354,
+          "actual_vz_m_s": 0.4935511147054472,
+          "nominal_z_m": 1.351296285577758,
+          "nominal_vz_m_s": 0.08799205427102978,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.4380019043408552,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023124418,
+            "result_tick": 1691,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.01323101343587
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.3000108140113298,
+          "epoch": 158875.618928345,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.4068431854248047,
+            1.5624784231185913,
+            1.4450222253799438,
+            0.9751782706371146,
+            0.1566274265814637,
+            -0.15605079636489688,
+            -0.0119724130214504,
+            1.5051331567785065,
+            0.5344940250058497,
+            0.4809540544695166,
+            -1.2259283582438516,
+            -1.6593487661763437,
+            -0.4160576973673501
+          ],
+          "selected": [
+            0.685143339323914,
+            -0.8768372587261967,
+            -0.7552046200082483,
+            0.3537711696320612
+          ],
+          "actual_z_m": 1.4450222253799438,
+          "actual_vz_m_s": 0.4809540544695166,
+          "nominal_z_m": 1.3529599758897208,
+          "nominal_vz_m_s": 0.0788745104221967,
+          "vertical_accel_target_m_s2": -2.0,
+          "drag_world_z_m_s2": 0.42807586965832733,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022812633000000002,
+            "result_tick": 1692,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.3036760073155165
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.32004979701014236,
+          "epoch": 158875.638967328,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.434488296508789,
+            1.5714105367660522,
+            1.4533928632736206,
+            0.9740999575777263,
+            0.15056095458950886,
+            -0.1683242258585272,
+            -0.01129719386818357,
+            1.429110906712585,
+            0.4727899885768424,
+            0.43734349120163124,
+            -0.9790113955524982,
+            -1.4127716572976616,
+            -0.308213080868815
+          ],
+          "selected": [
+            0.6875822652828788,
+            -0.9168231142122578,
+            -0.4914794521649802,
+            0.35278182596603586
+          ],
+          "actual_z_m": 1.4533928632736206,
+          "actual_vz_m_s": 0.43734349120163124,
+          "nominal_z_m": 1.354455893425374,
+          "nominal_vz_m_s": 0.070481990357886,
+          "vertical_accel_target_m_s2": -1.9902593287379504,
+          "drag_world_z_m_s2": 0.4088514127043734,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023031068000000002,
+            "result_tick": 1693,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.123871000250801
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.340052838990232,
+          "epoch": 158875.65897037,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.4609037637710571,
+            1.578784704208374,
+            1.461732029914856,
+            0.9742032965843764,
+            0.13429556897698314,
+            -0.1807533517476144,
+            -0.014861457172332454,
+            1.3463558295600715,
+            0.3949709931986953,
+            0.4135543703011988,
+            -1.4724135127627007,
+            -1.3680690775666018,
+            -0.7901092454790573
+          ],
+          "selected": [
+            0.6880619059759584,
+            -0.8559733325577941,
+            -0.20460288532107385,
+            0.3895342106623947
+          ],
+          "actual_z_m": 1.461732029914856,
+          "actual_vz_m_s": 0.4135543703011988,
+          "nominal_z_m": 1.355784060430436,
+          "nominal_vz_m_s": 0.062345957607384206,
+          "vertical_accel_target_m_s2": -1.9522486326015944,
+          "drag_world_z_m_s2": 0.38198303858957283,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023151719,
+            "result_tick": 1694,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.077275010989979
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.360051947995089,
+          "epoch": 158875.678969479,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.4858863353729248,
+            1.5852210521697998,
+            1.4692846536636353,
+            0.9749731542870514,
+            0.1224149629483005,
+            -0.18478935057344212,
+            -0.01717035761331544,
+            1.3122290750289092,
+            0.34654947960378407,
+            0.39482036916510166,
+            -1.529430879903125,
+            -0.8915288413619226,
+            -0.965892683918093
+          ],
+          "selected": [
+            0.6862386473395443,
+            -0.7967474112861882,
+            -0.09777573958658287,
+            0.416156248615016
+          ],
+          "actual_z_m": 1.4692846536636353,
+          "actual_vz_m_s": 0.39482036916510166,
+          "nominal_z_m": 1.3569504576790892,
+          "nominal_vz_m_s": 0.05431841454958309,
+          "vertical_accel_target_m_s2": -1.92625712418842,
+          "drag_world_z_m_s2": 0.3629571230411797,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022799168,
+            "result_tick": 1695,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.139838001923636
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.379987591993995,
+          "epoch": 158875.698905123,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.5077691078186035,
+            1.5909528732299805,
+            1.4762780666351318,
+            0.9753304721138549,
+            0.12017244112723177,
+            -0.18502010766782384,
+            -0.007524248685010938,
+            1.1571323953232928,
+            0.29932392884888737,
+            0.3554689501812885,
+            -0.9731508909159818,
+            -0.5005017980294275,
+            -0.012629246454048962
+          ],
+          "selected": [
+            0.6891752036367517,
+            -0.8806406215575486,
+            0.17366901070818255,
+            0.30989065787137743
+          ],
+          "actual_z_m": 1.4762780666351318,
+          "actual_vz_m_s": 0.3554689501812885,
+          "nominal_z_m": 1.357955622599645,
+          "nominal_vz_m_s": 0.04657497727361315,
+          "vertical_accel_target_m_s2": -1.836176519122967,
+          "drag_world_z_m_s2": 0.3165911827894891,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023274304000000003,
+            "result_tick": 1696,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 4.97748501948081
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.4000075710064266,
+          "epoch": 158875.718925102,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.5294827222824097,
+            1.5954512357711792,
+            1.4826040267944336,
+            0.9765120471016924,
+            0.10471018855354018,
+            -0.18816507825383835,
+            -0.007341771180795021,
+            1.136326197541428,
+            0.25395879059580845,
+            0.33487521335517206,
+            -1.4285971860368805,
+            -0.39211127058366785,
+            -0.2348610712190061
+          ],
+          "selected": [
+            0.6872663196851586,
+            -0.7782776690991373,
+            0.25004574020792353,
+            0.30185986812589594
+          ],
+          "actual_z_m": 1.4826040267944336,
+          "actual_vz_m_s": 0.33487521335517206,
+          "nominal_z_m": 1.3588142968603374,
+          "nominal_vz_m_s": 0.039270389330129565,
+          "vertical_accel_target_m_s2": -1.7996991492818248,
+          "drag_world_z_m_s2": 0.29934741304432166,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022817737,
+            "result_tick": 1697,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 4.887918010354042
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.4199909529997967,
+          "epoch": 158875.738908484,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.5481780767440796,
+            1.5992563962936401,
+            1.488913655281067,
+            0.9777245352004492,
+            0.10117395791805854,
+            -0.18384411612245655,
+            -0.004461442974332813,
+            1.0010722655191302,
+            0.20973090349416396,
+            0.3182168945938686,
+            -0.9060474927239733,
+            0.10542640266676259,
+            -0.016865726282393398
+          ],
+          "selected": [
+            0.6823615143344424,
+            -0.8195900951477676,
+            0.4275024264942199,
+            0.27366131567277086
+          ],
+          "actual_z_m": 1.488913655281067,
+          "actual_vz_m_s": 0.3182168945938686,
+          "nominal_z_m": 1.359530091844394,
+          "nominal_vz_m_s": 0.032441111584296564,
+          "vertical_accel_target_m_s2": -1.7749627069444476,
+          "drag_world_z_m_s2": 0.25778412288193003,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.023354318000000002,
+            "result_tick": 1698,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.060347000835463
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.43998784600989893,
+          "epoch": 158875.758905377,
+          "phase": "landing",
+          "reason": "mpc_tick_age",
+          "state": [
+            1.5658038854599,
+            1.6022891998291016,
+            1.4945545196533203,
+            0.9791843025938184,
+            0.09303873521643714,
+            -0.18038388590882287,
+            -0.0018838809983777068,
+            0.9146855444464701,
+            0.1702643754623946,
+            0.2942169500164508,
+            -0.9469009321858629,
+            0.2871411074111405,
+            0.07543284946709672
+          ],
+          "selected": [
+            0.6796142253961002,
+            -0.7976653335836839,
+            0.5399510061449607,
+            0.24253617349433304
+          ],
+          "actual_z_m": 1.4945545196533203,
+          "actual_vz_m_s": 0.2942169500164508,
+          "nominal_z_m": 1.3601165367878716,
+          "nominal_vz_m_s": 0.026326394640459428,
+          "vertical_accel_target_m_s2": -1.7255263307012079,
+          "drag_world_z_m_s2": 0.22640887765110806,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022978557,
+            "result_tick": 1699,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.046723992563784
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": null
+        },
+        {
+          "t_s": 0.459988999995403,
+          "epoch": 158875.778906531,
+          "phase": "stopped",
+          "reason": "hard_flight_envelope",
+          "state": [
+            1.5818171501159668,
+            1.604397177696228,
+            1.5000020265579224,
+            0.9809121575453743,
+            0.08236423451531517,
+            -0.17613709547056516,
+            -0.0017876385479974593,
+            0.8450407116927985,
+            0.12903935787645135,
+            0.28169069394772617,
+            -1.0412702099675883,
+            0.39302657280380754,
+            -0.06267426424536476
+          ],
+          "selected": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "actual_z_m": 1.5000020265579224,
+          "actual_vz_m_s": 0.28169069394772617,
+          "nominal_z_m": 1.3605900282117482,
+          "nominal_vz_m_s": 0.021146301137530743,
+          "vertical_accel_target_m_s2": -1.7255263307012079,
+          "drag_world_z_m_s2": 0.22640887765110806,
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022693301000000003,
+            "result_tick": 1700,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.010236025555059
+          },
+          "emergency_phase": "emergency_brake",
+          "height_target_m": 1.2838356494903564,
+          "braking_rate_cap_rad_s": 2.0,
+          "latched_at_s": null,
+          "guard": {
+            "level": "hard",
+            "criteria": [
+              "altitude"
+            ],
+            "monotonic_s": 158875.778906531,
+            "tilt_deg": 22.424393102511804,
+            "position_error_m": 0.14344731406107086,
+            "speed_m_s": 0.9000525581076861,
+            "altitude_m": 1.5000020265579224,
+            "limits": {
+              "soft_position_m": 1.0,
+              "hard_position_m": 1.5,
+              "soft_tilt_deg": 72.0,
+              "hard_tilt_deg": 82.0,
+              "maximum_speed_m_s": 6.5
+            }
+          }
+        }
+      ],
+      "worker_arrivals": [
+        {
+          "tick": 1668,
+          "observation_epoch_s": 158875.118943318,
+          "observation_state_epoch_s": 158875.11556952202,
+          "pose_age_ms": 3.3737959747668356,
+          "source_to_finished_ms": 9.901375975459814,
+          "commit_stamp_epoch_s": 158875.120212685,
+          "commit_to_finished_ms": 5.258213001070544,
+          "relative_to_abort_s": -0.1999742129992228,
+          "worker_finished_epoch_s": 158875.125470898,
+          "end_to_end_ms": 6.5275800006929785,
+          "internal_MPC_ms": 4.962979000993073,
+          "solve_ms": 0.7541829836554825,
+          "core_solve_ms": 0.15329700545407832,
+          "acados_time_ms": 0.152,
+          "outside_command_ms": 1.5646009996999055,
+          "command_outside_solve_ms": 4.2087960173375905,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1669,
+          "observation_epoch_s": 158875.13894521,
+          "observation_state_epoch_s": 158875.13576079402,
+          "pose_age_ms": 3.184415982104838,
+          "source_to_finished_ms": 10.02209199941717,
+          "commit_stamp_epoch_s": 158875.140544258,
+          "commit_to_finished_ms": 5.238628014922142,
+          "relative_to_abort_s": -0.17997232099878602,
+          "worker_finished_epoch_s": 158875.14578288601,
+          "end_to_end_ms": 6.837676017312333,
+          "internal_MPC_ms": 4.909406998194754,
+          "solve_ms": 0.7372639956884086,
+          "core_solve_ms": 0.13647499145008624,
+          "acados_time_ms": 0.134,
+          "outside_command_ms": 1.9282690191175789,
+          "command_outside_solve_ms": 4.1721430025063455,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1670,
+          "observation_epoch_s": 158875.158906105,
+          "observation_state_epoch_s": 158875.1559782,
+          "pose_age_ms": 2.927905006799847,
+          "source_to_finished_ms": 9.296461008489132,
+          "commit_stamp_epoch_s": 158875.16010776002,
+          "commit_to_finished_ms": 5.166900984477252,
+          "relative_to_abort_s": -0.1600114259927068,
+          "worker_finished_epoch_s": 158875.165274661,
+          "end_to_end_ms": 6.368556001689285,
+          "internal_MPC_ms": 4.817911016289145,
+          "solve_ms": 0.7051309803500772,
+          "core_solve_ms": 0.13154500629752874,
+          "acados_time_ms": 0.12999999999999998,
+          "outside_command_ms": 1.5506449854001403,
+          "command_outside_solve_ms": 4.112780035939068,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1671,
+          "observation_epoch_s": 158875.178906163,
+          "observation_state_epoch_s": 158875.17560805302,
+          "pose_age_ms": 3.2981099793687463,
+          "source_to_finished_ms": 9.73044999409467,
+          "commit_stamp_epoch_s": 158875.18010911002,
+          "commit_to_finished_ms": 5.2293929911684245,
+          "relative_to_abort_s": -0.14001136799925007,
+          "worker_finished_epoch_s": 158875.185338503,
+          "end_to_end_ms": 6.4323400147259235,
+          "internal_MPC_ms": 4.898479004623368,
+          "solve_ms": 0.7203030108939856,
+          "core_solve_ms": 0.1351670071016997,
+          "acados_time_ms": 0.133,
+          "outside_command_ms": 1.5338610101025552,
+          "command_outside_solve_ms": 4.178175993729383,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1672,
+          "observation_epoch_s": 158875.198927899,
+          "observation_state_epoch_s": 158875.19638697102,
+          "pose_age_ms": 2.5409279915038496,
+          "source_to_finished_ms": 9.233491990016773,
+          "commit_stamp_epoch_s": 158875.200249065,
+          "commit_to_finished_ms": 5.371398001443595,
+          "relative_to_abort_s": -0.11998963198857382,
+          "worker_finished_epoch_s": 158875.205620463,
+          "end_to_end_ms": 6.692563998512924,
+          "internal_MPC_ms": 5.055970977991819,
+          "solve_ms": 0.7953970052767545,
+          "core_solve_ms": 0.15426002210006118,
+          "acados_time_ms": 0.15100000000000002,
+          "outside_command_ms": 1.6365930205211043,
+          "command_outside_solve_ms": 4.260573972715065,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1673,
+          "observation_epoch_s": 158875.218905522,
+          "observation_state_epoch_s": 158875.216152617,
+          "pose_age_ms": 2.7529049839358777,
+          "source_to_finished_ms": 9.254500997485593,
+          "commit_stamp_epoch_s": 158875.220296643,
+          "commit_to_finished_ms": 5.110475001856685,
+          "relative_to_abort_s": -0.1000120090029668,
+          "worker_finished_epoch_s": 158875.225407118,
+          "end_to_end_ms": 6.501596013549715,
+          "internal_MPC_ms": 4.971176007529721,
+          "solve_ms": 0.7420809997711331,
+          "core_solve_ms": 0.1450649870093912,
+          "acados_time_ms": 0.14300000000000002,
+          "outside_command_ms": 1.5304200060199946,
+          "command_outside_solve_ms": 4.229095007758588,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1674,
+          "observation_epoch_s": 158875.238939444,
+          "observation_state_epoch_s": 158875.23620116402,
+          "pose_age_ms": 2.738279988989234,
+          "source_to_finished_ms": 10.79560598009266,
+          "commit_stamp_epoch_s": 158875.24176135001,
+          "commit_to_finished_ms": 5.235419987002388,
+          "relative_to_abort_s": -0.07997808698564768,
+          "worker_finished_epoch_s": 158875.24699677,
+          "end_to_end_ms": 8.057325991103426,
+          "internal_MPC_ms": 5.1714369910769165,
+          "solve_ms": 0.8945280278567225,
+          "core_solve_ms": 0.17008199938572943,
+          "acados_time_ms": 0.16699999999999998,
+          "outside_command_ms": 2.885889000026509,
+          "command_outside_solve_ms": 4.276908963220194,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1675,
+          "observation_epoch_s": 158875.25896936402,
+          "observation_state_epoch_s": 158875.256358134,
+          "pose_age_ms": 2.611230011098087,
+          "source_to_finished_ms": 10.447951004607603,
+          "commit_stamp_epoch_s": 158875.261711305,
+          "commit_to_finished_ms": 5.094780004583299,
+          "relative_to_abort_s": -0.059948166977846995,
+          "worker_finished_epoch_s": 158875.266806085,
+          "end_to_end_ms": 7.836720993509516,
+          "internal_MPC_ms": 5.150491022504866,
+          "solve_ms": 0.7809319940861315,
+          "core_solve_ms": 0.1548709988128394,
+          "acados_time_ms": 0.153,
+          "outside_command_ms": 2.68622997100465,
+          "command_outside_solve_ms": 4.369559028418735,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1676,
+          "observation_epoch_s": 158875.278929493,
+          "observation_state_epoch_s": 158875.276217523,
+          "pose_age_ms": 2.711970009841025,
+          "source_to_finished_ms": 21.665777021553367,
+          "commit_stamp_epoch_s": 158875.281461362,
+          "commit_to_finished_ms": 16.421938023995608,
+          "relative_to_abort_s": -0.03998803798458539,
+          "worker_finished_epoch_s": 158875.29788330002,
+          "end_to_end_ms": 18.953807011712343,
+          "internal_MPC_ms": 13.934181974036619,
+          "solve_ms": 1.127645984524861,
+          "core_solve_ms": 0.23744901409372687,
+          "acados_time_ms": 0.23399999999999999,
+          "outside_command_ms": 5.019625037675723,
+          "command_outside_solve_ms": 12.806535989511758,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1677,
+          "observation_epoch_s": 158875.29943678502,
+          "observation_state_epoch_s": 158875.29615278702,
+          "pose_age_ms": 3.2839979976415634,
+          "source_to_finished_ms": 29.18123098788783,
+          "commit_stamp_epoch_s": 158875.301072747,
+          "commit_to_finished_ms": 24.261270998977125,
+          "relative_to_abort_s": -0.019480745977489278,
+          "worker_finished_epoch_s": 158875.325334018,
+          "end_to_end_ms": 25.897232990246266,
+          "internal_MPC_ms": 13.99933302309364,
+          "solve_ms": 1.1843059910461307,
+          "core_solve_ms": 0.24012901121750474,
+          "acados_time_ms": 0.23800000000000002,
+          "outside_command_ms": 11.897899967152625,
+          "command_outside_solve_ms": 12.81502703204751,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1678,
+          "observation_epoch_s": 158875.318917531,
+          "observation_state_epoch_s": 158875.31601810502,
+          "pose_age_ms": 2.8994259773753583,
+          "source_to_finished_ms": 28.167776996269822,
+          "commit_stamp_epoch_s": 158875.32092037902,
+          "commit_to_finished_ms": 23.265502997674048,
+          "relative_to_abort_s": 0.0,
+          "worker_finished_epoch_s": 158875.34418588202,
+          "end_to_end_ms": 25.268351018894464,
+          "internal_MPC_ms": 11.829352006316185,
+          "solve_ms": 1.1274779972154647,
+          "core_solve_ms": 0.23200700525194407,
+          "acados_time_ms": 0.23,
+          "outside_command_ms": 13.438999012578279,
+          "command_outside_solve_ms": 10.70187400910072,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1679,
+          "observation_epoch_s": 158875.338913826,
+          "observation_state_epoch_s": 158875.335930538,
+          "pose_age_ms": 2.983287995448336,
+          "source_to_finished_ms": 25.240574992494658,
+          "commit_stamp_epoch_s": 158875.33981689502,
+          "commit_to_finished_ms": 21.354217984480783,
+          "relative_to_abort_s": 0.019996295013697818,
+          "worker_finished_epoch_s": 158875.361171113,
+          "end_to_end_ms": 22.25728699704632,
+          "internal_MPC_ms": 11.947363003855571,
+          "solve_ms": 1.417007006239146,
+          "core_solve_ms": 0.5175610131118447,
+          "acados_time_ms": 0.515,
+          "outside_command_ms": 10.30992399319075,
+          "command_outside_solve_ms": 10.530355997616425,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1680,
+          "observation_epoch_s": 158875.358913562,
+          "observation_state_epoch_s": 158875.35599458902,
+          "pose_age_ms": 2.9189729830250144,
+          "source_to_finished_ms": 23.276185005670413,
+          "commit_stamp_epoch_s": 158875.35978830702,
+          "commit_to_finished_ms": 19.482467003399506,
+          "relative_to_abort_s": 0.039996031002374366,
+          "worker_finished_epoch_s": 158875.37927077402,
+          "end_to_end_ms": 20.3572120226454,
+          "internal_MPC_ms": 12.11900101043284,
+          "solve_ms": 1.549609994981438,
+          "core_solve_ms": 0.4308579955250025,
+          "acados_time_ms": 0.429,
+          "outside_command_ms": 8.23821101221256,
+          "command_outside_solve_ms": 10.569391015451401,
+          "valid": false,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.3232709370774114
+        },
+        {
+          "tick": 1681,
+          "observation_epoch_s": 158875.380331347,
+          "observation_state_epoch_s": 158875.37593126902,
+          "pose_age_ms": 4.400077974423766,
+          "source_to_finished_ms": 22.252203983953223,
+          "commit_stamp_epoch_s": 158875.381442732,
+          "commit_to_finished_ms": 16.740741004468873,
+          "relative_to_abort_s": 0.0614138160017319,
+          "worker_finished_epoch_s": 158875.398183473,
+          "end_to_end_ms": 17.852126009529456,
+          "internal_MPC_ms": 12.86068098852411,
+          "solve_ms": 1.2863839801866561,
+          "core_solve_ms": 0.40764998993836343,
+          "acados_time_ms": 0.40499999999999997,
+          "outside_command_ms": 4.991445021005347,
+          "command_outside_solve_ms": 11.574297008337453,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1682,
+          "observation_epoch_s": 158875.3989151,
+          "observation_state_epoch_s": 158875.39610114502,
+          "pose_age_ms": 2.8139549831394106,
+          "source_to_finished_ms": 9.655025001848117,
+          "commit_stamp_epoch_s": 158875.399969738,
+          "commit_to_finished_ms": 5.786432011518627,
+          "relative_to_abort_s": 0.07999756900244392,
+          "worker_finished_epoch_s": 158875.40575617002,
+          "end_to_end_ms": 6.841070018708706,
+          "internal_MPC_ms": 5.360648006899282,
+          "solve_ms": 0.8512960048392415,
+          "core_solve_ms": 0.24324498372152448,
+          "acados_time_ms": 0.241,
+          "outside_command_ms": 1.4804220118094236,
+          "command_outside_solve_ms": 4.509352002060041,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1683,
+          "observation_epoch_s": 158875.41906427802,
+          "observation_state_epoch_s": 158875.41600544602,
+          "pose_age_ms": 3.058831993257627,
+          "source_to_finished_ms": 10.410352988401428,
+          "commit_stamp_epoch_s": 158875.420718532,
+          "commit_to_finished_ms": 5.697267013601959,
+          "relative_to_abort_s": 0.10014674701960757,
+          "worker_finished_epoch_s": 158875.426415799,
+          "end_to_end_ms": 7.351520995143801,
+          "internal_MPC_ms": 5.165376991499215,
+          "solve_ms": 0.8934799989219755,
+          "core_solve_ms": 0.25466797524131835,
+          "acados_time_ms": 0.252,
+          "outside_command_ms": 2.1861440036445856,
+          "command_outside_solve_ms": 4.27189699257724,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1684,
+          "observation_epoch_s": 158875.43896461002,
+          "observation_state_epoch_s": 158875.43599754202,
+          "pose_age_ms": 2.9670679941773415,
+          "source_to_finished_ms": 17.520170978968963,
+          "commit_stamp_epoch_s": 158875.440555815,
+          "commit_to_finished_ms": 12.961897999048233,
+          "relative_to_abort_s": 0.1200470790208783,
+          "worker_finished_epoch_s": 158875.453517713,
+          "end_to_end_ms": 14.553102984791622,
+          "internal_MPC_ms": 12.509831984061748,
+          "solve_ms": 2.025714988121763,
+          "core_solve_ms": 0.6426180189009756,
+          "acados_time_ms": 0.639,
+          "outside_command_ms": 2.0432710007298738,
+          "command_outside_solve_ms": 10.484116995939985,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        },
+        {
+          "tick": 1685,
+          "observation_epoch_s": 158875.458968386,
+          "observation_state_epoch_s": 158875.456075964,
+          "pose_age_ms": 2.892421995056793,
+          "source_to_finished_ms": 17.31577899772674,
+          "commit_stamp_epoch_s": 158875.46083019502,
+          "commit_to_finished_ms": 12.56154797738418,
+          "relative_to_abort_s": 0.14005085499957204,
+          "worker_finished_epoch_s": 158875.473391743,
+          "end_to_end_ms": 14.423357002669945,
+          "internal_MPC_ms": 12.143653992097825,
+          "solve_ms": 1.7973270150832832,
+          "core_solve_ms": 0.4647820023819804,
+          "acados_time_ms": 0.46099999999999997,
+          "outside_command_ms": 2.2797030105721205,
+          "command_outside_solve_ms": 10.346326977014542,
+          "valid": true,
+          "solver_status": "ACADOS_SUCCESS",
+          "constraint_violation": 0.0
+        }
+      ],
+      "source_sha256": {
+        "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/configuration.json": "b79c6f50d2ac27d599a07a9f24155c4361d999113e86950ba2da1ca64cf5cf8e",
+        "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/flight/events.jsonl": "954372cd971530507cb5ce38687decc3c7c6dc2a6411113db50dc9950662ab98",
+        "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/flight/mpc/history.jsonl": "5aa35e6c84a81375df8ddb3dc3a2020d9e2cd39ae8307cf08eb9030fd3b2c213"
+      },
+      "interpretation": "Valid solves arrived late for20ms selection; stale-tick guard latched2rad/s EmergencyLanding. Actualheight rose past1.5m despite downward vertical acceleration demand; nativePID fault-free. Underlying vertical-response cause awaits measuredRPM/mixer data, not unused INDI shadow fields."
+    },
+    "source_sha256": "5a310451926c303e7cd69ce63fd603fd207ddb63b2c3f685a88ddc4eb6ea1bb7"
+  },
+  "PID_host_cases": [
+    {
+      "run": "sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z",
+      "speed_requested_m_s": 3,
+      "stamp": "10-21-18",
+      "success": true,
+      "reason": "test_complete",
+      "envelope": {
+        "soft_position_m": 1.0,
+        "hard_position_m": 1.5,
+        "soft_tilt_deg": 40.0,
+        "hard_tilt_deg": 60.0,
+        "mpc_rate_limit_rad_s": 2.3,
+        "blend_s": 2.0,
+        "maximum_speed_m_s": 4.0,
+        "mpc_thrust_weight": 1.5
+      },
+      "trajectory_options": {
+        "kind": "paired_mpc_gerono",
+        "center_xy_m": [
+          0.0,
+          0.0
+        ],
+        "radius_m": 2.0,
+        "peak_speed_m_s": 3.0,
+        "ramp_s": 2.0,
+        "transfer_speed_m_s": 0.4,
+        "entry_dwell_s": 1.0,
+        "entry_timeout_s": 10.0,
+        "entry_position_m": 0.15,
+        "entry_speed_m_s": 0.25,
+        "entry_tilt_deg": 6.0,
+        "final_hold_s": 2.0,
+        "schedule": "indi_shaped_angular",
+        "laps": 6,
+        "pattern": "lemniscate",
+        "width_m": 3.0,
+        "reference_kind": "butterfly",
+        "butterfly_height_m": 0.3,
+        "butterfly_cycles": 3,
+        "maximum_acceleration_m_s2": 7.149065642368818,
+        "maximum_jerk_m_s3": 23.382796082290703
+      },
+      "ground_m": 0.02761646918952465,
+      "height_world_center_m": 1.0276164691895247,
+      "configuration": {
+        "version": 1,
+        "device": 15,
+        "flight_profile": "indi_mpc_benchmark",
+        "listen": "tcp/10.0.0.200:7447",
+        "telemetry_listen": "",
+        "collective_profile": "/home/hw527/Projects/drones/Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_collective.json",
+        "limits": {
+          "expected_uid": "56003f001451333231343731",
+          "pid_only": false,
+          "ground_m": 0.02761646918952465,
+          "height_m": 1.0,
+          "pid_hold_s": 20.0,
+          "indi_hold_s": 5.0,
+          "maximum_run_s": 120.0,
+          "maximum_altitude_m": 1.5,
+          "maximum_startup_tilt_deg": 10.0,
+          "soft_position_m": 0.6,
+          "hard_position_m": 0.75,
+          "soft_tilt_deg": 15.0,
+          "hard_tilt_deg": 35.0,
+          "controller_status_max_age_s": 0.3,
+          "expected_control_period_us": 1000,
+          "mass_kg": 0.07151
+        },
+        "ground_indi": {
+          "thrust_weight": 0.4,
+          "spool_s": 1.5,
+          "warmup_s": 0.6,
+          "eligible_dwell_s": 0.5,
+          "maximum_wait_s": 12.0,
+          "maximum_height_m": 0.04,
+          "start_climb_on_ack": false,
+          "launch_boost_weight": 0.0,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0
+        },
+        "mocap": {
+          "topic": "/tf",
+          "parent_frame": "map",
+          "tracked_frame": "sanity15",
+          "world_from_map_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "marker_to_base_xyz": [
+            0,
+            0,
+            0
+          ],
+          "marker_to_base_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "commissioning": "Explicit matched MPC+PID benchmark; lemniscate, indi_shaped_angular,radius2.0m,6eightlaps,peak3.0m/s. Common measured mass, geometry, command bounds and envelope; INDI uses identified prediction dynamics, PID uses ideal-rate dynamics with a separate causal selected-command delay projection; takeoff differs: INDI0.4weight ground warmup then immediate climb on guarded ACK, bounded1.2weight launch floor for at most0.5s with3N/s upward slew until confirmed liftoff; PID retains0.4weight and legacy timing with boost disabled. Circle centeredworldXY[0,0] starts[0,-R]; lemniscate startsworldcenter. Ground supplied by caller: physical launcher must obtain a fresh stationary disabled-bench capture before flight. limits.pid_only=false selects the common permission-ON guarded protocol; inner_controller and actual native FC ACK determine inner identity. BUTTERFLY: 3 cycles, 6 complete eight laps, alternating +h/-h planes with h=0.3m; each eight stops at center with zeroV/A/J.  Explicit width_m=3; footprint4x3m. Explicit reference acceleration/jerk shaping lengthens phase ramps for the selected geometry and peak speed. Mocap coverage is not established by reference shaping. PID COMPARISON: native PID is confirmed before arming and throughout healthy phases; INDI is never requested. Ideal-rate MPC projects to the20ms selection plus15ms output epoch from accepted measured state and selected command history, without identified INDI poles. Emergency2rad/s is explicit for3/4/5; ordinary takeoff and settled landing retain0.6rad/s. HIGH-SPEED PREPARATION: reference bounds explicitly increased to preserve requested peak and two-second ramps; reference screen is not flight qualification.",
+        "estimator_logging": {
+          "maximum_rate_hz": 25.0,
+          "clock_rate_hz": 20.0,
+          "clock_endpoint": "udp/10.0.0.115:7461",
+          "flight_profile": "indi_mpc_benchmark",
+          "require_initialized": false
+        },
+        "command_timing": {
+          "enabled": true,
+          "requires_receiver_build_option": "CONFIG_SANITY_COMMAND_TIMING_TRACE",
+          "scope": "Optional measurement stream; commands and leases unchanged."
+        },
+        "controller_backend": "paper_measured_rpm_ctbr_compatibility",
+        "liftoff_options": {
+          "clearance_m": 0.02,
+          "airborne_dwell_s": 0.04,
+          "blend_s": 0.2,
+          "ground_rate_limit_rad_s": 0.15
+        },
+        "spool_leveling": false,
+        "trajectory": {
+          "kind": "paired_mpc_gerono",
+          "center_xy_m": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 2.0,
+          "peak_speed_m_s": 3.0,
+          "ramp_s": 2.0,
+          "transfer_speed_m_s": 0.4,
+          "entry_dwell_s": 1.0,
+          "entry_timeout_s": 10.0,
+          "entry_position_m": 0.15,
+          "entry_speed_m_s": 0.25,
+          "entry_tilt_deg": 6.0,
+          "final_hold_s": 2.0,
+          "schedule": "indi_shaped_angular",
+          "laps": 6,
+          "pattern": "lemniscate",
+          "width_m": 3.0,
+          "reference_kind": "butterfly",
+          "butterfly_height_m": 0.3,
+          "butterfly_cycles": 3,
+          "maximum_acceleration_m_s2": 7.149065642368818,
+          "maximum_jerk_m_s3": 23.382796082290703
+        },
+        "benchmark_envelope": {
+          "soft_position_m": 1.0,
+          "hard_position_m": 1.5,
+          "soft_tilt_deg": 40.0,
+          "hard_tilt_deg": 60.0,
+          "mpc_rate_limit_rad_s": 2.3,
+          "blend_s": 2.0,
+          "maximum_speed_m_s": 4.0,
+          "mpc_thrust_weight": 1.5
+        },
+        "mpc": {
+          "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_3mps.json",
+          "model": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/model_3mps.xml"
+        },
+        "inner_controller": "pid",
+        "takeoff_provenance": {
+          "ground_thrust_weight": 0.4,
+          "start_climb_on_ack": true,
+          "launch_boost_weight": 1.2,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0,
+          "scope": "host-only bounded launch candidate; existing SZC4 and FC firmware; not flight qualified"
+        },
+        "high_speed_wire": false,
+        "benchmark_provenance": {
+          "pattern": "lemniscate",
+          "inner_controller": "pid",
+          "speed_m_s": 3.0,
+          "schedule": "indi_shaped_angular",
+          "radius_m": 2.0,
+          "width_m": 3.0,
+          "footprint_xy_m": [
+            4.0,
+            3.0
+          ],
+          "ground_thrust_weight": 0.4,
+          "start_climb_on_ack": false,
+          "launch_boost_weight": 0.0,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0,
+          "requested_laps": 6,
+          "butterfly_cycles": 3,
+          "butterfly_height_m": 0.3,
+          "reference_kind": "butterfly",
+          "ground_m": 0.02761646918952465,
+          "mpc_predictor": "ideal_PID_with_selected_command_delay_projection",
+          "runtime_rule": "max(120,ceil(reference_duration_s+60)), capped180s; ordinary hover cap120s unchanged",
+          "reference_duration_s": 57.93176065400564,
+          "reference_design": {
+            "schedule": "indi_shaped_angular",
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "vertical_amplitude_m": 0.3,
+            "footprint_xy_m": [
+              4.0,
+              3.0
+            ],
+            "derivative_norm_bounds_m": [
+              3.655133376499413,
+              6.437390775772433,
+              12.4
+            ],
+            "requested_ramp_s": 2.0,
+            "effective_ramp_s": 2.0,
+            "maximum_acceleration_m_s2": 7.149065642368818,
+            "maximum_jerk_m_s3": 23.382796082290703,
+            "conservative_acceleration_bound_m_s2": 7.149065642361668,
+            "conservative_jerk_bound_m_s3": 23.38279608226732,
+            "angular_cruise_rad_s": 0.8207634827468742,
+            "reference_rate_proxy_limit_rad_s": 2.3835673886127116,
+            "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+            "geometry_and_peak_speed_preserved": true,
+            "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+            "reference_kind": "butterfly",
+            "cycles": 3,
+            "eight_laps": 6,
+            "plane_sequence": [
+              "z=center_z+h*sin(2theta)",
+              "z=center_z-h*sin(2theta)"
+            ],
+            "segment_duration_s": 9.655293442334274,
+            "total_duration_s": 57.93176065400564,
+            "plane_handoff": "C3 rest at center after each complete eight",
+            "height_bounds_m": [
+              0.7276164691895246,
+              1.3276164691895247
+            ]
+          }
+        },
+        "high_speed_preparation": {
+          "reference_screen": {
+            "scope": "Sampled fixed-yaw full-rotation reference equilibrium with fitted body drag; not measured flight or closed-loop guarantee",
+            "speed_m_s": 3.0,
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "footprint_xy_m": [
+              4.0,
+              3.0
+            ],
+            "center_xy_m": [
+              0.0,
+              0.0
+            ],
+            "height_m": 1.0,
+            "laps": 6,
+            "butterfly_cycles": 3,
+            "butterfly_height_m": 0.3,
+            "duration_s": 57.93176065400564,
+            "effective_ramp_s": 2.0,
+            "sample_dt_max_s": 0.0019999917370085996,
+            "speed_peak_m_s": 2.999999651747305,
+            "acceleration_peak_m_s2": 4.232056825507701,
+            "jerk_peak_m_s3": 10.669966978309448,
+            "tilt_peak_deg": 28.19232356165058,
+            "thrust_peak_N": 0.8540786575189534,
+            "thrust_peak_weight": 1.217480696396052,
+            "body_rate_axis_peak_rad_s": [
+              1.1505801214599867,
+              0.39645441168631884,
+              0.15922462048452526
+            ],
+            "equilibrium_residual_m_s2": 7.9065049888418e-12,
+            "ordinary_envelope_violations": [],
+            "reference_design": {
+              "schedule": "indi_shaped_angular",
+              "radius_m": 2.0,
+              "width_m": 3.0,
+              "vertical_amplitude_m": 0.3,
+              "footprint_xy_m": [
+                4.0,
+                3.0
+              ],
+              "derivative_norm_bounds_m": [
+                3.655133376499413,
+                6.437390775772433,
+                12.4
+              ],
+              "requested_ramp_s": 2.0,
+              "effective_ramp_s": 2.0,
+              "maximum_acceleration_m_s2": 7.149065642368818,
+              "maximum_jerk_m_s3": 23.382796082290703,
+              "conservative_acceleration_bound_m_s2": 7.149065642361668,
+              "conservative_jerk_bound_m_s3": 23.38279608226732,
+              "angular_cruise_rad_s": 0.8207634827468742,
+              "reference_rate_proxy_limit_rad_s": 2.3835673886127116,
+              "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+              "geometry_and_peak_speed_preserved": true,
+              "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+              "reference_kind": "butterfly",
+              "cycles": 3,
+              "eight_laps": 6,
+              "plane_sequence": [
+                "z=center_z+h*sin(2theta)",
+                "z=center_z-h*sin(2theta)"
+              ],
+              "segment_duration_s": 9.655293442334274,
+              "total_duration_s": 57.93176065400564,
+              "plane_handoff": "C3 rest at center after each complete eight",
+              "height_bounds_m": [
+                0.7,
+                1.3
+              ]
+            },
+            "qualification": "offline model study; high-speed small-angle identified rate response is unvalidated"
+          },
+          "ordinary_live_supported": true,
+          "required_release": "ordinary SZC4",
+          "scope": "Requested peaks and R2 geometry preserved; Measured trajectory tilt guards use the reviewed speed-specific expanded thresholds; PD takeoff/landing command caps and native guards unchanged. The explicit3m/s airborne/braking envelope is40deg soft,60deg hard and4m/s. Offline model study is not flight qualification.",
+          "airborne_and_braking_envelope": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 40.0,
+            "hard_tilt_deg": 60.0,
+            "mpc_rate_limit_rad_s": 2.3,
+            "blend_s": 2.0,
+            "maximum_speed_m_s": 4.0,
+            "mpc_thrust_weight": 1.5,
+            "scope": "Latches after MPC admission through fault landing; pre-admission speed2m/s and ordinary PD/native guards unchanged"
+          },
+          "selected_release_supported": true,
+          "selected_wire": "SZC4",
+          "status": "PID comparison candidate; ideal-rate MPC and explicit2rad/s PID emergency recovery; matched receiver capability ACK required",
+          "PD_takeoff_and_landing_thrust_weight": 1.5,
+          "speed_headroom_rationale": "Hard caps4/5/6.5m/s for requested3/4/5 preserve the matching INDI envelopes. These are hard interruption thresholds, not reference speed changes or room-coverage validation."
+        },
+        "emergency_braking_configuration": {
+          "rate_limit_rad_s": 2.0,
+          "ordinary_PD_rate_limit_rad_s": 0.6,
+          "scope": "Explicit matched native PID butterfly branch: emergency2rad/s after admission; ordinaryPD0.6rad/s"
+        }
+      },
+      "completed_laps": 6.0,
+      "phases": [
+        {
+          "time_s": 0.0,
+          "phase": "waiting",
+          "reason": null
+        },
+        {
+          "time_s": 2.8600083120109048,
+          "phase": "arming",
+          "reason": null
+        },
+        {
+          "time_s": 2.9399992740072776,
+          "phase": "ground_spinup",
+          "reason": null
+        },
+        {
+          "time_s": 5.5600099049916025,
+          "phase": "takeoff",
+          "reason": null
+        },
+        {
+          "time_s": 12.580042531015351,
+          "phase": "trajectory_entry",
+          "reason": null
+        },
+        {
+          "time_s": 13.580049617012264,
+          "phase": "transfer_to_center",
+          "reason": null
+        },
+        {
+          "time_s": 15.59999995600083,
+          "phase": "mpc_entry",
+          "reason": null
+        },
+        {
+          "time_s": 16.619998814014252,
+          "phase": "mpc_blend",
+          "reason": null
+        },
+        {
+          "time_s": 18.63999731099466,
+          "phase": "lemniscate",
+          "reason": null
+        },
+        {
+          "time_s": 76.57999915000983,
+          "phase": "return_home",
+          "reason": null
+        },
+        {
+          "time_s": 78.58013670600485,
+          "phase": "trajectory_hold",
+          "reason": null
+        },
+        {
+          "time_s": 87.51999716300634,
+          "phase": "landing",
+          "reason": "test_complete"
+        },
+        {
+          "time_s": 94.26000027899863,
+          "phase": "stopped",
+          "reason": "test_complete"
+        }
+      ],
+      "trajectory_samples": 2897,
+      "trajectory_duration_s": 57.9200006989995,
+      "reference_duration_s": 57.93176065400564,
+      "position_RMS_m": 0.05346308383395922,
+      "position_max_m": 0.1154677401299399,
+      "position_p95_m": 0.07707102497069376,
+      "axis_RMS_m": [
+        0.018077453153286047,
+        0.03400456012682956,
+        0.037083647489271274
+      ],
+      "mean_error_xyz_m": [
+        -0.013875601392584947,
+        0.013614210918057335,
+        0.03476109229162437
+      ],
+      "speed_m_s_p0_p50_p95_max": [
+        0.016062196451399995,
+        1.659893022912908,
+        2.7624337321092334,
+        3.0348287061307357
+      ],
+      "tilt_deg_p0_p50_p95_max": [
+        0.1406482346389737,
+        15.262606473727677,
+        25.85305919119443,
+        28.27062645941717
+      ],
+      "selected_CTBR_abs_peak": [
+        0.9263080069560795,
+        1.564288240858148,
+        0.9888587783062148,
+        0.22046746306031384
+      ],
+      "authority_gyro_sampled_tracking_abs_peak_FLU_rad_s": [
+        2.1822502613067627,
+        1.7271708250045776,
+        0.348638653755188
+      ],
+      "authority_gyro_sampled_whole_abs_peak_FLU_rad_s": [
+        2.1822502613067627,
+        2.723292350769043,
+        0.4888516068458557
+      ],
+      "MPC_health": {
+        "ok": 2897
+      },
+      "MPC_clipped_frames": 0,
+      "MPC_compute_ms_p0_p50_p95_max": [
+        4.788888007169589,
+        4.972297989297658,
+        5.308456998318434,
+        13.731565995840356
+      ],
+      "MPC_worker_attempt_counts": {
+        "1": 2896
+      },
+      "MPC_worker_rescued_count": 0,
+      "MPC_worker_invalid_count": 0,
+      "mocap_age_ms_p0_p50_p95_max": [
+        0.5149919999999999,
+        2.956115,
+        3.3639104000000004,
+        3.8005109999999998
+      ],
+      "controller_age_ms_p0_p50_p95_max": [
+        0.03412002115510404,
+        34.999424999114126,
+        67.22965119406581,
+        82.66147098038346
+      ],
+      "raw_mocap_outcomes": {
+        "accepted": 18856
+      },
+      "outlier_retention_events": 0,
+      "native_modes": {
+        "pid": 2897
+      },
+      "native_faults": {
+        "ok": 2897
+      },
+      "native_RPM_masks": {
+        "15": 2897
+      },
+      "native_saturation_masks": {
+        "0": 2897
+      },
+      "native_INDI_weight_min_max": [
+        0.0,
+        0.0
+      ],
+      "timing_counters_tracking": {
+        "pid_execution_deadline_misses": {
+          "first": 0,
+          "last": 4,
+          "delta": 4
+        },
+        "late_apply_intervals": {
+          "first": 2,
+          "last": 9,
+          "delta": 7
+        },
+        "pid_over_90_percent_budget": {
+          "first": 19,
+          "last": 234,
+          "delta": 215
+        },
+        "trace_log_dropped_bytes": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        },
+        "gyro_sample_overruns": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        },
+        "gyro_filter_overruns": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        }
+      },
+      "timing_scope": "Host-polled status snapshots; native trace audited separately",
+      "guards": [],
+      "soft_to_hard_s": null,
+      "landing": {
+        "samples": 337,
+        "duration_s": 6.720002209011,
+        "rate_command_abs_peak": [
+          0.15333579884067897,
+          0.0912367668596609,
+          0.19009936513968148
+        ],
+        "thrust_N_min_max": [
+          0.40582143750009814,
+          0.7247116787951433
+        ],
+        "measured_speed_max_m_s": 0.4729742114895248,
+        "reference_error_max_before_stop_m": 0.07213341191795664,
+        "height_above_ground_min_max_m": [
+          0.0005664974451065063,
+          1.0501561481505632
+        ]
+      },
+      "laps": [
+        {
+          "lap": 1,
+          "samples": 483,
+          "RMS_m": 0.05765844219196875,
+          "max_m": 0.1154677401299399,
+          "peak_speed_m_s": 2.988336268024016,
+          "peak_tilt_deg": 27.567634034276107
+        },
+        {
+          "lap": 2,
+          "samples": 483,
+          "RMS_m": 0.054785990269106494,
+          "max_m": 0.09001715287945333,
+          "peak_speed_m_s": 2.975876840085725,
+          "peak_tilt_deg": 26.946274020812904
+        },
+        {
+          "lap": 3,
+          "samples": 483,
+          "RMS_m": 0.05470011855289503,
+          "max_m": 0.10446068855155516,
+          "peak_speed_m_s": 2.986295148731096,
+          "peak_tilt_deg": 27.574652004650503
+        },
+        {
+          "lap": 4,
+          "samples": 483,
+          "RMS_m": 0.0507886968237104,
+          "max_m": 0.0841936073774513,
+          "peak_speed_m_s": 2.9691721383970493,
+          "peak_tilt_deg": 26.506079280999884
+        },
+        {
+          "lap": 5,
+          "samples": 482,
+          "RMS_m": 0.051577884298863425,
+          "max_m": 0.08682288711683013,
+          "peak_speed_m_s": 3.0348287061307357,
+          "peak_tilt_deg": 28.27062645941717
+        },
+        {
+          "lap": 6,
+          "samples": 483,
+          "RMS_m": 0.050907018013857344,
+          "max_m": 0.09211046377552531,
+          "peak_speed_m_s": 2.981186681138577,
+          "peak_tilt_deg": 27.32016485312751
+        }
+      ],
+      "recorder_dropped": 0,
+      "shutdown_acknowledged": true,
+      "all_owned_children_exited": true,
+      "gyro_timestamp_scope": "Unique authority controller gyro is BF/FLU, not native paper FRD; plotted at first actual host-control receipt; unshifted; sparse gyro is not a native Blackbox rate trace",
+      "source_sha256": {
+        "configuration.json": "0ebd5bcbf72a2ad11fcc2ecd40a21a698a38308a72365069b6ea7ed8d3bc2521",
+        "run_summary.json": "9eddbc4d1283c1f5f1681c30e3dabfee3bdbab3ca06fe292e2372e224465025a",
+        "flight/events.jsonl": "3f5a909c62ddd9ded9fbe06b0dc5313dce6590304a15ba71cea04de8ef8c73a7",
+        "flight/mpc/history.jsonl": "b2d422011ea1b87848e7935b30d32f487041fd069530a6cd1e86a620c611fa66"
+      },
+      "first_native_fault": null,
+      "first_native_fault_elapsed_s": null,
+      "first_native_fault_trajectory_time_s": null,
+      "tracking_height_world_min_max_m": [
+        0.7571248412132263,
+        1.416108250617981
+      ],
+      "tracking_height_above_ground_min_max_m": [
+        0.7295083720237017,
+        1.3884917814284563
+      ],
+      "ordinary_and_emergency_braking_configuration": {
+        "rate_limit_rad_s": 2.0,
+        "ordinary_PD_rate_limit_rad_s": 0.6,
+        "scope": "Explicit PID comparison: emergency2rad/s for admitted3/4/5butterfly; ordinarytakeoff/settledlanding0.6; guardrate/collective lag are documented PID engineering assumptions"
+      },
+      "final_control_diagnostics": {
+        "version": 1,
+        "pd_evaluated_this_tick": false,
+        "pd_command_count": 4334,
+        "world_frame": "configured_world_z_up",
+        "attitude_matrix_convention": "body_to_configured_world",
+        "integral_acceleration_state_m_s2": [
+          0.12232364315335166,
+          -0.11213843273682221,
+          -0.1504008783538153
+        ],
+        "integral_limits_m_s2": [
+          0.25,
+          0.25,
+          1.5
+        ],
+        "pd": null,
+        "selected_ctbr": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "selected_enabled": false,
+        "expected_control_period_us": 1000,
+        "ground_entry": {
+          "thrust_weight": 0.4,
+          "start_climb_on_ack": false,
+          "acknowledgement_monotonic_s": null,
+          "reference_clock_origin_monotonic_s": 158739.508362123
+        },
+        "launch_boost": {
+          "reason": "disabled",
+          "pd_requested_thrust_N": null,
+          "requested_floor_N": 0.0,
+          "requested_thrust_N": null,
+          "previous_selected_thrust_N": 0.41581133551165217,
+          "configured_weight": 0.0,
+          "active": false,
+          "started_monotonic_s": null,
+          "permanent_stop_reason": null,
+          "selected_thrust_N": 0.0,
+          "slew_up_limit_N_s": 0.5,
+          "slew_down_limit_N_s": 0.5
+        },
+        "flight_envelope_guard": {
+          "active": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 40.0,
+            "hard_tilt_deg": 60.0,
+            "maximum_speed_m_s": 4.0
+          },
+          "last_violation": null
+        },
+        "trajectory": {
+          "kind": "paired_mpc_butterfly",
+          "phase": "stopped",
+          "options": {
+            "pattern": "lemniscate",
+            "reference_kind": "butterfly",
+            "butterfly_height_m": 0.3,
+            "butterfly_cycles": 3,
+            "schedule": "indi_shaped_angular",
+            "center_xy_m": [
+              0.0,
+              0.0
+            ],
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "peak_speed_m_s": 3.0,
+            "ramp_s": 2.0,
+            "laps": 6,
+            "transfer_speed_m_s": 0.4,
+            "entry_dwell_s": 1.0,
+            "entry_timeout_s": 10.0,
+            "entry_position_m": 0.15,
+            "entry_speed_m_s": 0.25,
+            "entry_tilt_deg": 6.0,
+            "final_hold_s": 2.0,
+            "maximum_acceleration_m_s2": 7.149065642368818,
+            "maximum_jerk_m_s3": 23.382796082290703
+          },
+          "lap_duration_s": 57.93176065400564,
+          "duration_scope": "whole_speed_ramped_lap_segment",
+          "requested_laps": 6,
+          "reference_design": {
+            "kind": "indi_shaped_transfer",
+            "duration_s": 2.0,
+            "speed_bound_m_s": 0.18889836182541997,
+            "acceleration_bound_m_s2": 0.32439519581183257,
+            "jerk_bound_m_s3": 1.1333901709525198,
+            "scope": "C3 reference transfer; not measured aircraft tracking"
+          }
+        },
+        "emergency_braking_configuration": {
+          "rate_limit_rad_s": 2.0,
+          "ordinary_PD_rate_limit_rad_s": 0.6,
+          "scope": "Explicit PID comparison: emergency2rad/s for admitted3/4/5butterfly; ordinarytakeoff/settledlanding0.6; guardrate/collective lag are documented PID engineering assumptions"
+        },
+        "inner_controller": "pid",
+        "native_inner_status": {
+          "mode": "pid",
+          "indi_weight": 0.0,
+          "requested": false,
+          "permission": true,
+          "armed": true
+        },
+        "native_inner_confirmed_at": 158739.508362123,
+        "pid_confirmed_at": 158739.508362123,
+        "indi_confirmed_at": null,
+        "mpc": {
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022959242,
+            "result_tick": 4711,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 4.979409015504643
+          },
+          "weight": 0.0,
+          "selection": {},
+          "benchmark_envelope_active": true,
+          "airborne_envelope": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 40.0,
+            "hard_tilt_deg": 60.0,
+            "maximum_speed_m_s": 4.0
+          },
+          "selected_count": 3544,
+          "clipped_count": 0,
+          "solver": {
+            "success": true,
+            "solver_success": true,
+            "status": "ACADOS_SUCCESS",
+            "status_code": 0,
+            "solve_ms": 0.79614800051786,
+            "core_solve_ms": 0.2266950032208115,
+            "acados_time_ms": 0.225,
+            "nonlinear_refinement_count": 1,
+            "feasibility_attempts": [
+              {
+                "attempt": 1,
+                "solver_status": 0,
+                "constraint_violation": 0.0,
+                "dynamics_defect": 0.0007773941394653011,
+                "finite": true,
+                "elapsed_ms": 3.782935003982857
+              }
+            ],
+            "initial_constraint_violation": 0.0,
+            "initial_dynamics_defect": 0.0007773941394653011,
+            "iterations": 1,
+            "qp_iterations": [
+              0.0,
+              7.0
+            ],
+            "constraint_violation": 0.0,
+            "dynamics_defect": 0.0007773941394653011,
+            "kkt_residuals": [
+              12.038874622507024,
+              0.0007773941394653011,
+              0.0,
+              0.19995624740184953
+            ],
+            "disturbance_world_m_s2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "cost": 3.7112812957497017,
+            "rate_response_state": null,
+            "thrust_effectiveness": 0.953,
+            "requested_ctbr": [
+              0.5219107671750199,
+              0.2018701001554961,
+              1.3665546421598054,
+              0.254941002803915
+            ],
+            "total_ms": 4.979409015504643,
+            "deadline_scope": "Causal state projection plus full MPC computation",
+            "refinement_rescued": false,
+            "command_prediction": {
+              "mode": "ideal_PID_selected_command_projection",
+              "source_stamp_ns": 158828185393255,
+              "target_stamp_ns": 158828223351590,
+              "projection_s": 0.037958335,
+              "nominal_command_delay_s": 0.015,
+              "selected_history_only": true,
+              "rate_model_state": null,
+              "source_state": [
+                0.11179998517036438,
+                0.0580400675535202,
+                0.04376263916492462,
+                0.9995676868177941,
+                0.008382189081752893,
+                0.0036597920090640002,
+                -0.02794251775292622,
+                -0.013848735383228568,
+                0.030619506883157403,
+                0.18950068320421704,
+                0.0906181288159198,
+                -0.16449888705943824,
+                0.15402270589828004
+              ],
+              "predicted_state": [
+                0.11131021799601035,
+                0.059115198632257955,
+                0.04787955585267908,
+                0.9995694497019877,
+                0.008736679032655263,
+                0.004733720973539581,
+                -0.027607563233481177,
+                -0.011892563689138567,
+                0.026039227210991906,
+                0.02741643755871048,
+                0.020314703256637,
+                0.055889990492187694,
+                0.018049451810407197
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "run": "sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z",
+      "speed_requested_m_s": 5,
+      "stamp": "10-23-05",
+      "success": false,
+      "reason": "hard_flight_envelope",
+      "envelope": {
+        "soft_position_m": 1.0,
+        "hard_position_m": 1.5,
+        "soft_tilt_deg": 72.0,
+        "hard_tilt_deg": 82.0,
+        "mpc_rate_limit_rad_s": 9.5,
+        "blend_s": 2.0,
+        "mpc_thrust_weight": 2.2,
+        "maximum_speed_m_s": 6.5
+      },
+      "trajectory_options": {
+        "kind": "paired_mpc_gerono",
+        "center_xy_m": [
+          0.0,
+          0.0
+        ],
+        "radius_m": 2.0,
+        "peak_speed_m_s": 5.0,
+        "ramp_s": 2.0,
+        "transfer_speed_m_s": 0.4,
+        "entry_dwell_s": 1.0,
+        "entry_timeout_s": 10.0,
+        "entry_position_m": 0.15,
+        "entry_speed_m_s": 0.25,
+        "entry_tilt_deg": 6.0,
+        "final_hold_s": 2.0,
+        "schedule": "indi_shaped_angular",
+        "laps": 6,
+        "pattern": "lemniscate",
+        "width_m": 3.0,
+        "reference_kind": "butterfly",
+        "butterfly_height_m": 0.3,
+        "butterfly_cycles": 3,
+        "maximum_acceleration_m_s2": 16.733515673243588,
+        "maximum_jerk_m_s3": 72.8374001968332
+      },
+      "ground_m": 0.027845676988363266,
+      "height_world_center_m": 1.0278456769883633,
+      "configuration": {
+        "version": 1,
+        "device": 15,
+        "flight_profile": "indi_mpc_benchmark",
+        "listen": "tcp/10.0.0.200:7447",
+        "telemetry_listen": "",
+        "collective_profile": "/home/hw527/Projects/drones/Sanity/src/ros2_sanity_ws/src/sanity_zenoh/config/sanity15_indi_collective.json",
+        "limits": {
+          "expected_uid": "56003f001451333231343731",
+          "pid_only": false,
+          "ground_m": 0.027845676988363266,
+          "height_m": 1.0,
+          "pid_hold_s": 20.0,
+          "indi_hold_s": 5.0,
+          "maximum_run_s": 120.0,
+          "maximum_altitude_m": 1.5,
+          "maximum_startup_tilt_deg": 10.0,
+          "soft_position_m": 0.6,
+          "hard_position_m": 0.75,
+          "soft_tilt_deg": 15.0,
+          "hard_tilt_deg": 35.0,
+          "controller_status_max_age_s": 0.3,
+          "expected_control_period_us": 1000,
+          "mass_kg": 0.07151
+        },
+        "ground_indi": {
+          "thrust_weight": 0.4,
+          "spool_s": 1.5,
+          "warmup_s": 0.6,
+          "eligible_dwell_s": 0.5,
+          "maximum_wait_s": 12.0,
+          "maximum_height_m": 0.04,
+          "start_climb_on_ack": false,
+          "launch_boost_weight": 0.0,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0
+        },
+        "mocap": {
+          "topic": "/tf",
+          "parent_frame": "map",
+          "tracked_frame": "sanity15",
+          "world_from_map_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "marker_to_base_xyz": [
+            0,
+            0,
+            0
+          ],
+          "marker_to_base_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        "commissioning": "Explicit matched MPC+PID benchmark; lemniscate, indi_shaped_angular,radius2.0m,6eightlaps,peak5.0m/s. Common measured mass, geometry, command bounds and envelope; INDI uses identified prediction dynamics, PID uses ideal-rate dynamics with a separate causal selected-command delay projection; takeoff differs: INDI0.4weight ground warmup then immediate climb on guarded ACK, bounded1.2weight launch floor for at most0.5s with3N/s upward slew until confirmed liftoff; PID retains0.4weight and legacy timing with boost disabled. Circle centeredworldXY[0,0] starts[0,-R]; lemniscate startsworldcenter. Ground supplied by caller: physical launcher must obtain a fresh stationary disabled-bench capture before flight. limits.pid_only=false selects the common permission-ON guarded protocol; inner_controller and actual native FC ACK determine inner identity. BUTTERFLY: 3 cycles, 6 complete eight laps, alternating +h/-h planes with h=0.3m; each eight stops at center with zeroV/A/J.  Explicit width_m=3; footprint4x3m. Explicit reference acceleration/jerk shaping lengthens phase ramps for the selected geometry and peak speed. Mocap coverage is not established by reference shaping. PID COMPARISON: native PID is confirmed before arming and throughout healthy phases; INDI is never requested. Ideal-rate MPC projects to the20ms selection plus15ms output epoch from accepted measured state and selected command history, without identified INDI poles. Emergency2rad/s is explicit for3/4/5; ordinary takeoff and settled landing retain0.6rad/s. HIGH-SPEED PREPARATION: reference bounds explicitly increased to preserve requested peak and two-second ramps; reference screen is not flight qualification.",
+        "estimator_logging": {
+          "maximum_rate_hz": 25.0,
+          "clock_rate_hz": 20.0,
+          "clock_endpoint": "udp/10.0.0.115:7461",
+          "flight_profile": "indi_mpc_benchmark",
+          "require_initialized": false
+        },
+        "command_timing": {
+          "enabled": true,
+          "requires_receiver_build_option": "CONFIG_SANITY_COMMAND_TIMING_TRACE",
+          "scope": "Optional measurement stream; commands and leases unchanged."
+        },
+        "controller_backend": "paper_measured_rpm_ctbr_compatibility",
+        "liftoff_options": {
+          "clearance_m": 0.02,
+          "airborne_dwell_s": 0.04,
+          "blend_s": 0.2,
+          "ground_rate_limit_rad_s": 0.15
+        },
+        "spool_leveling": false,
+        "trajectory": {
+          "kind": "paired_mpc_gerono",
+          "center_xy_m": [
+            0.0,
+            0.0
+          ],
+          "radius_m": 2.0,
+          "peak_speed_m_s": 5.0,
+          "ramp_s": 2.0,
+          "transfer_speed_m_s": 0.4,
+          "entry_dwell_s": 1.0,
+          "entry_timeout_s": 10.0,
+          "entry_position_m": 0.15,
+          "entry_speed_m_s": 0.25,
+          "entry_tilt_deg": 6.0,
+          "final_hold_s": 2.0,
+          "schedule": "indi_shaped_angular",
+          "laps": 6,
+          "pattern": "lemniscate",
+          "width_m": 3.0,
+          "reference_kind": "butterfly",
+          "butterfly_height_m": 0.3,
+          "butterfly_cycles": 3,
+          "maximum_acceleration_m_s2": 16.733515673243588,
+          "maximum_jerk_m_s3": 72.8374001968332
+        },
+        "benchmark_envelope": {
+          "soft_position_m": 1.0,
+          "hard_position_m": 1.5,
+          "soft_tilt_deg": 72.0,
+          "hard_tilt_deg": 82.0,
+          "mpc_rate_limit_rad_s": 9.5,
+          "blend_s": 2.0,
+          "mpc_thrust_weight": 2.2,
+          "maximum_speed_m_s": 6.5
+        },
+        "mpc": {
+          "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_5mps.json",
+          "model": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/model_5mps.xml"
+        },
+        "inner_controller": "pid",
+        "takeoff_provenance": {
+          "ground_thrust_weight": 0.4,
+          "start_climb_on_ack": true,
+          "launch_boost_weight": 1.2,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0,
+          "scope": "host-only bounded launch candidate; existing SZC4 and FC firmware; not flight qualified"
+        },
+        "high_speed_wire": true,
+        "benchmark_provenance": {
+          "pattern": "lemniscate",
+          "inner_controller": "pid",
+          "speed_m_s": 5.0,
+          "schedule": "indi_shaped_angular",
+          "radius_m": 2.0,
+          "width_m": 3.0,
+          "footprint_xy_m": [
+            4.0,
+            3.0
+          ],
+          "ground_thrust_weight": 0.4,
+          "start_climb_on_ack": false,
+          "launch_boost_weight": 0.0,
+          "launch_boost_max_s": 0.5,
+          "launch_slew_up_N_s": 3.0,
+          "requested_laps": 6,
+          "butterfly_cycles": 3,
+          "butterfly_height_m": 0.3,
+          "reference_kind": "butterfly",
+          "ground_m": 0.027845676988363266,
+          "mpc_predictor": "ideal_PID_with_selected_command_delay_projection",
+          "runtime_rule": "max(120,ceil(reference_duration_s+60)), capped180s; ordinary hover cap120s unchanged",
+          "reference_duration_s": 39.55905639240339,
+          "reference_design": {
+            "schedule": "indi_shaped_angular",
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "vertical_amplitude_m": 0.3,
+            "footprint_xy_m": [
+              4.0,
+              3.0
+            ],
+            "derivative_norm_bounds_m": [
+              3.655133376499413,
+              6.437390775772433,
+              12.4
+            ],
+            "requested_ramp_s": 2.0,
+            "effective_ramp_s": 2.0,
+            "maximum_acceleration_m_s2": 16.733515673243588,
+            "maximum_jerk_m_s3": 72.8374001968332,
+            "conservative_acceleration_bound_m_s2": 16.733515673226854,
+            "conservative_jerk_bound_m_s3": 72.83740019676036,
+            "angular_cruise_rad_s": 1.367939137911457,
+            "reference_rate_proxy_limit_rad_s": 7.4248114369860545,
+            "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+            "geometry_and_peak_speed_preserved": true,
+            "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+            "reference_kind": "butterfly",
+            "cycles": 3,
+            "eight_laps": 6,
+            "plane_sequence": [
+              "z=center_z+h*sin(2theta)",
+              "z=center_z-h*sin(2theta)"
+            ],
+            "segment_duration_s": 6.593176065400565,
+            "total_duration_s": 39.55905639240339,
+            "plane_handoff": "C3 rest at center after each complete eight",
+            "height_bounds_m": [
+              0.7278456769883632,
+              1.3278456769883633
+            ]
+          }
+        },
+        "high_speed_preparation": {
+          "reference_screen": {
+            "scope": "Sampled fixed-yaw full-rotation reference equilibrium with fitted body drag; not measured flight or closed-loop guarantee",
+            "speed_m_s": 5.0,
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "footprint_xy_m": [
+              4.0,
+              3.0
+            ],
+            "center_xy_m": [
+              0.0,
+              0.0
+            ],
+            "height_m": 1.0,
+            "laps": 6,
+            "butterfly_cycles": 3,
+            "butterfly_height_m": 0.3,
+            "duration_s": 39.55905639240339,
+            "effective_ramp_s": 2.0,
+            "sample_dt_max_s": 0.0019999522948666026,
+            "speed_peak_m_s": 4.999999999999999,
+            "acceleration_peak_m_s2": 11.755713702641424,
+            "jerk_peak_m_s3": 31.741102750939493,
+            "tilt_peak_deg": 58.65222757810676,
+            "thrust_peak_N": 1.2494361035776507,
+            "thrust_peak_weight": 1.7810588335095245,
+            "body_rate_axis_peak_rad_s": [
+              3.354606264412442,
+              0.9637042266421487,
+              1.309132225879432
+            ],
+            "equilibrium_residual_m_s2": 9.349059790897186e-12,
+            "ordinary_envelope_violations": [
+              "MPC tilt limit 30 deg",
+              "airborne thrust cap 1.5 weight",
+              "SZC4 selected-INDI body-rate cap 2.3 rad/s"
+            ],
+            "reference_design": {
+              "schedule": "indi_shaped_angular",
+              "radius_m": 2.0,
+              "width_m": 3.0,
+              "vertical_amplitude_m": 0.3,
+              "footprint_xy_m": [
+                4.0,
+                3.0
+              ],
+              "derivative_norm_bounds_m": [
+                3.655133376499413,
+                6.437390775772433,
+                12.4
+              ],
+              "requested_ramp_s": 2.0,
+              "effective_ramp_s": 2.0,
+              "maximum_acceleration_m_s2": 16.733515673243588,
+              "maximum_jerk_m_s3": 72.8374001968332,
+              "conservative_acceleration_bound_m_s2": 16.733515673226854,
+              "conservative_jerk_bound_m_s3": 72.83740019676036,
+              "angular_cruise_rad_s": 1.367939137911457,
+              "reference_rate_proxy_limit_rad_s": 7.4248114369860545,
+              "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+              "geometry_and_peak_speed_preserved": true,
+              "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+              "reference_kind": "butterfly",
+              "cycles": 3,
+              "eight_laps": 6,
+              "plane_sequence": [
+                "z=center_z+h*sin(2theta)",
+                "z=center_z-h*sin(2theta)"
+              ],
+              "segment_duration_s": 6.593176065400565,
+              "total_duration_s": 39.55905639240339,
+              "plane_handoff": "C3 rest at center after each complete eight",
+              "height_bounds_m": [
+                0.7,
+                1.3
+              ]
+            },
+            "qualification": "offline model study; high-speed small-angle identified rate response is unvalidated"
+          },
+          "ordinary_live_supported": false,
+          "required_release": "isolated high-speed MPC/envelope plus matched SZC6 receiver/host when rates exceed2.3rad/s",
+          "scope": "Requested peaks and R2 geometry preserved; Measured trajectory tilt guards use the reviewed speed-specific expanded thresholds; PD takeoff/landing command caps and native guards unchanged. The explicit3m/s airborne/braking envelope is40deg soft,60deg hard and4m/s. Offline model study is not flight qualification.",
+          "selected_release_supported": true,
+          "selected_wire": "SZC6",
+          "status": "PID comparison candidate; ideal-rate MPC and explicit2rad/s PID emergency recovery; matched receiver capability ACK required",
+          "PD_takeoff_and_landing_thrust_weight": 1.5,
+          "airborne_and_braking_envelope": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 72.0,
+            "hard_tilt_deg": 82.0,
+            "mpc_rate_limit_rad_s": 9.5,
+            "blend_s": 2.0,
+            "mpc_thrust_weight": 2.2,
+            "maximum_speed_m_s": 6.5,
+            "scope": "Latches after MPC admission through fault landing; pre-admission speed2m/s and ordinary PD/native guards unchanged"
+          },
+          "speed_headroom_rationale": "Hard caps4/5/6.5m/s for requested3/4/5 preserve the matching INDI envelopes. These are hard interruption thresholds, not reference speed changes or room-coverage validation."
+        },
+        "emergency_braking_configuration": {
+          "rate_limit_rad_s": 2.0,
+          "ordinary_PD_rate_limit_rad_s": 0.6,
+          "scope": "Explicit matched native PID butterfly branch: emergency2rad/s after admission; ordinaryPD0.6rad/s"
+        }
+      },
+      "completed_laps": 2.0681339835125154,
+      "phases": [
+        {
+          "time_s": 0.0,
+          "phase": "waiting",
+          "reason": null
+        },
+        {
+          "time_s": 3.420043143996736,
+          "phase": "arming",
+          "reason": null
+        },
+        {
+          "time_s": 3.4600275259872433,
+          "phase": "ground_spinup",
+          "reason": null
+        },
+        {
+          "time_s": 6.079996400978416,
+          "phase": "takeoff",
+          "reason": null
+        },
+        {
+          "time_s": 13.080022943991935,
+          "phase": "trajectory_entry",
+          "reason": null
+        },
+        {
+          "time_s": 14.099995630997,
+          "phase": "transfer_to_center",
+          "reason": null
+        },
+        {
+          "time_s": 16.10003547699307,
+          "phase": "mpc_entry",
+          "reason": null
+        },
+        {
+          "time_s": 17.100059186981525,
+          "phase": "mpc_blend",
+          "reason": null
+        },
+        {
+          "time_s": 19.120036486972822,
+          "phase": "lemniscate",
+          "reason": null
+        },
+        {
+          "time_s": 33.58000872898265,
+          "phase": "landing",
+          "reason": "mpc_tick_age"
+        },
+        {
+          "time_s": 34.03999772897805,
+          "phase": "stopped",
+          "reason": "hard_flight_envelope"
+        }
+      ],
+      "trajectory_samples": 723,
+      "trajectory_duration_s": 14.440491496003233,
+      "reference_duration_s": 39.55905639240339,
+      "position_RMS_m": 0.08151939844156593,
+      "position_max_m": 0.21822990282340887,
+      "position_p95_m": 0.12720642251234993,
+      "axis_RMS_m": [
+        0.026141501950631956,
+        0.0574815780389983,
+        0.051554848309217624
+      ],
+      "mean_error_xyz_m": [
+        -0.009220078747204628,
+        0.015256888673938158,
+        0.04254110150009626
+      ],
+      "speed_m_s_p0_p50_p95_max": [
+        0.025962357434538185,
+        2.2718280071740726,
+        4.3583824111399245,
+        5.1775043846260385
+      ],
+      "tilt_deg_p0_p50_p95_max": [
+        0.5063236863159574,
+        25.541551922267306,
+        54.514148601036425,
+        58.59776468316448
+      ],
+      "selected_CTBR_abs_peak": [
+        1.3998963953022723,
+        4.75113170219557,
+        3.1073721697927814,
+        1.3225336588069314
+      ],
+      "authority_gyro_sampled_tracking_abs_peak_FLU_rad_s": [
+        4.360212802886963,
+        3.1322178840637207,
+        1.3401494026184082
+      ],
+      "authority_gyro_sampled_whole_abs_peak_FLU_rad_s": [
+        4.360212802886963,
+        3.1322178840637207,
+        1.3401494026184082
+      ],
+      "MPC_health": {
+        "ok": 723
+      },
+      "MPC_clipped_frames": 0,
+      "MPC_compute_ms_p0_p50_p95_max": [
+        4.755786998430267,
+        4.91157898795791,
+        5.222978911479004,
+        13.934181974036619
+      ],
+      "MPC_worker_attempt_counts": {
+        "1": 722
+      },
+      "MPC_worker_rescued_count": 0,
+      "MPC_worker_invalid_count": 0,
+      "mocap_age_ms_p0_p50_p95_max": [
+        2.354335,
+        3.015246,
+        3.3985166999999996,
+        4.007359
+      ],
+      "controller_age_ms_p0_p50_p95_max": [
+        0.03303599078208208,
+        36.80297499522567,
+        72.20734169823118,
+        87.94041399960406
+      ],
+      "raw_mocap_outcomes": {
+        "accepted": 6812
+      },
+      "outlier_retention_events": 0,
+      "native_modes": {
+        "pid": 723
+      },
+      "native_faults": {
+        "ok": 723
+      },
+      "native_RPM_masks": {
+        "15": 723
+      },
+      "native_saturation_masks": {
+        "0": 723
+      },
+      "native_INDI_weight_min_max": [
+        0.0,
+        0.0
+      ],
+      "timing_counters_tracking": {
+        "pid_execution_deadline_misses": {
+          "first": 20,
+          "last": 30,
+          "delta": 10
+        },
+        "late_apply_intervals": {
+          "first": 38,
+          "last": 57,
+          "delta": 19
+        },
+        "pid_over_90_percent_budget": {
+          "first": 481,
+          "last": 644,
+          "delta": 163
+        },
+        "trace_log_dropped_bytes": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        },
+        "gyro_sample_overruns": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        },
+        "gyro_filter_overruns": {
+          "first": 0,
+          "last": 0,
+          "delta": 0
+        }
+      },
+      "timing_scope": "Host-polled status snapshots; native trace audited separately",
+      "guards": [
+        {
+          "time_s": 34.03999772897805,
+          "trajectory_time_s": 14.919961242005229,
+          "phase": "stopped",
+          "reason": "hard_flight_envelope",
+          "guard": {
+            "level": "hard",
+            "criteria": [
+              "altitude"
+            ],
+            "monotonic_s": 158875.778906531,
+            "tilt_deg": 22.424393102511804,
+            "position_error_m": 0.14344731406107086,
+            "speed_m_s": 0.9000525581076861,
+            "altitude_m": 1.5000020265579224,
+            "limits": {
+              "soft_position_m": 1.0,
+              "hard_position_m": 1.5,
+              "soft_tilt_deg": 72.0,
+              "hard_tilt_deg": 82.0,
+              "maximum_speed_m_s": 6.5
+            }
+          },
+          "controller": {
+            "mode": "pid",
+            "fault": "ok",
+            "indi_weight": 0.0,
+            "rpm_mask": 15,
+            "saturated_mask": 0,
+            "gyro_native_rad_s": [
+              -0.914542019367218,
+              0.1932491511106491,
+              0.3258923590183258
+            ]
+          },
+          "command": {
+            "enabled": false,
+            "thrust_N": 0.0,
+            "rates_rad_s": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "indi_requested": false,
+            "phase": "stopped",
+            "reason": "hard_flight_envelope",
+            "done": true
+          },
+          "MPC": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022693301000000003,
+            "result_tick": 1700,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.010236025555059
+          }
+        }
+      ],
+      "soft_to_hard_s": null,
+      "landing": {
+        "samples": 23,
+        "duration_s": 0.43998784600989893,
+        "rate_command_abs_peak": [
+          1.732272189847644,
+          2.0,
+          0.416156248615016
+        ],
+        "thrust_N_min_max": [
+          0.6661793647871939,
+          0.6988233818479862
+        ],
+        "measured_speed_max_m_s": 2.7194055748056916,
+        "reference_error_max_before_stop_m": 0.1382219649362003,
+        "height_above_ground_min_max_m": [
+          1.2559899725019932,
+          1.466708842664957
+        ]
+      },
+      "laps": [
+        {
+          "lap": 1,
+          "samples": 330,
+          "RMS_m": 0.08979325756439378,
+          "max_m": 0.21822990282340887,
+          "peak_speed_m_s": 4.954796904630564,
+          "peak_tilt_deg": 58.59776468316448
+        },
+        {
+          "lap": 2,
+          "samples": 330,
+          "RMS_m": 0.0784731965731725,
+          "max_m": 0.12745703173402326,
+          "peak_speed_m_s": 5.1775043846260385,
+          "peak_tilt_deg": 55.97952322673601
+        },
+        {
+          "lap": 3,
+          "samples": 63,
+          "RMS_m": 0.0421157613184671,
+          "max_m": 0.05266622704013798,
+          "peak_speed_m_s": 2.748872031005316,
+          "peak_tilt_deg": 26.200751598982915
+        }
+      ],
+      "recorder_dropped": 0,
+      "shutdown_acknowledged": true,
+      "all_owned_children_exited": true,
+      "gyro_timestamp_scope": "Unique authority controller gyro is BF/FLU, not native paper FRD; plotted at first actual host-control receipt; unshifted; sparse gyro is not a native Blackbox rate trace",
+      "source_sha256": {
+        "configuration.json": "b79c6f50d2ac27d599a07a9f24155c4361d999113e86950ba2da1ca64cf5cf8e",
+        "run_summary.json": "9295bd5ddc380cd565cf2196512c63b59f012bfb6f4c2683d13231b80d5916e4",
+        "flight/events.jsonl": "954372cd971530507cb5ce38687decc3c7c6dc2a6411113db50dc9950662ab98",
+        "flight/mpc/history.jsonl": "5aa35e6c84a81375df8ddb3dc3a2020d9e2cd39ae8307cf08eb9030fd3b2c213"
+      },
+      "first_native_fault": null,
+      "first_native_fault_elapsed_s": null,
+      "first_native_fault_trajectory_time_s": null,
+      "tracking_height_world_min_max_m": [
+        0.7557200789451599,
+        1.378252625465393
+      ],
+      "tracking_height_above_ground_min_max_m": [
+        0.7278744019567966,
+        1.3504069484770298
+      ],
+      "ordinary_and_emergency_braking_configuration": {
+        "rate_limit_rad_s": 2.0,
+        "ordinary_PD_rate_limit_rad_s": 0.6,
+        "scope": "Explicit PID comparison: emergency2rad/s for admitted3/4/5butterfly; ordinarytakeoff/settledlanding0.6; guardrate/collective lag are documented PID engineering assumptions"
+      },
+      "final_control_diagnostics": {
+        "version": 1,
+        "pd_evaluated_this_tick": false,
+        "pd_command_count": 1298,
+        "world_frame": "configured_world_z_up",
+        "attitude_matrix_convention": "body_to_configured_world",
+        "integral_acceleration_state_m_s2": [
+          0.08782832099170923,
+          -0.23194415314220745,
+          -0.1504955231065732
+        ],
+        "integral_limits_m_s2": [
+          0.25,
+          0.25,
+          1.5
+        ],
+        "pd": null,
+        "selected_ctbr": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "selected_enabled": false,
+        "expected_control_period_us": 1000,
+        "ground_entry": {
+          "thrust_weight": 0.4,
+          "start_climb_on_ack": false,
+          "acknowledgement_monotonic_s": null,
+          "reference_clock_origin_monotonic_s": 158847.818905203
+        },
+        "launch_boost": {
+          "reason": "disabled",
+          "pd_requested_thrust_N": null,
+          "requested_floor_N": 0.0,
+          "requested_thrust_N": null,
+          "previous_selected_thrust_N": 0.6628668889446252,
+          "configured_weight": 0.0,
+          "active": false,
+          "started_monotonic_s": null,
+          "permanent_stop_reason": null,
+          "selected_thrust_N": 0.0,
+          "slew_up_limit_N_s": 0.5,
+          "slew_down_limit_N_s": 0.5
+        },
+        "flight_envelope_guard": {
+          "active": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 72.0,
+            "hard_tilt_deg": 82.0,
+            "maximum_speed_m_s": 6.5
+          },
+          "last_violation": {
+            "level": "hard",
+            "criteria": [
+              "altitude"
+            ],
+            "monotonic_s": 158875.778906531,
+            "tilt_deg": 22.424393102511804,
+            "position_error_m": 0.14344731406107086,
+            "speed_m_s": 0.9000525581076861,
+            "altitude_m": 1.5000020265579224,
+            "limits": {
+              "soft_position_m": 1.0,
+              "hard_position_m": 1.5,
+              "soft_tilt_deg": 72.0,
+              "hard_tilt_deg": 82.0,
+              "maximum_speed_m_s": 6.5
+            }
+          }
+        },
+        "trajectory": {
+          "kind": "paired_mpc_butterfly",
+          "phase": "stopped",
+          "options": {
+            "pattern": "lemniscate",
+            "reference_kind": "butterfly",
+            "butterfly_height_m": 0.3,
+            "butterfly_cycles": 3,
+            "schedule": "indi_shaped_angular",
+            "center_xy_m": [
+              0.0,
+              0.0
+            ],
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "peak_speed_m_s": 5.0,
+            "ramp_s": 2.0,
+            "laps": 6,
+            "transfer_speed_m_s": 0.4,
+            "entry_dwell_s": 1.0,
+            "entry_timeout_s": 10.0,
+            "entry_position_m": 0.15,
+            "entry_speed_m_s": 0.25,
+            "entry_tilt_deg": 6.0,
+            "final_hold_s": 2.0,
+            "maximum_acceleration_m_s2": 16.733515673243588,
+            "maximum_jerk_m_s3": 72.8374001968332
+          },
+          "lap_duration_s": 39.55905639240339,
+          "duration_scope": "whole_speed_ramped_lap_segment",
+          "requested_laps": 6,
+          "reference_design": {
+            "schedule": "indi_shaped_angular",
+            "radius_m": 2.0,
+            "width_m": 3.0,
+            "vertical_amplitude_m": 0.3,
+            "footprint_xy_m": [
+              4.0,
+              3.0
+            ],
+            "derivative_norm_bounds_m": [
+              3.655133376499413,
+              6.437390775772433,
+              12.4
+            ],
+            "requested_ramp_s": 2.0,
+            "effective_ramp_s": 2.0,
+            "maximum_acceleration_m_s2": 16.733515673243588,
+            "maximum_jerk_m_s3": 72.8374001968332,
+            "conservative_acceleration_bound_m_s2": 16.733515673226854,
+            "conservative_jerk_bound_m_s3": 72.83740019676036,
+            "angular_cruise_rad_s": 1.367939137911457,
+            "reference_rate_proxy_limit_rad_s": 7.4248114369860545,
+            "rate_proxy_scope": "Small-tilt fixed-yaw jerk/g proxy; not actual MPC/FC rates",
+            "geometry_and_peak_speed_preserved": true,
+            "sensing_scope": "Reference shaping does not establish mocap coverage; selected radius and center determine geometry",
+            "reference_kind": "butterfly",
+            "cycles": 3,
+            "eight_laps": 6,
+            "plane_sequence": [
+              "z=center_z+h*sin(2theta)",
+              "z=center_z-h*sin(2theta)"
+            ],
+            "segment_duration_s": 6.593176065400565,
+            "total_duration_s": 39.55905639240339,
+            "plane_handoff": "C3 rest at center after each complete eight",
+            "height_bounds_m": [
+              0.7278456769883632,
+              1.3278456769883633
+            ]
+          }
+        },
+        "emergency_braking_configuration": {
+          "rate_limit_rad_s": 2.0,
+          "ordinary_PD_rate_limit_rad_s": 0.6,
+          "scope": "Explicit PID comparison: emergency2rad/s for admitted3/4/5butterfly; ordinarytakeoff/settledlanding0.6; guardrate/collective lag are documented PID engineering assumptions"
+        },
+        "emergency_landing": {
+          "version": 1,
+          "phase": "emergency_brake",
+          "active_braking": true,
+          "fail_reason": null,
+          "start_s": 158875.318917531,
+          "last_advance_s": 158875.778906531,
+          "advance_count": 23,
+          "last_nominal_cells": 3,
+          "braking_deadline_s": 158883.318917531,
+          "timeout_s": 158900.318917531,
+          "settled_since_s": null,
+          "latched_at_s": null,
+          "height_target_m": 1.2838356494903564,
+          "heading_target_rad": 0.02666370386378484,
+          "settling_checks": {
+            "horizontal_speed": false,
+            "tilt": false,
+            "vertical_speed": true,
+            "height_error": false
+          },
+          "requested_yaw_rad": -0.0815380512980233,
+          "initial_state": [
+            0.8731508851051331,
+            1.2189912796020508,
+            1.2838356494903564,
+            0.9900187667594571,
+            0.0947265086006674,
+            0.10430491523495258,
+            0.0031960429034874898,
+            1.8208114071956403,
+            1.9664468120927048,
+            0.46141026746372216,
+            3.105553466881156,
+            -0.29415568817835286,
+            0.356592307835947
+          ],
+          "initial_thrust_N": 0.6705194929488876,
+          "previous_selected_ctbr": [
+            0.6705194929488876,
+            3.090519197600479,
+            -0.40208162253225477,
+            0.6691547285269375
+          ],
+          "initial_nominal_active_ctbr": [
+            0.6705194929488876,
+            3.090519197600479,
+            -0.40208162253225477,
+            0.6691547285269375
+          ],
+          "stopping_anchor": null,
+          "nominal_guard": {
+            "position": [
+              1.6148405327565363,
+              1.611530397686974,
+              1.3605900282117482
+            ],
+            "velocity": [
+              0.8753424641485023,
+              -0.04324167898325833,
+              0.021146301137530743
+            ],
+            "quaternion_wxyz": [
+              0.9769125271372278,
+              0.07111608317303601,
+              -0.20141711751505018,
+              -0.003944845803036583
+            ],
+            "body_rate": [
+              -1.439067048301093,
+              0.07847938915105447,
+              0.4562619263723991
+            ],
+            "thrust_N": 0.80552256874207,
+            "acceleration": [
+              -4.688800911224553,
+              -1.4684488944571625,
+              -0.2449613056113641
+            ],
+            "selected_ctbr": [
+              0.7943925983819002,
+              -0.8950283522237659,
+              1.084246502429896,
+              0.32922685856524103
+            ],
+            "delay_s": 0.035,
+            "rate_tau_s": 0.05,
+            "collective_tau_s": 0.025
+          },
+          "last_command": null,
+          "command_detail": {
+            "horizontal_acceleration_target_m_s2": [
+              -2.2867138611161755,
+              -0.4256609386559865
+            ],
+            "vertical_acceleration_target_m_s2": -1.7255263307012079,
+            "desired_body_to_world": [
+              [
+                0.9619779008744161,
+                -0.02663348158237311,
+                -0.27182563508258945
+              ],
+              [
+                0.013350482447858698,
+                0.9986298115380947,
+                -0.0505990526176009
+              ],
+              [
+                0.2728008116697256,
+                0.0450461670532657,
+                0.9610153796824211
+              ]
+            ],
+            "body_log_error_rad": [
+              -0.1329442222639473,
+              0.08999183435749346,
+              0.04042269558238884
+            ],
+            "actual_Rzz": 0.917610894907517,
+            "drag_world_m_s2": [
+              0.518058586355424,
+              0.13532739181908676,
+              0.22640887765110806
+            ],
+            "unclipped_required_vertical_force_N": 0.5943112109323875,
+            "required_vertical_force_N": 0.5943112109323875,
+            "vertical_force_numerator_limited": false,
+            "requested_thrust_N": 0.6796142253961002,
+            "capped_thrust_N": 0.6796142253961002,
+            "selected_thrust_N": 0.6796142253961002,
+            "thrust_cap_overrode_slew": false
+          },
+          "limits": {
+            "rate_rad_s": 2.0,
+            "thrust_N": 1.5433288200000004,
+            "thrust_slew_N_s": 4.0,
+            "horizontal_decel_m_s2": 6.0,
+            "height_accel_m_s2": 2.0
+          },
+          "guard_scope": "PID branch engineering guard: first-order rate50ms,collective25ms,totaldelay35ms; independent initial-state model, no measured-velocity anchor updates; hard error1.5unchanged"
+        },
+        "inner_controller": "pid",
+        "native_inner_status": {
+          "mode": "pid",
+          "indi_weight": 0.0,
+          "requested": false,
+          "permission": true,
+          "armed": true
+        },
+        "native_inner_confirmed_at": 158847.818905203,
+        "pid_confirmed_at": 158847.818905203,
+        "indi_confirmed_at": null,
+        "mpc": {
+          "health": {
+            "valid": true,
+            "reason": "ok",
+            "source_age_s": 0.022693301000000003,
+            "result_tick": 1700,
+            "state_time_domain": "host_monotonic_ns; state timestamp reconstructed from measured age duration",
+            "total_ms": 5.010236025555059
+          },
+          "weight": 0.0,
+          "selection": {},
+          "benchmark_envelope_active": true,
+          "airborne_envelope": {
+            "soft_position_m": 1.0,
+            "hard_position_m": 1.5,
+            "soft_tilt_deg": 72.0,
+            "hard_tilt_deg": 82.0,
+            "maximum_speed_m_s": 6.5
+          },
+          "selected_count": 823,
+          "clipped_count": 0,
+          "solver": {
+            "success": true,
+            "solver_success": true,
+            "status": "ACADOS_SUCCESS",
+            "status_code": 0,
+            "solve_ms": 0.8243679767474532,
+            "core_solve_ms": 0.23465900449082255,
+            "acados_time_ms": 0.23299999999999998,
+            "nonlinear_refinement_count": 1,
+            "feasibility_attempts": [
+              {
+                "attempt": 1,
+                "solver_status": 0,
+                "constraint_violation": 0.0,
+                "dynamics_defect": 0.0020151893964895917,
+                "finite": true,
+                "elapsed_ms": 3.839465993223712
+              }
+            ],
+            "initial_constraint_violation": 0.0,
+            "initial_dynamics_defect": 0.0020151893964895917,
+            "iterations": 1,
+            "qp_iterations": [
+              0.0,
+              7.0
+            ],
+            "constraint_violation": 0.0,
+            "dynamics_defect": 0.0020151893964895917,
+            "kkt_residuals": [
+              14.084829057163919,
+              0.0020151893964895917,
+              0.0,
+              0.37450113507327915
+            ],
+            "disturbance_world_m_s2": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "cost": 32.23707792781774,
+            "rate_response_state": null,
+            "thrust_effectiveness": 0.953,
+            "requested_ctbr": [
+              0.00881080726308223,
+              -0.9353163909764121,
+              5.268825026316632,
+              -0.28067825250558254
+            ],
+            "total_ms": 5.010236025555059,
+            "deadline_scope": "Causal state projection plus full MPC computation",
+            "refinement_rescued": false,
+            "command_prediction": {
+              "mode": "ideal_PID_selected_command_projection",
+              "source_stamp_ns": 158875756213230,
+              "target_stamp_ns": 158875793905377,
+              "projection_s": 0.037692147,
+              "nominal_command_delay_s": 0.015,
+              "selected_history_only": true,
+              "rate_model_state": null,
+              "source_state": [
+                1.5658038854599,
+                1.6022891998291016,
+                1.4945545196533203,
+                0.9791843025938184,
+                0.09303873521643714,
+                -0.18038388590882287,
+                -0.0018838809983777068,
+                0.9146855444464701,
+                0.1702643754623946,
+                0.2942169500164508,
+                -0.9469009321858629,
+                0.2871411074111405,
+                0.07543284946709672
+              ],
+              "predicted_state": [
+                1.5976765564617839,
+                1.6075145768315844,
+                1.5044785740405477,
+                0.9819226414710469,
+                0.07698458631240206,
+                -0.17291623223717714,
+                0.001129719314168716,
+                0.7778073524554687,
+                0.1090222223064215,
+                0.23329751136239082,
+                -0.875789164706377,
+                0.4009556535187214,
+                0.0400582989255161
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  "PID_native": {
+    "scope": "PID native measurements only: gyro, actual RPM and applied mixer counts.\nINDI-shadow allocator/omega-target/servo/residual/desired-alpha/torque fields\nare not treated as PID actuation. No measured filtering, resampling or shifts.\nNominal kT sum(omega^2) is a model thrust estimate, not a force measurement.\n",
+    "runs": [
+      {
+        "run": "sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z",
+        "speed_m_s": 3.0,
+        "csv": "/home/hw527/Projects/drones/outputs/sanity15_pid_butterfly_flights_20261112_1023/cache/18bd393e8d31a8e5_3f6de0e1/read1.01.csv",
+        "csv_sha256": "db486cdcb100f5ef843c38b84ce76a7ac3585edb55ba848fcbedf714d9569d85",
+        "archive_sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8",
+        "host_FC_offset_s": 158710.97069691398,
+        "host_FC_offset_p5_p95_spread_ms": [
+          -57.316388993058354,
+          58.02764441468752
+        ],
+        "scope": "PID native measurements only: gyro, actual RPM and applied mixer counts.\nINDI-shadow allocator/omega-target/servo/residual/desired-alpha/torque fields\nare not treated as PID actuation. No measured filtering, resampling or shifts.\nNominal kT sum(omega^2) is a model thrust estimate, not a force measurement.\n",
+        "tracking": {
+          "samples": 14374,
+          "gyro_peak_abs_FRD_rad_s": [
+            2.453351,
+            2.398675,
+            0.434508
+          ],
+          "measured_rotor_omega_min_median_max_rad_s": [
+            [
+              1478.294,
+              1462.586,
+              1684.243,
+              1694.7150000000001
+            ],
+            [
+              2535.964,
+              2291.617,
+              2560.398,
+              2286.381
+            ],
+            [
+              3293.436,
+              3303.908,
+              3303.908,
+              3183.48
+            ]
+          ],
+          "applied_motor_counts_min_median_max": [
+            [
+              1100.9,
+              1100.9,
+              1100.9,
+              1100.9
+            ],
+            [
+              1358.1915,
+              1327.1425,
+              1367.213,
+              1335.62
+            ],
+            [
+              1776.4850000000001,
+              1778.972,
+              1763.944,
+              1749.589
+            ]
+          ],
+          "RPM_valid_mask_counts": {
+            "15": 14374
+          },
+          "native_mode_counts": {
+            "0": 14374
+          },
+          "native_INDI_weight_min_max": [
+            0.0,
+            0.0
+          ],
+          "loop_counter_deltas": {
+            "deadline": 4,
+            "late_intervals": 7,
+            "log_drops": 0
+          },
+          "model_thrust_estimate_N_min_median_max": [
+            0.40334063636903594,
+            0.7560755467300212,
+            1.0976763131110225
+          ]
+        },
+        "counter_change_events": [
+          {
+            "fc_time_us": 47765763,
+            "trajectory_time_s": 6.148110384994652,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 47823190,
+            "trajectory_time_s": 6.20553738498711,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 48340104,
+            "trajectory_time_s": 6.722451384994201,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 55950678,
+            "trajectory_time_s": 14.333025384985376,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 56918999,
+            "trajectory_time_s": 15.301346384978388,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 76879054,
+            "trajectory_time_s": 35.26140138498158,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 88616886,
+            "trajectory_time_s": 46.99923338499502,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 99709812,
+            "trajectory_time_s": 58.092159384978004,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 99743062,
+            "trajectory_time_s": 58.12540938498569,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 99873048,
+            "trajectory_time_s": 58.255395385000156,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 99914359,
+            "trajectory_time_s": 58.29670638497919,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 102680317,
+            "trajectory_time_s": 61.06266438498278,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 102810302,
+            "trajectory_time_s": 61.192649384989636,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103327231,
+            "trajectory_time_s": 61.70957838499453,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103481391,
+            "trajectory_time_s": 61.86373838500003,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103486428,
+            "trajectory_time_s": 61.86877538499539,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103592231,
+            "trajectory_time_s": 61.974578384979395,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103597273,
+            "trajectory_time_s": 61.97962038498372,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 103944906,
+            "trajectory_time_s": 62.327253384981304,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 104268363,
+            "trajectory_time_s": 62.65071038500173,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 104761102,
+            "trajectory_time_s": 63.14344938498107,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 104774211,
+            "trajectory_time_s": 63.15655838500243,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 106044864,
+            "trajectory_time_s": 64.42721138498746,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 106174863,
+            "trajectory_time_s": 64.5572103849845,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 106220212,
+            "trajectory_time_s": 64.60255938497721,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 106700862,
+            "trajectory_time_s": 65.08320938498946,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 106705897,
+            "trajectory_time_s": 65.08824438499869,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 107339738,
+            "trajectory_time_s": 65.72208538500126,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 107405239,
+            "trajectory_time_s": 65.78758638500585,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 107631968,
+            "trajectory_time_s": 66.0143153849931,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 107814353,
+            "trajectory_time_s": 66.19670038498589,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 108214407,
+            "trajectory_time_s": 66.5967543849838,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 108279905,
+            "trajectory_time_s": 66.66225238499464,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 108667867,
+            "trajectory_time_s": 67.05021438500262,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          }
+        ],
+        "model_thrust_estimate": {
+          "kT_N_per_rad_s_squared": 3.275921725e-08,
+          "source": "pinnedFCpaper_model.h SP_KT; unfiltered actual measured motor speeds",
+          "scope": "Calibrated static rotor-model estimate only, not measured physical thrust; dynamic inflow/voltage/mixer effects may differ"
+        },
+        "PID5_recovery": null
+      },
+      {
+        "run": "sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z",
+        "speed_m_s": 5.0,
+        "csv": "/home/hw527/Projects/drones/outputs/sanity15_pid_butterfly_flights_20261112_1023/cache/18bd393e8d31a8e5_3f6de0e1/read1.02.csv",
+        "csv_sha256": "16bd5acabb178b7ed57a5a16908fa9d1656d1450dc66dc93d233c7b49071f803",
+        "archive_sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8",
+        "host_FC_offset_s": 158711.07578557753,
+        "host_FC_offset_p5_p95_spread_ms": [
+          -21.131150526343845,
+          19.842009205603972
+        ],
+        "scope": "PID native measurements only: gyro, actual RPM and applied mixer counts.\nINDI-shadow allocator/omega-target/servo/residual/desired-alpha/torque fields\nare not treated as PID actuation. No measured filtering, resampling or shifts.\nNominal kT sum(omega^2) is a model thrust estimate, not a force measurement.\n",
+        "tracking": {
+          "samples": 3583,
+          "gyro_peak_abs_FRD_rad_s": [
+            5.335328,
+            5.376037999999999,
+            1.570393
+          ],
+          "measured_rotor_omega_min_median_max_rad_s": [
+            [
+              1073.378,
+              767.945,
+              1197.296,
+              836.013
+            ],
+            [
+              2719.223,
+              2419.026,
+              2617.994,
+              2368.4120000000003
+            ],
+            [
+              3687.88,
+              3754.203,
+              3836.234,
+              3502.876
+            ]
+          ],
+          "applied_motor_counts_min_median_max": [
+            [
+              1100.9,
+              1100.9,
+              1100.9,
+              1100.9
+            ],
+            [
+              1394.642,
+              1357.354,
+              1397.454,
+              1369.607
+            ],
+            [
+              1795.281,
+              1823.223,
+              1802.357,
+              1810.626
+            ]
+          ],
+          "RPM_valid_mask_counts": {
+            "15": 3583
+          },
+          "native_mode_counts": {
+            "0": 3583
+          },
+          "native_INDI_weight_min_max": [
+            0.0,
+            0.0
+          ],
+          "loop_counter_deltas": {
+            "deadline": 10,
+            "late_intervals": 19,
+            "log_drops": 0
+          },
+          "model_thrust_estimate_N_min_median_max": [
+            0.1359159170580473,
+            0.837250282514577,
+            1.4538512726075898
+          ]
+        },
+        "counter_change_events": [
+          {
+            "fc_time_us": 149922373,
+            "trajectory_time_s": 0.13921328855212778,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 149931451,
+            "trajectory_time_s": 0.14829128855490126,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 150037249,
+            "trajectory_time_s": 0.25408928852993995,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 150042283,
+            "trajectory_time_s": 0.25912328853155486,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 151135573,
+            "trajectory_time_s": 1.3524132885504514,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 153099460,
+            "trajectory_time_s": 3.3163002885412425,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 153205262,
+            "trajectory_time_s": 3.422102288546739,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 153246568,
+            "trajectory_time_s": 3.4634082885459065,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 153396716,
+            "trajectory_time_s": 3.6135562885319814,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 158460148,
+            "trajectory_time_s": 8.676988288556458,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 158525646,
+            "trajectory_time_s": 8.742486288538203,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 158881333,
+            "trajectory_time_s": 9.098173288541147,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 158946830,
+            "trajectory_time_s": 9.163670288544381,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 159624991,
+            "trajectory_time_s": 9.841831288533285,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 159714667,
+            "trajectory_time_s": 9.931507288536523,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 159844643,
+            "trajectory_time_s": 10.061483288533054,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 159853724,
+            "trajectory_time_s": 10.070564288529567,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 160499613,
+            "trajectory_time_s": 10.716453288536286,
+            "delta": [
+              1,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 161048783,
+            "trajectory_time_s": 11.26562328854925,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          },
+          {
+            "fc_time_us": 164274281,
+            "trajectory_time_s": 14.491121288534487,
+            "delta": [
+              0,
+              1,
+              0
+            ],
+            "native_mode": 0
+          }
+        ],
+        "model_thrust_estimate": {
+          "kT_N_per_rad_s_squared": 3.275921725e-08,
+          "source": "pinnedFCpaper_model.h SP_KT; unfiltered actual measured motor speeds",
+          "scope": "Calibrated static rotor-model estimate only, not measured physical thrust; dynamic inflow/voltage/mixer effects may differ"
+        },
+        "PID5_recovery": {
+          "window_s": [
+            0.0,
+            0.5
+          ],
+          "native_frames": 124,
+          "raw_omega_min_median_max_rad_s": [
+            [
+              1837.832,
+              1679.007,
+              1904.154,
+              1932.08
+            ],
+            [
+              2651.155,
+              2272.419,
+              2572.6150000000002,
+              2111.848
+            ],
+            [
+              3242.822,
+              3202.679,
+              2967.06,
+              2412.045
+            ]
+          ],
+          "actual_applied_counts_min_median_max": [
+            [
+              1100.9,
+              1100.9,
+              1100.9,
+              1100.9
+            ],
+            [
+              1392.583,
+              1330.4465,
+              1381.8115,
+              1335.4955
+            ],
+            [
+              1614.362,
+              1794.8700000000001,
+              1611.82,
+              1504.566
+            ]
+          ],
+          "model_thrust_estimate_N_min_median_max": [
+            0.45260475168503983,
+            0.7575751277397496,
+            1.004790236677219
+          ],
+          "native_mode_counts": {
+            "0": 124
+          },
+          "INDI_weight_min_max": [
+            0.0,
+            0.0
+          ],
+          "scope": "Physical RPM and applied counts retained; no INDIshadow actuator quantities interpreted."
+        }
+      }
+    ],
+    "archive_mapping": {
+      "success": true,
+      "download_passes": 1,
+      "erased": true,
+      "USB_closed": true,
+      "archive_bytes": 9721856,
+      "archive_sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8",
+      "decoder_sha256": "3f6de0e1ae3453c7b2188bf62ec95d026439c475cd7f01f1a019cd66c0d7c58b",
+      "cache": "/home/hw527/Projects/drones/outputs/sanity15_pid_butterfly_flights_20261112_1023/cache/18bd393e8d31a8e5_3f6de0e1",
+      "recording_count": 2,
+      "matched": [
+        {
+          "run": "sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z",
+          "recording": "read1.01.csv",
+          "csv": "/home/hw527/Projects/drones/outputs/sanity15_pid_butterfly_flights_20261112_1023/cache/18bd393e8d31a8e5_3f6de0e1/read1.01.csv",
+          "csv_sha256": "db486cdcb100f5ef843c38b84ce76a7ac3585edb55ba848fcbedf714d9569d85",
+          "matching_evidence": {
+            "read1.01.csv": {
+              "snapshots": 1282,
+              "coverage_fraction": 0.9976599063962559,
+              "matching_fraction": 0.9976599063962559,
+              "median_sequence_error": 1.0,
+              "p95_sequence_error": 2.0,
+              "median_time_error_us": 823.0
+            },
+            "read1.02.csv": {
+              "snapshots": 1282,
+              "coverage_fraction": 0.0,
+              "matching_fraction": 0.0,
+              "median_sequence_error": 62675.5,
+              "p95_sequence_error": 103019.1,
+              "median_time_error_us": 63186748.5
+            }
+          },
+          "score": {
+            "snapshots": 1282,
+            "coverage_fraction": 0.9976599063962559,
+            "matching_fraction": 0.9976599063962559,
+            "median_sequence_error": 1.0,
+            "p95_sequence_error": 2.0,
+            "median_time_error_us": 823.0
+          },
+          "archive_sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8"
+        },
+        {
+          "run": "sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z",
+          "recording": "read1.02.csv",
+          "csv": "/home/hw527/Projects/drones/outputs/sanity15_pid_butterfly_flights_20261112_1023/cache/18bd393e8d31a8e5_3f6de0e1/read1.02.csv",
+          "csv_sha256": "16bd5acabb178b7ed57a5a16908fa9d1656d1450dc66dc93d233c7b49071f803",
+          "matching_evidence": {
+            "read1.01.csv": {
+              "snapshots": 404,
+              "coverage_fraction": 0.0,
+              "matching_fraction": 0.0,
+              "median_sequence_error": 31874.0,
+              "p95_sequence_error": 45200.7,
+              "median_time_error_us": 32122702.0
+            },
+            "read1.02.csv": {
+              "snapshots": 404,
+              "coverage_fraction": 0.9925742574257426,
+              "matching_fraction": 0.9925742574257426,
+              "median_sequence_error": 1.0,
+              "p95_sequence_error": 2.0,
+              "median_time_error_us": 828.0
+            }
+          },
+          "score": {
+            "snapshots": 404,
+            "coverage_fraction": 0.9925742574257426,
+            "matching_fraction": 0.9925742574257426,
+            "median_sequence_error": 1.0,
+            "p95_sequence_error": 2.0,
+            "median_time_error_us": 828.0
+          },
+          "archive_sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8"
+        }
+      ],
+      "unmatched_recordings": []
+    }
+  },
+  "prior_INDI_assessment": "/home/hw527/Projects/drones/outputs/sanity15_butterfly_3_4_5mps_20261112_0954/FINAL_ASSESSMENT.json",
+  "processing": "Actualrecordedsamples/sourcefilters only;no addedfilters,resampling,correlationfit or measuredtimeshift. Main5window9.98s excludesfallbacktail; sourcegeometryequalbyassertion,freshgrounddatumsretained.",
+  "cleanup": {
+    "host": "dolphin",
+    "analysis_pids": [
+      314043,
+      315841,
+      314683,
+      316314,
+      316200,
+      316235
+    ],
+    "still_running": [],
+    "children": [
+      {
+        "pid": 316396,
+        "argv": [
+          "qpdf",
+          "/home/hw527/Projects/drones/outputs/sanity15_butterfly_3_4_5mps_20261112_0954/native_report.pdf",
+          "--pages",
+          ".",
+          "3",
+          "--",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_native_raw.pdf"
+        ],
+        "exit_code": 0,
+        "reaped": true
+      },
+      {
+        "pid": 316397,
+        "argv": [
+          "qpdf",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_native_raw.pdf",
+          "--overlay",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI_label.pdf",
+          "--",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_native.pdf"
+        ],
+        "exit_code": 0,
+        "reaped": true
+      },
+      {
+        "pid": 316398,
+        "argv": [
+          "qpdf",
+          "/home/hw527/Projects/drones/outputs/sanity15_butterfly_3_4_5mps_20261112_0954/host_review/actual_5mps_recovery.pdf",
+          "--overlay",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI_label.pdf",
+          "--",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_recovery.pdf"
+        ],
+        "exit_code": 0,
+        "reaped": true
+      },
+      {
+        "pid": 316399,
+        "argv": [
+          "qpdf",
+          "--empty",
+          "--pages",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/main_comparison.pdf",
+          "1-4",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/host_review/host_report.pdf",
+          "1-2",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/native_pid_appendix.pdf",
+          "1-2",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/comparison_host_report.pdf",
+          "3",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/native_pid_appendix.pdf",
+          "3",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_native.pdf",
+          "1",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/appendix_work/INDI5_recovery.pdf",
+          "1",
+          "--",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/MPC_INDI_vs_MPC_PID_butterfly_comparison.pdf"
+        ],
+        "exit_code": 0,
+        "reaped": true
+      },
+      {
+        "pid": 316400,
+        "argv": [
+          "qpdf",
+          "--show-npages",
+          "/home/hw527/Projects/drones/outputs/sanity15_pid_indi_butterfly_comparison_20261112/MPC_INDI_vs_MPC_PID_butterfly_comparison.pdf"
+        ],
+        "exit_code": 0,
+        "reaped": true
+      }
+    ],
+    "all_children_reaped": true,
+    "services_started": false,
+    "hardware_opened": false,
+    "control_files_changed": false,
+    "other_users_processes_stopped": false
+  },
+  "archive_PID": {
+    "bytes": 9721856,
+    "sha256": "18bd393e8d31a8e5de2c0e62dd48bdfa2b57b2a4663e4a4a6909ad780f1a20b8",
+    "download_passes": 1,
+    "erased": true,
+    "USB_closed": true
+  }
+}

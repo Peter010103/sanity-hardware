@@ -1,0 +1,127 @@
+{
+  "success": false,
+  "output": "/home/hw527/Projects/drones/outputs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z",
+  "test": "trajectory",
+  "pattern": "lemniscate",
+  "inner_controller": "indi",
+  "speed_m_s": 5.0,
+  "flight_requested": true,
+  "flight_started": true,
+  "host": "dolphin",
+  "launcher_pid": 308322,
+  "started_unix": 1794476901.5105224,
+  "ground_reference": {
+    "ground_m": 0.03069985657930374,
+    "samples": 46,
+    "maximum_tilt_deg": 1.032070082120977,
+    "median_speed_m_s": 0.001506257015349657,
+    "position_span_m": [
+      8.899904787540436e-05,
+      9.527802467346191e-05,
+      0.00018284283578395844
+    ],
+    "median_xyz_m": [
+      0.020760596729815006,
+      -0.18908604234457016,
+      0.03069985657930374
+    ],
+    "last_pose_age_s": 0.420255672,
+    "tracked_frame": "sanity15"
+  },
+  "configuration_sha256": "0a9fc139f9aa356185ea08984ced84859d91b607fc2ad69de2b44650a893bd9d",
+  "error": "flight failed; inspect /home/hw527/Projects/drones/outputs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z/flight.log",
+  "flight_result": {
+    "success": false,
+    "reason": "fc_indi_fault_allocator",
+    "phase": "stopped",
+    "recorder_dropped": 0,
+    "recorder_error": null,
+    "shutdown_acknowledged": true,
+    "cleanup_errors": [],
+    "qualification": "No automatic declaration of flight qualification",
+    "estimator_logging": {
+      "records": 11633,
+      "dropped": 0,
+      "error": null,
+      "state_record_age_s": 0.81469291,
+      "initialized_and_clock_valid": false,
+      "ready": false,
+      "latest": {
+        "kind": 3,
+        "sequence": 28702,
+        "received_us": 88413993,
+        "record_drops": 15750,
+        "epoch": 16416078235851682387,
+        "time_us": 56627837,
+        "flags": 4,
+        "fault": 9,
+        "position": [
+          0.020580358803272247,
+          -0.18915171921253204,
+          0.030852237716317177
+        ],
+        "velocity": [
+          -0.001347618643194437,
+          -0.0006912932149134576,
+          0.0009649500134401023
+        ],
+        "quaternion": [
+          -0.999954879283905,
+          -0.004598668310791254,
+          0.006374819204211235,
+          0.005342838354408741
+        ],
+        "gyro_bias": [
+          0.0007829150417819619,
+          0.0028174666222184896,
+          -5.5550313845742494e-05
+        ],
+        "accel_bias": [
+          0.002746468409895897,
+          -0.0190097875893116,
+          0.07645252346992493
+        ],
+        "covariance_diag": [
+          0.00013514334568753839,
+          0.00013514357851818204,
+          0.00013132493768353015,
+          0.003199381986632943,
+          0.0031993926968425512,
+          0.0029080158565193415,
+          6.514060078188777e-05,
+          6.514053529826924e-05,
+          6.630847929045558e-05,
+          6.247818964766338e-05,
+          6.24780950602144e-05,
+          6.322591070784256e-05,
+          0.008682845160365105,
+          0.008683070540428162,
+          0.006979032419621944
+        ],
+        "event_drops": 3,
+        "max_task_us": 53268,
+        "fused": 35,
+        "replayed": 124,
+        "pending_replaced": 0,
+        "clock_rejected": 487,
+        "timing_rejected": 90,
+        "static_memory_bytes": 80392,
+        "last_pose_us": 56597662,
+        "latest_imu_us": 56627837,
+        "nis": 0.001348867081105709,
+        "innovation": [
+          0.00019740499556064606,
+          7.160007953643799e-05,
+          -8.623488247394562e-05,
+          -0.0009261518134735525,
+          5.679633250110783e-05,
+          0.0001028476472129114
+        ]
+      }
+    },
+    "observation_records_validated": 11633,
+    "observation_crc_validation": true
+  },
+  "completed_unix": 1794476944.7226207,
+  "all_owned_child_groups_exited": true
+}

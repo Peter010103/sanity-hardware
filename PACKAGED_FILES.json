@@ -9,13 +9,17 @@
       "sha256": "fa6b7d95a2d6e731938e9bc467845ca69eeedb54ff926b815390b79805a9c60d",
       "bytes": 339
     },
+    "LATEST_SOURCE_MANIFEST.json": {
+      "sha256": "fe873fe1520667c894e3f5c694fc7393edc3a7892281b118e8b283f083913e96",
+      "bytes": 128687
+    },
     "LICENSES.md": {
-      "sha256": "4a314353f354b0b46ce4fba0cee5383d941d6866da6a62985005aee82c06fb7e",
-      "bytes": 1781
+      "sha256": "e82a7221caa361d5fedb019973ad3f4ec32658b1e306f96623633f1f4eba2561",
+      "bytes": 1922
     },
     "README.md": {
-      "sha256": "79c068719ecf457c6ece170761fcac58aa2c30e494a2106b4a7e01a1c06c4073",
-      "bytes": 6820
+      "sha256": "4c8fa53dada14b1b851bbdac75662fe0677ede51dc10b08f113827b33cb14a1c",
+      "bytes": 7189
     },
     "SOURCE_MANIFEST.json": {
       "sha256": "e479d064b9a862f0cedd4185eaf7d82246a59d226beb42df680ec20637d5009e",
@@ -502,8 +506,8 @@
       "bytes": 6539
     },
     "VALIDATION.md": {
-      "sha256": "277beea62f178c057dad766efc24e1e83f1f2b9961dc8200f8a3a4501f0263b5",
-      "bytes": 3816
+      "sha256": "92a9258f9c52e0e275198659e11d82981afa4638cf13b429a4180a88d49ddabe",
+      "bytes": 5050
     },
     "config/lab.example.json": {
       "sha256": "e2a729fdf3850345c6519169ac00215b3906c19f1d7243cb6cdf6d711db05fe3",
@@ -530,16 +534,20 @@
       "bytes": 9512
     },
     "docs/flights.md": {
-      "sha256": "68ae2c5870af69c2cfba136ed4a33472f12253aba1050a2db566f3773aaf42e6",
-      "bytes": 14321
+      "sha256": "874fafac61869ee9434c0d815cc30dbcade1cb65c52acb0f01fcc293400c1cd4",
+      "bytes": 14483
     },
     "docs/hardware.md": {
       "sha256": "e80e82a33c724610fe3b16a42e8ccb70c69f07f78cf6b2669781b81da4c57faa",
       "bytes": 9053
     },
+    "docs/latest-butterfly.md": {
+      "sha256": "76fbf6c02f42690b120e4e061970f83467b39b6ab410cdfaa25c13cb76c739d0",
+      "bytes": 6220
+    },
     "docs/results.md": {
-      "sha256": "4d0602effeb415fbe0e374243aa52b3a20284a3614ebcc3255acdaa0bff28910",
-      "bytes": 6204
+      "sha256": "b5d08173e18922e2d073adf83d2ce8d99961af5466ddcac5b5412276a9fce26d",
+      "bytes": 6410
     },
     "evidence/firmware/fc_build_receipt.json": {
       "sha256": "f86b3661c2a4a4f651c4145b5b3e043be31525e396b3f8c57ac586dc306cae65",
@@ -556,6 +564,94 @@
     "evidence/indi4-recomputed-metrics.json": {
       "sha256": "e2c3f5430b6924884416838cd6fc86c27de40c507c9fd17206022d85eaeb997b",
       "bytes": 981
+    },
+    "evidence/latest-butterfly/ACTIVATION.json": {
+      "sha256": "7cad1ee044d4953c3505de9d7cc520ece77a67157a7a119377e6d447dd152f5a",
+      "bytes": 1115
+    },
+    "evidence/latest-butterfly/FINAL_COMPARISON.json": {
+      "sha256": "dd884a5a3153c9bc3380fa486c00dde3cb95bc77899f3f541657f0b9ddc5ef6b",
+      "bytes": 173288
+    },
+    "evidence/latest-butterfly/FINDINGS.txt": {
+      "sha256": "9f94ecb81f64f29e089e8b1bb6019790bffd276ca9690ed60cd4403434da3a59",
+      "bytes": 3620
+    },
+    "evidence/latest-butterfly/IPC_VALIDATION.json": {
+      "sha256": "7f0a0744d9c751164d055265e22472dcde9efbeb21429e5a1f12865fbb6c408d",
+      "bytes": 5054
+    },
+    "evidence/latest-butterfly/MPC_INDI_vs_MPC_PID_butterfly_comparison.pdf": {
+      "sha256": "2bd2f6c7af72d9990b8e5d147bab0eae0bc57c3358516b59129ebf329c7991ad",
+      "bytes": 1459071
+    },
+    "evidence/latest-butterfly/RATE_MODEL_CHANGE.json": {
+      "sha256": "d89fb59da19190dd7c22b07a891b7b5d29e5b8a3c795da052dc8561384efdfa8",
+      "bytes": 656
+    },
+    "evidence/latest-butterfly/reference_comparison.json": {
+      "sha256": "ab658b163fb386d2ccc5818efa10b8517451b39aff7fdca15fb561ae19fb79ec",
+      "bytes": 6318
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-52-31Z/configuration.json": {
+      "sha256": "264c89078f67d77e0ab59e59e8b3374fd9621f170279dadea96fdc9a769e4d04",
+      "bytes": 11266
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-52-31Z/ground_reference.json": {
+      "sha256": "da6aea3ae7e9a4495e2dbdb0cdb2c856a08aef7d945c08e4582f894c7fbc69bf",
+      "bytes": 415
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-52-31Z/run_summary.json": {
+      "sha256": "f3d303ec7bd46d38ff5b9c55f47f5a63f79ace35f3772c47644a3d676ff80b98",
+      "bytes": 3702
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-54-26Z/configuration.json": {
+      "sha256": "f05a703dd6548f60ee79c8fd2eac22da3db88d894601e31a7c916750b6a29cb4",
+      "bytes": 11382
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-54-26Z/ground_reference.json": {
+      "sha256": "9bbc7e5b124768e7330be1776344154d928c39554f4a3d8454b6322eb64e151f",
+      "bytes": 416
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_4mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-54-26Z/run_summary.json": {
+      "sha256": "a39779466c708568084637f97e17e7faebd3de32ac846c9128be8b699b557551",
+      "bytes": 3698
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z/configuration.json": {
+      "sha256": "0a9fc139f9aa356185ea08984ced84859d91b607fc2ad69de2b44650a893bd9d",
+      "bytes": 11475
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z/ground_reference.json": {
+      "sha256": "618733770e9f1f6d095a32357947aec6b427547352d93138089cccf21ae475cc",
+      "bytes": 415
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_INDI_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_09-48-21Z/run_summary.json": {
+      "sha256": "77456d6ff73c4424300bd11e431ecf295ae76dac5704be7260a40c53bb3ec2c4",
+      "bytes": 3861
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z/configuration.json": {
+      "sha256": "0ebd5bcbf72a2ad11fcc2ecd40a21a698a38308a72365069b6ea7ed8d3bc2521",
+      "bytes": 11686
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z/ground_reference.json": {
+      "sha256": "d60bf1144cf756d88fce694a9e7f137d55b7ecf8c970d5d86ea5a14b31c270a7",
+      "bytes": 414
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_3mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-21-18Z/run_summary.json": {
+      "sha256": "9eddbc4d1283c1f5f1681c30e3dabfee3bdbab3ca06fe292e2372e224465025a",
+      "bytes": 3694
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/configuration.json": {
+      "sha256": "b79c6f50d2ac27d599a07a9f24155c4361d999113e86950ba2da1ca64cf5cf8e",
+      "bytes": 11897
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/ground_reference.json": {
+      "sha256": "bd654257db06354825762b034103fcc99f8c295b37f867e7d52152456ef3583f",
+      "bytes": 414
+    },
+    "evidence/latest-butterfly/runs/sanity15_lemniscate_PID_5mps_indi-shaped-angular_R2m_W3m_butterflyH0.3m_C3_2026-11-12_10-23-05Z/run_summary.json": {
+      "sha256": "9295bd5ddc380cd565cf2196512c63b59f012bfb6f4c2683d13231b80d5916e4",
+      "bytes": 3856
     },
     "evidence/pid-flip10-recomputed-metrics.json": {
       "sha256": "b22a39f681ca5cf78e2a041356123539352a3a5f9d0680508e5c1e934fe19796",
@@ -900,6 +996,18 @@
     "firmware/fc/tests/blackbox_layout_test.c": {
       "sha256": "acacf570d9fcc3d0dc5f10f96f91d9e2dfa7526ca193067f571ce96e5380a163",
       "bytes": 3137
+    },
+    "firmware/fc/tests/pid_supervisor_source/paper_adapter.c": {
+      "sha256": "4fef8ba84cdf62d473906981b337dda114212b7c5a02d8a3495296cde693e74d",
+      "bytes": 30684
+    },
+    "firmware/fc/tests/pid_supervisor_source/supervisor.c": {
+      "sha256": "3dc880c524f6dc8b3aa3e144ec5a64564853fcd3270760384fffd4da012a75f3",
+      "bytes": 2250
+    },
+    "firmware/fc/tests/pid_supervisor_source/supervisor.h": {
+      "sha256": "89591b521ce518bf4796ada659f4337581641041d807070246f497403cf19d09",
+      "bytes": 802
     },
     "firmware/fc/tests/replay_provenance.json": {
       "sha256": "952a1c486ba42d4915a9861a86b7825b47dab93d2265a26d91edca92d8831afd",
@@ -1593,6 +1701,1458 @@
       "sha256": "eb7b7fd6ada3f0f54ae987ebeecca060ed3d0aab1a3b727108dfcefa613c3c6c",
       "bytes": 365634
     },
+    "releases/butterfly-indi/RECEIVER_MATCH.json": {
+      "sha256": "c8f7ece4981f595eda0977ae07028e73abf34db93ef5b1c6463a7958317d85da",
+      "bytes": 743
+    },
+    "releases/butterfly-indi/assets": {
+      "sha256": "0d4decd1cd506fb34a78905bee5026a16eb98cf5fd976ba260504374a912b908",
+      "bytes": 67
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/cable_engagement_shadow.json": {
+      "sha256": "e95bd35a19ddfb17aa185c92824584a31218bfafe9407349eec235db96c526d1",
+      "bytes": 448
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/dds_robotlab.xml": {
+      "sha256": "0ef74af5d44b0d781f3d62cb0835539151cb7fa52f0010768fa94fe00540cd65",
+      "bytes": 842
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/fleet_comms_three.json": {
+      "sha256": "4918b8dce434551d0213d2c741d4dc9f6595da49c36d8245947f7cc9caf14be4",
+      "bytes": 691
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/paper_native_replay_example.json": {
+      "sha256": "9308c963e25a533cb01a1e59ebd9f1c9efb060de38fe7c233ce81d0a57ab8cd7",
+      "bytes": 1155
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_hx711_hover_20261028.json": {
+      "sha256": "72c897aa4403bb174accea5beb82fd1dddcd0b917426497f3e8cb3202783efaf",
+      "bytes": 6270
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_hx711_payload_23g_20261028.json": {
+      "sha256": "fb05dad56a6e8a9964506fd1c6a43549629015c8ca566390c3a6422f7db5ad51",
+      "bytes": 3717
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_motor_collective.json": {
+      "sha256": "325681aa9e061149ce4a04359bd52b5f0a07023211edd42575e86302441e04b3",
+      "bytes": 435
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_mpc.json": {
+      "sha256": "fa556292ace4c5764a99326f48197ecbaa21a194e516e93ecfa70dddfa513870",
+      "bytes": 435
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_mpc_bias.json": {
+      "sha256": "852227c4cab0ee5528e1b4a4d81ecc85f25ad0b43bfdedd70b4413df29244a4d",
+      "bytes": 568
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_mpc_high_bank.json": {
+      "sha256": "ca52094f601dd7ab9b002e81ffa9a1ab8a7bd92bcd9b4a946e7bfda50d3deb05",
+      "bytes": 435
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity09_pitch_loop.json": {
+      "sha256": "78f9bf16d8d9c0ecbd3af8ad724f3bde77f710aa840656cda6b4d8d949b22c65",
+      "bytes": 1605
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity10_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity14_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover.json": {
+      "sha256": "8b35ac9a92b86c09448db2457e345ea8e38ed81bd6f40338c252c197884d049e",
+      "bytes": 2144
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover_1khz.json": {
+      "sha256": "936692088fa5813b6f478ed2387b2c936e03f3a42a609cf243b7f9f11f99cea3",
+      "bytes": 3021
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover_diagnostics.json": {
+      "sha256": "f437f59bbd48b894c391c3b1695f389326e58dd79f9e96693206b788effe6f33",
+      "bytes": 2476
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_full_indi_lemniscate_1khz.json": {
+      "sha256": "9923b10faed7d0044e1fb9aff7eaf412da4f9fb80390d87bc187a46e0101690d",
+      "bytes": 2539
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_estimator_hover.json": {
+      "sha256": "0417d839abb308cfee61a292af405c0e84412446f03c463709e08efde09cb052",
+      "bytes": 1503
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_estimator_hover_1khz.json": {
+      "sha256": "3a74544652698fa5f8b17a314329a50b10cb3cf71a276083a56d0beb59db7eb4",
+      "bytes": 1961
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_hover.json": {
+      "sha256": "1f50a3ae2654f9cb9040475c5fa26b588d4a33cf26d4414644888b02b29ad6f1",
+      "bytes": 712
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength.json": {
+      "sha256": "cddf7eb35d429ae257be837bb59fa6cec0c3ad51ddeda716afcc6732cfac88bc",
+      "bytes": 3538
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength_pid.json": {
+      "sha256": "77113ea5cfcb2eac5625f908d7293490cfca724efa73e650f3392c8557f75a83",
+      "bytes": 3284
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular.json": {
+      "sha256": "161520f5bcfba01d775d5f9eb5ebf6da8aa9c2b85b0a3ca81f54e13978300d30",
+      "bytes": 3534
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular_pid.json": {
+      "sha256": "12ebe75a7454ae74fa7cfdd15868623c6b4816f710df9cfe01728120bb75d489",
+      "bytes": 3280
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_mpc_indi_rate_model.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_paper_ctbr_compatibility_1khz.json": {
+      "sha256": "b590383ff1c14adcffad17365072d223eee575ac71decfee9d89be0dee4c7646",
+      "bytes": 2007
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_pid_estimator_hover.json": {
+      "sha256": "ecfebc1791a23e63b730a98a138a108423bf62db2e8b8f85a07a211b35263efd",
+      "bytes": 1133
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity15_pid_estimator_hover_1khz.json": {
+      "sha256": "d945c91fe47cbe93114c4c538a10d974401d3cff844b1dbcdb8f6a9f33dcbcbe",
+      "bytes": 1591
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity18_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity21_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity22_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity24_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable.json": {
+      "sha256": "51af92d51531d7b204764909f5db44940c6bcd333c68d285179f60f06a64f196",
+      "bytes": 3880
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_faster_23g_20261024.json": {
+      "sha256": "316f6731c7c35d013f9e9d28214ad6690a3e649b58c1675fab8a0791a7470a8a",
+      "bytes": 5995
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_faster_comparison_aware_23g_20261025.json": {
+      "sha256": "33823c97c2b2608bfe6db32596a9736990c822096b5e75c54ead95eb9e920623",
+      "bytes": 6211
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_faster_unaware_23g_20261025.json": {
+      "sha256": "90c32c9d3991ebd6580ae78035889d6197f64798d25d648b82783c17a22e01a6",
+      "bytes": 6256
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_payload_23g.json": {
+      "sha256": "e4e79bafea95ccbb6d513240c1a7af0b9cc28395c01b259b75930e50a3e75a37",
+      "bytes": 3251
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_room_20261024.json": {
+      "sha256": "b5fb691d62efd7f2827c65f549adcfa0a3375a0b76d877f60b0927f08b88d007",
+      "bytes": 4870
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_cable_room_23g_20261024.json": {
+      "sha256": "c829ae6af04c436b32c261aebd4b95ee96cd263e3dd916640185ce5cf9465f86",
+      "bytes": 5677
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_payload_spiral_23g_20261024.json": {
+      "sha256": "c5e15a50b174c42821cfd215ea8a9aa6c4ec3862ad7ae51b72608286050ce8b0",
+      "bytes": 6209
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/config/sanity_plate_108g.json": {
+      "sha256": "923087834fc553513d1b3d62ef9fad2a8354197567baf530982c64b648bfd2f6",
+      "bytes": 4453
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/launch/cable.launch.py": {
+      "sha256": "6463c4b48d2c7a445db4a7e22294030592922748a19b47bb7c7889944669a5af",
+      "bytes": 3193
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/launch/plate.launch.py": {
+      "sha256": "e562518ac59d2bfa7a1a2a1f590989e7351b12792b3ff09da84977f8f89ed79b",
+      "bytes": 1448
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/package.xml": {
+      "sha256": "0498df94bd64f3a3aafb4b389577df123eb6df3b52d1fa8a429e237f1d0011fb",
+      "bytes": 927
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/__init__.py": {
+      "sha256": "9dfcdc4cbf75c9b6bc40b6a941f28e3efcdb412c2b0b4e23e7b3a87c920c6ec8",
+      "bytes": 84
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/acro_collective.py": {
+      "sha256": "5bc679dffba9c2aaa1f50bfb6247cc8e1329a815a5911da969d58c5a5d375572",
+      "bytes": 1954
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/actuator.py": {
+      "sha256": "bbc7179136a7aeefb8988c7acef3aa95d99e3c1d22e4f5be430034b4fc66e6c9",
+      "bytes": 4330
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/arrival_metrics.py": {
+      "sha256": "4c6a874403126d0344995e105baec8ec74a9e3d0c619beefab8609a357985fdb",
+      "bytes": 2066
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/async_policy.py": {
+      "sha256": "981f81d9fd22808cd84e98a1b0b7edddfc24fa6a136b5eb173e6b6af9773dc7a",
+      "bytes": 5852
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/autotune_bench.py": {
+      "sha256": "e9fe8f2fe0ee9dabb4554a087e3274a53aa817f44bdea11418675154305465ca",
+      "bytes": 8961
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/autotune_mission.py": {
+      "sha256": "2f744e16d6a3da26636a2e8f8a1202ee0131711d5b9778721527fb781de4a143",
+      "bytes": 12855
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_assessment.py": {
+      "sha256": "3d0174064b1749d34c3c8cbb1e1b32fc245ca1b1203adf7113986b32fddb2ff9",
+      "bytes": 8262
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_configuration.py": {
+      "sha256": "49a701b35318a215ff9ddf4052e72419936be6a5d21bbc98e58ee538d93ce409",
+      "bytes": 11227
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_engagement.py": {
+      "sha256": "de44b6ade3271ac7ebae95f677df3cde31e6a9eabca09fcbb212546245fb8072",
+      "bytes": 14151
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_geometry.py": {
+      "sha256": "85bbfadaf87d885c994e0ea1862cb21fe6fbbe4db766fb2ecbe4599b28e85108",
+      "bytes": 3518
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_health.py": {
+      "sha256": "130a16323f3a58746cc790d7c1eee9d054f47bfa4062b7117959e931f0f18321",
+      "bytes": 7264
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_length.py": {
+      "sha256": "7cc98ecbdbc9b42c7f279f12b774e5e896ae842807e8b99313a1b9ac1f567df8",
+      "bytes": 4887
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_mission.py": {
+      "sha256": "b251002b52aed81eafcd1b075197915f89860b6f7c15bbf0a048212148a81a6a",
+      "bytes": 33882
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_preflight.py": {
+      "sha256": "3175aeb414c519719efcd26c59b0467d1efb740e3599e0459033c15e133732c3",
+      "bytes": 3026
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_process.py": {
+      "sha256": "bae59664d34bd2229793365aff3dd2a2c13ee73dd0e24cb2e4dceadb55d58766",
+      "bytes": 8414
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_qualification.py": {
+      "sha256": "94f2bc183ff7be611da11ad62bf5d559707306f35c7f7c505c60abcd937485dc",
+      "bytes": 5410
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_sequence.py": {
+      "sha256": "5e3fba2644427babcb010a3454dbd137520283910c7e037effa195b2016aa7ab",
+      "bytes": 41469
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_shadow_bench.py": {
+      "sha256": "1af2ddb61b56c13b91cf6281809c326a8a141f912d8b7bcff6c625c572a3225a",
+      "bytes": 9454
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_shadow_plot.py": {
+      "sha256": "324ef6f74ec68a9c7a79170ed7e68c2e947c136705f101847b01f0e8c3cb5766",
+      "bytes": 4133
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_shadow_protocol.py": {
+      "sha256": "7c6a80027526539682acc6a3af1aa115cddefa63d9ff6dcb9688d43d0fc8440a",
+      "bytes": 3306
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_simulation.py": {
+      "sha256": "b730e3dc1811972c2a413fbcaf9bed06b6dced2dacebf67b861f8c50ea7b83cf",
+      "bytes": 17750
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_state.py": {
+      "sha256": "8fbb6a51ec5ddcfb5602b90aabd30c2514e92f4b6111363ab248054b16784b96",
+      "bytes": 16486
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_strain.py": {
+      "sha256": "73f79e7cb5094b6e75604b64d3f38a334a9b24b0d2fcbd23b11d507886b14c83",
+      "bytes": 7239
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cable_validate.py": {
+      "sha256": "987aee58ab39e74e1a73f0f59158ffc864ad36ca8713ef3bac1eb05cd6beaa6b",
+      "bytes": 5064
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/cli.py": {
+      "sha256": "12be0183a751f06275e1d6e3bc8cf85a29f9145cfae8c777c86cc5204385c516",
+      "bytes": 5359
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/client.py": {
+      "sha256": "78ed52e8399ede837e354e11357b294109e991ad0e40665b261d6e3410e8987d",
+      "bytes": 28518
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/clocked_sequence_sim.py": {
+      "sha256": "fbac010c59a8deec8d0297a326bfe544e0f65c1a9be2a7b0bfc2f7fc539c5e5f",
+      "bytes": 10386
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/collective.py": {
+      "sha256": "5b952a75d4e216b568255d4b3810ac47cb9a582d59e40c8ab808420a949f6104",
+      "bytes": 6235
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/command_prediction.py": {
+      "sha256": "c85ea269ff7b7fa8981a441f99a1ddaa582a887bd5048bc0e7e4e9ebad2523e8",
+      "bytes": 4855
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/command_timing.py": {
+      "sha256": "44653940172827e7539c452c92907cb15735fee02db89d19a12c96bbf3f203eb",
+      "bytes": 9729
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/comms_compare.py": {
+      "sha256": "7cf693dede091664bc0bcd4039c558429814b2d242a3dec023d45ca1663b3dae",
+      "bytes": 12995
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/comms_test.py": {
+      "sha256": "eda2b7c0029ae188668a1847bc1b7f339e4313b9f8faddfdfcb28138ffa98e65",
+      "bytes": 10544
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/controller_status.py": {
+      "sha256": "76ef82a303f35ebb5d80e543d31ef300e6995882f13498b4950c467104a7b1f5",
+      "bytes": 3057
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/controller_timing.py": {
+      "sha256": "84f2e4d6a6a97697f455f55217892045fb76f47d08840895acb4d1bef62872d2",
+      "bytes": 2748
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/damping_search.py": {
+      "sha256": "f8b918240b356ff0f6340a9a3b9b2aefeaea54593733992f3e7572540898a012",
+      "bytes": 5566
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/datagram_transport.py": {
+      "sha256": "23b919d33885adf80159bde16bf77fe502fb5e0b78122a13f52aa7e216287c24",
+      "bytes": 7832
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/emergency_braking_mission.py": {
+      "sha256": "2712d44824bf48e838cd5af93ca75ce9ee29461900f453b806c31b12117019eb",
+      "bytes": 4643
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/emergency_landing.py": {
+      "sha256": "5e992950bec052842436825376a6b60e1136ac6289d5fea32a456cd5e7e30222",
+      "bytes": 15821
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/estimator_protocol.py": {
+      "sha256": "d2dc85e64f0bf7f76f71bad67c95a952048cc0377e0c89fcd34dcbd83606f4fe",
+      "bytes": 6997
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/estimator_tools.py": {
+      "sha256": "e1a02b11a6e794e9ad2b7877b33cefbeedb0dc47da44f6e051a62c41816fd8e2",
+      "bytes": 15794
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/experiment.py": {
+      "sha256": "af3cafe7fafd156858b56c897dc22ac1eac6648dc2dd20e75e882f5609310031",
+      "bytes": 23320
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fc_blackbox.py": {
+      "sha256": "a1fb3f03bea23d8d6d59f91a6067901e9c5042247e2b14673bfbce7e5d937d3f",
+      "bytes": 21873
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fc_indi_tune.py": {
+      "sha256": "a83ce8bf05b36f69c53ddb6c02dc834b235e72bd7f37b131fc4af1f7b60429ad",
+      "bytes": 13921
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fc_telemetry.py": {
+      "sha256": "f6b63c969922932d445183ac657f85f5b8829becd5b8e6e192178b90ec0783dc",
+      "bytes": 8919
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/firmware_collective.py": {
+      "sha256": "34ca90148158d83499c38df248a7338507c57d4aa6813f4bbad162d0b01da5a6",
+      "bytes": 4256
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet.py": {
+      "sha256": "614aa1d68b0c0332fe0c1411e6be23c0f3c28bda77fdc425f6dfe2168333c38e",
+      "bytes": 30334
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_comms.py": {
+      "sha256": "df103e3dede8d4436bc61ded4d26a7db7824d322169db8a42f71c18afece55b2",
+      "bytes": 20938
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_config.py": {
+      "sha256": "d9bba1fb3ebe3edd084c42cad885e6c439b010b643eb789016aba7d18982dad4",
+      "bytes": 14996
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_discovery.py": {
+      "sha256": "3585173f8bd4d37766b8b3cbbc56bd188371da12df75b5f61e23ad6d46d71514",
+      "bytes": 11088
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_emulator.py": {
+      "sha256": "f7812b0e27867d35777d90f1b6ab269b4295f83f18de7ce50a83c66e016b414f",
+      "bytes": 9730
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_home_capture.py": {
+      "sha256": "caa881df572b7b5a2f06818ca863eb7467c06ba75f60234a3f963500ce0ec22a",
+      "bytes": 8871
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_mocap.py": {
+      "sha256": "c0534b5d99a814e4b2610693fc152c9e8a195b7b50992322d54e9774ff6ecc79",
+      "bytes": 3535
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_mocap_process.py": {
+      "sha256": "11279ed50606d59aa4562868b7e5d9823f6c442ed4a3547968501b083a1951a4",
+      "bytes": 4493
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_pitch.py": {
+      "sha256": "0cab6418e3c7d637132852c492c12395ed6d7f4b4b897c57220cd17150f6250c",
+      "bytes": 15011
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_pitch_core.py": {
+      "sha256": "bc3fd02f2ba0ce3041eed305aae6cffdf71d4eb627a1600ac88e4f6997fc789b",
+      "bytes": 8414
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_pitch_runtime.py": {
+      "sha256": "e36efd3170705a943dfebe0911f2487a88502dafc8213b0b9c0f667fec5bf601",
+      "bytes": 20962
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_pitch_sim.py": {
+      "sha256": "97d39357c0bf8db39788a9d9d591a38fd824bbefb0b86cbbb8a364162bd17d83",
+      "bytes": 10788
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_reference.py": {
+      "sha256": "e3044daf26e3fa45b5f97448d2c08e187e827849a9235b4a27a250752c34517a",
+      "bytes": 5616
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_simulator.py": {
+      "sha256": "883f82bd0082a4c99394a1fa9236317cf1dde98b8db09076be54b42ef8ab93cc",
+      "bytes": 5343
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/fleet_supervisor.py": {
+      "sha256": "16c52994bc852716256aadd3453bfe10ab030ff52e01f2e448bd5bcc101ef5ab",
+      "bytes": 4802
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/frame_calibration.py": {
+      "sha256": "c068df9e8b76bcef074bb84456ae9a5a4a5e0ce4efcf94e24c3d2f6fc494e351",
+      "bytes": 6237
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/full_indi_mission.py": {
+      "sha256": "ad41f4de5411d96c39174a3d6ee005c47f132ea69b068d103319fbdc6d628501",
+      "bytes": 22870
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/high_speed_lemniscate.py": {
+      "sha256": "28f1f2f456bc5ba5a6e3de01116c9abdf52a193f9b1e6252f9971e51e5456d9c",
+      "bytes": 5837
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/hover_observations.py": {
+      "sha256": "9637b71aa92b68b22dddd29bd1f5fa7572834cfed63b30f3e894f94fcda93222",
+      "bytes": 4250
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/identification_experiment.py": {
+      "sha256": "fa9d3b71f346e4dc9c1f3a4edf0cafea00afe6d1b6ea6f1f26a0aa868c365d22",
+      "bytes": 24071
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/identification_mission.py": {
+      "sha256": "0dcb0d26f050403a845c5e6cee31b292e4be5bf99dd41004314226c69da9b4fd",
+      "bytes": 16052
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/indi_diagnostics.py": {
+      "sha256": "a0feab6cff39e38c7ce5931c79cc91f7ce4a55c3730c56bd028566cc1eda7420",
+      "bytes": 12523
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/indi_hover.py": {
+      "sha256": "0afd9f5db0c654ba6e3bc9a32b313fb90cefaa6dc421eaf939b1c536c5426b5d",
+      "bytes": 37464
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/indi_hover_mission.py": {
+      "sha256": "ee1e65aefb1b589e07d4aa219961e5bae33405e65426564907c1d6525b47f29d",
+      "bytes": 16155
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/indi_lemniscate.py": {
+      "sha256": "5e9e6ca4572b4ff4b111602206206585fbe86d62f48f36412e6e53d656d0bd7e",
+      "bytes": 20459
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/indi_mpc_benchmark.py": {
+      "sha256": "f999fd0e631695ce573944401be67529154c0e90b862d09bd125677f608c8053",
+      "bytes": 25128
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/landing.py": {
+      "sha256": "827a33108bd91456ae0242ca65f8d4ee2c8157856d7d58cd30d652ff89ecfc71",
+      "bytes": 5340
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/local_policy.py": {
+      "sha256": "8923874ff672bd703f3e3e21d699432113c08769176d7f11cc6492271149bc42",
+      "bytes": 19175
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mission_clock.py": {
+      "sha256": "8b9ee23e99d1f3dc33a67519208d428a51b0badaa8202507a13e393f900e242c",
+      "bytes": 1004
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap.py": {
+      "sha256": "739705a0e9073c566537c4bd37a5e510807f51c16ae75a084b627a5da1e2003d",
+      "bytes": 8705
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_bridge.py": {
+      "sha256": "ead9c838df29b923d3fdf3b5de01dadcb332a9cdf95c23a733a109099ab645d3",
+      "bytes": 5147
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_diagnostics.py": {
+      "sha256": "d3ad9fae2965bb66c8245291f535c347a213a821259a9d3c676e8e2e4e544c7e",
+      "bytes": 5810
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_ipc.py": {
+      "sha256": "2b2476c9ac9292522982c931a8818404cdfe3d600558448ae3c3978d72a08ecc",
+      "bytes": 2148
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_protocol.py": {
+      "sha256": "969f3e24112faf83db091bcc8ed3607d8bd3d736eba499b95c0bf47a5f579a27",
+      "bytes": 4113
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_stream.py": {
+      "sha256": "309dc700d91912b4c84492d9d2203be3bf435f348094c108b9575e8b2a2c1b9d",
+      "bytes": 9756
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mocap_stream_node.py": {
+      "sha256": "95252e85f3754682eec2e6be8cf13775fdbc8e83f6b97b6195ecc622a9bb9681",
+      "bytes": 3890
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mpc_benchmark_config.py": {
+      "sha256": "79c3c4bfbf947e1ea3c243fbde40731b76a1168ba66b3e530be6d56615befda8",
+      "bytes": 11985
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/mpc_process.py": {
+      "sha256": "80a14a0a196686e1b54231af7126e1fff9886d4b549ab62c25d324d09a0397cb",
+      "bytes": 5893
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/paper_native.py": {
+      "sha256": "c69c5bfbb42fc1494013b2d5def0874f5ff5cd2136f92cc0c714ed9945dbfa9e",
+      "bytes": 4271
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/paper_status.py": {
+      "sha256": "375a80c1fc511408c83a4a9bcbff009b43ae610fd65d22a6149a41181c43dde8",
+      "bytes": 2215
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/pitch_experiment.py": {
+      "sha256": "327a343031ba4c3e31d3cdf7637bceaf14febd4920b9e71352e332f5b4633bfc",
+      "bytes": 19448
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/pitch_mission.py": {
+      "sha256": "46cc13eb11156f3d5b2a1a2c51c3f369097061cfebd0389600b1ec3294391ed9",
+      "bytes": 23540
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_commissioning.py": {
+      "sha256": "97843fb46125f7dc426456866f084506e8604a63171adddbdbf99b53602f1ab1",
+      "bytes": 18936
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_configuration.py": {
+      "sha256": "c7674d48893526d0e7e882316a86ff5b85d4f5c02a7975d5072f49ff104c6824",
+      "bytes": 7207
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_preflight.py": {
+      "sha256": "a6d26f2ad9466a4ae02d93fb219a5f46fd140f0ad8ad1e902ae06b35776d958c",
+      "bytes": 3097
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_process.py": {
+      "sha256": "3f8459be127ba95802bb1d23b06561d0beafe4c25d79b8d62f90ea319b8ee8dc",
+      "bytes": 4399
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_sequence.py": {
+      "sha256": "1ec2592695a4204664f3a6b3bc4bc2018d8856df235bdcaba423a7679ea1b063",
+      "bytes": 14396
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_state.py": {
+      "sha256": "5514fe26b878509da93cc6ae4f6f760cae22aebe7bb5e7ee40951f55d121a832",
+      "bytes": 4731
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/plate_transport.py": {
+      "sha256": "55e72f13c5dd16a829f1647cbaf049d933afe759295ec62ffaf1aba2a05671ee",
+      "bytes": 4870
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/policy_process.py": {
+      "sha256": "fd08d11a44c535063cb26926eeb3ee93846b93892462ee5a5311f187e1ca25b8",
+      "bytes": 5115
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/protocol.py": {
+      "sha256": "27266ddc5530911eeccc908930c068acd30e1833f648fc7a69c5ea0fc8952463",
+      "bytes": 7742
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/rate_analysis.py": {
+      "sha256": "e338f1b337ff2c8e61252fe23617c92922f314e0a3a5db14e18173c3c1e35db9",
+      "bytes": 1855
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/rate_autotune.py": {
+      "sha256": "0edeab540f5c400030855dbf6723a2d0464b2b0369e3b07ac67536f9dfdee086",
+      "bytes": 10970
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/receiver_health.py": {
+      "sha256": "6c799486ef61f589352b97803b378ca0f5bbe0e4f6a012c0546917edd6ba7d64",
+      "bytes": 1581
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/recording.py": {
+      "sha256": "f42af21b484d55147c68b378fbfc3916813d91c46372d8993df1ced069356c6f",
+      "bytes": 5206
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/recording_process.py": {
+      "sha256": "53b4ede2cf3081ef111e46e9bd62cc9d2cff02a9b1624e49734c4bd32ad6dd5f",
+      "bytes": 1615
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/residual_runtime.py": {
+      "sha256": "bec5c8365f3fa996c2f9a14d6f4cac1e8e4eac2e5f6bf2404c52be58cde4233c",
+      "bytes": 5180
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/ros_bridge.py": {
+      "sha256": "9a801cb845c845b617db972fa466c1e2f8c80eab7831c28b3ceb9543bca3f185",
+      "bytes": 5659
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/ros_sequence.py": {
+      "sha256": "eb33f51220662b6ed8b791506a10e7f2ed2f281433390c6fa5723c1b5de44e0b",
+      "bytes": 43406
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/simulate_sequence.py": {
+      "sha256": "d560f8babc49cbc098f2a2e12951e7b919a75818de3cc1234fc0e30330fe9175",
+      "bytes": 8833
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/simulation_wire.py": {
+      "sha256": "5a93b754464dec0513db841f112428b6abc1dc00c385fd0d271b6a00fe1c14c9",
+      "bytes": 712
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/sine_analysis.py": {
+      "sha256": "341464889709c131fc7d88a0f4a0046178a0cdd400888623cb7ac1f5fb913ff2",
+      "bytes": 8454
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/sine_mission.py": {
+      "sha256": "2189cc3b3c5adeac1e9c0dba94885fdca7b386e1ff4bd1093bcfe0838bc3fb00",
+      "bytes": 4940
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/standalone_paths.py": {
+      "sha256": "13f6ac96ec6182450e0bc95f373ec9b30b76b760048f630a0be3f74d39f92b00",
+      "bytes": 726
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/telemetry_capture.py": {
+      "sha256": "a19883ae56813468e64c67ee0f22a29f1f34d82b5dbcebfc3410c23611d65ab1",
+      "bytes": 7321
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/transport.py": {
+      "sha256": "cbe10868db54366efd496549b3740e27e011111660d0b2080e00c5ab86ae3c68",
+      "bytes": 1929
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/transport_test.py": {
+      "sha256": "f3378affdf3b0968ffc90f6e97d0cfcdd9ad7dbaf02a5e89230d937e7206c66c",
+      "bytes": 16831
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/sanity_zenoh/tuning_rpc.py": {
+      "sha256": "b0307b66d51a9c18ac43a4ef3a0553c43ca0e55fa6a3bd9653fd24c1e1c8a824",
+      "bytes": 10594
+    },
+    "releases/butterfly-indi/host/sanity_zenoh/setup.py": {
+      "sha256": "9efa10d75cb4366f4af754e973d198de56452e8f97a76fc2dd8c16234e97a64e",
+      "bytes": 3882
+    },
+    "releases/butterfly-indi/indi_rate_model.py": {
+      "sha256": "dea69c77a6b04a514c054da3ca7245ce79c04bc96daca3e71b0737f29ee4d21c",
+      "bytes": 9777
+    },
+    "releases/butterfly-indi/model_3mps.xml": {
+      "sha256": "6a33dab1b3b8009dd41c3003c93e9721d1ff45fb2bb85c755676b1696befafc0",
+      "bytes": 6046
+    },
+    "releases/butterfly-indi/model_4mps.xml": {
+      "sha256": "32a55348f67352ef77c8b77e99e1e6880e09040dd10cd766377c30807e0cb4a0",
+      "bytes": 6046
+    },
+    "releases/butterfly-indi/model_5mps.xml": {
+      "sha256": "613b3afac040a93f91de04d20c1184de67a679dc6cf5bc9140363c7aa54b1b27",
+      "bytes": 6046
+    },
+    "releases/butterfly-indi/model_6mps.xml": {
+      "sha256": "518e0b4b8710d3fb86e69ba172fb6e2bbd39bdb1068393e6f2985a2eae268e9e",
+      "bytes": 6046
+    },
+    "releases/butterfly-indi/mpc_3mps.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/mpc_4mps.json": {
+      "sha256": "236a5bc915b687580ebebe34150c7bc7715c36a18b82c1f03eb02892b0e4a02a",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/mpc_5mps.json": {
+      "sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/mpc_5mps_original_rate_model.json": {
+      "sha256": "9a2710bd7dea11cbc35401eae493ef0718e5e243d230c84521ea1aa69c015e3a",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/mpc_6mps.json": {
+      "sha256": "5faedc75b25c4812b7e48095ba5a3be8ddf3bb93f118a5962e60361edf3ed8ce",
+      "bytes": 946
+    },
+    "releases/butterfly-indi/mpc_controller.py": {
+      "sha256": "7ac39cb5e941caa8fc02b0019837bedb486dc856ffe38a12232f1e66f904fcd4",
+      "bytes": 25859
+    },
+    "releases/butterfly-indi/mpc_disturbance.py": {
+      "sha256": "12dcefed9f871b0c93f892a90cf8b32963c08722413510a5a4628bcfe374be5b",
+      "bytes": 8022
+    },
+    "releases/butterfly-indi/physical_plant.py": {
+      "sha256": "4ac6cb3715d822c6765f696890348f5271cc667d004aa3274c403d4c029f72bc",
+      "bytes": 5003
+    },
+    "releases/butterfly-indi/run_high_speed_hover.sh": {
+      "sha256": "cc1be0f6ca16ba1e6d00f15dd1106c6e731fdde060dd201b022f101aab52ba46",
+      "bytes": 435
+    },
+    "releases/butterfly-indi/run_high_speed_lemniscate.py": {
+      "sha256": "12d82c7fe32f90841ba3b6a200cec5edd7d79ab16b3d7fa06c3646c62d455bb0",
+      "bytes": 20409
+    },
+    "releases/butterfly-indi/test/test_geometry.py": {
+      "sha256": "bad14a001eceb2089509bd07e85044205e05c9fed778a6ee792b6b95cedf1bb0",
+      "bytes": 8301
+    },
+    "releases/butterfly-pid/RECEIVER_MATCH.json": {
+      "sha256": "c8f7ece4981f595eda0977ae07028e73abf34db93ef5b1c6463a7958317d85da",
+      "bytes": 743
+    },
+    "releases/butterfly-pid/VALIDATION_RECEIPT.json": {
+      "sha256": "f9d3ab802bac2d3a49e4098e654eb88393aaf62383aebdd18ba8c1b2eedcf845",
+      "bytes": 35011
+    },
+    "releases/butterfly-pid/assets": {
+      "sha256": "0d4decd1cd506fb34a78905bee5026a16eb98cf5fd976ba260504374a912b908",
+      "bytes": 67
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/cable_engagement_shadow.json": {
+      "sha256": "e95bd35a19ddfb17aa185c92824584a31218bfafe9407349eec235db96c526d1",
+      "bytes": 448
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/dds_robotlab.xml": {
+      "sha256": "0ef74af5d44b0d781f3d62cb0835539151cb7fa52f0010768fa94fe00540cd65",
+      "bytes": 842
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/fleet_comms_three.json": {
+      "sha256": "4918b8dce434551d0213d2c741d4dc9f6595da49c36d8245947f7cc9caf14be4",
+      "bytes": 691
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/paper_native_replay_example.json": {
+      "sha256": "9308c963e25a533cb01a1e59ebd9f1c9efb060de38fe7c233ce81d0a57ab8cd7",
+      "bytes": 1155
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_hx711_hover_20261028.json": {
+      "sha256": "72c897aa4403bb174accea5beb82fd1dddcd0b917426497f3e8cb3202783efaf",
+      "bytes": 6270
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_hx711_payload_23g_20261028.json": {
+      "sha256": "fb05dad56a6e8a9964506fd1c6a43549629015c8ca566390c3a6422f7db5ad51",
+      "bytes": 3717
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_motor_collective.json": {
+      "sha256": "325681aa9e061149ce4a04359bd52b5f0a07023211edd42575e86302441e04b3",
+      "bytes": 435
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_mpc.json": {
+      "sha256": "fa556292ace4c5764a99326f48197ecbaa21a194e516e93ecfa70dddfa513870",
+      "bytes": 435
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_mpc_bias.json": {
+      "sha256": "852227c4cab0ee5528e1b4a4d81ecc85f25ad0b43bfdedd70b4413df29244a4d",
+      "bytes": 568
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_mpc_high_bank.json": {
+      "sha256": "ca52094f601dd7ab9b002e81ffa9a1ab8a7bd92bcd9b4a946e7bfda50d3deb05",
+      "bytes": 435
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity09_pitch_loop.json": {
+      "sha256": "78f9bf16d8d9c0ecbd3af8ad724f3bde77f710aa840656cda6b4d8d949b22c65",
+      "bytes": 1605
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity10_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity14_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover.json": {
+      "sha256": "8b35ac9a92b86c09448db2457e345ea8e38ed81bd6f40338c252c197884d049e",
+      "bytes": 2144
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover_1khz.json": {
+      "sha256": "936692088fa5813b6f478ed2387b2c936e03f3a42a609cf243b7f9f11f99cea3",
+      "bytes": 3021
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_full_indi_estimator_hover_diagnostics.json": {
+      "sha256": "f437f59bbd48b894c391c3b1695f389326e58dd79f9e96693206b788effe6f33",
+      "bytes": 2476
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_full_indi_lemniscate_1khz.json": {
+      "sha256": "9923b10faed7d0044e1fb9aff7eaf412da4f9fb80390d87bc187a46e0101690d",
+      "bytes": 2539
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_estimator_hover.json": {
+      "sha256": "0417d839abb308cfee61a292af405c0e84412446f03c463709e08efde09cb052",
+      "bytes": 1503
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_estimator_hover_1khz.json": {
+      "sha256": "3a74544652698fa5f8b17a314329a50b10cb3cf71a276083a56d0beb59db7eb4",
+      "bytes": 1961
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_hover.json": {
+      "sha256": "1f50a3ae2654f9cb9040475c5fa26b588d4a33cf26d4414644888b02b29ad6f1",
+      "bytes": 712
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength.json": {
+      "sha256": "cddf7eb35d429ae257be837bb59fa6cec0c3ad51ddeda716afcc6732cfac88bc",
+      "bytes": 3538
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_mpc_constant_arclength_pid.json": {
+      "sha256": "77113ea5cfcb2eac5625f908d7293490cfca724efa73e650f3392c8557f75a83",
+      "bytes": 3284
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular.json": {
+      "sha256": "161520f5bcfba01d775d5f9eb5ebf6da8aa9c2b85b0a3ca81f54e13978300d30",
+      "bytes": 3534
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_indi_mpc_variable_angular_pid.json": {
+      "sha256": "12ebe75a7454ae74fa7cfdd15868623c6b4816f710df9cfe01728120bb75d489",
+      "bytes": 3280
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_mpc_indi_rate_model.json": {
+      "sha256": "6a45e1f754dcf9789511c4b509af02dd26b71744637a3ce5901f3877dfbf8009",
+      "bytes": 946
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_paper_ctbr_compatibility_1khz.json": {
+      "sha256": "b590383ff1c14adcffad17365072d223eee575ac71decfee9d89be0dee4c7646",
+      "bytes": 2007
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_pid_estimator_hover.json": {
+      "sha256": "ecfebc1791a23e63b730a98a138a108423bf62db2e8b8f85a07a211b35263efd",
+      "bytes": 1133
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity15_pid_estimator_hover_1khz.json": {
+      "sha256": "d945c91fe47cbe93114c4c538a10d974401d3cff844b1dbcdb8f6a9f33dcbcbe",
+      "bytes": 1591
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity18_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity21_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity22_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity24_esp_collective.json": {
+      "sha256": "fb8a58c006fa65918514662a2edc742b2b6f4735f875ec0db956f84442b3abb8",
+      "bytes": 9620
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable.json": {
+      "sha256": "51af92d51531d7b204764909f5db44940c6bcd333c68d285179f60f06a64f196",
+      "bytes": 3880
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_faster_23g_20261024.json": {
+      "sha256": "316f6731c7c35d013f9e9d28214ad6690a3e649b58c1675fab8a0791a7470a8a",
+      "bytes": 5995
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_faster_comparison_aware_23g_20261025.json": {
+      "sha256": "33823c97c2b2608bfe6db32596a9736990c822096b5e75c54ead95eb9e920623",
+      "bytes": 6211
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_faster_unaware_23g_20261025.json": {
+      "sha256": "90c32c9d3991ebd6580ae78035889d6197f64798d25d648b82783c17a22e01a6",
+      "bytes": 6256
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_payload_23g.json": {
+      "sha256": "e4e79bafea95ccbb6d513240c1a7af0b9cc28395c01b259b75930e50a3e75a37",
+      "bytes": 3251
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_room_20261024.json": {
+      "sha256": "b5fb691d62efd7f2827c65f549adcfa0a3375a0b76d877f60b0927f08b88d007",
+      "bytes": 4870
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_cable_room_23g_20261024.json": {
+      "sha256": "c829ae6af04c436b32c261aebd4b95ee96cd263e3dd916640185ce5cf9465f86",
+      "bytes": 5677
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_payload_spiral_23g_20261024.json": {
+      "sha256": "c5e15a50b174c42821cfd215ea8a9aa6c4ec3862ad7ae51b72608286050ce8b0",
+      "bytes": 6209
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/config/sanity_plate_108g.json": {
+      "sha256": "923087834fc553513d1b3d62ef9fad2a8354197567baf530982c64b648bfd2f6",
+      "bytes": 4453
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/launch/cable.launch.py": {
+      "sha256": "6463c4b48d2c7a445db4a7e22294030592922748a19b47bb7c7889944669a5af",
+      "bytes": 3193
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/launch/plate.launch.py": {
+      "sha256": "e562518ac59d2bfa7a1a2a1f590989e7351b12792b3ff09da84977f8f89ed79b",
+      "bytes": 1448
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/package.xml": {
+      "sha256": "0498df94bd64f3a3aafb4b389577df123eb6df3b52d1fa8a429e237f1d0011fb",
+      "bytes": 927
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/__init__.py": {
+      "sha256": "9dfcdc4cbf75c9b6bc40b6a941f28e3efcdb412c2b0b4e23e7b3a87c920c6ec8",
+      "bytes": 84
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/acro_collective.py": {
+      "sha256": "5bc679dffba9c2aaa1f50bfb6247cc8e1329a815a5911da969d58c5a5d375572",
+      "bytes": 1954
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/actuator.py": {
+      "sha256": "bbc7179136a7aeefb8988c7acef3aa95d99e3c1d22e4f5be430034b4fc66e6c9",
+      "bytes": 4330
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/arrival_metrics.py": {
+      "sha256": "4c6a874403126d0344995e105baec8ec74a9e3d0c619beefab8609a357985fdb",
+      "bytes": 2066
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/async_policy.py": {
+      "sha256": "981f81d9fd22808cd84e98a1b0b7edddfc24fa6a136b5eb173e6b6af9773dc7a",
+      "bytes": 5852
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/autotune_bench.py": {
+      "sha256": "e9fe8f2fe0ee9dabb4554a087e3274a53aa817f44bdea11418675154305465ca",
+      "bytes": 8961
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/autotune_mission.py": {
+      "sha256": "2f744e16d6a3da26636a2e8f8a1202ee0131711d5b9778721527fb781de4a143",
+      "bytes": 12855
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_assessment.py": {
+      "sha256": "3d0174064b1749d34c3c8cbb1e1b32fc245ca1b1203adf7113986b32fddb2ff9",
+      "bytes": 8262
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_configuration.py": {
+      "sha256": "49a701b35318a215ff9ddf4052e72419936be6a5d21bbc98e58ee538d93ce409",
+      "bytes": 11227
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_engagement.py": {
+      "sha256": "de44b6ade3271ac7ebae95f677df3cde31e6a9eabca09fcbb212546245fb8072",
+      "bytes": 14151
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_geometry.py": {
+      "sha256": "85bbfadaf87d885c994e0ea1862cb21fe6fbbe4db766fb2ecbe4599b28e85108",
+      "bytes": 3518
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_health.py": {
+      "sha256": "130a16323f3a58746cc790d7c1eee9d054f47bfa4062b7117959e931f0f18321",
+      "bytes": 7264
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_length.py": {
+      "sha256": "7cc98ecbdbc9b42c7f279f12b774e5e896ae842807e8b99313a1b9ac1f567df8",
+      "bytes": 4887
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_mission.py": {
+      "sha256": "b251002b52aed81eafcd1b075197915f89860b6f7c15bbf0a048212148a81a6a",
+      "bytes": 33882
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_preflight.py": {
+      "sha256": "3175aeb414c519719efcd26c59b0467d1efb740e3599e0459033c15e133732c3",
+      "bytes": 3026
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_process.py": {
+      "sha256": "bae59664d34bd2229793365aff3dd2a2c13ee73dd0e24cb2e4dceadb55d58766",
+      "bytes": 8414
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_qualification.py": {
+      "sha256": "94f2bc183ff7be611da11ad62bf5d559707306f35c7f7c505c60abcd937485dc",
+      "bytes": 5410
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_sequence.py": {
+      "sha256": "5e3fba2644427babcb010a3454dbd137520283910c7e037effa195b2016aa7ab",
+      "bytes": 41469
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_shadow_bench.py": {
+      "sha256": "1af2ddb61b56c13b91cf6281809c326a8a141f912d8b7bcff6c625c572a3225a",
+      "bytes": 9454
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_shadow_plot.py": {
+      "sha256": "324ef6f74ec68a9c7a79170ed7e68c2e947c136705f101847b01f0e8c3cb5766",
+      "bytes": 4133
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_shadow_protocol.py": {
+      "sha256": "7c6a80027526539682acc6a3af1aa115cddefa63d9ff6dcb9688d43d0fc8440a",
+      "bytes": 3306
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_simulation.py": {
+      "sha256": "b730e3dc1811972c2a413fbcaf9bed06b6dced2dacebf67b861f8c50ea7b83cf",
+      "bytes": 17750
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_state.py": {
+      "sha256": "8fbb6a51ec5ddcfb5602b90aabd30c2514e92f4b6111363ab248054b16784b96",
+      "bytes": 16486
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_strain.py": {
+      "sha256": "73f79e7cb5094b6e75604b64d3f38a334a9b24b0d2fcbd23b11d507886b14c83",
+      "bytes": 7239
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cable_validate.py": {
+      "sha256": "987aee58ab39e74e1a73f0f59158ffc864ad36ca8713ef3bac1eb05cd6beaa6b",
+      "bytes": 5064
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/cli.py": {
+      "sha256": "12be0183a751f06275e1d6e3bc8cf85a29f9145cfae8c777c86cc5204385c516",
+      "bytes": 5359
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/client.py": {
+      "sha256": "78ed52e8399ede837e354e11357b294109e991ad0e40665b261d6e3410e8987d",
+      "bytes": 28518
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/clocked_sequence_sim.py": {
+      "sha256": "fbac010c59a8deec8d0297a326bfe544e0f65c1a9be2a7b0bfc2f7fc539c5e5f",
+      "bytes": 10386
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/collective.py": {
+      "sha256": "5b952a75d4e216b568255d4b3810ac47cb9a582d59e40c8ab808420a949f6104",
+      "bytes": 6235
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/command_prediction.py": {
+      "sha256": "c85ea269ff7b7fa8981a441f99a1ddaa582a887bd5048bc0e7e4e9ebad2523e8",
+      "bytes": 4855
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/command_timing.py": {
+      "sha256": "44653940172827e7539c452c92907cb15735fee02db89d19a12c96bbf3f203eb",
+      "bytes": 9729
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/comms_compare.py": {
+      "sha256": "7cf693dede091664bc0bcd4039c558429814b2d242a3dec023d45ca1663b3dae",
+      "bytes": 12995
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/comms_test.py": {
+      "sha256": "eda2b7c0029ae188668a1847bc1b7f339e4313b9f8faddfdfcb28138ffa98e65",
+      "bytes": 10544
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/controller_status.py": {
+      "sha256": "76ef82a303f35ebb5d80e543d31ef300e6995882f13498b4950c467104a7b1f5",
+      "bytes": 3057
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/controller_timing.py": {
+      "sha256": "84f2e4d6a6a97697f455f55217892045fb76f47d08840895acb4d1bef62872d2",
+      "bytes": 2748
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/damping_search.py": {
+      "sha256": "f8b918240b356ff0f6340a9a3b9b2aefeaea54593733992f3e7572540898a012",
+      "bytes": 5566
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/datagram_transport.py": {
+      "sha256": "23b919d33885adf80159bde16bf77fe502fb5e0b78122a13f52aa7e216287c24",
+      "bytes": 7832
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/emergency_braking_mission.py": {
+      "sha256": "d752e98d78cb059ac6c0d0b27e1e744874922bd4cc2de9109bbb0dff475fd940",
+      "bytes": 4729
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/emergency_landing.py": {
+      "sha256": "3afe5606a276c991218ce8e045a3a27e69924c82357b21c6b932d042807ee4c7",
+      "bytes": 16001
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/estimator_protocol.py": {
+      "sha256": "d2dc85e64f0bf7f76f71bad67c95a952048cc0377e0c89fcd34dcbd83606f4fe",
+      "bytes": 6997
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/estimator_tools.py": {
+      "sha256": "e1a02b11a6e794e9ad2b7877b33cefbeedb0dc47da44f6e051a62c41816fd8e2",
+      "bytes": 15794
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/experiment.py": {
+      "sha256": "af3cafe7fafd156858b56c897dc22ac1eac6648dc2dd20e75e882f5609310031",
+      "bytes": 23320
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fc_blackbox.py": {
+      "sha256": "a1fb3f03bea23d8d6d59f91a6067901e9c5042247e2b14673bfbce7e5d937d3f",
+      "bytes": 21873
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fc_indi_tune.py": {
+      "sha256": "a83ce8bf05b36f69c53ddb6c02dc834b235e72bd7f37b131fc4af1f7b60429ad",
+      "bytes": 13921
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fc_telemetry.py": {
+      "sha256": "f6b63c969922932d445183ac657f85f5b8829becd5b8e6e192178b90ec0783dc",
+      "bytes": 8919
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/firmware_collective.py": {
+      "sha256": "34ca90148158d83499c38df248a7338507c57d4aa6813f4bbad162d0b01da5a6",
+      "bytes": 4256
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet.py": {
+      "sha256": "614aa1d68b0c0332fe0c1411e6be23c0f3c28bda77fdc425f6dfe2168333c38e",
+      "bytes": 30334
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_comms.py": {
+      "sha256": "df103e3dede8d4436bc61ded4d26a7db7824d322169db8a42f71c18afece55b2",
+      "bytes": 20938
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_config.py": {
+      "sha256": "d9bba1fb3ebe3edd084c42cad885e6c439b010b643eb789016aba7d18982dad4",
+      "bytes": 14996
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_discovery.py": {
+      "sha256": "3585173f8bd4d37766b8b3cbbc56bd188371da12df75b5f61e23ad6d46d71514",
+      "bytes": 11088
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_emulator.py": {
+      "sha256": "f7812b0e27867d35777d90f1b6ab269b4295f83f18de7ce50a83c66e016b414f",
+      "bytes": 9730
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_home_capture.py": {
+      "sha256": "caa881df572b7b5a2f06818ca863eb7467c06ba75f60234a3f963500ce0ec22a",
+      "bytes": 8871
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_mocap.py": {
+      "sha256": "c0534b5d99a814e4b2610693fc152c9e8a195b7b50992322d54e9774ff6ecc79",
+      "bytes": 3535
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_mocap_process.py": {
+      "sha256": "11279ed50606d59aa4562868b7e5d9823f6c442ed4a3547968501b083a1951a4",
+      "bytes": 4493
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_pitch.py": {
+      "sha256": "0cab6418e3c7d637132852c492c12395ed6d7f4b4b897c57220cd17150f6250c",
+      "bytes": 15011
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_pitch_core.py": {
+      "sha256": "bc3fd02f2ba0ce3041eed305aae6cffdf71d4eb627a1600ac88e4f6997fc789b",
+      "bytes": 8414
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_pitch_runtime.py": {
+      "sha256": "e36efd3170705a943dfebe0911f2487a88502dafc8213b0b9c0f667fec5bf601",
+      "bytes": 20962
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_pitch_sim.py": {
+      "sha256": "97d39357c0bf8db39788a9d9d591a38fd824bbefb0b86cbbb8a364162bd17d83",
+      "bytes": 10788
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_reference.py": {
+      "sha256": "e3044daf26e3fa45b5f97448d2c08e187e827849a9235b4a27a250752c34517a",
+      "bytes": 5616
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_simulator.py": {
+      "sha256": "883f82bd0082a4c99394a1fa9236317cf1dde98b8db09076be54b42ef8ab93cc",
+      "bytes": 5343
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/fleet_supervisor.py": {
+      "sha256": "16c52994bc852716256aadd3453bfe10ab030ff52e01f2e448bd5bcc101ef5ab",
+      "bytes": 4802
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/frame_calibration.py": {
+      "sha256": "c068df9e8b76bcef074bb84456ae9a5a4a5e0ce4efcf94e24c3d2f6fc494e351",
+      "bytes": 6237
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/full_indi_mission.py": {
+      "sha256": "ad41f4de5411d96c39174a3d6ee005c47f132ea69b068d103319fbdc6d628501",
+      "bytes": 22870
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/high_speed_lemniscate.py": {
+      "sha256": "28f1f2f456bc5ba5a6e3de01116c9abdf52a193f9b1e6252f9971e51e5456d9c",
+      "bytes": 5837
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/hover_observations.py": {
+      "sha256": "9637b71aa92b68b22dddd29bd1f5fa7572834cfed63b30f3e894f94fcda93222",
+      "bytes": 4250
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/ideal_command_prediction.py": {
+      "sha256": "6df06063b907876114b9ecb3eb6f6251a2474eb4e2cd550439410844c911b767",
+      "bytes": 3737
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/identification_experiment.py": {
+      "sha256": "fa9d3b71f346e4dc9c1f3a4edf0cafea00afe6d1b6ea6f1f26a0aa868c365d22",
+      "bytes": 24071
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/identification_mission.py": {
+      "sha256": "0dcb0d26f050403a845c5e6cee31b292e4be5bf99dd41004314226c69da9b4fd",
+      "bytes": 16052
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/indi_diagnostics.py": {
+      "sha256": "a0feab6cff39e38c7ce5931c79cc91f7ce4a55c3730c56bd028566cc1eda7420",
+      "bytes": 12523
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/indi_hover.py": {
+      "sha256": "31765940da165e5d9e5de7abbd6f1c470509b5a5c669e69679f0369f734885ff",
+      "bytes": 37561
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/indi_hover_mission.py": {
+      "sha256": "ee1e65aefb1b589e07d4aa219961e5bae33405e65426564907c1d6525b47f29d",
+      "bytes": 16155
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/indi_lemniscate.py": {
+      "sha256": "5e9e6ca4572b4ff4b111602206206585fbe86d62f48f36412e6e53d656d0bd7e",
+      "bytes": 20459
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/indi_mpc_benchmark.py": {
+      "sha256": "92a4dafe90e7ac75d1920131dc120b3dbbdfdfaff8bcb4a37396197c021b2248",
+      "bytes": 25326
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/landing.py": {
+      "sha256": "827a33108bd91456ae0242ca65f8d4ee2c8157856d7d58cd30d652ff89ecfc71",
+      "bytes": 5340
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/local_policy.py": {
+      "sha256": "8923874ff672bd703f3e3e21d699432113c08769176d7f11cc6492271149bc42",
+      "bytes": 19175
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mission_clock.py": {
+      "sha256": "8b9ee23e99d1f3dc33a67519208d428a51b0badaa8202507a13e393f900e242c",
+      "bytes": 1004
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap.py": {
+      "sha256": "739705a0e9073c566537c4bd37a5e510807f51c16ae75a084b627a5da1e2003d",
+      "bytes": 8705
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_bridge.py": {
+      "sha256": "ead9c838df29b923d3fdf3b5de01dadcb332a9cdf95c23a733a109099ab645d3",
+      "bytes": 5147
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_diagnostics.py": {
+      "sha256": "d3ad9fae2965bb66c8245291f535c347a213a821259a9d3c676e8e2e4e544c7e",
+      "bytes": 5810
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_ipc.py": {
+      "sha256": "2b2476c9ac9292522982c931a8818404cdfe3d600558448ae3c3978d72a08ecc",
+      "bytes": 2148
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_protocol.py": {
+      "sha256": "969f3e24112faf83db091bcc8ed3607d8bd3d736eba499b95c0bf47a5f579a27",
+      "bytes": 4113
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_stream.py": {
+      "sha256": "309dc700d91912b4c84492d9d2203be3bf435f348094c108b9575e8b2a2c1b9d",
+      "bytes": 9756
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mocap_stream_node.py": {
+      "sha256": "95252e85f3754682eec2e6be8cf13775fdbc8e83f6b97b6195ecc622a9bb9681",
+      "bytes": 3890
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mpc_benchmark_config.py": {
+      "sha256": "388e6451f17038a4320e5de3c378c76e39fb27c3f248ef3cd89fd5865235afe5",
+      "bytes": 12487
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/mpc_process.py": {
+      "sha256": "0d3993f81c72b9e551bc2a9cd701fa4a7a8779192b9ee150426e6664a3411ce8",
+      "bytes": 6118
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/paper_native.py": {
+      "sha256": "c69c5bfbb42fc1494013b2d5def0874f5ff5cd2136f92cc0c714ed9945dbfa9e",
+      "bytes": 4271
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/paper_status.py": {
+      "sha256": "375a80c1fc511408c83a4a9bcbff009b43ae610fd65d22a6149a41181c43dde8",
+      "bytes": 2215
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/pitch_experiment.py": {
+      "sha256": "327a343031ba4c3e31d3cdf7637bceaf14febd4920b9e71352e332f5b4633bfc",
+      "bytes": 19448
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/pitch_mission.py": {
+      "sha256": "46cc13eb11156f3d5b2a1a2c51c3f369097061cfebd0389600b1ec3294391ed9",
+      "bytes": 23540
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_commissioning.py": {
+      "sha256": "97843fb46125f7dc426456866f084506e8604a63171adddbdbf99b53602f1ab1",
+      "bytes": 18936
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_configuration.py": {
+      "sha256": "c7674d48893526d0e7e882316a86ff5b85d4f5c02a7975d5072f49ff104c6824",
+      "bytes": 7207
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_preflight.py": {
+      "sha256": "a6d26f2ad9466a4ae02d93fb219a5f46fd140f0ad8ad1e902ae06b35776d958c",
+      "bytes": 3097
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_process.py": {
+      "sha256": "3f8459be127ba95802bb1d23b06561d0beafe4c25d79b8d62f90ea319b8ee8dc",
+      "bytes": 4399
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_sequence.py": {
+      "sha256": "1ec2592695a4204664f3a6b3bc4bc2018d8856df235bdcaba423a7679ea1b063",
+      "bytes": 14396
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_state.py": {
+      "sha256": "5514fe26b878509da93cc6ae4f6f760cae22aebe7bb5e7ee40951f55d121a832",
+      "bytes": 4731
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/plate_transport.py": {
+      "sha256": "55e72f13c5dd16a829f1647cbaf049d933afe759295ec62ffaf1aba2a05671ee",
+      "bytes": 4870
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/policy_process.py": {
+      "sha256": "fd08d11a44c535063cb26926eeb3ee93846b93892462ee5a5311f187e1ca25b8",
+      "bytes": 5115
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/protocol.py": {
+      "sha256": "27266ddc5530911eeccc908930c068acd30e1833f648fc7a69c5ea0fc8952463",
+      "bytes": 7742
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/rate_analysis.py": {
+      "sha256": "e338f1b337ff2c8e61252fe23617c92922f314e0a3a5db14e18173c3c1e35db9",
+      "bytes": 1855
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/rate_autotune.py": {
+      "sha256": "0edeab540f5c400030855dbf6723a2d0464b2b0369e3b07ac67536f9dfdee086",
+      "bytes": 10970
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/receiver_health.py": {
+      "sha256": "6c799486ef61f589352b97803b378ca0f5bbe0e4f6a012c0546917edd6ba7d64",
+      "bytes": 1581
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/recording.py": {
+      "sha256": "f42af21b484d55147c68b378fbfc3916813d91c46372d8993df1ced069356c6f",
+      "bytes": 5206
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/recording_process.py": {
+      "sha256": "53b4ede2cf3081ef111e46e9bd62cc9d2cff02a9b1624e49734c4bd32ad6dd5f",
+      "bytes": 1615
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/residual_runtime.py": {
+      "sha256": "bec5c8365f3fa996c2f9a14d6f4cac1e8e4eac2e5f6bf2404c52be58cde4233c",
+      "bytes": 5180
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/ros_bridge.py": {
+      "sha256": "9a801cb845c845b617db972fa466c1e2f8c80eab7831c28b3ceb9543bca3f185",
+      "bytes": 5659
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/ros_sequence.py": {
+      "sha256": "eb33f51220662b6ed8b791506a10e7f2ed2f281433390c6fa5723c1b5de44e0b",
+      "bytes": 43406
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/simulate_sequence.py": {
+      "sha256": "d560f8babc49cbc098f2a2e12951e7b919a75818de3cc1234fc0e30330fe9175",
+      "bytes": 8833
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/simulation_wire.py": {
+      "sha256": "5a93b754464dec0513db841f112428b6abc1dc00c385fd0d271b6a00fe1c14c9",
+      "bytes": 712
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/sine_analysis.py": {
+      "sha256": "341464889709c131fc7d88a0f4a0046178a0cdd400888623cb7ac1f5fb913ff2",
+      "bytes": 8454
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/sine_mission.py": {
+      "sha256": "2189cc3b3c5adeac1e9c0dba94885fdca7b386e1ff4bd1093bcfe0838bc3fb00",
+      "bytes": 4940
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/standalone_paths.py": {
+      "sha256": "13f6ac96ec6182450e0bc95f373ec9b30b76b760048f630a0be3f74d39f92b00",
+      "bytes": 726
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/telemetry_capture.py": {
+      "sha256": "a19883ae56813468e64c67ee0f22a29f1f34d82b5dbcebfc3410c23611d65ab1",
+      "bytes": 7321
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/transport.py": {
+      "sha256": "cbe10868db54366efd496549b3740e27e011111660d0b2080e00c5ab86ae3c68",
+      "bytes": 1929
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/transport_test.py": {
+      "sha256": "f3378affdf3b0968ffc90f6e97d0cfcdd9ad7dbaf02a5e89230d937e7206c66c",
+      "bytes": 16831
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/sanity_zenoh/tuning_rpc.py": {
+      "sha256": "b0307b66d51a9c18ac43a4ef3a0553c43ca0e55fa6a3bd9653fd24c1e1c8a824",
+      "bytes": 10594
+    },
+    "releases/butterfly-pid/host/sanity_zenoh/setup.py": {
+      "sha256": "9efa10d75cb4366f4af754e973d198de56452e8f97a76fc2dd8c16234e97a64e",
+      "bytes": 3882
+    },
+    "releases/butterfly-pid/indi_rate_model.py": {
+      "sha256": "dea69c77a6b04a514c054da3ca7245ce79c04bc96daca3e71b0737f29ee4d21c",
+      "bytes": 9777
+    },
+    "releases/butterfly-pid/model_3mps.xml": {
+      "sha256": "6a33dab1b3b8009dd41c3003c93e9721d1ff45fb2bb85c755676b1696befafc0",
+      "bytes": 6046
+    },
+    "releases/butterfly-pid/model_4mps.xml": {
+      "sha256": "32a55348f67352ef77c8b77e99e1e6880e09040dd10cd766377c30807e0cb4a0",
+      "bytes": 6046
+    },
+    "releases/butterfly-pid/model_5mps.xml": {
+      "sha256": "613b3afac040a93f91de04d20c1184de67a679dc6cf5bc9140363c7aa54b1b27",
+      "bytes": 6046
+    },
+    "releases/butterfly-pid/model_6mps.xml": {
+      "sha256": "518e0b4b8710d3fb86e69ba172fb6e2bbd39bdb1068393e6f2985a2eae268e9e",
+      "bytes": 6046
+    },
+    "releases/butterfly-pid/mpc_3mps.json": {
+      "sha256": "3e25a8913dafd8e370c6804b21cfc21aa86e9a07b7f778c26237a0bc5695f7b8",
+      "bytes": 617
+    },
+    "releases/butterfly-pid/mpc_4mps.json": {
+      "sha256": "831a50566b9e8df7c1d64c59304fe673370c19d0cbca3cf1a4e0f37367af1858",
+      "bytes": 617
+    },
+    "releases/butterfly-pid/mpc_5mps.json": {
+      "sha256": "6b3625bb20112612b19930f474b0270db4b2bc17d93cca74134e2d840770c261",
+      "bytes": 617
+    },
+    "releases/butterfly-pid/mpc_5mps_original_rate_model.json": {
+      "sha256": "9a2710bd7dea11cbc35401eae493ef0718e5e243d230c84521ea1aa69c015e3a",
+      "bytes": 946
+    },
+    "releases/butterfly-pid/mpc_6mps.json": {
+      "sha256": "5faedc75b25c4812b7e48095ba5a3be8ddf3bb93f118a5962e60361edf3ed8ce",
+      "bytes": 946
+    },
+    "releases/butterfly-pid/mpc_controller.py": {
+      "sha256": "b87409e43f9d904a8766da058b939f1e3d34dbf7ae4d5bd246330afa493cf513",
+      "bytes": 25900
+    },
+    "releases/butterfly-pid/mpc_disturbance.py": {
+      "sha256": "12dcefed9f871b0c93f892a90cf8b32963c08722413510a5a4628bcfe374be5b",
+      "bytes": 8022
+    },
+    "releases/butterfly-pid/physical_plant.py": {
+      "sha256": "4ac6cb3715d822c6765f696890348f5271cc667d004aa3274c403d4c029f72bc",
+      "bytes": 5003
+    },
+    "releases/butterfly-pid/run_high_speed_hover.sh": {
+      "sha256": "cc1be0f6ca16ba1e6d00f15dd1106c6e731fdde060dd201b022f101aab52ba46",
+      "bytes": 435
+    },
+    "releases/butterfly-pid/run_high_speed_lemniscate.py": {
+      "sha256": "fdec4463e5607cd0c7d10242f9da7f646a56f8e2075248ddd5224038b9a3d3d9",
+      "bytes": 20517
+    },
+    "releases/butterfly-pid/test/test_mission_integration.py": {
+      "sha256": "46c255c69960fcd2501e5010b28c3c2b6d853470e7e8355ed973dce3adbce943",
+      "bytes": 10303
+    },
+    "releases/butterfly-pid/test/test_pid_comparison.py": {
+      "sha256": "fde53ccc622f19b8ed17eef828503c2c212e45e5fca0a4952ec5bd768d1afb47",
+      "bytes": 8091
+    },
     "releases/high-speed/README.txt": {
       "sha256": "d662e195b82bb6bb472e3b25ea5146fded008dfc5da1143366f7887bc159a0ce",
       "bytes": 4709
@@ -1946,16 +3506,16 @@
       "bytes": 4544
     },
     "scripts/prepare_solver.py": {
-      "sha256": "1baf2fb2be6205c34935128dd969a4ec7479a1dea088c63e264f0faa56d98811",
-      "bytes": 1168
+      "sha256": "df0d67604f613bdc31bcf617d192baba22ca859b072f81dfa23feac18ac71de4",
+      "bytes": 1307
     },
     "scripts/recipes.py": {
-      "sha256": "47812b32f345d5ea54071a15fb4adf6929d888a4176627f7e00a0f0b67cc3eea",
-      "bytes": 2522
+      "sha256": "6bb430fadae6a973ed3492d91aa09c21055333084009c543b932af9226f67733",
+      "bytes": 3051
     },
     "scripts/run_mpc.py": {
-      "sha256": "760a25cae3b9459503fdfd459c3ba2c586137e183e954caae7d07e56562033cf",
-      "bytes": 7712
+      "sha256": "45d78a8bafc1c4a9bf34888cac5b0de222a99882030e305791ea26a6a4f14de7",
+      "bytes": 8187
     },
     "scripts/run_mpc.sh": {
       "sha256": "ab325a69a74c6cdc1a86321d5662d0615eac77f3b5ac70ce8d0a977962ebab1d",
@@ -1970,8 +3530,8 @@
       "bytes": 525
     },
     "scripts/test.sh": {
-      "sha256": "1de34b18b0c3865789c869f057f5b30f7f9a9be31fd63792119180846c8815d8",
-      "bytes": 938
+      "sha256": "0953ced6e84371ca40de83dd48d069064471441f1325280f52ec72fe0fdf573e",
+      "bytes": 1201
     },
     "scripts/verify_package.py": {
       "sha256": "a8502f4aa21b9426e4b286dcfb99086da83cdbebed5e8593f0912d97d2019a2e",

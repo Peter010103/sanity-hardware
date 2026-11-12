@@ -1,0 +1,81 @@
+{
+  "scope": "experimental_pitch_loop",
+  "mass_kg": 0.06985,
+  "inertia_kg_m2": [
+    [
+      3.3200000000000014e-05,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.280000000000001e-05,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      5.4300000000000026e-05
+    ]
+  ],
+  "rate_kv": [
+    0.00083,
+    0.00107,
+    0.000543
+  ],
+  "torque_limits_Nm": [
+    0.032,
+    0.032,
+    0.011
+  ],
+  "allocation_per_m": [
+    [
+      -8.783935152352788,
+      8.783935152352788,
+      -48.26676731743555
+    ],
+    [
+      -8.783935152352788,
+      -8.783935152352788,
+      48.26676731743555
+    ],
+    [
+      8.783935152352788,
+      -8.783935152352788,
+      -48.26676731743555
+    ],
+    [
+      8.783935152352788,
+      8.783935152352788,
+      48.26676731743555
+    ]
+  ],
+  "physical_force_range_N": [
+    0.031382950872716045,
+    3.101025119936554
+  ],
+  "torque_reserve_fraction": 0.7,
+  "collective_tau_up_s": 0.04388193290528556,
+  "collective_tau_down_s": 0.04855109375875827,
+  "pitch_limit_rad_s": 9.5,
+  "maximum_thrust_N": 2.85,
+  "solver_type": "SQP_RTI",
+  "rti_iterations": 2,
+  "control_cost": [
+    0.1,
+    0.03,
+    0.03,
+    0.03
+  ],
+  "reference_mode": "run_in",
+  "host_selection_delay_s": 0.02,
+  "host_output_delay_s": 0.015,
+  "command_lease_s": 1.0,
+  "handover_rate_tolerance_rad_s": 1.0,
+  "handover_thrust_tolerance_N": 0.3,
+  "rate_prediction": "flight",
+  "flight_rate_profile": "loco_mjx/loco_mjx/environments/robots/sanity_ctbr/data/flight_rate_20261022.json",
+  "angular_rate_filter_tau_s": 0.05,
+  "position_filter_tau_s": 0.01,
+  "attitude_filter_tau_s": 0.01
+}

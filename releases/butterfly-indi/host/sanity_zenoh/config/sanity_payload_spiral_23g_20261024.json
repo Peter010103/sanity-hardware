@@ -1,0 +1,218 @@
+{
+  "mission": "payload_orbit",
+  "controller": "aware",
+  "geometry_confirmed": true,
+  "attachment_body_m": [
+    0.0,
+    0.0,
+    -0.0137
+  ],
+  "floor_height_m": -0.018102297903721264,
+  "hover_height_m": 1.1818977020962786,
+  "maximum_height_m": 1.9818977020962787,
+  "climb_s": 12.0,
+  "maximum_run_s": 180.0,
+  "output_delay_s": 0.015,
+  "swing_cost_scale": 25.0,
+  "mocap": {
+    "parent_frame": "map",
+    "aircraft_frame": "sanity09",
+    "payload_frame": "23g_mass",
+    "frames_confirmed": true,
+    "world_from_map_xyzw": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "aircraft_marker_to_body_xyz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "aircraft_marker_to_body_xyzw": [
+      0.005740941344438956,
+      -0.01981705748539078,
+      -0.00011379278728325242,
+      0.9997871337821377
+    ],
+    "payload_marker_to_body_xyz": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "payload_marker_to_body_xyzw": [
+      -0.0066234225049118765,
+      -0.007357316684290034,
+      0.0,
+      0.9999509988822095
+    ],
+    "velocity_filter_tau_s": 0.01,
+    "angular_rate_filter_tau_s": 0.01,
+    "maximum_pair_skew_s": 0.012,
+    "max_age_s": 0.04,
+    "calibration_source": "Aircraft successful pitch flight20261022_031049; cube-centre origin confirmed24October2026; hook-axis rotation inferred from both fixed-support rest recordings. New 23g_mass retains the prior small marker-to-hook rotation as an approximation; it has not been remeasured for this rigid body.",
+    "cable_mode_filter": true,
+    "payload_velocity_filter_tau_s": 0.02,
+    "payload_angular_rate_filter_tau_s": 0.04,
+    "payload_hook_axis_calibration": {
+      "method": "Mean of inferred marker-frame vertical hook axes from the two fixed-support initial-rest records; shortest rotation from cube+Z. Cube yaw axes unmeasured; isotropic inertia proxy.",
+      "sources": [
+        {
+          "file": "outputs/payload_pendulum_x_01/poses.csv",
+          "sha256": "3ac6246b94c5c9e46ca8e964f4fb444d794a9af46c77e9ca29ad2ff0fda365fa",
+          "rest_samples": 600,
+          "hook_axis_marker": [
+            -0.015077909149689294,
+            0.014159746045542945,
+            0.9997860562378338
+          ]
+        },
+        {
+          "file": "outputs/payload_pendulum_y_01/poses.csv",
+          "sha256": "9b94e8e5757894058080b274713c22fc3d4dd2cc293b9ba6a63a4c100cda6fd5",
+          "rest_samples": 600,
+          "hook_axis_marker": [
+            -0.01434990128642008,
+            0.01233263293944785,
+            0.9998209772243485
+          ]
+        }
+      ],
+      "hook_axis_marker": [
+        -0.01471391233509713,
+        0.013246195899611075,
+        0.999804000331057
+      ],
+      "record_hook_vector_difference_m": 6.393136805004145e-05,
+      "applicability": "Inherited from 45g_mass; not a measured calibration of 23g_mass."
+    },
+    "payload_estimation": "position_pendulum",
+    "payload_position_innovation_m": 0.008,
+    "payload_max_acceleration_m_s2": 40.0,
+    "payload_max_speed_m_s": 3.0,
+    "payload_orientation_hold_s": 0.035,
+    "payload_position_filter_tau_s": 0.02
+  },
+  "geometry_confirmation": "User confirmed 23.86 g with markers and without cable; same 45 mm cube, 32.5 mm hook-to-centre offset and centre mocap origin, 24 October 2026. Existing battery attachment retained. User subsequently requested a 490 mm cable model; cable mass retained at 1.34 g.",
+  "mpc_input_cost": [
+    100.0,
+    20.0,
+    20.0,
+    5.0
+  ],
+  "floor_landing_clearance_xy_m": [
+    0.15,
+    0.0
+  ],
+  "pickup_swing_damping_gain_m_s": 0.8,
+  "command_lease_s": 1.0,
+  "first_command_change_cost": [
+    1000.0,
+    50.0,
+    50.0,
+    10.0
+  ],
+  "command_slew_per_s": [
+    2.0,
+    15.0,
+    15.0,
+    15.0
+  ],
+  "payload_attitude_dynamics": false,
+  "nodes": 14,
+  "prediction_dt_s": 0.06,
+  "controller_cpu_affinity": [
+    4
+  ],
+  "solver_cpu_affinity": [
+    2
+  ],
+  "cpu_affinity_source": "Current i7-14700 host: logical CPU2 and4 are separate performance cores. Update these lists on a different host; startup rejects unavailable CPUs.",
+  "simulation_plant_cpu_affinity": [
+    6
+  ],
+  "floor_calibration": {
+    "method": "Median computed cube lowest point during confirmed resting-on-floor recording; existing rigid-body transforms retained",
+    "source": "outputs/sanity_cable_20261024_174648/tf.jsonl",
+    "floor_height_m": -0.018102297903721264,
+    "bottom_range_m": [
+      -0.01816435559925352,
+      -0.018039742234967758
+    ],
+    "samples": 5350,
+    "aircraft_lean": "User confirms aircraft physically tilted by cable beneath it; mocap rigid body unchanged.",
+    "source_sha256": "6860898e3a6929f9c39a564d6f9cf14192341eb218969ed48e2aa02be822f924"
+  },
+  "background_cpu_affinity": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "landing_speed_profile": "quick",
+  "landing_cutoff_height_m": 0.05,
+  "landing_cutoff_dwell_s": 0.1,
+  "smooth_takeoff": true,
+  "takeoff_command_slew_per_s": [
+    1.0,
+    1.5,
+    1.5,
+    2.0
+  ],
+  "pickup_load_fraction_rate_per_s": 1.0,
+  "pid_control_thread": true,
+  "ros_cpu_affinity": [
+    6
+  ],
+  "dedicated_control_thread": true,
+  "countdown_s": 5.0,
+  "response_reader_cpu_affinity": [
+    5
+  ],
+  "mpc_hover_only": false,
+  "payload_recovery_s": 0.08,
+  "physical_config": "sanity_cable_payload_23g.json",
+  "mpc_hover_qualification": {
+    "rate_filter_tau_s": 0.05,
+    "minimum_rate_good_fraction": 0.75,
+    "maximum_continuous_rate_exceedance_s": 0.1
+  },
+  "cable_length_calibration": {
+    "enabled": true,
+    "window_s": 2.0,
+    "timeout_s": 12.0,
+    "maximum_adjustment_m": 0.03,
+    "maximum_spread_m": 0.003
+  },
+  "payload_spiral": {
+    "radius_m": 0.05,
+    "start_s": 2.0,
+    "ramp_out_s": 12.0,
+    "hold_s": 18.0,
+    "ramp_in_s": 12.0,
+    "settle_s": 8.0,
+    "maximum_aircraft_displacement_m": 0.15,
+    "maximum_payload_offset_m": 0.1
+  },
+  "payload_health": {
+    "maximum_internal_tilt_deg": 20.0,
+    "maximum_transverse_rate_rms_rad_s": 3.0,
+    "rate_filter_tau_s": 0.1,
+    "dwell_s": 0.2
+  },
+  "flight_voltage": {
+    "minimum_start_V": 7.6,
+    "landing_below_V": 7.0,
+    "dwell_s": 0.5
+  },
+  "landing_transfer_s": 0.5
+}

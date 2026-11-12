@@ -1,0 +1,13 @@
+{
+  "status": "Isolated roll-model candidate for offline comparisons; not installed to active runner",
+  "old": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_5mps_original_rate_model.json",
+  "candidate": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release/mpc_5mps.json",
+  "old_sha256": "9a2710bd7dea11cbc35401eae493ef0718e5e243d230c84521ea1aa69c015e3a",
+  "candidate_sha256": "93d2d2a89fcce079e997db93ec4e15e2cb17651392b31f5400b34a901988d143",
+  "changed_keys": [
+    "rate_response.roll"
+  ],
+  "FC_or_ESP_firmware_changed": false,
+  "controller_weights_unchanged": true,
+  "PID": 292955
+}

@@ -1,0 +1,1044 @@
+{
+  "created_utc": "2026-11-12T10:11:13.346408+00:00",
+  "status": "Runnable isolated MPC+PID comparison candidate; nominal and historical-pole screens pass; slower-response robustness failure retained; no high-rate physical PID qualification",
+  "release": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly",
+  "source_manifest_sha256": "3323e4469e0f0da25d4490aa4e5fbe601f83b5d79412e7a578efcfef7dd8f908",
+  "commands": {
+    "3": {
+      "plan": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_3mps.sh --plan-only",
+      "bench": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_3mps.sh --bench-check --frames-confirmed",
+      "fly": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_3mps.sh --fly --frames-confirmed"
+    },
+    "4": {
+      "plan": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_4mps.sh --plan-only",
+      "bench": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_4mps.sh --bench-check --frames-confirmed",
+      "fly": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_4mps.sh --fly --frames-confirmed"
+    },
+    "5": {
+      "plan": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_5mps.sh --plan-only",
+      "bench": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_5mps.sh --bench-check --frames-confirmed",
+      "fly": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/run_5mps.sh --fly --frames-confirmed"
+    }
+  },
+  "geometry": {
+    "footprint_xy_m": [
+      4,
+      3
+    ],
+    "height_above_fresh_ground_m": [
+      0.7,
+      1.3
+    ],
+    "cycles": 3,
+    "complete_eights": 6,
+    "peak_3d_speed_levels_m_s": [
+      3,
+      4,
+      5
+    ],
+    "byte_exact_same_geometry_source_as_INDI": true,
+    "all_p_v_a_j_samples_and_plane_handoffs_tested": true
+  },
+  "control": {
+    "inner": "native PID from before arming",
+    "INDI_requested": false,
+    "rate_model": "ideal PID with no INDI poles",
+    "timing": "Source state projected with causal actual selected CTBR history to now+20ms async selection+15ms output; enabled independently of rate_response",
+    "common_parameters": "Per-speed JSON/XML exactly match corresponding INDI branch except rate_response disabled",
+    "inactive_ideal_model_terms": [
+      "rate_acceleration_weights (no latent rate state)"
+    ],
+    "ordinary_rate_cap_rad_s": 0.6,
+    "admitted_emergency_rate_cap_rad_s": 2.0,
+    "emergency_timeout_s": 25,
+    "brake_timeout_s": 8,
+    "guard_changes": false,
+    "firmware_changes": false
+  },
+  "pure_tests": {
+    "count": 61,
+    "passed": true,
+    "log": "validation/pytest.log",
+    "log_sha256": "a79af295c6ce5b47dc52844b796a9c76ceeb7ab609e96f49ee0dd7afd452b3d3",
+    "coverage": [
+      "actual PID-before-arm waiting ticks",
+      "selected wire PID bit and all-axis boundary",
+      "full p/v/a/jerk reference equality at1101times+all handoffs per speed",
+      "common MPC/XML parity",
+      "all3 actual source archives",
+      "causal ideal prediction20+15ms no latent poles",
+      "actual mission emergency/fallback and fixed timeouts",
+      "original hard guards",
+      "actual archived supervisor shadow allocator predicate/C unit"
+    ]
+  },
+  "actual_worker_smoke": {
+    "host": "dolphin",
+    "parent_pid": 310646,
+    "hardware_or_network": false,
+    "scope": "Synthetic exact-reference full-duration 50Hz actual pipe/selection/timing smoke; independent physical plant validation is separate",
+    "source": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_controller.py",
+    "source_sha256": "b87409e43f9d904a8766da058b939f1e3d34dbf7ae4d5bd246330afa493cf513",
+    "config": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_5mps.json",
+    "config_sha256": "6b3625bb20112612b19930f474b0270db4b2bc17d93cca74134e2d840770c261",
+    "maximum_compute_ms_allowed": 25.0,
+    "maximum_source_age_s_allowed": 0.04,
+    "worker_pid": 310654,
+    "startup_s": 0.2769499490095768,
+    "worker_info": {
+      "controller": "mpc",
+      "implementation": "Agilicious-inspired CTBR NMPC; generated acados C, direct CTBR model",
+      "solver": "acados/SQP_RTI/HPIPM",
+      "hessian": "GAUSS_NEWTON",
+      "acados_source": "/home/hw527/Projects/drones/.deps/acados-v0.6.0",
+      "acados_library_sha256": "ad33d257eb6b22c4cb0a4ca75a1012e96f8a756bba41a876358d5c0c8994e106",
+      "acados_build": {
+        "version": "v0.6.0",
+        "revision": "503364817c872d474ab5bed219c26760ac267769",
+        "source": "/home/hw527/Projects/drones/.deps/acados-v0.6.0",
+        "libraries": {
+          "libacados.so": "ad33d257eb6b22c4cb0a4ca75a1012e96f8a756bba41a876358d5c0c8994e106",
+          "libhpipm.so": "f1f05781fc647375d5133b679c914813ece2bace8d2477b2f7b79b1b9ceba30f",
+          "libblasfeo.so": "464e3483fb9a2c450a485f4859c3ed2eafb1ec1e661b4d6228d6820737d8ef4f"
+        },
+        "python_environments": [
+          "/home/hw527/Projects/drones/.venv-sanity-deploy/bin/python",
+          "/home/hw527/Projects/drones/.venv-sanity-train/bin/python",
+          "/home/hw527/Projects/drones/.venv-sanity-isaac/bin/python"
+        ]
+      },
+      "generated_solver_cache": "/home/hw527/.cache/sanity_ctbr_mpc/dc4db7f153c4af522688d908b43361a09289f2c6d8925b5b1c43ac024d693e6a",
+      "generated_solver_key": "dc4db7f153c4af522688d908b43361a09289f2c6d8925b5b1c43ac024d693e6a",
+      "wrapper": "Python ctypes; optimization and linear algebra in compiled C",
+      "casadi_version": "3.7.2",
+      "model_path": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/model_5mps.xml",
+      "model_sha256": "613b3afac040a93f91de04d20c1184de67a679dc6cf5bc9140363c7aa54b1b27",
+      "mass_kg": 0.07151,
+      "ctrlrange": [
+        [
+          0.0,
+          1.54332882
+        ],
+        [
+          -9.5,
+          9.5
+        ],
+        [
+          -9.5,
+          9.5
+        ],
+        [
+          -9.5,
+          9.5
+        ]
+      ],
+      "policy_dt_s": 0.02,
+      "history_length_steps": 0,
+      "imu_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reference_point": "root",
+      "state": "p_world,q_wxyz,v_world; ideal body rates",
+      "prediction_state_count": 10,
+      "rate_response_configuration": {
+        "enabled": false
+      },
+      "thrust_effectiveness": 0.953,
+      "command_delay_s": 0.015,
+      "action": "total thrust N; body rates rad/s, x-forward y-left z-up",
+      "configuration": {
+        "nodes": 20,
+        "prediction_dt_s": 0.05,
+        "tilt_limit_deg": 62.0,
+        "qp_max_iterations": 50,
+        "max_solve_time_s": 0.025,
+        "terminal_multiplier": 2.0,
+        "position_weights": [
+          30.0,
+          30.0,
+          60.0
+        ],
+        "velocity_weights": [
+          4.0,
+          4.0,
+          6.0
+        ],
+        "attitude_weights": [
+          1.0,
+          1.0,
+          2.0
+        ],
+        "input_weights": [
+          0.02,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "drag_per_s": [
+          0.587,
+          0.82,
+          0.0
+        ],
+        "rate_acceleration_weights": [
+          0.002,
+          0.002,
+          0.001
+        ],
+        "disturbance_compensation": {
+          "enabled": false,
+          "time_constant_s": 2.0,
+          "window_s": 0.25,
+          "max_bias_m_s2": 0.6,
+          "innovation_limit_m_s2": 2.0,
+          "max_speed_m_s": 0.3,
+          "max_body_rate_rad_s": 0.5,
+          "max_tilt_deg": 10.0,
+          "min_height_m": 0.3,
+          "max_reference_speed_m_s": 0.05,
+          "max_reference_acceleration_m_s2": 0.1
+        }
+      },
+      "disturbance_compensation": {
+        "enabled": false,
+        "time_constant_s": 2.0,
+        "window_s": 0.25,
+        "max_bias_m_s2": 0.6,
+        "innovation_limit_m_s2": 2.0,
+        "max_speed_m_s": 0.3,
+        "max_body_rate_rad_s": 0.5,
+        "max_tilt_deg": 10.0,
+        "min_height_m": 0.3,
+        "max_reference_speed_m_s": 0.05,
+        "max_reference_acceleration_m_s2": 0.1,
+        "observer_source_sha256": "12dcefed9f871b0c93f892a90cf8b32963c08722413510a5a4628bcfe374be5b",
+        "frame": "model world XY",
+        "units": "m/s^2",
+        "scope": "Bounded effective constant acceleration bias; not identified drag or actuator dynamics"
+      },
+      "prediction_dt_s": 0.05,
+      "nodes": 20,
+      "horizon_s": 1.0,
+      "preview_times_s": [
+        0.0,
+        0.05,
+        0.1,
+        0.15000000000000002,
+        0.2,
+        0.25,
+        0.30000000000000004,
+        0.35000000000000003,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6000000000000001,
+        0.65,
+        0.7000000000000001,
+        0.75,
+        0.8,
+        0.8500000000000001,
+        0.9,
+        0.9500000000000001,
+        1.0
+      ],
+      "rate_response": "Ideal PID body-rate tracking; no INDI poles; selected-command20ms async/15ms output projection is external",
+      "drag_scope": "Explicit body-frame effective damping; not unique aerodynamic identification",
+      "command_slew_limit": null,
+      "warm_start": "Previous controls interpolated by 20 ms and rolled out from current state; identified-rate INDI may relinearize the same observation up to twice after an infeasible first RTI step; ideal-rate PID retains one step; no output filtering",
+      "maximum_feasibility_attempts": 1,
+      "feasibility_refinement_scope": "INDI identified-rate model only; unchanged 1e-4 feasibility tolerance and total compute budget; no additional control-history shift",
+      "feasibility_contract": "Check raw input/tilt inequalities and nonlinear rollout tilt; RTI nonlinear dynamics defects recorded separately, not treated as convergence to an NLP optimum",
+      "config_path": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_5mps.json",
+      "config_sha256": "6b3625bb20112612b19930f474b0270db4b2bc17d93cca74134e2d840770c261",
+      "source_path": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/mpc_controller.py",
+      "source_sha256": "b87409e43f9d904a8766da058b939f1e3d34dbf7ae4d5bd246330afa493cf513",
+      "warmup_ms": [
+        0.7977310160640627,
+        0.6527110235765576,
+        0.6903419853188097,
+        0.6306110008154064,
+        0.6405380263458937,
+        0.6457150157075375
+      ],
+      "history_contract": "No actor history; every selected outgoing CTBR is acknowledged and logged"
+    },
+    "success": true,
+    "ticks": 2079,
+    "completed_reference_eights": 6.0,
+    "health_counts": {
+      "no_result": 1,
+      "ok": 2078
+    },
+    "wall_s": 41.561873003985966,
+    "compute_p50_p95_max_ms": [
+      4.941115505062044,
+      5.265817642793991,
+      13.288732006913051
+    ],
+    "tick_lateness_p95_max_ms": [
+      0.25091341231018244,
+      0.5780429928563535
+    ],
+    "stream_observed": 2079,
+    "stream_committed": 2079,
+    "child_exit_code": -15,
+    "child_reaped": true,
+    "final_worker_error": null,
+    "final_runtime_error": null,
+    "parent_pid_absent": true,
+    "worker_pid_absent": true
+  },
+  "full_mission_engineering_screens": [
+    {
+      "file": "validation/initial_screens/pid_3mps_plant_nominal.json",
+      "sha256": "210ded3af0d24f7936ba64340b3becc10705e3fe404df78bb2ba07bbb2ad9184",
+      "reason": "test_complete",
+      "done": true,
+      "completed_eights": 6.0,
+      "tracking_position_3d_RMS_m": 0.0370103769524301,
+      "tracking_position_3d_max_m": 0.06403923635767528,
+      "maximum_speed_m_s": 2.9732512292379933,
+      "maximum_tilt_deg": 28.05163661369308,
+      "tracking_height_min_max_m": [
+        0.7018162032949571,
+        1.2990193996652573
+      ],
+      "compute_p95_ms": 6.075181388587224,
+      "compute_max_ms": 18.554431007942185,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_3mps_plant_historical.json",
+      "sha256": "9a215b9a9f8eb2775aaf726df3569f643e024c2c9209cd0cf5e62992092a9a39",
+      "reason": "test_complete",
+      "done": true,
+      "completed_eights": 6.0,
+      "tracking_position_3d_RMS_m": 0.035466803865722596,
+      "tracking_position_3d_max_m": 0.0621029826010263,
+      "maximum_speed_m_s": 2.9699958744425174,
+      "maximum_tilt_deg": 28.069080115063237,
+      "tracking_height_min_max_m": [
+        0.7015332385412295,
+        1.2992865695394396
+      ],
+      "compute_p95_ms": 6.064558809157461,
+      "compute_max_ms": 16.013038984965533,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_plant_nominal.json",
+      "sha256": "4c1207d33e2c6d872343be7c1f3082ef76d39893fb2bd47703c60a0d806baf1c",
+      "reason": "test_complete",
+      "done": true,
+      "completed_eights": 6.0,
+      "tracking_position_3d_RMS_m": 0.04855332076137534,
+      "tracking_position_3d_max_m": 0.08723870585200069,
+      "maximum_speed_m_s": 3.973101325570762,
+      "maximum_tilt_deg": 44.74029344258505,
+      "tracking_height_min_max_m": [
+        0.6991348428769079,
+        1.2998550375319569
+      ],
+      "compute_p95_ms": 5.933707422809675,
+      "compute_max_ms": 19.362383987754583,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_plant_slow.json",
+      "sha256": "3eec2c355850bd35fa0d47a990927f0a53c04f3908ed18048ba42df811bb69cb",
+      "reason": "mpc_invalid_solver",
+      "done": true,
+      "completed_eights": 0.6305005422750851,
+      "tracking_position_3d_RMS_m": 0.07023229334611726,
+      "tracking_position_3d_max_m": 0.15435313956158506,
+      "maximum_speed_m_s": 4.389890042768617,
+      "maximum_tilt_deg": 51.47343022260899,
+      "tracking_height_min_max_m": [
+        0.6535555593627428,
+        1.2901889437158822
+      ],
+      "compute_p95_ms": 5.924350197892636,
+      "compute_max_ms": 8.714449009858072,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_plant_historical.json",
+      "sha256": "7774b0809028805c0fce177c974ae1ece1e28f04e1c9afbaa523686ba7c37a23",
+      "reason": "test_complete",
+      "done": true,
+      "completed_eights": 6.0,
+      "tracking_position_3d_RMS_m": 0.05551116375099551,
+      "tracking_position_3d_max_m": 0.10734953155145069,
+      "maximum_speed_m_s": 4.954882370212934,
+      "maximum_tilt_deg": 58.54736070865536,
+      "tracking_height_min_max_m": [
+        0.6957884229691012,
+        1.2981571355919124
+      ],
+      "compute_p95_ms": 6.127806442964356,
+      "compute_max_ms": 16.52212897897698,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_plant_nominal.json",
+      "sha256": "f7e6e37f8d30fd4df6f0a42063e07fc0e6d02fd2fe3b911e8278bd4473e8e141",
+      "reason": "test_complete",
+      "done": true,
+      "completed_eights": 6.0,
+      "tracking_position_3d_RMS_m": 0.06320159826377217,
+      "tracking_position_3d_max_m": 0.11513712845927793,
+      "maximum_speed_m_s": 5.000991002001031,
+      "maximum_tilt_deg": 59.80172758045103,
+      "tracking_height_min_max_m": [
+        0.6908080518738532,
+        1.3015781534099071
+      ],
+      "compute_p95_ms": 5.957041801593732,
+      "compute_max_ms": 18.982200010214,
+      "worker_deadlines": 0,
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_plant_slow.json",
+      "sha256": "9293afe60f8c635763561cadee351ccde269cf1bcda8313bdc5914f54f59d00a",
+      "reason": "hard_flight_envelope",
+      "done": true,
+      "completed_eights": 1.1500692875896177,
+      "tracking_position_3d_RMS_m": 0.10248894676153515,
+      "tracking_position_3d_max_m": 0.2392525786223556,
+      "maximum_speed_m_s": 6.886490738217125,
+      "maximum_tilt_deg": 73.44226030590323,
+      "tracking_height_min_max_m": [
+        0.5737815202578456,
+        1.2932251740466136
+      ],
+      "compute_p95_ms": 6.181751741678454,
+      "compute_max_ms": 15.059873985592276,
+      "worker_deadlines": 0,
+      "final_guard": {
+        "level": "hard",
+        "criteria": [
+          "speed"
+        ],
+        "monotonic_s": 25.9,
+        "tilt_deg": 45.937095163642205,
+        "position_error_m": 0.09611322917436262,
+        "speed_m_s": 6.5625785984315135,
+        "altitude_m": 0.5986714688077892,
+        "limits": {
+          "soft_position_m": 1.0,
+          "hard_position_m": 1.5,
+          "soft_tilt_deg": 72.0,
+          "hard_tilt_deg": 82.0,
+          "maximum_speed_m_s": 6.5
+        }
+      }
+    }
+  ],
+  "abort_engineering_screens": [
+    {
+      "file": "validation/initial_screens/pid_3mps_nominal_abort_peak_high_bank.json",
+      "sha256": "1bc4ae33d233c4e3fa4dd446c215d863badd398470563063a20eeb9ae68c58a1",
+      "speed": 3.0,
+      "truth": "nominal",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 8.82,
+      "max_distance_xy": 0.7856693660106042,
+      "max_speed": 1.594439844247421,
+      "height_range": [
+        0.0,
+        1.274812273914875
+      ],
+      "max_tilt": 28.05163661369308,
+      "max_rate_command": [
+        2.0,
+        0.956680190510373,
+        0.47207314793604643
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/initial_screens/pid_3mps_nominal_abort_peak_low_bank.json",
+      "sha256": "7676745ca0549624984b953023c9447b13ab88c997a1f53eee50562b6ed25ea8",
+      "speed": 3.0,
+      "truth": "nominal",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 6.900000000000006,
+      "max_distance_xy": 0.7284208898364759,
+      "max_speed": 1.5644565301497733,
+      "height_range": [
+        0.0,
+        0.7910739046787527
+      ],
+      "max_tilt": 23.761010900169737,
+      "max_rate_command": [
+        2.0,
+        1.048459272282405,
+        0.49767137046214904
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/initial_screens/pid_3mps_nominal_abort_peak_speed.json",
+      "sha256": "dddcfa2f697efded2b75234a7e2879625abeae0937eea66a5d87c7719dd9df7e",
+      "speed": 3.0,
+      "truth": "nominal",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.579999999999998,
+      "max_distance_xy": 1.2177988480194222,
+      "max_speed": 2.9732512292379933,
+      "height_range": [
+        0.0,
+        0.9986049355754391
+      ],
+      "max_tilt": 26.598638044071407,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.45016686433674824
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_3mps_historical_abort_peak_high_bank.json",
+      "sha256": "90fba2be402d69b0fd960a3a4b5d38b4a849173a19ee82d58184573f4579ad28",
+      "speed": 3.0,
+      "truth": "historical",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 8.799999999999997,
+      "max_distance_xy": 0.7374003785550572,
+      "max_speed": 1.508079058673535,
+      "height_range": [
+        0.0,
+        1.2752317772759938
+      ],
+      "max_tilt": 28.069080115063237,
+      "max_rate_command": [
+        2.0,
+        0.975998602654093,
+        0.5100251286188502
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_3mps_historical_abort_peak_low_bank.json",
+      "sha256": "362cb836a06b36b24f4ee4ed7f84ce096601612950b05e001f04f6ae5c29e133",
+      "speed": 3.0,
+      "truth": "historical",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.099999999999998,
+      "max_distance_xy": 0.861948278244851,
+      "max_speed": 1.8096790428754814,
+      "height_range": [
+        0.0,
+        0.8411044282280542
+      ],
+      "max_tilt": 23.96798551672044,
+      "max_rate_command": [
+        2.0,
+        0.724470366011329,
+        0.5289033494014798
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_3mps_historical_abort_peak_speed.json",
+      "sha256": "86fc47ed41542661d12ff99cdf0647ef6411b5adb740a692f9fbebeaddddf898",
+      "speed": 3.0,
+      "truth": "historical",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.600000000000001,
+      "max_distance_xy": 1.2048709025709206,
+      "max_speed": 2.9699958744425174,
+      "height_range": [
+        0.0,
+        0.9994517550775688
+      ],
+      "max_tilt": 23.905242943180827,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.5152497118965275
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_nominal_abort_peak_high_bank.json",
+      "sha256": "1094b2ad0e92a011acc8458dafdfdda7f7b76aa9252642938c2f2baf41f63d8d",
+      "speed": 4.0,
+      "truth": "nominal",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 9.239999999999998,
+      "max_distance_xy": 1.5245004627218817,
+      "max_speed": 2.4373509483087803,
+      "height_range": [
+        0.0,
+        1.2994907823833428
+      ],
+      "max_tilt": 44.74029344258505,
+      "max_rate_command": [
+        2.0,
+        1.477708795652014,
+        0.924259225644033
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_nominal_abort_peak_low_bank.json",
+      "sha256": "59257a83aacd56e2870b73649ecb033c7f5beb73a192c24f4031ba67e7c850f6",
+      "speed": 4.0,
+      "truth": "nominal",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.060000000000002,
+      "max_distance_xy": 1.1397436558661562,
+      "max_speed": 2.0744303489477467,
+      "height_range": [
+        0.0,
+        0.8031682751481228
+      ],
+      "max_tilt": 34.72309143203808,
+      "max_rate_command": [
+        2.0,
+        1.408059526694681,
+        0.9153016054153628
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_nominal_abort_peak_speed.json",
+      "sha256": "f5c68e5a4d4f73a6eb349087618fe56c4bbf4f09c8d64a137e45f145c719d19b",
+      "speed": 4.0,
+      "truth": "nominal",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.68,
+      "max_distance_xy": 1.8047172554534052,
+      "max_speed": 3.973101325570762,
+      "height_range": [
+        0.0,
+        0.9925788600012154
+      ],
+      "max_tilt": 28.007787633555914,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.4664873036927494
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_slow_abort_peak_high_bank.json",
+      "sha256": "b6455fd25ea54dc9da7c42a7e4895c446e6bed820ad759a227a60fe339a1d50b",
+      "speed": 4.0,
+      "truth": "slow",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 9.76,
+      "max_distance_xy": 2.1862785252450787,
+      "max_speed": 3.1891125735167867,
+      "height_range": [
+        0.0,
+        1.2792219685850643
+      ],
+      "max_tilt": 51.47343022260899,
+      "max_rate_command": [
+        2.0,
+        1.8069542202718898,
+        1.270231398297428
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_slow_abort_peak_low_bank.json",
+      "sha256": "9d9169f2c39f5bcd2d6a571dfab52329d329ed7dfa0698bd4d04a4081307d6eb",
+      "speed": 4.0,
+      "truth": "slow",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.980000000000002,
+      "max_distance_xy": 3.1383851243143193,
+      "max_speed": 4.393347341356167,
+      "height_range": [
+        0.0,
+        1.0055120616227238
+      ],
+      "max_tilt": 45.11191567544988,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        1.5542221004713863
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_4mps_slow_abort_peak_speed.json",
+      "sha256": "b83199d7ed9063937ff98fe9813e81985e438f5e60eb29331dfc22c02c766a68",
+      "speed": 4.0,
+      "truth": "slow",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 8.120000000000001,
+      "max_distance_xy": 1.8087371961549803,
+      "max_speed": 4.389890042768617,
+      "height_range": [
+        0.0,
+        1.063653697866661
+      ],
+      "max_tilt": 39.4163131040839,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.865837234028032
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_historical_abort_peak_high_bank.json",
+      "sha256": "e0a2110106aa6ca8efa9a64af26e8122f80c2e6d5ff4e943a8d50d39e35e3c0b",
+      "speed": 5.0,
+      "truth": "historical",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 9.520000000000003,
+      "max_distance_xy": 3.13518171413186,
+      "max_speed": 4.069428532668242,
+      "height_range": [
+        0.0,
+        1.303151679192682
+      ],
+      "max_tilt": 58.54736070865536,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        1.8610293050579227
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_historical_abort_peak_low_bank.json",
+      "sha256": "a5033ba96b5aa71b2084f714749fa89072629fb6f1d7a7acf6558d2614479b9a",
+      "speed": 5.0,
+      "truth": "historical",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.340000000000002,
+      "max_distance_xy": 1.9983609188499056,
+      "max_speed": 3.121105456735025,
+      "height_range": [
+        0.0,
+        0.9072923278440626
+      ],
+      "max_tilt": 45.16412897747022,
+      "max_rate_command": [
+        2.0,
+        1.5195549299151518,
+        1.3792990097493978
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_historical_abort_peak_speed.json",
+      "sha256": "4f979b6b4ca8ef6ff276213b437ab35c3f0d0c6cdd551d9593eb2e898de39e13",
+      "speed": 5.0,
+      "truth": "historical",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 8.400000000000002,
+      "max_distance_xy": 2.4632404229653,
+      "max_speed": 4.954882370212934,
+      "height_range": [
+        0.0,
+        1.1730218351599233
+      ],
+      "max_tilt": 32.08159096023159,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.9010258491826154
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_nominal_abort_peak_high_bank.json",
+      "sha256": "3adc49f99e04c0805a650fc66c4790c823c133d651e86ad78869f34f17cbfd0b",
+      "speed": 5.0,
+      "truth": "nominal",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 9.800000000000004,
+      "max_distance_xy": 3.056297191208051,
+      "max_speed": 4.031179782843211,
+      "height_range": [
+        0.0,
+        1.3075595848660242
+      ],
+      "max_tilt": 59.80172758045103,
+      "max_rate_command": [
+        2.0,
+        1.6833900654297382,
+        1.3520015571565838
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_nominal_abort_peak_low_bank.json",
+      "sha256": "549b4acb69afa9d27fee39f5636cd02eeb91983c7d0299cf25bd53bcdb0a6f4b",
+      "speed": 5.0,
+      "truth": "nominal",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.100000000000001,
+      "max_distance_xy": 1.497817952287246,
+      "max_speed": 2.426913181713936,
+      "height_range": [
+        0.0,
+        0.7869372765668918
+      ],
+      "max_tilt": 44.610139908005756,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        1.3476616759032773
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_nominal_abort_peak_speed.json",
+      "sha256": "8980fa266d56a0b82fe8f693be136d32290080722ab1fb4027a0c7f29b77e189",
+      "speed": 5.0,
+      "truth": "nominal",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 7.880000000000003,
+      "max_distance_xy": 2.3855197773417087,
+      "max_speed": 5.000991002001031,
+      "height_range": [
+        0.0,
+        0.9768726947323293
+      ],
+      "max_tilt": 27.611261968782088,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        0.5360470741952857
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_slow_abort_peak_high_bank.json",
+      "sha256": "0b91508dad080d49c2646695da096c2f02cb0ae084d62bbd504ab977af80c609",
+      "speed": 5.0,
+      "truth": "slow",
+      "label": "peak_high_bank",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 9.960000000000003,
+      "max_distance_xy": 5.123115559163879,
+      "max_speed": 5.97320668199875,
+      "height_range": [
+        0.0,
+        1.270657379121799
+      ],
+      "max_tilt": 68.87678015765546,
+      "max_rate_command": [
+        2.0,
+        1.3997085934049847,
+        1.2744779562578241
+      ],
+      "final_guard": null
+    },
+    {
+      "file": "validation/pid_5mps_slow_abort_peak_low_bank.json",
+      "sha256": "e0de054e8818491a232c0554a910da95158e8230e613525d5f0c449b05e5c3a0",
+      "speed": 5.0,
+      "truth": "slow",
+      "label": "peak_low_bank",
+      "done": true,
+      "reason": "hard_flight_envelope",
+      "touchdown": false,
+      "elapsed": 0.33999999999999986,
+      "max_distance_xy": 1.5702718753630585,
+      "max_speed": 6.886490738217125,
+      "height_range": [
+        0.5956374969440899,
+        0.6722515096385858
+      ],
+      "max_tilt": 73.44226030590323,
+      "max_rate_command": [
+        2.0,
+        1.0691712220803469,
+        1.2955177430754916
+      ],
+      "final_guard": {
+        "level": "hard",
+        "criteria": [
+          "speed"
+        ],
+        "monotonic_s": 25.9,
+        "tilt_deg": 45.937095163642205,
+        "position_error_m": 0.09611322917436262,
+        "speed_m_s": 6.5625785984315135,
+        "altitude_m": 0.5986714688077892,
+        "limits": {
+          "soft_position_m": 1.0,
+          "hard_position_m": 1.5,
+          "soft_tilt_deg": 72.0,
+          "hard_tilt_deg": 82.0,
+          "maximum_speed_m_s": 6.5
+        }
+      }
+    },
+    {
+      "file": "validation/pid_5mps_slow_abort_peak_speed.json",
+      "sha256": "f062b4767c6ea0bcd9b707d01bbe18040540109aa6a938b60c79ab548788211c",
+      "speed": 5.0,
+      "truth": "slow",
+      "label": "peak_speed",
+      "done": true,
+      "reason": "validation_operator",
+      "touchdown": true,
+      "elapsed": 8.44,
+      "max_distance_xy": 2.4755662264018237,
+      "max_speed": 4.9746401588884535,
+      "height_range": [
+        0.0,
+        1.185137669702716
+      ],
+      "max_tilt": 38.45112466464501,
+      "max_rate_command": [
+        2.0,
+        2.0,
+        1.1754758859413768
+      ],
+      "final_guard": null
+    }
+  ],
+  "limitations": [
+    "Slow response80ms roll/pitch and150ms yaw with25ms transport/45ms collective and eta0.935 fails4mps solver feasibility and5mps recovery hard speed guard; no guard relaxed",
+    "Initial host compute deadline interruptions27\u201332ms retained in validation/initial_screens; clean nominal reruns and complete actualIPC smoke are separate evidence",
+    "Historical PID poles are identified small-angle/oldmass; current recorded PID gains match but high-rate/banked dynamics and nativePIDmixer are not identified",
+    "Hardware torque/allocation/headroom are independent engineering proxies; no nativePIDmixer replica",
+    "Historical abort raw scope string incorrectly says first-order, inherited from harness; historical saved truth contains archived PID second-order poles and code applies them",
+    "Emergency travel exceeds trajectory XYfootprint: inspect saved world states and displacement before room use"
+  ],
+  "native_shadow_allocator_audit": {
+    "adapter_source_sha256": "4fef8ba84cdf62d473906981b337dda114212b7c5a02d8a3495296cde693e74d",
+    "supervisor_source_sha256": "3dc880c524f6dc8b3aa3e144ec5a64564853fcd3270760384fffd4da012a75f3",
+    "finding": "Adapter supervisor fault input is gated by policy.weight>0; unused SH_ALLOCATOR shadow at PIDweight0/request=false passesfault0. Actual supervisor Ctest stays PIDweight0/fault0; genuine injected fault still latches. Native takeoff/numeric/timing faults remain unchanged."
+  },
+  "pid_response_evidence": "validation/pid_response_evidence.json",
+  "process_cleanup": {
+    "host": "dolphin",
+    "drivers": [
+      {
+        "pid": 310169,
+        "host": "dolphin",
+        "argv": [
+          "outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/validation/physical_validation_pid.py",
+          "--speeds",
+          "3",
+          "4",
+          "5",
+          "--plants",
+          "nominal"
+        ],
+        "started": 1794477827.5982294,
+        "completed": true,
+        "finished": 1794477891.955392,
+        "file": "validation/initial_screens/process_310169.json",
+        "pid_absent": true
+      },
+      {
+        "pid": 310865,
+        "host": "dolphin",
+        "argv": [
+          "outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/validation/physical_validation_pid.py",
+          "--speeds",
+          "4",
+          "5",
+          "--plants",
+          "nominal",
+          "slow"
+        ],
+        "started": 1794477990.537878,
+        "completed": true,
+        "finished": 1794478062.5569782,
+        "file": "validation/process_310865.json",
+        "pid_absent": true
+      },
+      {
+        "pid": 311425,
+        "host": "dolphin",
+        "argv": [
+          "outputs/sanity15_5mps_refit_4x3_20261112/release_pid_butterfly/validation/physical_validation_pid.py",
+          "--speeds",
+          "3",
+          "5",
+          "--plants",
+          "historical"
+        ],
+        "started": 1794478113.4519181,
+        "completed": true,
+        "finished": 1794478173.0637112,
+        "file": "validation/process_311425.json",
+        "pid_absent": true
+      }
+    ],
+    "worker_child_reaped": true,
+    "all_known_driver_PIDs_absent": true,
+    "worker_and_smoke_parent_absent": true,
+    "live_services_or_hardware_started": false
+  }
+}

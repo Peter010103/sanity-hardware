@@ -21,6 +21,13 @@ receiver firmware, ROS 2 mocap stream, network and calibrated frames.
 | [Validation](VALIDATION.md) | Offline checks performed on this standalone package |
 | [Source provenance](SOURCE_MANIFEST.json) | Original sources and their hashes before packaging adaptations |
 
+## Latest update
+
+The later **[3D butterfly flights and paired PID/INDI comparison](docs/latest-butterfly.md)**
+are now included, with named `indi-butterfly-3/4/5` and `pid-butterfly-3/5` recipes,
+the activated roll-model/braking releases, exact outcomes and the final report.
+Both3m/s systems and the INDI4m/s run completed six eights; neither5m/s attempt completed.
+
 ## Flight recipes
 
 All recipes default to **offline planning**. `--prepare-only` builds and warms the

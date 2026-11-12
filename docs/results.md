@@ -88,6 +88,10 @@ native INDI behavior is not qualified by moderate-angle lemniscates. The prepare
 November INDI flip release had offline solver/dynamics tests and matched SZC6
 receiver work; no completed physical INDI flip is included here.
 
+The later butterfly releases, paired results and revised emergency controllers are
+documented in [the latest update](latest-butterfly.md). The following paragraph
+describes the archived planar controller.
+
 High-speed emergency braking is a material unresolved limitation of these saved
 controllers. At a full-speed center crossing, the retained braking reference alone
 can advance about 15.0 / 23.44 / 33.75 m at 4 / 5 / 6 m/s, with long return times.

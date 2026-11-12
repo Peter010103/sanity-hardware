@@ -8,7 +8,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'Sanity/src/ros2_sanity_ws/src/sanity_zenoh'))
 sys.path.insert(0,str(ROOT/'Sanity/src/ros2_sanity_ws/src/udp_broadcaster'))
-from sanity_zenoh.async_policy import AsyncPolicy
+
 
 
 def main():
@@ -16,6 +16,9 @@ def main():
     p.add_argument('--source',type=Path,required=True);p.add_argument('--config',type=Path,required=True)
     p.add_argument('--model',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     args=p.parse_args();args.output.mkdir(parents=True,exist_ok=False)
+    isolated_package=args.source.parent/'host/sanity_zenoh'
+    if isolated_package.is_dir():sys.path.insert(0,str(isolated_package))
+    from sanity_zenoh.async_policy import AsyncPolicy
     worker=AsyncPolicy(Path(sys.executable),args.source,args.config,args.output,controller='mpc',mpc_model=args.model)
     try:
         (args.output/'solver_info.json').write_text(json.dumps(worker.info,indent=2)+'\n')

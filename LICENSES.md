@@ -7,7 +7,9 @@ parameters and generated figures use [CC BY 4.0](licenses/CC-BY-4.0.txt): credit
 licence, and indicate changes. Existing source notices take precedence for any
 third-party component.
 
-`firmware/fc/source.patch` contains modifications to Betaflight 4.5.1 and the
+`firmware/fc/source.patch` and the archived C supervisor/adapter test sources
+under `firmware/fc/tests/pid_supervisor_source/` retain GPL-3.0-or-later terms.
+The patch contains modifications to Betaflight 4.5.1 and the
 Sanity native rate-controller integration, distributed under the retained
 [GPL-3.0-or-later terms](licenses/Betaflight-GPL-3.0.txt). The INDIflight algorithm
 reference is revision `72c0b7614b4a462b4fd1db43477a189ba13a32b1`; pinned

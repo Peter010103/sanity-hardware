@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>sanity_zenoh</name><version>0.1.0</version>
+  <description>Zenoh sender for Sanity CTBR and direct motor bench control</description>
+  <maintainer email="hw527@cam.ac.uk">Sanity</maintainer><license>TODO</license>
+  <exec_depend>launch</exec_depend><exec_depend>launch_ros</exec_depend>
+  <exec_depend>rclpy</exec_depend><exec_depend>std_srvs</exec_depend><exec_depend>sanity_msgs</exec_depend>
+  <exec_depend>udp_broadcaster</exec_depend><exec_depend>std_msgs</exec_depend>
+  <exec_depend>rosgraph_msgs</exec_depend><exec_depend>tf2_msgs</exec_depend><exec_depend>geometry_msgs</exec_depend><exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>ros2bag</exec_depend><exec_depend>rosbag2_storage_mcap</exec_depend>
+  <exec_depend>python3-matplotlib</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

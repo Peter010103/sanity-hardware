@@ -31,6 +31,24 @@ FC setting change or room-service startup was performed for this packaging task.
   ten-loop PID flip, and successful INDI 3/4 m/s recordings. It generated source-
   hashed metrics/CSV and 2D PNG/PDF plots. No fitted temporal/bias alignment was used.
 
+## Latest butterfly update
+
+The additional release snapshots were checked offline with the same installed
+Python/acados environment. All 20 named recipes are covered by the public-runner
+suite, including the five new butterfly plans. The current suites pass with
+**776 passed, 5 skipped**: 615 common/public-runner tests, 85 archived high-speed
+checks, 15 isolated butterfly INDI checks and 61 isolated butterfly PID checks.
+The butterfly suites cover geometry, source capture, causal PID command-history
+projection, actual mission integration and the native supervisor's unused-allocator
+behavior. The native supervisor fixture is copied from the same archived FC source;
+no firmware implementation was changed for this update.
+
+Actual isolated solver preparation also passed for `indi-butterfly-5` and
+`pid-butterfly-5`, with the respective isolated host worker imports. Both workers
+were closed and reaped. FC and ESP sources are unchanged, so the original native
+build validation above was not repeated. No new physical flight was run. The new
+flight outcomes and comparison report come from the included original receipts.
+
 Re-run the software checks with:
 
 ```sh
@@ -40,6 +58,8 @@ Re-run the software checks with:
 ./scripts/run_mpc.sh indi-lemniscate-r2-3 --prepare-only
 ./scripts/run_mpc.sh indi-lemniscate-r2-4 --prepare-only
 ./scripts/run_mpc.sh pid-flip-1 --prepare-only
+./scripts/run_mpc.sh indi-butterfly-5 --prepare-only
+./scripts/run_mpc.sh pid-butterfly-5 --prepare-only
 ```
 
 The receiver's complete ESP-IDF application was not rebuilt during this packaging

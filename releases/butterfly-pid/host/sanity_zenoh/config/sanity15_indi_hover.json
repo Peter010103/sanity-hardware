@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "device": 15,
+  "listen": [
+    "udp/10.0.0.200:7447",
+    "tcp/10.0.0.200:7447"
+  ],
+  "telemetry_listen": "tcp/10.0.0.200:7448",
+  "collective_profile": "sanity15_indi_collective.json",
+  "limits": {
+    "expected_uid": "56003f001451333231343731"
+  },
+  "mocap": {
+    "topic": "/tf",
+    "parent_frame": "map",
+    "tracked_frame": "sanity15",
+    "world_from_map_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "marker_to_base_xyz": [
+      0,
+      0,
+      0
+    ],
+    "marker_to_base_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "commissioning": "Frame names/marker transforms and device15 binding require confirmation; these defaults do not assert calibration."
+}

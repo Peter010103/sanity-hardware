@@ -1,0 +1,17 @@
+{
+  "status": "Activated for user-run flight; not flown by agent",
+  "created_unix": 1794476878.4388182,
+  "host": "dolphin",
+  "user_instruction": "ok let's try flying give me command",
+  "approved_emergency_rate_rad_s": 2.0,
+  "ordinary_rate_cap_rad_s": 0.6,
+  "public_runner": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/run_5mps.sh",
+  "public_runner_sha256": "4f58c117bf4487ff7c1965a788c95bd267b90ab60d3dae17ce3abbfa2ec16eb6",
+  "release": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/release_proposed_braking_2rad_s",
+  "plan": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/activated_plan/plan.json",
+  "source_receipt": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/PROPOSED_BRAKING_CHANGE.json",
+  "recovery_validation": "/home/hw527/Projects/drones/outputs/sanity15_5mps_refit_4x3_20261112/physical_validation/RATE_CAP_PROPOSAL_RECEIPT.json",
+  "firmware_changed": false,
+  "hardware_flight_launched": false,
+  "processes_started": "Only completed finite offline plan check; no services or device access"
+}
